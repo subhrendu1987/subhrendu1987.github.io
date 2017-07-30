@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name=”description” content=”Personal website of Subhrendu Chattopadhyay, a student of Computer Science and Engineering. Find more personal information about him on this site.” />
+    <meta name=”keywords” content=”Subhrendu Chattopadhyay, computer science, student, IITG” />
+    <meta name=”author” content=”Subhrendu Chattopadhyay” />
+    <meta http-equiv=”content-type” content=”text/html;charset=UTF-8″ />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" /> 
+	<title> Publication </title>
+	<link rel="shortcut icon" href="../Picture/rsz_publication.png">
+	<link href='../css/PinyonScript.css' rel='stylesheet' type='text/css'>
+	<link href='../css/AlexBrush.css' rel='stylesheet' type='text/css'>
+	</head>
+<!--------------------------------------------------------------------------------------------------->
+<body>
+<!---------------------------------MAIN BODY----------------------------------------------------------->
+<center>
+<table  id="contenttable">
+<tr><td align="left" valign="top">
+	<ol>
+				<!------------------------------------------------------------------>
+ 		<li font-size="9">Sushanta Karmakar, <b>Subhrendu Chattopadhyay</b>,
+		 <q><a class="pub_link" target="_top" href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCgQFjAA&url=http%3A%2F%2Fcrpit.com%2Fconfpapers%2FCRPITV147Karmakar.pdf&ei=oxIfU7jBIKWK0AXdjICADA&usg=AFQjCNGTUgGj20zCj1XG8dHTZMWiG4zVLA&sig2=s5_ECXBtj0Zt8odCuiokgg">
+		 A Trigger Counting Mechanism for Ring Topology
+		 </a></q> 
+		 				in the proc. of the 
+		 37th Australasian Computer Science Conference (ACSC 2014)
+		 , Auckland, New Zealand, January 20-23, 2014</li><p>		
+				<!------------------------------------------------------------------>
+		<li font-size="9">Sandip Chakraborty, <b>Subhrendu Chattopadhyay</b>, Suchetana Chakraborty,Sukumar Nandi,
+		 <q><a class="pub_link" target="_top" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6734873">
+		 Defending Concealedness in IEEE 802.11n
+		 </a></q> 
+		 				in the proc. of the 
+		 Sixth International Conference on COMmunication System & NETworks (COMSNET 2014)
+		 , Bangalore, India, January 7-10, 2014</li><p>		
+				<!------------------------------------------------------------------>
+		<li font-size="9">Sandip Chakraborty, Sukumar Nandi, <b>Subhrendu Chattopadhyay</b>,
+		 <q><a class="pub_link" target="_top" href="#"><em>Surpassing Flow Fairness in a Mesh Network: How to Ensure Equity among End Users?</em>
+		 </a></q> 
+		 				in the proc. of the 
+		 Seventh IEEE International Conference on Advanced Networks and Telecommunication Systems (ANTS 2013)
+		 , Chennai, India, December 15-18, 2013 <em>(Best paper Award)</em></li><p>
+				<!------------------------------------------------------------------>
+
+	</ol>
+</td></tr>
+</table>
+
+</center>
+<!---------------------------------MAIN BODY END------------------------------------------------------->
+
+<!--------------------------------------------------------------------------------------------------->
+</body>
+</html>

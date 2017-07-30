@@ -1,0 +1,2913 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Simple CSS Drop Down Menu | Code-Tricks</title>
+<link rel="Shortcut Icon" href="http://code-tricks.com/wp-content/themes/eleven40/images/favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/orgSeries.css" type="text/css" media="screen"><link rel="alternate" type="application/rss+xml" title="Code-Tricks » Feed" href="http://code-tricks.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Code-Tricks » Comments Feed" href="http://code-tricks.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Code-Tricks » Simple CSS Drop Down Menu Comments Feed" href="http://code-tricks.com/simple-css-drop-down-menu/feed/">
+<link rel="stylesheet" id="eleven40-theme-css" href="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpcci_custom_css-css" href="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/wpcci_custom_css.css" type="text/css" media="all">
+<link rel="stylesheet" id="fvch-styles-css" href="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/fvch-styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="commentluv_style-css" href="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/commentluv.css" type="text/css" media="all">
+<script src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/all.js" id="facebook-jssdk"></script><script src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/ga.js" async="" type="text/javascript"></script><script src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/widgets.js" id="twitter-wjs"></script><script src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/azcarbon_2_1_0_VERTDARK.js" async="" type="text/javascript"></script><script type="text/javascript" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/jquery.js"></script>
+<script type="text/javascript" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/jquery-migrate.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var cl_settings = {"name":"author","url":"url","comment":"comment","email":"email","infopanel":"on","default_on":"on","default_on_admin":"on","cl_version":"2.93","images":"http:\/\/code-tricks.com\/wp-content\/plugins\/commentluv\/images\/","api_url":"http:\/\/code-tricks.com\/wp-admin\/admin-ajax.php","_fetch":"5f5f15574b","_info":"49f4685f8c","infoback":"white","infotext":"black","template_insert":"","logged_in":"","refer":"http:\/\/code-tricks.com\/simple-css-drop-down-menu\/","no_url_message":"Please enter a URL and then click the CommentLuv checkbox if you want to add your last blog post","no_http_message":"Please use http:\/\/ in front of your url","no_url_logged_in_message":"You need to visit your profile in the dashboard and update your details with your site URL","no_info_message":"No info was available or an error occured"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/commentluv.js"></script>
+<script type="text/javascript" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/wp-google-analytics.js"></script>
+<script type="text/javascript" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/comment-reply.js"></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://code-tricks.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://code-tricks.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="CSS Media Queries For Common Devices" href="http://code-tricks.com/css-media-queries-for-common-devices/">
+<link rel="next" title="CSS Clearfix Methods" href="http://code-tricks.com/css-clearfix-methods/">
+<meta name="generator" content="WordPress 3.6">
+<link rel="shortlink" href="http://code-tricks.com/?p=422">
+        <style type="text/css">
+            .fvch-codeblock {
+                background: #fff;
+            }
+            .fvch-codeblock pre, .fvch-line-numbers pre {
+                background: #fff;
+                line-height: 1.3em;
+                font-family: 'Courier New', Courier, monospace;
+                font-size: 13px;
+            }
+            .fvch-line-numbers pre {
+                background: #e2e2e2;
+            }
+        </style>
+        <meta name="generator" content="FV Code Highlighter">
+        <link rel="pingback" href="http://code-tricks.com/xmlrpc.php">
+<meta name="google-site-verification" content="7EX0nkTP4-hJDqaUH0K8B8nrPhrGzJn5Y-b0kIW1PwY">
+
+<!-- All in One SEO Pack 2.0.1 by Michael Torbert of Semper Fi Web Design[306,340] -->
+<link rel="author" href="https://plus.google.com/102402022598550373198/">
+<meta name="description" content="A simple CSS drop down menu without any need of javascript.">
+
+<meta name="keywords" content="css">
+
+<link rel="canonical" href="http://code-tricks.com/simple-css-drop-down-menu/">
+<!-- /all in one seo pack -->
+
+<style type="text/css"></style>
+<script src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/bsa.js" async="" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}
+.fb_invisible{display:none}
+.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}
+.fb_reset > div{overflow:hidden}
+.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}
+.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}
+.fb_dialog_content{background:#fff;color:#333}
+.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px;top:8px\9;right:7px\9}
+.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}
+.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}
+.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}
+.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}
+.fb_dialog_top_left,
+.fb_dialog_top_right,
+.fb_dialog_bottom_left,
+.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}
+.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}
+.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}
+.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}
+.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right,
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}
+.fb_dialog_vert_left,
+.fb_dialog_vert_right{width:10px;height:100%}
+.fb_dialog_vert_left{margin-left:-10px}
+.fb_dialog_vert_right{right:0;margin-right:-10px}
+.fb_dialog_horiz_top,
+.fb_dialog_horiz_bottom{width:100%;height:10px}
+.fb_dialog_horiz_top{margin-top:-10px}
+.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}
+.fb_dialog_iframe{line-height:0}
+.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}
+.fb_dialog_content .dialog_title > span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif)
+no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}
+body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}
+.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif)
+white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}
+.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}
+#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}
+#fb-root #fb_dialog_ipad_overlay.hidden{display:none}
+.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}
+.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}
+.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%
+}
+.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px
+}
+.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6),
+color-stop(0.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset,
+rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}
+.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}
+.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}
+.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}
+#fb_dialog_loader_close{float:left}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}
+.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}
+.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}
+.fb_iframe_widget iframe{position:absolute}
+.fb_iframe_widget_lift{z-index:1}
+.fb_hide_iframes iframe{position:relative;left:-10000px}
+.fb_iframe_widget_loader{position:relative;display:inline-block}
+.fb_iframe_widget_fluid{display:inline}
+.fb_iframe_widget_fluid span{width:100%}
+.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}
+.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fb_connect_bar_container div,
+.fb_connect_bar_container span,
+.fb_connect_bar_container a,
+.fb_connect_bar_container img,
+.fb_connect_bar_container strong{background:none;border-spacing:0;border:0;direction:ltr;font-style:normal;font-variant:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal;vertical-align:baseline}
+.fb_connect_bar_container{position:fixed;left:0 !important;right:0 !important;height:42px !important;padding:0 25px !important;margin:0 !important;vertical-align:middle !important;border-bottom:1px solid #333 !important;background:#3b5998 !important;z-index:99999999 !important;overflow:hidden !important}
+.fb_connect_bar_container_ie6{position:absolute;top:expression(document.compatMode=="CSS1Compat"? document.documentElement.scrollTop+"px":body.scrollTop+"px")}
+.fb_connect_bar{position:relative;margin:auto;height:100%;width:100%;padding:6px 0 0 0 !important;background:none;color:#fff !important;font-family:"lucida grande", tahoma, verdana, arial, sans-serif !important;font-size:13px !important;font-style:normal !important;font-variant:normal !important;font-weight:normal !important;letter-spacing:normal !important;line-height:1 !important;text-decoration:none !important;text-indent:0 !important;text-shadow:none !important;text-transform:none !important;white-space:normal !important;word-spacing:normal !important}
+.fb_connect_bar a:hover{color:#fff}
+.fb_connect_bar .fb_profile img{height:30px;width:30px;vertical-align:middle;margin:0 6px 5px 0}
+.fb_connect_bar div a,
+.fb_connect_bar span,
+.fb_connect_bar span a{color:#bac6da;font-size:11px;text-decoration:none}
+.fb_connect_bar .fb_buttons{float:right;margin-top:7px}
+.fb_edge_widget_with_comment{position:relative;*z-index:1000}
+.fb_edge_widget_with_comment span.fb_edge_comment_widget{position:absolute}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget{z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget .FB_Loader{left:0;top:1px;margin-top:6px;margin-left:0;background-position:50% 50%;background-color:#fff;height:150px;width:394px;border:1px #666 solid;border-bottom:2px solid #283e6c;z-index:1}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.dark .FB_Loader{background-color:#000;border-bottom:2px solid #ccc}
+.fb_edge_widget_with_comment span.fb_send_button_form_widget.siderender
+.FB_Loader{margin-top:0}
+.fbpluginrecommendationsbarleft,
+.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}
+.fbpluginrecommendationsbarleft{left:10px}
+.fbpluginrecommendationsbarright{right:10px}</style></head>
+<body data-twttr-rendered="true" class="single single-post postid-422 single-format-standard content-sidebar">
+<div id="wrap">
+<div id="header"><div class="wrap"><div id="title-area"><h1 id="title"><a title="Code-Tricks" href="http://code-tricks.com/">{code-tricks}</a></h1><p id="description">Coding and beyond</p></div><!-- end #title-area --><div class="widget-area"><div id="text-10" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><div fb-xfbml-state="rendered" class="fb-like fb_edge_widget_with_comment fb_iframe_widget" data-href="https://www.facebook.com/codetricks" data-width="250" data-height="The pixel height of the plugin" data-colorscheme="dark" data-layout="button" data-action="like" data-show-faces="true" data-send="true"><span style="height: 33px; width: 285px;"><iframe src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/like.html" class="fb_ltr" title="Like this content on Facebook." style="border: medium none; overflow: hidden; height: 33px; width: 285px;" name="f1d1b1cdac12318" id="f2924d2c1c0be6c" scrolling="no"></iframe></span></div></div>
+		</div></div>
+</div><!-- end .widget-area --></div><!-- end .wrap --></div><!--end #header--><div id="nav"><div class="wrap"><ul id="menu-top_nav" class="menu genesis-nav-menu menu-primary superfish sf-js-enabled"><li id="menu-item-835" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-835"><a href="http://code-tricks.com/archive/">Archive</a></li>
+<li id="menu-item-176" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-176"><a href="http://code-tricks.com/snippets/">Snippets</a></li>
+<li id="menu-item-179" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-179"><a href="http://code-tricks.com/javascript/">Javascript</a></li>
+<li id="menu-item-180" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-180"><a href="http://code-tricks.com/css/">CSS</a></li>
+<li id="menu-item-181" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-181"><a href="http://code-tricks.com/jquery/">jQuery</a></li>
+<li id="menu-item-799" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-799"><a class="sf-with-ul" href="http://code-tricks.com/plugins/">Plugins<span class="sf-sub-indicator"> »</span></a>
+<ul style="display: none; visibility: hidden;" class="sub-menu">
+	<li id="menu-item-800" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-800"><a href="http://code-tricks.com/plugins/jquery-plugins/">jQuery Plugins</a></li>
+</ul>
+</li>
+<li id="menu-item-188" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-188"><a href="http://code-tricks.com/contact/">Contact</a></li>
+</ul></div><!-- end .wrap --></div><div id="inner"><div class="wrap">	<div id="content-sidebar-wrap">
+				<div id="content" class="hfeed">
+			<div class="breadcrumb">You are here: <a href="http://code-tricks.com/" title="View Home">Home</a> / <a href="http://code-tricks.com/css/" title="View all items in CSS">CSS</a> / Simple CSS Drop Down Menu</div>	<div class="post-422 post type-post status-publish format-standard hentry category-css category-html tag-css-2 entry">
+
+				<h1 class="entry-title">Simple CSS Drop Down Menu</h1> 
+		
+		<div class="post-info"><span class="date published time" title="2013-04-29T20:58:17+00:00">April 29, 2013</span>  by <span class="author vcard"><span class="fn"><a href="http://code-tricks.com/author/tirumal/" class="fn n" title="Tirumal" rel="author">Tirumal</a></span></span> <span class="post-comments"><a href="http://code-tricks.com/simple-css-drop-down-menu/#comments">61 Comments</a></span> </div>		<div class="entry-content">
+			<p>In this post I’ll show you how to build a simple CSS based drop 
+down menu without any need of scripting like javascript with the 
+following piece of snippet.<br>
+<span id="more-422"></span></p>
+<h4>HTML</h4>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="html"><span class="html-other-element">&lt;ul id=<span class="html-attribute">"menu"</span>&gt;</span>
+    <span class="html-other-element">&lt;li&gt;</span>
+        <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Menu 1<span class="html-anchor-element">&lt;/a&gt;</span>
+    <span class="html-other-element">&lt;/li&gt;</span>
+    <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Menu 2<span class="html-anchor-element">&lt;/a&gt;</span>
+
+        <span class="html-other-element">&lt;ul class=<span class="html-attribute">"sub-menu"</span>&gt;</span>
+            <span class="html-other-element">&lt;li&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Sub Menu 1<span class="html-anchor-element">&lt;/a&gt;</span>
+            <span class="html-other-element">&lt;/li&gt;</span>
+            <span class="html-other-element">&lt;li&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Sub Menu 2<span class="html-anchor-element">&lt;/a&gt;</span>
+            <span class="html-other-element">&lt;/li&gt;</span>
+            <span class="html-other-element">&lt;li&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Sub Menu 3<span class="html-anchor-element">&lt;/a&gt;</span>
+            <span class="html-other-element">&lt;/li&gt;</span>
+            <span class="html-other-element">&lt;li&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Sub Menu 4<span class="html-anchor-element">&lt;/a&gt;</span>
+            <span class="html-other-element">&lt;/li&gt;</span>
+        <span class="html-other-element">&lt;/ul&gt;</span>
+    <span class="html-other-element">&lt;/li&gt;</span>
+    <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Menu 3<span class="html-anchor-element">&lt;/a&gt;</span>
+
+    <span class="html-other-element">&lt;/li&gt;</span>
+    <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Menu 4<span class="html-anchor-element">&lt;/a&gt;</span>
+
+        <span class="html-other-element">&lt;ul class=<span class="html-attribute">"sub-menu"</span>&gt;</span>
+            <span class="html-other-element">&lt;li&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Sub Menu 1<span class="html-anchor-element">&lt;/a&gt;</span>
+            <span class="html-other-element">&lt;/li&gt;</span>
+            <span class="html-other-element">&lt;li&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Sub Menu 2<span class="html-anchor-element">&lt;/a&gt;</span>
+            <span class="html-other-element">&lt;/li&gt;</span>
+            <span class="html-other-element">&lt;li&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Sub Menu 3<span class="html-anchor-element">&lt;/a&gt;</span>
+            <span class="html-other-element">&lt;/li&gt;</span>
+            <span class="html-other-element">&lt;li&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Sub Menu 4<span class="html-anchor-element">&lt;/a&gt;</span>
+            <span class="html-other-element">&lt;/li&gt;</span>
+        <span class="html-other-element">&lt;/ul&gt;</span>
+    <span class="html-other-element">&lt;/li&gt;</span>
+    <span class="html-other-element">&lt;li&gt;</span>
+        <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span>&gt;</span>Menu 5<span class="html-anchor-element">&lt;/a&gt;</span>
+    <span class="html-other-element">&lt;/li&gt;</span>
+<span class="html-other-element">&lt;/ul&gt;</span></span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<h4>CSS</h4>
+<div id="fvch-codeblock-1" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-1"><span class="css"><span class="css-comment">/*Initialize*/</span>
+ul#menu, ul#menu ul.sub-menu {
+    <span class="css-property">padding<span class="css-selector">:</span><span class="css-value">0</span></span>;
+    <span class="css-property">margin<span class="css-selector">:</span><span class="css-value"> 0</span></span>;
+}
+ul#menu li, ul#menu ul.sub-menu li {
+    <span class="css-property">list-style-type<span class="css-selector">:</span><span class="css-value"> none</span></span>;
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value"> inline-block</span></span>;
+}
+<span class="css-comment">/*Link Appearance*/</span>
+ul#menu li a, ul#menu li ul.sub-menu li a {
+    <span class="css-property">text-decoration<span class="css-selector">:</span><span class="css-value"> none</span></span>;
+    <span class="css-property">color<span class="css-selector">:</span><span class="css-value"> #fff</span></span>;
+    <span class="css-property">background<span class="css-selector">:</span><span class="css-value"> #666</span></span>;
+    <span class="css-property">padding<span class="css-selector">:</span><span class="css-value"> 5px</span></span>;
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">inline-block</span></span>;
+}
+<span class="css-comment">/*Make the parent of sub-menu relative*/</span>
+ul#menu li {
+    <span class="css-property">position<span class="css-selector">:</span><span class="css-value"> relative</span></span>;
+}
+<span class="css-comment">/*sub menu*/</span>
+ul#menu li ul.sub-menu {
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">none</span></span>;
+    <span class="css-property">position<span class="css-selector">:</span><span class="css-value"> absolute</span></span>;
+    <span class="css-property">top<span class="css-selector">:</span><span class="css-value"> 30px</span></span>;
+    <span class="css-property">left<span class="css-selector">:</span><span class="css-value"> 0</span></span>;
+    <span class="css-property">width<span class="css-selector">:</span><span class="css-value"> 100px</span></span>;
+}
+ul#menu li:hover ul.sub-menu {
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">block</span></span>;
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>The code is self explanatory, I’ve created a menu in an unordered 
+list and inserted sub menu into the list item since it’s a block element
+ (A block element can contain any other block element or inline 
+element).</p>
+<p>By default the sub-menu is hidden by using display:none property and shown only when cursor is hovered on the parent list item.</p>
+<p><strong>Following is the demo</strong></p>
+<p><iframe src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/a.html" allowfullscreen="allowfullscreen" frameborder="0" height="300" width="100%"></iframe></p>
+<div id="crp_related" class="crp_related"><h2>Related Posts</h2><ul><li><a href="http://code-tricks.com/dropdown-menu-with-css-and-jquery-including-css-arrows/" class="crp_title">Dropdown menu with CSS and jQuery including CSS arrows</a></li><li><a href="http://code-tricks.com/bootstrap-collapsible-menu/" class="crp_title">Bootstrap Collapsible menu</a></li><li><a href="http://code-tricks.com/javascript-get-element-by-class-name/" class="crp_title">Javascript Get Element By Class Name</a></li><li><a href="http://code-tricks.com/css-clearfix-methods/" class="crp_title">CSS Clearfix Methods</a></li><li><a href="http://code-tricks.com/overflow-hidden-not-working-in-ie7/" class="crp_title">Overflow hidden not working in IE7</a></li></ul></div><a class="synved-social-button synved-social-button-share synved-social-provider-facebook" data-provider="facebook" target="_blank" rel="nofollow" title="Share on Facebook" href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fcode-tricks.com%2Fsimple-css-drop-down-menu%2F&amp;t=Simple+CSS+Drop+Down+Menu"><img alt="facebook" title="Share on Facebook" class="synved-share-image" style="width:24px;margin:0;margin-bottom:5px;margin-right:5px;" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/facebook.png" width="24"></a><a class="synved-social-button synved-social-button-share synved-social-provider-twitter" data-provider="twitter" target="_blank" rel="nofollow" title="Share on Twitter" href="http://twitter.com/share?url=http%3A%2F%2Fcode-tricks.com%2Fsimple-css-drop-down-menu%2F&amp;text=Hey%20check%20this%20out"><img alt="twitter" title="Share on Twitter" class="synved-share-image" style="width:24px;margin:0;margin-bottom:5px;margin-right:5px;" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/twitter.png" width="24"></a><a class="synved-social-button synved-social-button-share synved-social-provider-google_plus" data-provider="google_plus" target="_blank" rel="nofollow" title="Share on Google+" href="https://plus.google.com/share?url=http%3A%2F%2Fcode-tricks.com%2Fsimple-css-drop-down-menu%2F"><img alt="google_plus" title="Share on Google+" class="synved-share-image" style="width:24px;margin:0;margin-bottom:5px;margin-right:5px;" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/google_plus.png" width="24"></a><a class="synved-social-button synved-social-button-share synved-social-provider-reddit" data-provider="reddit" target="_blank" rel="nofollow" title="Share on Reddit" href="http://www.reddit.com/submit?url=http%3A%2F%2Fcode-tricks.com%2Fsimple-css-drop-down-menu%2F&amp;title=Simple+CSS+Drop+Down+Menu"><img alt="reddit" title="Share on Reddit" class="synved-share-image" style="width:24px;margin:0;margin-bottom:5px;margin-right:5px;" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/reddit.png" width="24"></a><a class="synved-social-button synved-social-button-share synved-social-provider-pinterest" data-provider="pinterest" target="_blank" rel="nofollow" title="Pin it with Pinterest" href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fcode-tricks.com%2Fsimple-css-drop-down-menu%2F&amp;media=&amp;description=Simple+CSS+Drop+Down+Menu"><img alt="pinterest" title="Pin it with Pinterest" class="synved-share-image" style="width:24px;margin:0;margin-bottom:5px;margin-right:5px;" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/pinterest.png" width="24"></a><a class="synved-social-button synved-social-button-share synved-social-provider-linkedin" data-provider="linkedin" target="_blank" rel="nofollow" title="Share on Linkedin" href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http%3A%2F%2Fcode-tricks.com%2Fsimple-css-drop-down-menu%2F&amp;title=Simple+CSS+Drop+Down+Menu"><img alt="linkedin" title="Share on Linkedin" class="synved-share-image" style="width:24px;margin:0;margin-bottom:5px;margin-right:5px;" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/linkedin.png" width="24"></a><a class="synved-social-button synved-social-button-share synved-social-provider-mail" data-provider="mail" target="" rel="nofollow" title="Share by email" href="mailto:?subject=Simple+CSS+Drop+Down+Menu&amp;body=Hey%20check%20this%20out:%20http%3A%2F%2Fcode-tricks.com%2Fsimple-css-drop-down-menu%2F"><img alt="mail" title="Share by email" class="synved-share-image" style="width:24px;margin:0;margin-bottom:5px;" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/mail.png" width="24"></a><!--<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://code-tricks.com/simple-css-drop-down-menu/"
+    dc:identifier="http://code-tricks.com/simple-css-drop-down-menu/"
+    dc:title="Simple CSS Drop Down Menu"
+    trackback:ping="http://code-tricks.com/simple-css-drop-down-menu/trackback/" />
+</rdf:RDF>-->
+		</div><!-- end .entry-content -->
+		<div class="post-meta"><span class="categories">Filed Under: <a href="http://code-tricks.com/css/" title="View all posts in CSS" rel="category tag">CSS</a>, <a href="http://code-tricks.com/html/" title="View all posts in HTML" rel="category tag">HTML</a></span>  <span class="tags">Tagged With: <a href="http://code-tricks.com/tag/css-2/" rel="tag">css</a></span> </div><div class="after-post widget-area"><div id="newsletterwidget-3" class="widget widget_newsletterwidget"><div class="widget-wrap"><h4 class="widgettitle">SIGN UP TO OUR NEWSLETTER</h4>
+Stay tuned with latest updates on Web technologies, subscribe to our newsletter. We'll not spam your inbox.
+
+<script type="text/javascript">
+//<![CDATA[
+if (typeof newsletter_check !== "function") {
+window.newsletter_check = function (f) {
+    var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+    if (!re.test(f.elements["ne"].value)) {
+        alert("The email is not correct");
+        return false;
+    }
+    if (f.elements["ny"] && !f.elements["ny"].checked) {
+        alert("You must accept the privacy statement");
+        return false;
+    }
+    return true;
+}
+}
+//]]>
+</script>
+
+<div class="newsletter newsletter-widget">
+
+<script type="text/javascript">
+//<![CDATA[
+if (typeof newsletter_check !== "function") {
+window.newsletter_check = function (f) {
+    var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+    if (!re.test(f.elements["ne"].value)) {
+        alert("The email is not correct");
+        return false;
+    }
+    if (f.elements["ny"] && !f.elements["ny"].checked) {
+        alert("You must accept the privacy statement");
+        return false;
+    }
+    return true;
+}
+}
+//]]>
+</script>
+
+<form action="http://code-tricks.com/wp-content/plugins/newsletter/do/subscribe.php" onsubmit="return newsletter_check(this)" method="post"><input name="nr" value="widget" type="hidden"><p><input class="newsletter-email" required="" name="ne" value="Email" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue" type="email"></p><p><input class="newsletter-submit" value="Subscribe" type="submit"></p></form></div></div></div>
+</div>
+	</div><!-- end .postclass -->
+			<div id="comments">
+			<h3>Comments</h3>			<ol class="comment-list">
+				
+	<li class="comment even thread-even depth-1" id="comment-396">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/f34a8cdcadebe6d839a99ce0498f204f.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://codezample.com/" rel="external nofollow" class="url">Jesus</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-396">June 4, 2013 at 12:22 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Thank you for sharing your easy to follow tutorial on css drop down menu. Please feel free to share your sample code at <a href="http://codezample.com/" rel="nofollow">http://codezample.com/</a> so we can easily demo your work. Thanks again!</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=396#respond" onclick='return addComment.moveForm("comment-396", "396", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-406">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/667ade76ddfc796f72a4dd7ab4145cca.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Mail</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-406">June 4, 2013 at 3:17 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>CSS drop-down menu is good for Chrome and Firefox  but for IE 
+(6/7+) will not give odd results.  If simple Jquery is included in the 
+menu, then it will perform in all browsers.  For better Jquery drop down
+ menu (light weight), please check the following web page:</p>
+<p><a href="http://www.freemenu.info/2013/05/js-menu.html" rel="nofollow">http://www.freemenu.info/2013/05/js-menu.html</a><br>
+<a href="http://www.freemenu.info/2013/06/js10.html" rel="nofollow">http://www.freemenu.info/2013/06/js10.html</a></p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=406#respond" onclick='return addComment.moveForm("comment-406", "406", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-420">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/a877e3b076abd844aaa32334194cfa11.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Adam Sykes</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-420">June 5, 2013 at 6:32 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi,<br>
+I can’t get this to work. Pelase can you let me know where each section of code is to go?</p>
+<p>Regards<br>
+adam</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=420#respond" onclick='return addComment.moveForm("comment-420", "420", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor odd alt depth-2" id="comment-482">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-482">June 15, 2013 at 1:42 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi Adam,</p>
+<p>Simply copy the HTML part into .html file and CSS into “style” tag or
+ into .css file. Don’t forget to include the external style sheet in the
+ HTML file using “link” tag.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=482#respond" onclick='return addComment.moveForm("comment-482", "482", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-624">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/aec0e10cdf637f3646dd70823f305699.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Tinker</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-624">June 25, 2013 at 6:15 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>How can I add a third level sub menu?</p>
+<p>thank you!<br>
+Tinker</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=624#respond" onclick='return addComment.moveForm("comment-624", "624", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor odd alt depth-2" id="comment-665">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-665">July 6, 2013 at 8:35 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Insert one more UL into second level LI where you want your third 
+level to work and write the same CSS to display the third level menu by 
+referring to it.</p>
+<p>You can try changing the following:</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css">ul#menu li ul.sub-menu,  ul#menu li &gt;  ul &gt; li ul.sub-menu{
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">none</span></span>;
+    <span class="css-property">position<span class="css-selector">:</span><span class="css-value"> absolute</span></span>;
+    <span class="css-property">top<span class="css-selector">:</span><span class="css-value"> 30px</span></span>;
+    <span class="css-property">left<span class="css-selector">:</span><span class="css-value"> 0</span></span>;
+    <span class="css-property">width<span class="css-selector">:</span><span class="css-value"> 100px</span></span>;
+}
+ul#menu li:hover ul.sub-menu,  ul#menu li &gt; ul &gt;  li:hover ul.sub-menu{
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">block</span></span>;
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=665#respond" onclick='return addComment.moveForm("comment-665", "665", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-654">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/3e1a3f908c5b545543c70eec390a4714.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://techbuzindia.blogspot.com/" rel="external nofollow" class="url">Mayuresh</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-654">June 30, 2013 at 5:13 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hey I tried this<br>
+/* HTML PART*/<br>
+NOTE : REmove # from HTML Part only<br>
+**************************************</p>
+<pre><div id="fvch-codeblock-0" class="fvch-codeblock"><table><tbody><tr><td class="fvch-line-numbers"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="html"><span class="html-other-element">&lt;div id=<span class="html-attribute">"navmenu"</span>&gt;</span>
+<span class="html-other-element">&lt;ul&gt;</span>
+  <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Home <span class="html-anchor-element">&lt;/a&gt;</span><span class="html-other-element">&lt;/li&gt;</span>
+  <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>OS <span class="html-anchor-element">&lt;/a&gt;</span><span class="html-other-element">&lt;/li&gt;</span>
+  <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Windows <span class="html-anchor-element">&lt;/a&gt;</span><span class="html-other-element">&lt;/li&gt;</span>
+  <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Linux <span class="html-anchor-element">&lt;/a&gt;</span><span class="html-other-element">&lt;/li&gt;</span>
+  <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Mac <span class="html-anchor-element">&lt;/a&gt;</span><span class="html-other-element">&lt;/li&gt;</span>
+  <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>About Us <span class="html-anchor-element">&lt;/a&gt;</span><span class="html-other-element">&lt;/li&gt;</span>
+  <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Contact us <span class="html-anchor-element">&lt;/a&gt;</span><span class="html-other-element">&lt;/li&gt;</span>
+  <span class="html-other-element">&lt;li&gt;</span><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"#"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Disclamer <span class="html-anchor-element">&lt;/a&gt;</span><span class="html-other-element">&lt;/li&gt;</span>
+<span class="html-other-element">&lt;/ul&gt;</span>
+<span class="html-other-element">&lt;/div&gt;</span></span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p><!-- End of Drop Down list --></p>
+<p>/*And now the CSS PART*/<br>
+NOTE: Do not delete # from CSS part!!!</p>
+<div id="fvch-codeblock-1" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-1"><span class="css">#navmenu ul {<span class="css-property">padding<span class="css-selector">:</span><span class="css-value">0</span></span>;line-hight:30pt;;<span class="css-property">max-width<span class="css-selector">:</span><span class="css-value">900pt</span></span>;<span class="css-property">margin<span class="css-selector">:</span><span class="css-value">0</span></span>;<span class="css-property">margin-left<span class="css-selector">:</span><span class="css-value">auto</span></span>;}
+#navmenu li {<span class="css-property">list-style<span class="css-selector">:</span><span class="css-value">none</span></span>;<span class="css-property">float<span class="css-selector">:</span><span class="css-value">left</span></span>;<span class="css-property">position<span class="css-selector">:</span><span class="css-value">relative</span></span>;}
+#navmenu ul li a {
+<span class="css-property">background-color<span class="css-selector">:</span><span class="css-value"> #00CCFF</span></span>;
+<span class="css-property">display<span class="css-selector">:</span><span class="css-value"> block</span></span>;
+<span class="css-property">height<span class="css-selector">:</span><span class="css-value"> 30pt</span></span>;
+<span class="css-property">width<span class="css-selector">:</span><span class="css-value"> 150px</span></span>;
+<span class="css-property">color<span class="css-selector">:</span><span class="css-value"> #FFF</span></span>;
+<span class="css-property">text-decoration<span class="css-selector">:</span><span class="css-value"> none</span></span>;
+<span class="css-property">text-align<span class="css-selector">:</span><span class="css-value"> center</span></span>;
+<span class="css-property">border-right-width<span class="css-selector">:</span><span class="css-value"> 1pt</span></span>;
+<span class="css-property">border-bottom-width<span class="css-selector">:</span><span class="css-value"> 1pt</span></span>;
+<span class="css-property">border-left-width<span class="css-selector">:</span><span class="css-value"> 1pt</span></span>;
+<span class="css-property">border-right-style<span class="css-selector">:</span><span class="css-value"> solid</span></span>;
+<span class="css-property">border-bottom-style<span class="css-selector">:</span><span class="css-value"> solid</span></span>;
+<span class="css-property">border-left-style<span class="css-selector">:</span><span class="css-value"> solid</span></span>;
+<span class="css-property">border-right-color<span class="css-selector">:</span><span class="css-value"> #333</span></span>;
+<span class="css-property">border-bottom-color<span class="css-selector">:</span><span class="css-value"> #000</span></span>;
+<span class="css-property">border-left-color<span class="css-selector">:</span><span class="css-value"> #999</span></span>;
+<span class="css-property">line-height<span class="css-selector">:</span><span class="css-value"> 30pt</span></span>;
+<span class="css-property">font-family<span class="css-selector">:</span><span class="css-value"> Georgia</span></span>;
+<span class="css-property">font-weight<span class="css-selector">:</span><span class="css-value"> bold</span></span>;
+}
+#navmenu ul li a:hover{
+<span class="css-property">background-color<span class="css-selector">:</span><span class="css-value"> #FFF</span></span>;
+<span class="css-property">color<span class="css-selector">:</span><span class="css-value"> #0CF</span></span>;
+}
+#navmenu ul li ul {
+<span class="css-property">position<span class="css-selector">:</span><span class="css-value"> absolute</span></span>;
+<span class="css-property">visibility<span class="css-selector">:</span><span class="css-value"> hidden</span></span>;
+}
+#navmenu ul li:hover ul {
+<span class="css-property">visibility<span class="css-selector">:</span><span class="css-value"> visible</span></span>;
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>I hope you may like this!</p>
+		</pre></div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=654#respond" onclick='return addComment.moveForm("comment-654", "654", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-660">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/b010b88bf84e72279b217416a4d6dbb5.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">raju</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-660">July 4, 2013 at 1:18 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>thanks for your simple and easy understanding code</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=660#respond" onclick='return addComment.moveForm("comment-660", "660", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-664">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-664">July 6, 2013 at 8:29 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Glad to know, it helped.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=664#respond" onclick='return addComment.moveForm("comment-664", "664", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-676">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/407877e583ddcf9cbea512c4299eb6b1.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Noah</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-676">July 19, 2013 at 5:37 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi, great tutorial.<br>
+How would the CSS go if you wanted to make the top link have a background image and the sub menu not?  I tried<br>
+this with the code and it gave a background to the submenu’s as well.  Here is my css:</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css"><span class="css-comment">/*Initialize*/</span>
+ul#menu2, ul#menu2 ul.sub-menu {
+    <span class="css-property">padding<span class="css-selector">:</span><span class="css-value">0</span></span>;
+    <span class="css-property">margin<span class="css-selector">:</span><span class="css-value"> 0</span></span>;
+}
+ul#menu2 li, ul#menu2 ul.sub-menu li {
+    <span class="css-property">list-style-type<span class="css-selector">:</span><span class="css-value"> none</span></span>;
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value"> inline-block</span></span>;
+}
+<span class="css-comment">/*Link Appearance*/</span>
+ul#menu2 li a, ul#menu2 li ul.sub-menu li a {
+    <span class="css-property">text-decoration<span class="css-selector">:</span><span class="css-value"> none</span></span>;
+    <span class="css-property">color<span class="css-selector">:</span><span class="css-value"> #fff</span></span>;
+    <span class="css-property">background<span class="css-selector">:</span><span class="css-value"> none</span></span>;
+    <span class="css-property">background-image<span class="css-selector">:</span><span class="css-value">url(<span class="css-string">'/img/link_bacgkround_image.png'</span>)</span></span>;
+    <span class="css-property">padding<span class="css-selector">:</span><span class="css-value"> 18px</span></span>;
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">inline-block</span></span>;
+}
+<span class="css-comment">/*Make the parent of sub-menu relative*/</span>
+ul#menu2 li {
+    <span class="css-property">position<span class="css-selector">:</span><span class="css-value"> relative</span></span>;
+}
+<span class="css-comment">/*sub menu*/</span>
+ul#menu2 li ul.sub-menu {
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">none</span></span>;
+    <span class="css-property">position<span class="css-selector">:</span><span class="css-value"> absolute</span></span>;
+    <span class="css-property">top<span class="css-selector">:</span><span class="css-value"> 30px</span></span>;
+    <span class="css-property">left<span class="css-selector">:</span><span class="css-value"> 0</span></span>;
+    <span class="css-property">width<span class="css-selector">:</span><span class="css-value"> 100px</span></span>;
+    <span class="css-property">background<span class="css-selector">:</span><span class="css-value">none</span></span>;
+}
+ul#menu2 li:hover ul.sub-menu {
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">block</span></span>;
+    <span class="css-property">background<span class="css-selector">:</span><span class="css-value">none</span></span>;
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=676#respond" onclick='return addComment.moveForm("comment-676", "676", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment even depth-2" id="comment-677">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/407877e583ddcf9cbea512c4299eb6b1.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Noah</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-677">July 19, 2013 at 6:04 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Nevermind, I found that putting the first  in a  and adding the css line </p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css">ul#menu2 span.firstmenu a{
+<span class="css-property">background-image<span class="css-selector">:</span><span class="css-value">url(<span class="css-string">'/img/settings_icon.png'</span>)</span></span>;
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>did the trick</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=677#respond" onclick='return addComment.moveForm("comment-677", "677", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-708">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/25e56a28ab5eacdc104fef97de432cc9.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://karenafox.com/" rel="external nofollow" class="url">Karen</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-708">July 27, 2013 at 11:57 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>I’m having trouble getting this menu to show up as horizontal.  Is
+ it because it’s in a table cell?   Everything else works but that.    
+Here is menu code.  Only thing I changed in the CSS was the background 
+color.</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="html"><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"index.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Home<span class="html-anchor-element">&lt;/a&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"bio.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>About<span class="html-anchor-element">&lt;/a&gt;</span>
+                    
+                        <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"bio.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Bio<span class="html-anchor-element">&lt;/a&gt;</span>
+                        <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"media.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Media/Press<span class="html-anchor-element">&lt;/a&gt;</span>
+                    
+                
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"books.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Books<span class="html-anchor-element">&lt;/a&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"events.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Events<span class="html-anchor-element">&lt;/a&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"newsletter.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Newsletter<span class="html-anchor-element">&lt;/a&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"contact.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Contact<span class="html-anchor-element">&lt;/a&gt;</span></span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=708#respond" onclick='return addComment.moveForm("comment-708", "708", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-709">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/25e56a28ab5eacdc104fef97de432cc9.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://karenafox.com/" rel="external nofollow" class="url">Karen</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-709">July 27, 2013 at 11:58 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Sorry, forgot code blocks.</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="html"><span class="html-anchor-element">&lt;a href=<span class="html-attribute">"index.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Home<span class="html-anchor-element">&lt;/a&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"bio.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>About<span class="html-anchor-element">&lt;/a&gt;</span>
+                    
+                        <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"bio.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Bio<span class="html-anchor-element">&lt;/a&gt;</span>
+                        <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"media.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Media/Press<span class="html-anchor-element">&lt;/a&gt;</span>
+                    
+                
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"books.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Books<span class="html-anchor-element">&lt;/a&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"events.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Events<span class="html-anchor-element">&lt;/a&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"newsletter.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Newsletter<span class="html-anchor-element">&lt;/a&gt;</span>
+                <span class="html-anchor-element">&lt;a href=<span class="html-attribute">"contact.html"</span> rel=<span class="html-attribute">"nofollow"</span>&gt;</span>Contact<span class="html-anchor-element">&lt;/a&gt;</span></span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=709#respond" onclick='return addComment.moveForm("comment-709", "709", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-710">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/8ea08a7011edfef4e44715444963c86a.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">vasu</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-710">July 28, 2013 at 2:50 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>plz tell how to make it run !!!</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=710#respond" onclick='return addComment.moveForm("comment-710", "710", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-1507">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1507">August 17, 2013 at 2:22 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Copy the HTML into html file and copy the CSS into style tag or 
+external stylesheet. Once you get the similar result try changing them 
+to suit your needs. If you are new to web development then search Google
+ for HTML and CSS tutorials.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1507#respond" onclick='return addComment.moveForm("comment-1507", "1507", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-711">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/8ea08a7011edfef4e44715444963c86a.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">vasu</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-711">July 28, 2013 at 2:51 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>how to run both html and css code plz help</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=711#respond" onclick='return addComment.moveForm("comment-711", "711", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-712">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-712">July 28, 2013 at 3:52 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>HTML in .html file and CSS in either style tag or external style sheet. Learn more on <a target="blank" href="http://www.tizag.com/cssT/" rel="nofollow">CSS</a> and <a target="blank" href="http://www.tizag.com/htmlT/" rel="nofollow">HTML</a>.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=712#respond" onclick='return addComment.moveForm("comment-712", "712", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-729">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/e21ba6bc35b5a03c6b116508181e02a4.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">sebin</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-729">July 29, 2013 at 12:28 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>I just change some styles…</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css">ul#menu li ul.sub-menu {
+    <span class="css-property">height<span class="css-selector">:</span><span class="css-value">0px</span></span>;
+    <span class="css-property">position<span class="css-selector">:</span><span class="css-value"> absolute</span></span>;
+    <span class="css-property">top<span class="css-selector">:</span><span class="css-value"> 30px</span></span>;
+    <span class="css-property">left<span class="css-selector">:</span><span class="css-value"> 0</span></span>;
+    <span class="css-property">width<span class="css-selector">:</span><span class="css-value"> 100px</span></span>; <span class="css-property">overflow<span class="css-selector">:</span><span class="css-value">hidden</span></span>;
+    <span class="css-property">-moz-transition<span class="css-selector">:</span><span class="css-value">all 500ms</span></span>;
+    <span class="css-property">-webkit-transition<span class="css-selector">:</span><span class="css-value">all 500ms</span></span>;
+    <span class="css-property">-o-transition<span class="css-selector">:</span><span class="css-value">all 500ms</span></span>;
+    transition:all 500ms;
+        
+}
+ul#menu li:hover ul.sub-menu {
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">block</span></span>;
+    <span class="css-property">height<span class="css-selector">:</span><span class="css-value">100px
+</span></span>}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>Look How it works… <img src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/icon_smile.gif" alt=":)" class="wp-smiley"> </p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=729#respond" onclick='return addComment.moveForm("comment-729", "729", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-1501">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1501">August 17, 2013 at 2:07 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi Sebin,<br>
+That’s a nice CSS3 code. But, if you find trouble in IE browsers than 
+you can use jQuery to do this stuff. Such as using slide down to get the
+ same effect.</p>
+<p>Thanks</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1501#respond" onclick='return addComment.moveForm("comment-1501", "1501", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-768">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/44eaf1f523df2d3e2aa94e5454cba394.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Matija</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-768">July 30, 2013 at 10:29 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>This helped me a lot, thx!!</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=768#respond" onclick='return addComment.moveForm("comment-768", "768", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-1506">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1506">August 17, 2013 at 2:20 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>You’re welcome</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1506#respond" onclick='return addComment.moveForm("comment-1506", "1506", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1393">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/41dd54ed068e508aea647f9d84651daa.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://dawnhorsepress.com/" rel="external nofollow" class="url">Michael Harings</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1393">August 14, 2013 at 11:09 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>unify submenu lengths w/ one line of css:</p>
+<p>In order for all sub-menu items to have the same length, simply add:</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css"><span class="css-comment">/*sub menu*/</span>
+ul#menu li ul.sub-menu {...
+--&amp;gt;<span class="css-property">background-color<span class="css-selector">:</span><span class="css-value"> #666</span></span>;}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>An accidental discovery!</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1393#respond" onclick='return addComment.moveForm("comment-1393", "1393", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-1394">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1394">August 14, 2013 at 11:40 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi Michael, </p>
+<p>Could you please correct the above code..</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1394#respond" onclick='return addComment.moveForm("comment-1394", "1394", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-1418">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/ba6de69508bf5e9f596e156fa91501db.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Shinhye</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1418">August 15, 2013 at 7:22 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Gee thanks, really helps.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1418#respond" onclick='return addComment.moveForm("comment-1418", "1418", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-1505">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1505">August 17, 2013 at 2:20 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>I’m glad it worked for you.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1505#respond" onclick='return addComment.moveForm("comment-1505", "1505", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1440">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/4a967b6eb8f338b1c292fa80dd74129d.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.anthonyteacher.com/" rel="external nofollow" class="url">Anthony</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1440">August 15, 2013 at 5:55 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hello. Thanks for the simple code. I implemented your code on my 
+website, but the issue I am having is that moving my mouse off the 
+parent element and onto the submenu is not easy. The submenu constantly 
+disappears. </p>
+<p>Here is how I modified the CSS: <a href="http://pastebin.com/bgEduZ3S" rel="nofollow">http://pastebin.com/bgEduZ3S</a>. Is there any way you can take a look and let me know if I did something wrong?</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1440#respond" onclick='return addComment.moveForm("comment-1440", "1440", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-1504">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1504">August 17, 2013 at 2:19 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi Anthony,</p>
+<p>Such problem does occur when there’s a more gap between tier one tab 
+and tier 2 tab, you can eradicate this problem by simply reducing the 
+gap between them.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1504#respond" onclick='return addComment.moveForm("comment-1504", "1504", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-1441">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/60506c748989f71bd8297c7c4954ab8d.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Lily</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1441">August 15, 2013 at 6:04 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Thanks so much for this code – really helpful.  I now have the 
+drop down working, but I want to apply different styling to the top tab,
+ compared to the sub menu items.  Can I do this?  I’ve created rounded 
+borders at the top of the drop down (so they look like file tabs), but 
+my sub menu items also appear with the rounded border effect as well.  I
+ just want these to be plain, without borders.  Where can I specify that
+ I want the formatting to be different between the “top” menu and sub 
+menu?  Thanks!</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1441#respond" onclick='return addComment.moveForm("comment-1441", "1441", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-1502">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1502">August 17, 2013 at 2:13 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi Lily,</p>
+<p>You can give rounded corners to first tier tabs and no links to 
+second tier by using the following code. (I’m assuming that you’ve given
+ radius for anchor tag.)</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css">ul#menu2 li &gt; ul.sub-menu li a{
+   <span class="css-property">border<span class="css-selector">:</span><span class="css-value"> 0</span></span>;
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>If you need border but not border-radius than you can use border-radius property.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1502#respond" onclick='return addComment.moveForm("comment-1502", "1502", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1493">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/726ae441ca152ef78a298f6a0d521f62.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Azhar Youssef</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1493">August 16, 2013 at 10:05 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Thanks Tirumal so much for your great effort.</p>
+<p>I would like to create a drop-down menu with 2 columns. I used the CSS code below:</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css">.sub-menu {
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value"> inline-block</span></span>;
+    <span class="css-property">width<span class="css-selector">:</span><span class="css-value"> 350px <span class="css-important">!important</span></span></span>;
+    <span class="css-property">text-align<span class="css-selector">:</span><span class="css-value"> center</span></span>;
+}
+
+.sub-menu li {
+    <span class="css-property">width<span class="css-selector">:</span><span class="css-value"> 50% <span class="css-important">!important</span></span></span>;
+}
+
+.sub-menu li:nth-child(even) {
+    <span class="css-property">float<span class="css-selector">:</span><span class="css-value"> right</span></span>;
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>The sub-menu looks cool, but the tabs look large. How to make it smaller.<br>
+Here is a screenshot of my sub-menu:<br>
+<a href="http://i.imgur.com/blGVuId.png" rel="nofollow">http://i.imgur.com/blGVuId.png</a></p>
+<p>I’m looking forward to hearing from yo!</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1493#respond" onclick='return addComment.moveForm("comment-1493", "1493", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-1500">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1500">August 17, 2013 at 2:04 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi Azhar,</p>
+<p>You could make the first tier anchors to display block and set it’s 
+font-size and padding to adjust the height. Also, you can scale the 
+element using height and width.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1500#respond" onclick='return addComment.moveForm("comment-1500", "1500", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment odd alt depth-3" id="comment-1508">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/726ae441ca152ef78a298f6a0d521f62.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Azhar Youssef</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1508">August 17, 2013 at 2:52 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Thanks so much for your quick response.<br>
+Would you please give me an example for modifications I can do?<br>
+Actually, I’m new learner of CSS.<br>
+Waiting for your response!</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1508#respond" onclick='return addComment.moveForm("comment-1508", "1508", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-4" id="comment-1542">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1542">August 17, 2013 at 6:47 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Please post your entire code or the live site.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1542#respond" onclick='return addComment.moveForm("comment-1542", "1542", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-1718">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/e6fd6d060b73fbd976ca20a95970bde6.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Saranya</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1718">August 20, 2013 at 8:14 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi,<br>
+  I tried with your code as given in the top. The menus are displaying 
+as such i.e the sub level menus are getting displayed inspite of 
+hovering over the menu.Could you tell where did i went wrong?</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1718#respond" onclick='return addComment.moveForm("comment-1718", "1718", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-1722">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1722">August 20, 2013 at 10:11 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>You should try hiding the sub-menu when the page loads using CSS 
+display:none. When the you hover on the parent list item then you’ve to 
+display the sub-menu using the following:</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css">ul#menu li:hover ul.sub-menu {
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">block</span></span>;
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1722#respond" onclick='return addComment.moveForm("comment-1722", "1722", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-1832">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/6a68d604ca8a7630c74fd14775bc3efd.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://sd45.bc.ca/" rel="external nofollow" class="url">CThanorda</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1832">August 23, 2013 at 3:48 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi there – Just integrated your code into a new web deisign. Looks
+ great in all devices and most browsers. We are just having a problem 
+with IE10. Any ideas on how to fix for IE 10? Where the menu should be 
+there is simply white space with no links. I have been reading that IE10
+ is proving problematic with these drop-downs. Any help you could give 
+me would be appreciated. I cannot replicate on my computer with any of 
+my browsers – and I am using IE10 – but others are experiencing the 
+problem.</p>
+<p>Thanks so much CT</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1832#respond" onclick='return addComment.moveForm("comment-1832", "1832", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-1851">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/1130cda51de4d4f19eed585a443ce809.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.facegfx.com/" rel="external nofollow" class="url">Toomy Ngo</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-1851">August 23, 2013 at 1:08 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>this solution has working on internet explorer 7?</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=1851#respond" onclick='return addComment.moveForm("comment-1851", "1851", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor odd alt depth-2" id="comment-2056">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-2056">August 27, 2013 at 12:25 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi Toomy, </p>
+<p>Could you please tell me what problems are you facing on Explorer 7.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=2056#respond" onclick='return addComment.moveForm("comment-2056", "2056", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-2856">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/9669b6e3a315627551cd84e2108bcc2d.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://riandesign.web.id/" rel="external nofollow" class="url">Kang Rian</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-2856">September 13, 2013 at 8:27 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>This is the AWESOME TUTORIAL! simple but perfect .. thanks author ^_^ i love your tutorial so much ..</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=2856#respond" onclick='return addComment.moveForm("comment-2856", "2856", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-3086">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/a7340690032d054077a2f96f140ad312.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://near.my.id/" rel="external nofollow" class="url">Azhar</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3086">September 23, 2013 at 10:02 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>After over 3 months, now i understand it completely after i did a research in:</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css">ul#menu li:hover ul.sub-menu {
+    <span class="css-property">display<span class="css-selector">:</span><span class="css-value">block</span></span>;
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>Thank you <img src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/icon_smile.gif" alt=":)" class="wp-smiley"><br>
+<span class="cluv">Azhar recently posted…<a class="41a4ed47f2 3086" href="http://feedproxy.google.com/%7Er/NearAsAGeek/%7E3/3I74qik_6Mk/">Liputan Acara CompFest 2013 di Balairung UI</a><span class="heart_tip_box"><img class="heart_tip u 3086" alt="My Profile" style="border:0" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/littleheart.gif" height="14" width="16"></span></span></p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3086#respond" onclick='return addComment.moveForm("comment-3086", "3086", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-3090">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3090">September 23, 2013 at 10:25 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>You are welcome.<br>
+<span class="cluv">Tirumal recently posted…<a class="93adf93ab1 3090" href="http://code-tricks.com/asynchronously-load-javascript/">Asynchronously Load Javascript</a><span class="heart_tip_box"><img class="heart_tip u 3090" alt="My Profile" style="border:0" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/littleheartplus.gif" height="14" width="16"></span></span></p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3090#respond" onclick='return addComment.moveForm("comment-3090", "3090", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3128">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/177718923a522f685b7cf13a151f7c7b.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.digitalpod.co.uk/" rel="external nofollow" class="url">Matthew Stapleford</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3128">September 29, 2013 at 1:47 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Thanks for sharing the drop down menu. I have tested this and it 
+works really well. Love that you have managed to achieve this with only a
+ small amount of code as keeps the html and css files nice and small.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3128#respond" onclick='return addComment.moveForm("comment-3128", "3128", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-3129">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/1336c583902c49ba24ba3d391498faed.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://startwithbasix.com/" rel="external nofollow" class="url">gremeir</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3129">September 29, 2013 at 11:34 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>thank you for this tutorial. i am currently building my own wordpress theme for my site <a href="http://startwithbasix.com/" rel="nofollow">http://startwithbasix.com</a> and i don’t know what to do. i find other tutorial very complex that is why stick to your work.<br>
+<span class="cluv">gremeir recently posted…<a class="7cbcf76b17 3129" href="http://startwithbasix.com/find-perfect-domain-guides-blogging-part-4/">Find your perfect Domain – Guides to Blogging Part 4</a><span class="heart_tip_box"><img class="heart_tip u 3129" alt="My Profile" style="border:0" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/littleheart.gif" height="14" width="16"></span></span></p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3129#respond" onclick='return addComment.moveForm("comment-3129", "3129", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3160">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/59bb0f1500928469c64d420cfeed8be2.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">askari</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3160">October 9, 2013 at 10:06 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>thanx sir</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3160#respond" onclick='return addComment.moveForm("comment-3160", "3160", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-3161">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3161">October 9, 2013 at 11:45 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>You are Welcome <img src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/icon_smile.gif" alt=":-)" class="wp-smiley"><br>
+<span class="cluv">Tirumal recently posted…<a class="6a2045d2d1 3161" href="http://code-tricks.com/asynchronously-load-javascript/">Asynchronously Load Javascript</a><span class="heart_tip_box"><img class="heart_tip u 3161" alt="My Profile" style="border:0" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/littleheartplus.gif" height="14" width="16"></span></span></p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3161#respond" onclick='return addComment.moveForm("comment-3161", "3161", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-3162">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/b32f5a6dac9672288be6141b5e9ca68a.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Jeremy</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3162">October 9, 2013 at 9:03 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Thanks for the code. I am using it and it works great. I have a 
+question, when I mouse over a parent item with a sub menu, my hover 
+style shows on the parent item, sub menu appears, perfect. But when I 
+move my mouse to the sub menu, my hover style on the parent disappears. 
+Do you know how to have the parent #menu stay active while .sub-menu is 
+open and my mouse in on a sub menu?</p>
+<p>Thanks for taking the time to post this tutorial.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3162#respond" onclick='return addComment.moveForm("comment-3162", "3162", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment even depth-2" id="comment-3259">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2befe47950b5cbc08666b9e4f16039bf.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Hana</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3259">December 3, 2013 at 6:41 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>having the same problem!</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3259#respond" onclick='return addComment.moveForm("comment-3259", "3259", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor odd alt depth-3" id="comment-3260">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3260">December 3, 2013 at 8:53 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>You can select sub menu something like this : </p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css">ul#menu li &gt; ul.sub-menu &gt; li &gt; a {
+
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>and, apply the style only for sub-menu.</p>
+<p>For active classes you can use jQuery. Read my post on how to create simple dropdown menu with CSS and jQuery.<br>
+<a href="http://code-tricks.com/dropdown-menu-with-css-and-jquery-including-css-arrows/" rel="nofollow">Dropdown menu with CSS and jQuery including CSS arrows.</a></p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3260#respond" onclick='return addComment.moveForm("comment-3260", "3260", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-3171">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/7ce8a1951273329581a88a2aa8e1e943.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Bhejisa</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3171">October 17, 2013 at 1:06 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>May you please help if this css doc is written corrently. am 
+trying to complete an assignment on html. it should have seven pages 
+with each menu having sub-menues. please help</p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css">a {<span class="css-property">text-decoration<span class="css-selector">:</span><span class="css-value">none</span></span>;}
+
+body {<span class="css-property">background-color<span class="css-selector">:</span><span class="css-value">grey</span></span>;}
+
+h1{<span class="css-property">color<span class="css-selector">:</span><span class="css-value">red</span></span>;<span class="css-property">text-align<span class="css-selector">:</span><span class="css-value"><span class="css-string">"right"</span></span></span>;
+<span class="css-property">font-family<span class="css-selector">:</span><span class="css-value"><span class="css-string">"Lucida Calligraphy"</span></span></span>;}
+
+h2{<span class="css-property">color<span class="css-selector">:</span><span class="css-value"><span class="css-string">"black"</span></span></span>;<span class="css-property">text-align<span class="css-selector">:</span><span class="css-value"><span class="css-string">"center"</span></span></span>;
+<span class="css-property">font-family<span class="css-selector">:</span><span class="css-value"><span class="css-string">"Lucida Calligraphy"</span></span></span>}
+
+p{<span class="css-property">font-family<span class="css-selector">:</span><span class="css-value"><span class="css-string">"Lucida Calligraphy"</span></span></span>;
+<span class="css-property">font-size<span class="css-selector">:</span><span class="css-value">25px</span></span>;
+<span class="css-property">text-indent<span class="css-selector">:</span><span class="css-value">20px</span></span>;
+<span class="css-property">word-spacing<span class="css-selector">:</span><span class="css-value">5px
+text-color:brown</span></span>;}
+
+div.img
+{
+  <span class="css-property">margin<span class="css-selector">:</span><span class="css-value"> 2px</span></span>;
+  <span class="css-property">border<span class="css-selector">:</span><span class="css-value"> 1px solid #0000ff</span></span>;
+  <span class="css-property">height<span class="css-selector">:</span><span class="css-value"> auto</span></span>;
+  <span class="css-property">width<span class="css-selector">:</span><span class="css-value"> auto</span></span>;
+  <span class="css-property">float<span class="css-selector">:</span><span class="css-value"> left</span></span>;
+  <span class="css-property">text-align<span class="css-selector">:</span><span class="css-value"> center</span></span>;
+}   
+div.img img
+{
+  <span class="css-property">display<span class="css-selector">:</span><span class="css-value"> inline</span></span>;
+  <span class="css-property">margin<span class="css-selector">:</span><span class="css-value"> 3px</span></span>;
+  <span class="css-property">border<span class="css-selector">:</span><span class="css-value"> 1px solid #ffffff</span></span>;
+}
+div.img a:hover img {<span class="css-property">border<span class="css-selector">:</span><span class="css-value"> 1px solid #0000ff</span></span>;}
+div.desc
+{
+  <span class="css-property">text-align<span class="css-selector">:</span><span class="css-value"> center</span></span>;
+  <span class="css-property">font-weight<span class="css-selector">:</span><span class="css-value"> normal</span></span>;
+  <span class="css-property">width<span class="css-selector">:</span><span class="css-value"> 120px</span></span>;
+  <span class="css-property">margin<span class="css-selector">:</span><span class="css-value"> 2px</span></span>;
+}
+th{<span class="css-property">background-color<span class="css-selector">:</span><span class="css-value">chocolate</span></span>;
+<span class="css-property">color<span class="css-selector">:</span><span class="css-value">white</span></span>;
+<span class="css-property">font-family<span class="css-selector">:</span><span class="css-value">Lucida Calligraphy</span></span>;
+<span class="css-property">text-align<span class="css-selector">:</span><span class="css-value">auto</span></span>;}
+<span class="css-media">}</span>
+ul{<span class="css-property">list-style-type<span class="css-selector">:</span><span class="css-value">none</span></span>;
+<span class="css-property">margin<span class="css-selector">:</span><span class="css-value">0</span></span>;
+<span class="css-property">padding<span class="css-selector">:</span><span class="css-value">0</span></span>;
+<span class="css-property">overflow<span class="css-selector">:</span><span class="css-value">hidden</span></span>;
+}
+li{<span class="css-property">float<span class="css-selector">:</span><span class="css-value">left</span></span>;}
+a{<span class="css-property">display<span class="css-selector">:</span><span class="css-value">block</span></span>;
+<span class="css-property">width<span class="css-selector">:</span><span class="css-value">80px</span></span>;
+<span class="css-property">background-color<span class="css-selector">:</span><span class="css-value">#dddddd</span></span>;
+}
+
+links{<span class="css-property">color<span class="css-selector">:</span><span class="css-value">blue</span></span>;}
+
+div{<span class="css-property">cursor<span class="css-selector">:</span><span class="css-value"><span class="css-string">"auto"</span></span></span>;}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3171#respond" onclick='return addComment.moveForm("comment-3171", "3171", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor odd alt depth-2" id="comment-3189">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3189">November 1, 2013 at 11:59 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>No, you are not doing it correctly. You are floating the li 
+element and there is no li:hover pseudo class described anywhere. Please
+ follow the instruction in the post.<br>
+<span class="cluv">Tirumal recently posted…<a class="0e897413fe 3189" href="http://code-tricks.com/javascript-speech-recognition-library/">Javascript Speech Recognition Library</a><span class="heart_tip_box"><img class="heart_tip u 3189" alt="My Profile" style="border:0" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/littleheartplus.gif" height="14" width="16"></span></span></p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3189#respond" onclick='return addComment.moveForm("comment-3189", "3189", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-3181">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/357a20e8c56e69d6f9734d23ef9517e8.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">ajay</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3181">October 28, 2013 at 12:24 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>thanks</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3181#respond" onclick='return addComment.moveForm("comment-3181", "3181", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3182">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/edc9e3d502a10d94401b7814dfeb32b4.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.moorespark.com/" rel="external nofollow" class="url">Matt</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3182">October 31, 2013 at 12:02 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hey, I’ve got basically the same thing on my site (with no drop 
+downs), the problem I’m having is that when the page is loading, the nav
+ menu is displayed as a list in the upper left-hand corner of the page, 
+and then when it loads it looks like it should.  How do I keep it from 
+showing the list during page load?  Thanks for any help.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3182#respond" onclick='return addComment.moveForm("comment-3182", "3182", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-3188">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3188">November 1, 2013 at 11:55 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>You can use jQuery to detect the document load event and display block the list items.<br>
+<span class="cluv">Tirumal recently posted…<a class="a6d4774330 3188" href="http://code-tricks.com/javascript-speech-recognition-library/">Javascript Speech Recognition Library</a><span class="heart_tip_box"><img class="heart_tip u 3188" alt="My Profile" style="border:0" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/littleheartplus.gif" height="14" width="16"></span></span></p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3188#respond" onclick='return addComment.moveForm("comment-3188", "3188", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-even depth-1" id="comment-3191">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/e552788543d9ef4fc58f850e09f36dc4.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://w3schoo.com/" rel="external nofollow" class="url">shakeel khan</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3191">November 4, 2013 at 2:17 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hey this is very easy side, I’ve got basically the same thing on 
+my site (with no drop downs), the problem I’m having is that when the 
+page is loading, the nav menu is displayed as a list in the upper 
+left-hand corner of the page, and then when it loads it looks like it 
+should. How do I keep it from showing the list during page load? Thanks 
+for any help.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3191#respond" onclick='return addComment.moveForm("comment-3191", "3191", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment even thread-odd thread-alt depth-1" id="comment-3194">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/765f55e183b46699e76c761fac19981c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Jon</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3194">November 7, 2013 at 1:34 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Code is working fine, but I have two questions:<br>
+1. I would like to make the sub-menu background aligned on the left/right side, so it\’s not jagged. How can I do this?<br>
+2. How can I add mouseover effects to the links (i.e. color, underline)?</p>
+<p>Thanks<br>
+Jon</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3194#respond" onclick='return addComment.moveForm("comment-3194", "3194", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor odd alt depth-2" id="comment-3195">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3195">November 8, 2013 at 1:05 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Hi Jon,</p>
+<p>1. To align the sub menu background just change the left property for <code>ul#menu li ul.sub-menu</code>.<br>
+2. To change the color and text-decoration for sub menu and main menu you can do the following : </p>
+<div id="fvch-codeblock-0" class="fvch-codeblock">
+<table>
+<tbody><tr>
+<td class="fvch-line-numbers">
+<pre>1
+2
+3
+4
+</pre>
+</td>
+<td class="fvch-code">
+<pre id="fvch-code-0"><span class="css">ul#menu li a:hover, ul#menu li:hover ul.sub-menu li a:hover {
+    <span class="css-property">text-decoration<span class="css-selector">:</span><span class="css-value"> underline</span></span>;
+    <span class="css-property">color<span class="css-selector">:</span><span class="css-value"> tan</span></span>;
+}</span></pre>
+</td>
+</tr>
+</tbody></table>
+</div>
+<p>Regards<br>
+<span class="cluv">Tirumal recently posted…<a class="995e36986a 3195" href="http://code-tricks.com/javascript-speech-recognition-library/">Javascript Speech Recognition Library</a><span class="heart_tip_box"><img class="heart_tip u 3195" alt="My Profile" style="border:0" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/littleheartplus.gif" height="14" width="16"></span></span></p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3195#respond" onclick='return addComment.moveForm("comment-3195", "3195", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-3238">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/fbc896936c550c66325aa4f309f77c70.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Allan</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3238">November 24, 2013 at 6:17 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Actually, your code isn’t self-explanatory. You don’t explain why 
+it needs position:relative and position:absolute, and I have always been
+ taught that using position: at all, is a bad thing. Could you clarify 
+this at all?</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3238#respond" onclick='return addComment.moveForm("comment-3238", "3238", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3281">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/0a5d3ce7413e7a0c81eb8779d705f6e9.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Jeff</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3281">December 8, 2013 at 2:35 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Nice code. Thanks. How do you have a one font color and background
+ for menu and another for submenu items. Also, how do you toggle font 
+color and background for selected submenu items?</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3281#respond" onclick='return addComment.moveForm("comment-3281", "3281", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="comment-3289">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/0bf7bd03a1ff705b2e546d9d76d44b3f.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.prabaweb.webs.com/" rel="external nofollow" class="url">Prabaweb</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3289">December 10, 2013 at 12:56 PM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>it is awsome tuts.</p>
+<p>thanks</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3289#respond" onclick='return addComment.moveForm("comment-3289", "3289", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="comment-3294">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/709646ac64024cae9857e766b4e15b31.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn">Simon</cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3294">December 11, 2013 at 2:51 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>I find a problem with the demo (for Macs at least) is that when 
+you hover over the menus 2 and 4 and try to move down to the sub nav, 
+the sub nav disappears because of the gap. It’s worse for webkit 
+browsers (Safari, Chrome) but is still a problem to Firefox as well. Is 
+this just a Mac problem?</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3294#respond" onclick='return addComment.moveForm("comment-3294", "3294", "respond", "422")'>Reply</a>		</div>
+
+		<ul class="children">
+
+	<li class="comment byuser comment-author-tirumal bypostauthor even depth-2" id="comment-3302">
+
+		
+		<div class="comment-header">
+			<div class="comment-author vcard">
+				<img alt="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/2d7557f27e7d4e25331ddd9a2c4e115c.jpeg" class="avatar avatar-48 photo" height="48" width="48">				<cite class="fn"><a href="http://www.code-tricks.com/" rel="external nofollow" class="url">Tirumal</a></cite> <span class="says">says:</span>		 	</div><!-- end .comment-author -->
+
+			<div class="comment-meta commentmetadata">
+				<a href="http://code-tricks.com/simple-css-drop-down-menu/#comment-3302">December 12, 2013 at 7:34 AM</a>
+							</div><!-- end .comment-meta -->
+		</div>
+
+		<div class="comment-content">
+			
+			<p>Just decrease the gap by negative value for “top” of the sub-menu.</p>
+		</div><!-- end .comment-content -->
+
+		<div class="reply">
+			<a class="comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/?replytocom=3302#respond" onclick='return addComment.moveForm("comment-3302", "3302", "respond", "422")'>Reply</a>		</div>
+
+		</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+			</ol>
+			<div class="navigation">
+				<div class="alignleft"></div>
+				<div class="alignright"></div>
+			</div>
+		</div><!--end #comments-->
+										<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Speak Your Mind <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://code-tricks.com/simple-css-drop-down-menu/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="http://code-tricks.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+						<div class="wpcci_instructions">	<div class="wpcci_icon"> 	
+								<img src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/dialog-information.png" alt="dialog-information.png">
+							</div>	<p><strong>Code highlighting instructions</strong></p>
+
+<p>Use <code>{code type=language}</code> for code highlighting.
+For example, if you are using Javascript code then use the following to wrap.
+</p>
+<p>
+<code>{code type=javascript}<br>
+   //Your code here<br>
+{/code}</code><br>
+</p><p>
+<strong>or for PHP, use:</strong><br>
+</p><p>
+<code>{code type=PHP}<br>
+  // Your code here<br>
+{/code}</code></p>
+								<div class="wpcci_clearing">&nbsp;</div>
+							</div>																				<p class="comment-form-author"><input id="author" name="author" size="30" tabindex="1" aria-required="true" type="text"><label for="author">Name</label> <span class="required">*</span></p><!-- #form-section-author .form-section -->
+<p class="comment-form-email"><input id="email" name="email" size="30" tabindex="2" aria-required="true" type="text"><label for="email">Email</label> <span class="required">*</span></p><!-- #form-section-email .form-section -->
+<p class="comment-form-url"><input id="url" name="url" size="30" tabindex="3" type="text"><label for="url">Website</label></p><!-- #form-section-url .form-section -->
+												<div id="zrx_captcha">
+  <p>Security Code</p>
+  <label>
+    <input name="publicKey" maxlength="6" tabindex="3" type="text">
+    <img src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/captcha_reload.gif" onclick="setTimeout('reloadCaptcha()', 10)" style="cursor:pointer" title="Request a new image" alt=""><img id="simple_captcha" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/gdimg.png" alt=""></label>
+</div><p class="comment-form-comment"><textarea id="comment" name="comment" cols="45" rows="8" tabindex="4" aria-required="true"></textarea></p><!-- #form-section-comment .form-section -->												<p class="form-submit">
+							<input name="submit" id="submit" value="Post Comment" type="submit">
+							<input name="comment_post_ID" value="422" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+						</p>
+						<p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="ee7b7f29c7" type="hidden"></p><input value="" name="cl_post_title" id="cl_post_title" type="hidden"><input value="" name="cl_post_url" id="cl_post_url" type="hidden"><input value="" name="cl_prem" id="cl_prem" type="hidden"><div id="commentluv"><div id="cl_messages"></div><input id="doluv" name="doluv" checked="checked" type="checkbox"><span id="mylastpost"><img alt="CommentLuv badge" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/CL91_default.png"></span><span id="showmorespan"><img class="clarrow" id="showmore" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/down-arrow.gif" alt="Show more posts" title="Show more posts" style="display:none;"></span></div><div id="lastposts" style="display:none;"></div><script src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/a" type="text/javascript"></script><div id="commentPreview"></div><noscript>
+<br />
+<br />
+<div align="center" style="background-color:#FFBFC1; border:solid 1px #B30004; color: #B30004; padding: 3px;">You need to enable javascript in order to use Simple CAPTCHA.</div>
+</noscript>
+<script type="text/javascript">
+//<![CDATA[
+var count = 0;
+	// Reload the CAPTCHA
+	function reloadCaptcha() {
+		frm = document.getElementById("simple_captcha");
+		opacity("simple_captcha", 100, 0, 300);
+		count++;
+		frm.src = "http://code-tricks.com/wp-content/plugins/simpleCAPTCHA/gdimg.php?re=" + count;
+		opacity("simple_captcha", 0, 100, 300);
+	}
+	
+	// Change opacity
+	function opacity(id, opacStart, opacEnd, millisec) {
+		//speed for each frame
+		var speed = Math.round(millisec / 100);
+		var timer = 0;
+	
+		//determine the direction for the blending, if start and end are the same nothing happens
+		if(opacStart > opacEnd) {
+			for(i = opacStart; i >= opacEnd; i--) {
+				setTimeout("changeOpac(" + i + ",'" + id + "')",(timer * speed));
+				timer++;
+			}
+		} else if(opacStart < opacEnd) {
+			for(i = opacStart; i <= opacEnd; i++)
+				{
+				setTimeout("changeOpac(" + i + ",'" + id + "')",(timer * speed));
+				timer++;
+			}
+		}
+	}
+
+	// Change the opacity for different browsers
+	function changeOpac(opacity, id) {
+		var object = document.getElementById(id).style;
+		object.opacity = (opacity / 100);
+		object.MozOpacity = (opacity / 100);
+		object.KhtmlOpacity = (opacity / 100);
+		object.filter = "alpha(opacity=" + opacity + ")";
+	} 
+	
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+
+for( i = 0; i < document.forms.length; i++ ) {
+	if( typeof(document.forms[i].publicKey) != 'undefined' ) {
+		commentForm = document.forms[i].comment.parentNode;
+		break;
+	}
+}
+var commentArea = commentForm.parentNode;
+var captchafrm = document.getElementById("zrx_captcha");
+commentArea.insertBefore(captchafrm, commentForm);
+//commentArea.publicKey.size = commentArea.author.size;
+//commentArea.publicKey.className = commentArea.author.className;
+//]]>
+</script>
+					</form>
+							</div><!-- #respond -->
+								</div><!-- end #content -->
+		<div id="sidebar" class="sidebar widget-area">
+<div id="execphp-6" class="widget widget_execphp"><div class="widget-wrap">			
+			<div class="execphpwidget">
+<div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/49391/azcarbon_2_1_0_VERTDARK"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+
+</div>
+		</div></div>
+<div id="search-5" class="widget widget_search"><div class="widget-wrap">
+		<form method="get" class="searchform search-form" action="http://code-tricks.com/">
+			
+			<input value="Search this website…" name="s" class="s search-input" onfocus="if (this.value == 'Search this website…') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search this website…';}" type="text">
+			<input class="searchsubmit search-submit" value="Search" type="submit">
+		</form>
+	</div></div>
+<div id="newsletterwidget-2" class="widget widget_newsletterwidget"><div class="widget-wrap"><h4 class="widgettitle">SIGN UP TO OUR NEWSLETTER</h4>
+Stay tuned with latest updates on Web technologies, subscribe to our newsletter. We'll not spam your inbox.
+
+<script type="text/javascript">
+//<![CDATA[
+if (typeof newsletter_check !== "function") {
+window.newsletter_check = function (f) {
+    var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+    if (!re.test(f.elements["ne"].value)) {
+        alert("The email is not correct");
+        return false;
+    }
+    if (f.elements["ny"] && !f.elements["ny"].checked) {
+        alert("You must accept the privacy statement");
+        return false;
+    }
+    return true;
+}
+}
+//]]>
+</script>
+
+<div class="newsletter newsletter-widget">
+
+<script type="text/javascript">
+//<![CDATA[
+if (typeof newsletter_check !== "function") {
+window.newsletter_check = function (f) {
+    var re = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-]{1,})+\.)+([a-zA-Z0-9]{2,})+$/;
+    if (!re.test(f.elements["ne"].value)) {
+        alert("The email is not correct");
+        return false;
+    }
+    if (f.elements["ny"] && !f.elements["ny"].checked) {
+        alert("You must accept the privacy statement");
+        return false;
+    }
+    return true;
+}
+}
+//]]>
+</script>
+
+<form action="http://code-tricks.com/wp-content/plugins/newsletter/do/subscribe.php" onsubmit="return newsletter_check(this)" method="post"><input name="nr" value="widget" type="hidden"><p><input class="newsletter-email" required="" name="ne" value="Email" onclick="if (this.defaultValue==this.value) this.value=''" onblur="if (this.value=='') this.value=this.defaultValue" type="email"></p><p><input class="newsletter-submit" value="Subscribe" type="submit"></p></form></div></div></div>
+<div id="text-11" class="widget widget_text"><div class="widget-wrap"><h4 class="widgettitle">Follow {code-tricks} on Twitter</h4>
+			<div class="textwidget"><div><iframe style="width: 168px; height: 28px;" data-twttr-rendered="true" title="Twitter Follow Button" class="twitter-follow-button twitter-follow-button" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/follow_button.html" allowtransparency="true" id="twitter-widget-0" frameborder="0" scrolling="no"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div></div>
+		</div></div>
+<div id="text-12" class="widget widget_text"><div class="widget-wrap"><h4 class="widgettitle">Like {code-tricks} on facebook</h4>
+			<div class="textwidget"><div fb-iframe-plugin-query="app_id=487384324676998&amp;color_scheme=light&amp;header=true&amp;height=400&amp;href=https%3A%2F%2Fwww.facebook.com%2Fcodetricks&amp;locale=en_US&amp;sdk=joey&amp;show_border=true&amp;show_faces=true&amp;stream=false" fb-xfbml-state="rendered" class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/codetricks" data-height="400" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"><span style="vertical-align: bottom; width: 300px; height: 400px;"><iframe class="" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/like_box.html" style="border: medium none; visibility: visible; width: 300px; height: 400px;" title="fb:like_box Facebook Social Plugin" allowtransparency="true" name="f2eb625cb974ac8" frameborder="0" height="400px" scrolling="no" width="1000px"></iframe></span></div></div>
+		</div></div>
+		<div id="recent-posts-3" class="widget widget_recent_entries"><div class="widget-wrap">		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+					<li>
+				<a href="http://code-tricks.com/how-to-get-thumbnail-for-youtube-video/" title="How to Get Thumbnail for YouTube Video">How to Get Thumbnail for YouTube Video</a>
+							<span class="post-date">December 16, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/start-stop-and-reset-javascript-setinterval/" title="Start, Stop and Reset Javascript SetInterval">Start, Stop and Reset Javascript SetInterval</a>
+							<span class="post-date">December 12, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/convert-the-image-to-base64-data-stream/" title="Convert the Image to base64 data stream">Convert the Image to base64 data stream</a>
+							<span class="post-date">December 12, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/target-only-firefox-browser-with-css-hacks/" title="Target only Firefox Browser with CSS Hacks">Target only Firefox Browser with CSS Hacks</a>
+							<span class="post-date">December 12, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/top-hosting-service-for-node-js/" title="Top Hosting Service for Node.js">Top Hosting Service for Node.js</a>
+							<span class="post-date">December 5, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/gmail-js-javascript-api-for-gmail/" title="Gmail.js – JavaScript API for Gmail">Gmail.js – JavaScript API for Gmail</a>
+							<span class="post-date">December 3, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/echo-js-simple-javascript-image-lazy-loading/" title="Echo.js, simple JavaScript image lazy loading">Echo.js, simple JavaScript image lazy loading</a>
+							<span class="post-date">December 3, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/code-standards-for-web-developers/" title="Code Standards for Web Developers">Code Standards for Web Developers</a>
+							<span class="post-date">November 22, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/highlight-a-div-and-fade-others-using-css/" title="Highlight a DIV and fade others using CSS">Highlight a DIV and fade others using CSS</a>
+							<span class="post-date">November 21, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/awesome-blockquote-styling-with-css/" title="Awesome Blockquote Styling with CSS">Awesome Blockquote Styling with CSS</a>
+							<span class="post-date">November 20, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/tools-of-trade-for-web-developer-and-designer/" title="Tools of trade for Web Developer and Designer">Tools of trade for Web Developer and Designer</a>
+							<span class="post-date">November 13, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/find-empty-elements/" title="Find empty elements">Find empty elements</a>
+							<span class="post-date">November 12, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/remove-dotted-outline-from-html-elements/" title="Remove dotted outline from HTML elements">Remove dotted outline from HTML elements</a>
+							<span class="post-date">November 8, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/javascript-speech-recognition-library/" title="Javascript Speech Recognition Library">Javascript Speech Recognition Library</a>
+							<span class="post-date">October 25, 2013</span>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/offset-scroll-to-anchor-tag-with-jquery/" title="Offset Scroll to Anchor Tag with jQuery">Offset Scroll to Anchor Tag with jQuery</a>
+							<span class="post-date">October 23, 2013</span>
+						</li>
+				</ul>
+		</div></div>
+<div id="text-9" class="widget widget_text"><div class="widget-wrap"><h4 class="widgettitle">Find me</h4>
+			<div class="textwidget"><p>My <a href="http://wordpress.org/support/profile/tirumal" target="_blank">Wordpress Profile</a></p>
+<p>My <a href="https://github.com/tirumal" target="_blank">github Profile</a></p>
+</div>
+		</div></div>
+<div id="text-13" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><a href="http://pagerank.chromefans.org/" target="_blank" title="Online PageRank Checker, PageRank Checker for Chrome"><img src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/a.gif" alt="PageRank Checker" style="border:0px"></a></div>
+		</div></div>
+</div>
+	</div><!-- end #content-sidebar-wrap -->
+	<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-38309945-1']);
+_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+</div><!-- end .wrap --></div><!-- end #inner --><div id="footer-widgets" class="footer-widgets"><div class="wrap"><div class="footer-widgets-1 widget-area">		<div id="recent-posts-5" class="widget widget_recent_entries"><div class="widget-wrap">		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+					<li>
+				<a href="http://code-tricks.com/how-to-get-thumbnail-for-youtube-video/" title="How to Get Thumbnail for YouTube Video">How to Get Thumbnail for YouTube Video</a>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/start-stop-and-reset-javascript-setinterval/" title="Start, Stop and Reset Javascript SetInterval">Start, Stop and Reset Javascript SetInterval</a>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/convert-the-image-to-base64-data-stream/" title="Convert the Image to base64 data stream">Convert the Image to base64 data stream</a>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/target-only-firefox-browser-with-css-hacks/" title="Target only Firefox Browser with CSS Hacks">Target only Firefox Browser with CSS Hacks</a>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/top-hosting-service-for-node-js/" title="Top Hosting Service for Node.js">Top Hosting Service for Node.js</a>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/gmail-js-javascript-api-for-gmail/" title="Gmail.js – JavaScript API for Gmail">Gmail.js – JavaScript API for Gmail</a>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/echo-js-simple-javascript-image-lazy-loading/" title="Echo.js, simple JavaScript image lazy loading">Echo.js, simple JavaScript image lazy loading</a>
+						</li>
+					<li>
+				<a href="http://code-tricks.com/code-standards-for-web-developers/" title="Code Standards for Web Developers">Code Standards for Web Developers</a>
+						</li>
+				</ul>
+		</div></div>
+</div><div class="footer-widgets-2 widget-area"><div id="text-8" class="widget widget_text"><div class="widget-wrap">			<div data-twttr-id="twttr-sandbox-0" class="textwidget"><iframe title="Twitter Timeline" style="border: medium none; max-width: 100%; min-width: 180px;" class="twitter-timeline twitter-timeline-rendered" allowtransparency="true" id="twitter-widget-1" frameborder="0" height="400" scrolling="no" width="300"></iframe>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+		</div></div>
+</div><div class="footer-widgets-3 widget-area"><div id="search-4" class="widget widget_search"><div class="widget-wrap"><h4 class="widgettitle">Search</h4>
+
+		<form method="get" class="searchform search-form" action="http://code-tricks.com/">
+			
+			<input value="Search this website…" name="s" class="s search-input" onfocus="if (this.value == 'Search this website…') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search this website…';}" type="text">
+			<input class="searchsubmit search-submit" value="Search" type="submit">
+		</form>
+	</div></div>
+<div id="archives-3" class="widget widget_archive"><div class="widget-wrap"><h4 class="widgettitle">Archive</h4>
+		<ul>
+			<li><a href="http://code-tricks.com/2013/12/" title="December 2013">December 2013</a>&nbsp;(7)</li>
+	<li><a href="http://code-tricks.com/2013/11/" title="November 2013">November 2013</a>&nbsp;(6)</li>
+	<li><a href="http://code-tricks.com/2013/10/" title="October 2013">October 2013</a>&nbsp;(2)</li>
+	<li><a href="http://code-tricks.com/2013/09/" title="September 2013">September 2013</a>&nbsp;(12)</li>
+	<li><a href="http://code-tricks.com/2013/08/" title="August 2013">August 2013</a>&nbsp;(14)</li>
+	<li><a href="http://code-tricks.com/2013/07/" title="July 2013">July 2013</a>&nbsp;(10)</li>
+	<li><a href="http://code-tricks.com/2013/05/" title="May 2013">May 2013</a>&nbsp;(7)</li>
+	<li><a href="http://code-tricks.com/2013/04/" title="April 2013">April 2013</a>&nbsp;(5)</li>
+	<li><a href="http://code-tricks.com/2013/03/" title="March 2013">March 2013</a>&nbsp;(8)</li>
+	<li><a href="http://code-tricks.com/2013/02/" title="February 2013">February 2013</a>&nbsp;(22)</li>
+		</ul>
+</div></div>
+<div id="text-5" class="widget widget_text"><div class="widget-wrap">			<div class="textwidget"><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/"><img alt="Creative Commons License" style="border-width:0" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/88x31.png"></a><br>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/">Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License</a>.</div>
+		</div></div>
+</div></div><!-- end .wrap --></div><div id="footer" class="footer"><div class="wrap"><div class="gototop"><a href="#wrap" rel="nofollow">Top of Page</a></div><div class="creds">Copyright © 2013 <a href="http://code-tricks.com/" title="Code-Tricks rel=" nofollow""="">Code-Tricks</a> | <a target="_blank" href="http://www.wordpress.org/">Made with Wordpress</a></div></div><!-- end .wrap --></div><!-- end #footer -->
+</div><!-- end #wrap -->
+				<script type="text/javascript"><!--
+			var seriesdropdown = document.getElementById("orgseries_dropdown");
+			if (seriesdropdown) { 
+			 function onSeriesChange() {
+					if ( seriesdropdown.options[seriesdropdown.selectedIndex].value != ( 0 || -1 ) ) {
+						location.href = "http://code-tricks.com/series/"+seriesdropdown.options[seriesdropdown.selectedIndex].value;
+					}
+				}
+				seriesdropdown.onchange = onSeriesChange;
+			}
+			--></script>
+			<div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/xd_arbiter.html" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0" scrolling="no"></iframe><iframe src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/xd_arbiter_002.html" style="border: medium none;" tab-index="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0" scrolling="no"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/ping.html" style="display: none;" allowtransparency="true" name="f48a50fd12639e" frameborder="0" scrolling="no"></iframe></div></div></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=487384324676998";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<!-- BuySellAds Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds Ad Code --><script type="text/javascript" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/superfish.js"></script>
+<script type="text/javascript" src="Simple%20CSS%20Drop%20Down%20Menu%20%7C%20Code-Tricks_files/superfish_002.js"></script>
+
+
+<span id="heart_tip_big" style="display: none;position:absolute; z-index: 1001; background-color: white; color: black; width: 62px;"></span><iframe style="display: none;" allowtransparency="true" id="rufous-sandbox" frameborder="0" scrolling="no"></iframe></body></html>

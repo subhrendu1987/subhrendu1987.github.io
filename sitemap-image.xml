@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<!-- created by Clegent Online Sitemap Generator www.clegent.com -->
+<!-- Features of Clegent XML Sitemap generator: -->
+<!-- 1. It follows robots.txt file to exclude URLs. -->
+<!-- 2. It follows Meta Robots Tag to exclude URLs. -->
+<!-- 3. It follows Canonical Tags if you choose. -->
+<!-- 4. It does not add 404, 302, and 301 URLs. -->
+<!-- 5. It does not add Email Ids. -->
+<!-- 6. It excludes commented HTML code. -->
+<!-- 7. You can exclude all URLs from deep directories. -->
+<url>
+<loc>http://iitg.ernet.in/stud/subhrendu</loc>
+<image:image>
+<image:loc>http://iitg.ernet.in/stud/subhrendu/Picture/iitg_web_mid.gif</image:loc>
+<image:caption>IITG_LOGO</image:caption>
+</image:image>
+</url>
+<url>
+<loc>http://iitg.ernet.in/stud/subhrendu/contact.html</loc>
+<image:image>
+<image:loc>http://iitg.ernet.in/stud/subhrendu/Picture/Formal.jpg</image:loc>
+<image:caption>Subhrendu</image:caption>
+</image:image>
+</url>
+<url>
+<loc>http://iitg.ernet.in/stud/subhrendu/academics.html</loc>
+<image:image>
+<image:loc>http://iitg.ernet.in/stud/subhrendu/Picture/iitg_web_mid.gif</image:loc>
+<image:caption>IITG_LOGO</image:caption>
+</image:image>
+</url>
+<url>
+<loc>http://iitg.ernet.in/stud/subhrendu/</loc>
+<image:image>
+<image:loc>http://iitg.ernet.in/stud/subhrendu/Picture/iitg_web_mid.gif</image:loc>
+<image:caption>IITG_LOGO</image:caption>
+</image:image>
+</url>
+<url>
+<loc>http://iitg.ernet.in/stud/subhrendu/index.html</loc>
+<image:image>
+<image:loc>http://iitg.ernet.in/stud/subhrendu/Picture/withCap.jpg</image:loc>
+<image:caption>Subhrendu</image:caption>
+</image:image>
+</url>
+</urlset>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name=”description” content=”Personal homepage of Subhrendu Chattopadhyay, a student of Computer Science and Engineering. Find more personal information about him on this site.” />
+	<meta name=”keywords” content=”Subhrendu Chattopadhyay, computer science, student” />
+<meta name=”author” content=”Subhrendu Chattopadhyay” />
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+<title> Homepage of Subhrendu</title>
+<link rel="shortcut icon" href="Picture/rsz_BasicHome.png">
+		<script src="script/menu.js"> </script>
+		<script src='script/jquery.min.js'></script>
+		<script type="text/javascript">
+		/*****************************************/
+		function sizeFrame() {
+			for(i=1;i<5;i++){
+				var F = document.getElementById("pageframe"+i);
+				//alert(F.src);
+				if(F.contentDocument != null) {
+					F.height = F.contentDocument.documentElement.scrollHeight+35; //FF 3.0.11, Opera 9.63, and Chrome
+					//alert("DEBUG="+F.height);
+				} else {
+					F.height = F.contentWindow.document.body.scrollHeight+35; //IE6, IE7 and Chrome
+					//alert("DEBUG="+F.height);
+				}
+			}
+			alert(""+document.getElementById("NavBar1").innerHTML);
+			//$("#NavBar1").trigger('click');
+		}
+		/*****************************************/
+		$('mainframe').ready(function(){
+		for(i=1;i<5;i++){
+			var F = document.getElementById("pageframe"+i);
+				//alert(F.src);
+				if(F.contentDocument != null) {
+					F.height = F.contentDocument.documentElement.scrollHeight+35; //FF 3.0.11, Opera 9.63, and Chrome
+					//alert("DEBUG1="+F.height);
+				} else {
+					F.height = F.contentWindow.document.body.scrollHeight+35; //IE6, IE7 and Chrome
+					//alert("DEBUG2="+F.height);
+				}
+				$("#NavBar1").trigger('click');;
+				//.trigger('click');
+		}
+		});
+		//window.onload=sizeFrame; 
+		/*****************************************/
+		$(function() {
+		  $('a[href*=#]:not([href=#])').click(function() {
+				var $anchor = $(this);
+			    /*
+			    if you want to use one of the easing effects:
+			    $('html, body').stop().animate({
+			        scrollLeft: $($anchor.attr('href')).offset().left
+			    }, 1500,'easeInOutExpo');
+			     */
+			    $('html, body').stop().animate({
+			        scrollLeft: $($anchor.attr('href')).offset().left
+			    }, 1000);
+			    event.preventDefault();
+			});
+		});
+		/*****************************************/
+		</script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" /> 
+		<link href='css/PinyonScript.css' rel='stylesheet' type='text/css'>
+		<link href='css/AlexBrush.css' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' type='text/css' href='css/styles.css' />
+		<script type='text/javascript' src='script/menu_jquery.js'></script>
+	</head>
+
+<!--------------------------------------------------------------------------------------------------->
+<body id="all_body">
+<!--------------------------------------------------------------------------------------------------->
+<center>
+<div id="nav_panel" border="1">
+<!--------------------------------------------------------
+<div id='cssmenu' align="center">
+<ul>
+   <li class='active'><a href='#'><span>Home</span></a></li>
+   <li><a href='#'><span>Products</span></a></li>
+   <li class='has-sub'><a href='#'><span>Company</span></a>
+      <ul>
+         <li><a href='#'><span>About</span></a></li>
+         <li class='last'><a href='#'><span>Location</span></a></li>
+      </ul>
+   </li>
+   <li class='last'><a href='#'><span>Contact</span></a></li>
+</ul>
+</div>
+<!-------------------------------------------------------------------------------------------------->
+	<table class="NavBar1">
+		<tr align="center" width="100%">
+			<td class="Change Hicon" align="center" width="25%">
+				<a id="NavBarLink1" class="NavBarLink NavLink" href="#home" title="Home Page">Home</a>
+			</td>
+		</tr>
+	</table><table class="NavBar2">
+		<tr align="center" width="100%">
+			<td class="Change Aicon" align="center" width="25%">
+				<a id="NavBarLink2" class="NavBarLink NavLink" href="#academics" title="Academic Achievements">Academics</a>
+			</td>
+		</tr>
+	</table><table class="NavBar3">
+			<td class="Change Picon" align="center" width="25%">
+				<a id="NavBarLink3" class="NavBarLink NavLink" href="#publication" title="List of Publication">Publication</a>
+			</td>
+		</tr>
+	</table><table class="NavBar4">
+			<td class="Change Cicon" align="center" width="25%">
+				<a id="NavBarLink4" class="NavBarLink NavLink" href="#contact" title="Contact Information">Contact</a>
+			</td>
+		</tr>
+	</table>
+<!--------------------------------------------------------------------------------------------------->	
+</div>
+</center>
+<!--------------------------------------------------------------------------------------------------->
+<div id="main">
+<table width="400%">
+<!--tr>
+	<td align="center" width="25%">
+		<table width="50%" style="z-index:100;"><tr>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> <img class="icon" src="Picture/empty_small.png" alt="home_icon"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+		</tr></table>
+	</td>
+
+</tr-->
+<tr valign="top">
+	<td align="center" width="25%">
+		<table width="50%" style="z-index:100;"><tr>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> <img class="icon" src="Picture/empty_small.png" alt="home_icon"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+		</tr></table>
+		<!--div class="page_marker_home"><img class="icon" src="Picture/rsz_home_blue.png" alt="home_icon"></div-->
+	</td>
+	<td align="center">
+		<table width="50%"><tr>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> <img class="icon" src="Picture/empty_small.png" alt="acad_icon"></td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+		</tr></table>
+		<!--div class="page_marker_acad"><img class="icon" src="Picture/rsz_acad_blue.png" alt="acad_icon"></div-->
+	<!--/td>
+	<td align="center">
+		<table width="50%"><tr>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> <img class="icon" src="Picture/rsz_publication.png" alt="publication_icon"></td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+		</tr></table>
+		<!--div class="page_marker_pub"><img class="icon" src="Picture/rsz_publication.png" alt="publication_icon"></div-->
+	<!--/td>
+	<td align="center">
+		<table width="50%"><tr>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> </td>
+			<td width="12.5%" align="center"> <img class="icon" src="Picture/rsz_contact_blue2.jpg" alt="contact_icon"></td>
+		</tr></table>
+		<!--div class="page_marker_contact"><img class="icon" src="Picture/rsz_contact_blue2.jpg" alt="contact_icon"></div-->
+	<!--/td>
+</tr-->
+<!------------------------------------------------------------------><!------------------------------------------------------------------>
+<tr valign="top">
+<td width="25%" align="center">
+	<div id="home">
+		<iframe id="pageframe1" name="content" seamless class="contentframe" src="basic_pages/home.html" frameborder="0" onLoad='javascript:sizeFrame();' scroll="no"></iframe> 
+	</div>
+</td>
+<!------------------------------------------------------------------><!------------------------------------------------------------------>	
+<td width="25%" align="center">
+	<div id="academics">
+		<iframe id="pageframe2" name="content" seamless class="contentframe" src="basic_pages/academics.html" frameborder="0" onLoad='javascript:sizeFrame();' scroll="no"></iframe> 
+	</div>
+</td>
+<!------------------------------------------------------------------><!------------------------------------------------------------------>	
+<td width="25%" align="center">
+	<div id="publication">
+		<iframe id="pageframe3" name="content" seamless class="contentframe" src="basic_pages/publication.html" frameborder="0" onLoad='javascript:sizeFrame();' scroll="no"></iframe> 
+	</div>
+</td>
+<!------------------------------------------------------------------><!------------------------------------------------------------------>	
+<td width="25%" align="center">
+	<div id="contact">
+		<iframe id="pageframe4" name="content" seamless class="contentframe" src="basic_pages/contact.html" frameborder="0" onLoad='javascript:sizeFrame();' scroll="no"></iframe> 		
+	</div>
+</td>
+<!------------------------------------------------------------------><!------------------------------------------------------------------>	
+</tr></table>
+</div>
+
+</body>
+</html>

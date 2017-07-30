@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Pinyon Script';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pinyon Script'), local('PinyonScript'), url(PinyonScript.woff) format('woff');
+}

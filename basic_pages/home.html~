@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name=”description” content=”Personal homepage of Subhrendu Chattopadhyay, a student of Computer Science and Engineering. Find more personal information about him on this site.” />
+    <meta name=”keywords” content=”Subhrendu Chattopadhyay, computer science, student” />
+    <meta name=”author” content=”Subhrendu Chattopadhyay” />
+    <meta http-equiv=”content-type” content=”text/html;charset=UTF-8″ />
+		<link rel="stylesheet" type="text/css" href="css/style.css" /> 
+	<title> Homepage </title>
+	<link rel="shortcut icon" href="../Picture/rsz_BasicHome.png">
+	<link href='../css/PinyonScript.css' rel='stylesheet' type='text/css'>
+	<link href='../css/AlexBrush.css' rel='stylesheet' type='text/css'>
+	<!--script type="text/javascript">
+		
+	</script-->
+	
+	</head>
+<!--------------------------------------------------------------------------------------------------->
+<body>
+<!---------------------------------MAIN BODY----------------------------------------------------------->
+<center>
+<table  id="contenttable">
+<tr><td width="30%">
+	<a href="../index.html" target="_top">
+	<div id="MyPicture">
+		<img id="index_img" src="../Picture/withCap.jpg" alt="Subhrendu"> 
+	</div>
+	</a>
+	
+</td>
+<td class="italicfont">
+	I am a M.Tech second year student at <a id="dept_link" target="_top" href="http://www.iitg.ernet.in/cse/">Department of Computer Science and Engineering,
+	 Indian Institute of Technology, Guwahati</a>. Currently I am working under the supervision of Prof. Sukumar Nandi. 
+	 My research interests include Intelligent wireless Mesh and Sensor Networks and Next Generation Wireless Mesh Networks,
+	  Distributed Algorithms and Performance Modelling of Network and Communication System (Wireless Communication).<p>
+	I like to read books. I also like painting and music (Specifically classical, Fusion, Sufi and instrumental).
+</td></table>
+</center>
+<!---------------------------------MAIN BODY END------------------------------------------------------->
+<!--iframe  class="bottomframe" id="bottomlinks" src="Template/BottomLinks.html" style="overflow:hidden;" frameborder="0"></iframe> 
+<!--------------------------------------------------------------------------------------------------->
+</body>
+</html>
