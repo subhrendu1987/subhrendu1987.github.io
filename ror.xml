@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://subhrendu1987.github.io/</title>
+  <link>https://subhrendu1987.github.io/</link>
+
+<item>
+     <link>https://subhrendu1987.github.io/</link>
+     <title> Homepage of Subhrendu</title>
+     <description> Homepage of Subhrendu</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://subhrendu1987.github.io/basic_pages/home.html</link>
+     <title> Homepage </title>
+     <description> Homepage </description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://subhrendu1987.github.io/basic_pages/academics.html</link>
+     <title> Academics </title>
+     <description> Academics </description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://subhrendu1987.github.io/basic_pages/publication.html</link>
+     <title> Publication </title>
+     <description> Publication </description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://subhrendu1987.github.io/basic_pages/contact.html</link>
+     <title> Contact Info </title>
+     <description> Contact Info </description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://subhrendu1987.github.io/Template/BottomLinks.html</link>
+     <title></title>
+     
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://subhrendu1987.github.io/index.html</link>
+     <title> Homepage of Subhrendu</title>
+     <description> Homepage of Subhrendu</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://subhrendu1987.github.io/util/SubhrenduBookmarks.html</link>
+     <title>Bookmarks</title>
+     <description>Bookmarks</description>
+     <ror:updatePeriod>weekly</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
