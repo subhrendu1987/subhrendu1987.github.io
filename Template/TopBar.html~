@@ -3,9 +3,9 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="../css/style.css" /> 
 	</head>
+<body>
 <!--------------------------------------------------------------------------------------------------->
-<!--body>
-	<div class="showhim">HOVER ME
+	<!--div class="showhim">HOVER ME
 	<div class="showme">hai</div>
 </div>
 <!--------------------------------------------------------------------------------------------------->
@@ -13,7 +13,8 @@
 <table width="70%"><tr><td >
 	<a id="NamePlate" href="../index.html" target="_top">
 			<div class="name">Subhrendu Chattopadhyay</div>
-			<div class="nameplate_addr">Department of Computer Science and Engineering<br>
+			<div class="nameplate_addr">RS-2 Lab, Cube 15 <br>
+			Department of Computer Science and Engineering<br>
 			Indian Institute of Technology, Guwahati<br>
 			Assam India 781039</div>
 	</a>
@@ -30,52 +31,16 @@
 <table class="NavBar">
 	<tr align="center">
 		<td class="Change Hicon">
-			<table>
-				<tr><td>
-					<a id="NavBarLink" class="NavLink" href="../index.html" target="_top">Home</a>
-				</td></tr>
-					
-			</table>
+			<a id="NavBarLink" class="NavLink" href="../index.html" target="_top">Home</a>
 		</td>
 		<td class="Change Aicon">
-			<table>
-				<!--tr align="center"><td>
-					<a id="NavBarLink" class="NavLink" href="../academics.html" target="_top">
-					<img class="acad_icon" src="../Picture/rsz_acad.png" alt="acad_icon">
-					</a>
-				</td></tr-->
-				<tr>
-				<a id="NavBarLink" class="NavLink" href="../academics.html" target="_top">
-				<td>
-					Academics
-				</td>
-				</a>
-				</tr>
-			</table>
+			<a id="NavBarLink" class="NavLink" href="../academics.html" target="_top">Academics</a>
 		</td>
 		<td class="Change Picon">
-			<table>
-				<!--tr align="center"><td>
-					<a id="NavBarLink" class="NavLink" href="../publication.html" target="_top">
-					<img class="pub_icon" src="../Picture/rsz_publication.png" alt="publication_icon">
-					</a>
-				</td></tr-->
-				<tr><td>
-					<a id="NavBarLink" class="NavLink" href="../publication.html" target="_top">Publication</a>
-				</td></tr>
-			</table>
+			<a id="NavBarLink" class="NavLink" href="../publication.html" target="_top">Publication</a>
 		</td>
 		<td class="Change Cicon">
-			<table>
-				<!--tr align="center"><td>
-					<a id="NavBarLink" class="NavLink" href="../contact.html" target="_top">
-					<img class="cont_icon" src="../Picture/rsz_contact.png" alt="contact_icon">
-					</a>
-				</td></tr-->
-				<tr><td>
-					<a id="NavBarLink" class="NavLink" href="../contact.html" target="_top">Contact</a>
-				</td></tr>
-			</table>
+			<a id="NavBarLink" class="NavLink" href="../contact.html" target="_top">Contact</a>
 		</td>
 	</tr>
 </table>

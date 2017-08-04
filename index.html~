@@ -19,7 +19,7 @@
 				//alert(F.src);
 				if(F.contentDocument != null) {
 					F.height = F.contentDocument.documentElement.scrollHeight; //FF 3.0.11, Opera 9.63, and Chrome
-					//alert("DEBUG1="+F.height);
+					alert("DEBUG1="+F.height);
 				} else {
 					F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
 					//alert("DEBUG2="+F.height);
