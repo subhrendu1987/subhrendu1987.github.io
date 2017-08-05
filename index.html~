@@ -75,7 +75,7 @@
 <body id="index_body" background="Background/bg_lightwoodfloor.jpg" width="100%">
 <!--------------------------------------------------------------------------------------------------->
 <center>
-<table width="62.5%" border="1">
+<table width="62.5%">
     <tr>
         <td>
 			<div class="name">Subhrendu Chattopadhyay</div>
@@ -121,37 +121,29 @@
 	    <iframe id="footerframe" seamless class="contentframe" src="Template/BottomLinks.html" frameborder="0" onload='javascript:sizeFrame(this);'>
 	    </iframe>
 </td></tr>
-
-
-
 </table>
 </center>
 <!------------------------------------------------->
-<!--tr-->
-        <!------------------------------------------------->
-        <!--td width="10%" valign="top" style="padding:20px"-->
-	        <!------------------------------------------------->
-	        <table class="NavBar" width="100%">
-		        <tr><td><br></td></tr>
-		        <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
-				        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/home.html" title="Home Page">Home</a>
-			    </td></tr>
-			    <tr><td><hr></td></tr>
-		        <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
-				        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/academics.html" title="Academic Achievements">Academics</a>
-		        </td></tr>
-		        <tr><td><hr></td></tr>
-		        <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
-		                <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/publication.html" title="List of Publication">Publication</a>
-		        </td></tr>
-		        <tr><td><hr></td></tr>
-		        <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
-				        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/contact.html" title="Contact Information">Contact</a>
-		        </td></tr>
-		        <tr><td><br></td></tr>
-	        </table>
-        </td>
-        <!------------------------------------------------->
+<table class="NavBar" width="8%" border="1">
+    <tr><td align="center"><br></td></tr>
+    <tr><td class="Change Hicon" align="center">
+	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/home.html" title="Home Page">Home</a>
+    </td></tr>
+    <tr><td><hr></td></tr>
+    <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
+	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/academics.html" title="Academic Achievements">Academics</a>
+    </td></tr>
+    <tr><td><hr></td></tr>
+    <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
+            <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/publication.html" title="List of Publication">Publication</a>
+    </td></tr>
+    <tr><td><hr></td></tr>
+    <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
+	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/contact.html" title="Contact Information">Contact</a>
+    </td></tr>
+    <tr><td><br></td></tr>
+</table>
+<!------------------------------------------------->
 <!--/tr-->
 <!--------------------------------------------------------------------------------------------------->
 <!--div id="sticker_bottom" style="background-image: url(Picture/Aiga_downarrow_inv.gif);"><a href="#footerframe"> Quick Links</a></div>

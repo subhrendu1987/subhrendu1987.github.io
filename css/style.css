@@ -298,7 +298,7 @@ hr {
      border-radius:5px;
      color:#ffffff;
      background:#000000;
-     font-size:120%;
+     font-size:16px;
      font-weight:bold;
      text-decoration:none;
 }
@@ -307,7 +307,7 @@ hr {
     width:25%;
     border-radius:5px;
     background:#C80000;
-    font-size:120%;
+    font-size:16px;
     font-weight:bold;
     text-decoration:none;
     -webkit-transition: all .5s ease-out;  /* Chrome 1-25, Safari 3.2+ */
@@ -462,7 +462,7 @@ th{
     vertical-align:top;
     //background:#000000;
     color:#ffffff;
-    font-size:180%;
+    font-size:20px;
     text-decoration:none;
     font-weight:bold;
     width:100%;
@@ -473,7 +473,7 @@ th{
 }
 a.NavLinkHover:hover{
      color:#ffffff;
-     font-size:150%;
+     font-size:20px;
      align:center;
 }
 
@@ -494,12 +494,11 @@ table{
 .NavBar{
     display:inline-block;
     border:0px solid #333333;
-    width:10%;
     position: fixed;
     z-index:50;
     left:30px;
     top:25%;
-    border-radius:5px;
+    border-radius:10px;
     background: -webkit-linear-gradient(0deg, #000000, #333333); /* For Safari */
     background: -o-linear-gradient(0deg,#000000, #333333); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(0deg,#000000, #333333); /* For Firefox 3.6 to 15 */
