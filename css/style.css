@@ -207,7 +207,8 @@ iframe{
 }
 
 #Logo{
-    padding:10px 40px; 
+    //padding:10px 40px;
+    align:right;
 }
 
 #Logo > img{
@@ -493,7 +494,11 @@ table{
 .NavBar{
     display:inline-block;
     border:0px solid #333333;
-    width:120%;
+    width:10%;
+    position: fixed;
+    z-index:50;
+    left:30px;
+    top:25%;
     border-radius:5px;
     background: -webkit-linear-gradient(0deg, #000000, #333333); /* For Safari */
     background: -o-linear-gradient(0deg,#000000, #333333); /* For Opera 11.1 to 12.0 */
