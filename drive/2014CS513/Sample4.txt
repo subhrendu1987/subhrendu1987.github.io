@@ -1,0 +1,7 @@
+#<Operation>	<Name_info field>	<Priority>
+ 1	        string1                	19	
+ 1		string2         	20
+ 4
+ 2					
+ 3		
+

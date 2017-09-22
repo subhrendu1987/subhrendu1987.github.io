@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS558: Systems Lab </title>
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+
+<link rel="stylesheet" href="Notice/jquery-ui.css" />
+<script src="Notice/jquery-1.9.1.js"></script>
+<script src="Notice/jquery-ui.js"></script>
+
+<script>
+$(function() {
+ $( "#dialog-message" ).dialog({
+  modal: true,
+  buttons: {
+  Ok: function() {
+   $( this ).dialog( "close" );
+   } 
+}});
+});
+</script>
+</head>
+<body>
+<div id="dialog-message" title="Notice">
+ <center>
+	<p style='color:red'> 
+		Assignment 4: Uploaded<br>
+		Assignment 2: Marks uploaded 
+	</p>
+ </center>
+</div>
+<center>
+<h1>CS558: Systems Lab</h1>
+<hr>
+<table><tr>
+	<td><iframe name="sidebar" src="sidebar.html" width="130" height="700"></iframe></td>
+	<td><iframe name="content" src="instructions.html" width="1500" height="700"></iframe></td>
+<div src="content.html"> </div>
+</tr></table>
+<script>
+function myFunction()
+{
+	alert("<b>The submission mailID has been changed. Please submit subsequent assignment to the new mailID</b>");
+}
+
+function goodbye()
+{
+alert("Bye");
+}
+
+</script>
+<div id="note" STYLE="font-family: Arial Black; font-size: 8px; color: black">
+	Last Modified on <script>document.write(document.lastModified);</script>|
+	<br>Copyright &copy 2014 - All Rights Reserved by subhrendu@iitg.ernet.in <br>
+  <a href="ChangePermission.php" target="content">Chmp</a>
+</div>
+</body>
+</html>
+

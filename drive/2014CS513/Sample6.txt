@@ -1,0 +1,9 @@
+nodes	6
+Vertex1	Vertex2	Weight
+1	2	10
+2	3	5
+1	4	20
+3	4	-2
+end
+source		1
+destination	4

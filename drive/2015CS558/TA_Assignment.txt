@@ -1,0 +1,24 @@
+Week 2	(Gale-Shapley)
+1.	Manojit Ghose (Head TA)			J
+2.	Basant Subba				H
+3.	Awnish Kumar				D
+4.	Piyoosh P				I
+5.	Subhrendu Chattopadhyay (Website)	C
+6.	Devendra Malviya			F
+7.	Ramakanth Singh				E
+8.	Lat Sahab				B
+9.	Yashdeep Singh				A
+10.	Pulkit Verma				G
+
+Week 3	(Component Finding)
+
+1.	Manojit Ghose (Head TA)			J
+2.	Basant Subba				H
+3.	Awnish Kumar				I
+4.	Piyoosh P				C
+5.	Subhrendu Chattopadhyay (Website)	D
+6.	Devendra Malviya			B
+7.	Ramakanth Singh				F
+8.	Lat Sahab				E
+9.	Yashdeep Singh				G
+10.	Pulkit Verma				A

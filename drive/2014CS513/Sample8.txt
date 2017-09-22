@@ -1,0 +1,9 @@
+nodes	4
+Vertex1	Vertex2	FlowValue
+1	2	10
+2	3	5
+1	4	20
+3	4	1
+end
+source		1
+sink	4

@@ -10,75 +10,107 @@
 	<table id="ImportantLinks">
 	<tr>
 		<th>Social<hr align="left"></th>
-		<th>Research<hr align="left"></th>
+		<th>Publishers<hr align="left"></th>
 		<th>IIT Guwahati<hr align="left"></th>
-		<th>Hobbies<hr align="left"></th>
-		<th>Others<hr align="left"></th>
+		<th>Research<hr align="left"></th>
+		<th>People<hr align="left"></th>
+		<th>Xtra<hr align="left"></th>
 	</tr>
 	<tr>
 		<td ><table>
 		<tr><td id="ImpLinksCell">
-			<a href="https://www.facebook.com/subhrendu.chattopadhay" id="ImpLinks" target="_top">FaceBook</a><br>
+			<a href="https://www.facebook.com/subhrendu.chattopadhay" id="ImpLinks" target="_blank">FaceBook</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="https://plus.google.com/u/0/+subhrenduchattopadhyay/posts" id="ImpLinks" target="_top">Google+</a><br>
+			<a href="https://plus.google.com/u/0/+subhrenduchattopadhyay/posts" id="ImpLinks" target="_blank">Google+</a><br>
+		</td></tr>
+		<!--tr><td id="ImpLinksCell">
+			<a href="http://www.linkedin.com/" id="ImpLinks" target="_blank">Linkedin</a><br>
+		</td></tr-->
+		<tr><td id="ImpLinksCell">
+			<a href="http://www.informatik.uni-trier.de/~ley/pers/hd/c/Chattopadhyay:Subhrendu.html"  id="ImpLinks" target="_blank">DBLP</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="http://www.linkedin.com/" id="ImpLinks" target="_top">Linkedin</a><br>
+			<a href="http://scholar.google.co.in/citations?user=B0fUBacAAAAJ&hl=en"  id="ImpLinks" target="_blank">Google Scholar</a><br>
 		</td></tr>
 		</td></table>
+		<!------------------------------------------------------------------------------------------------------------------------------------------>
 		<td><table>
 		<tr><td id="ImpLinksCell">
-			<a href="http://scholar.google.co.in/citations?user=B0fUBacAAAAJ&hl=en"  id="ImpLinks" target="_top">Google Scholar</a><br>
+			<a href="http://ieeexplore.ieee.org/Xplore/home.jsp"  id="ImpLinks" target="_blank">IEEE Explore</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="http://dblp.uni-trier.de/"  id="ImpLinks" target="_top">DBLP</a><br>
+			<a href="http://dl.acm.org/dl.cfm"  id="ImpLinks" target="_blank">ACM dl</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="http://ieeexplore.ieee.org/Xplore/home.jsp"  id="ImpLinks" target="_top">IEEE Explore</a><br>
+			<a href="http://www.sciencedirect.com/"  id="ImpLinks" target="_blank">Science Direct</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="http://en.wikipedia.org/wiki/Main_Page"  id="ImpLinks" target="_top">Wikipedia</a><br>
+			<a href="http://bit.do/conferenceranking"  id="ImpLinks" target="_blank">Conf. Rank</a><br>
+		</td></tr>
+		</table></td>
+		<!------------------------------------------------------------------------------------------------------------------------------------------>
+		<td><table>
+		<tr><td id="ImpLinksCell">
+			<a href="http://www.iitg.ernet.in/"  id="ImpLinks" target="_blank">IIT Guwahati</a><br>
+		</td></tr>
+		<tr><td id="ImpLinksCell">
+			<a href="http://www.iitg.ernet.in/cse/"  id="ImpLinks" target="_blank">Dept.of CSE</a><br>
+		</td></tr>
+		<tr><td id="ImpLinksCell">
+			<a href="https://webmail.iitg.ernet.in/src/login.php" id="ImpLinks" target="_blank">Webmail</a><br>
+		</td></tr>
+		<tr><td id="ImpLinksCell">
+			<a href="http://www.iitg.ernet.in/conference-workshop" id="ImpLinks" target="_blank">Conference</a><br>
 		</td></tr>
 		</table></td>
 		<td><table>
+		<!------------------------------------------------------------------------------------------------------------------------------------------>
 		<tr><td id="ImpLinksCell">
-			<a href="http://www.iitg.ernet.in/"  id="ImpLinks" target="_top">IIT Guwahati</a><br>
+			<a href="https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr201004gls.html" id="ImpLinks" target="_blank">Wlan Standard</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="http://www.iitg.ernet.in/cse/"  id="ImpLinks" target="_top">Dept.of CSE</a><br>
+			<a href="http://en.wikipedia.org/wiki/Cognitive_network" id="ImpLinks" target="_blank">Cognitive Networks</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="https://webmail.iitg.ernet.in/src/login.php" id="ImpLinks" target="_top">Webmail</a><br>
+		<a href="https://www.opennetworking.org/sdn-resources/openflow"  id="ImpLinks" target="_blank">Openflow</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="http://www.iitg.ernet.in/conference-workshop" id="ImpLinks" target="_top">Conference</a><br>
+			<a href="https://www.geni.net/"  id="ImpLinks" target="_blank">Geni</a><br>
 		</td></tr>
+		<!--tr><td id="ImpLinksCell">
+			<a href="http://en.bookfi.org/"  id="ImpLinks" target="_blank">e-Books</a><br>
+		</td></tr-->
 		</table></td>
+		<!------------------------------------------------------------------------------------------------------------------------------------------>
 		<td><table>
 		<tr><td id="ImpLinksCell">
-		<a href="http://en.wikipedia.org/wiki/Origami"  id="ImpLinks" target="_top">Origami</a><br>
+		<a href="http://www.iitg.ernet.in/sukumar/" id="ImpLinks" target="_blank">Prof. Nandi</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="http://pencilsketch.in/"  id="ImpLinks" target="_top">Sketches</a><br>
+			<a href="http://cse.iitkgp.ac.in/~sandipc/" id="ImpLinks" target="_blank">Dr. Chakraborty</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="http://en.bookfi.org/"  id="ImpLinks" target="_top">e-Books</a><br>
+			<a href="http://www.iitg.ernet.in/stud/niladri/" id="ImpLinks" target="_blank">Niladri Sett</a><br>
+		</td></tr>
+		<tr><td id="ImpLinksCell">
+			<a href="http://cse.iitkgp.ac.in/~soumadip.biswas/" id="ImpLinks" target="_blank">Soumadip Biswas</a><br>
 		</td></tr>
 		</table></td>
+		<!------------------------------------------------------------------------------------------------------------------------------------------>
 		<td><table>
 		<tr><td id="ImpLinksCell">
-		<a href="http://www.iitg.ernet.in/sukumar/" id="ImpLinks" target="_top">Prof. Nandi</a><br>
+		<a href="http://googledrive.com/host/0ByviSc8y5ocLekwyMDJQQzl2Z28/" id="ImpLinks" target="_blank">TA</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="http://www.iitg.ernet.in/stud/c.sandip/" id="ImpLinks" target="_top">Sandip Chakraborty</a><br>
+			<a href="https://googledrive.com/host/0ByviSc8y5ocLekwyMDJQQzl2Z28/sketchs/" id="ImpLinks" target="_blank">Sketches</a><br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
-			<a href="https://www.ntt-review.jp/archive/ntttechnical.php?contents=ntr201004gls.html" id="ImpLinks" target="_top">Wlan Standard</a><br>
+			<a href="../util/SubhrenduBookmarks.html" id="ImpLinks" target="_blank">Bookmarks</a><br>
 		</td></tr>
-		<tr><td id="ImpLinksCell">
-			<a href="http://en.wikipedia.org/wiki/Cognitive_network" id="ImpLinks" target="_top">Cognitive Networks</a><br>
-		</td></tr>
+		<!--tr><td id="ImpLinksCell">
+			<a href="http://cse.iitkgp.ac.in/~soumadip.biswas/" id="ImpLinks" target="_blank">Soumadip Biswas</a><br>
+		</td></tr-->
 		</table></td>
 	</tr>
 	</table>
