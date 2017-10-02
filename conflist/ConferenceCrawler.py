@@ -31,10 +31,19 @@ def generateHTML(message):
 	f.close()
 ############################################################################
 ConfList=getDictFrom("ConferenceRanking_All.json")
+Confs=[]
+''' Use this part for Full list parsing
+for acronym in ConfList:
+	data=GetConferenceRanking(acronym)
+	if data <> None:
+		Confs=Confs+[data]
+putDictTo("AllCOREdata.json",Confs)
+'''
+''' Use this part for Partial list parsing
 temp=TruncateDict(ConfList,5)
-#Confs= [GetConferenceRanking(acronym) for acronym in ConfList]
-#putDictTo("AllCOREdata.json",Confs)
 Confs= [GetConferenceRanking(acronym) for acronym in temp]#Parse Core WebPage
+'''
+Confs=getDictFrom("AllCOREdata.json")
 ####################################
 SortedConfs = sorted(Confs, key=lambda k: k['Rank']) 
 body1=GetHTMLTemplate("TemplateTop.html")

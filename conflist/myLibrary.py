@@ -57,7 +57,8 @@ def GetConferenceRanking(acronym):
 	try:
 		Results=int(data[LeftPos:RightPos])
 		if Results <>1:
-			print  "ERROR: "+acronym+" Multiple Results"
+			print  "ERROR: "+acronym+" Multiple Results"# implement user choice
+			return(None)
 		DataSoup = BeautifulSoup(data)
 		table=DataSoup.find_all("table")
 		SoupCols=BeautifulSoup(str(table[0]))
@@ -67,6 +68,7 @@ def GetConferenceRanking(acronym):
 		Names=[h.get_text() for h in headers]
 		if (len(Names) <> len(items)):
 			print "ERROR: Table Parsing Problem. "+acronym
+			return(None)
 		TabDict={j:items[i] for i,j in enumerate(Names)}
 	except:
 		print "ERROR: Conf. Name %s"%(acronym)
