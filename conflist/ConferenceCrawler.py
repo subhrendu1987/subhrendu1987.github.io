@@ -32,6 +32,8 @@ def generateHTML(message):
 ############################################################################
 ConfList=getDictFrom("ConferenceRanking_All.json")
 temp=TruncateDict(ConfList,5)
+#Confs= [GetConferenceRanking(acronym) for acronym in ConfList]
+#putDictTo("AllCOREdata.json",Confs)
 Confs= [GetConferenceRanking(acronym) for acronym in temp]#Parse Core WebPage
 ####################################
 SortedConfs = sorted(Confs, key=lambda k: k['Rank']) 

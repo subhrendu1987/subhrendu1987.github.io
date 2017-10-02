@@ -54,19 +54,23 @@ def GetConferenceRanking(acronym):
 	data = r.text
 	LeftPos=data.find("of",data.find("Showing results"))+len("of")
 	RightPos=data.find("\n",LeftPos)
-	Results=int(data[LeftPos:RightPos])
-	if Results <>1:
-		print  "ERROR: "+acronym+" Multiple Results"
-	DataSoup = BeautifulSoup(data)
-	table=DataSoup.find_all("table")
-	SoupCols=BeautifulSoup(str(table[0]))
-	cols=SoupCols.find_all("td")
-	items=[re.sub("\n","",c.get_text()).strip()  for c in cols]
-	headers=SoupCols.findChildren("b")
-	Names=[h.get_text() for h in headers]
-	if (len(Names) <> len(items)):
-		print "ERROR: Table Parsing Problem. "+acronym
-	TabDict={j:items[i] for i,j in enumerate(Names)}
+	try:
+		Results=int(data[LeftPos:RightPos])
+		if Results <>1:
+			print  "ERROR: "+acronym+" Multiple Results"
+		DataSoup = BeautifulSoup(data)
+		table=DataSoup.find_all("table")
+		SoupCols=BeautifulSoup(str(table[0]))
+		cols=SoupCols.find_all("td")
+		items=[re.sub("\n","",c.get_text()).strip()  for c in cols]
+		headers=SoupCols.findChildren("b")
+		Names=[h.get_text() for h in headers]
+		if (len(Names) <> len(items)):
+			print "ERROR: Table Parsing Problem. "+acronym
+		TabDict={j:items[i] for i,j in enumerate(Names)}
+	except:
+		print "ERROR: Conf. Name %s"%(acronym)
+		return(None)
 	return(TabDict)
 ############################################################################
 def GetConferenceCFP(acronym):
