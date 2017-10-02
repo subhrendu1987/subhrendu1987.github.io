@@ -32,38 +32,50 @@ def generateHTML(message):
 ############################################################################
 ConfList=getDictFrom("ConferenceRanking_All.json")
 Confs=[]
+TierPriority={"A*":1,"A+":1,"A":2,"B":3,"C":4,"Australasian":5}
 ''' Use this part for Full list parsing
+failed=[]
 for acronym in ConfList:
-	data=GetConferenceRanking(acronym)
+	data=GetConferenceRanking(acronym,ConfList[acronym])
 	if data <> None:
 		Confs=Confs+[data]
+	else:
+		failed=failed+[acronym]
+for c in Confs:
+	if c["Rank"] in TierPriority.keys():
+		c.update( {"Tier":TierPriority[c["Rank"]]})
+	else:
+		c.update( {"Tier":100}) # Very low priority
 putDictTo("AllCOREdata.json",Confs)
 '''
 ''' Use this part for Partial list parsing
 temp=TruncateDict(ConfList,5)
 Confs= [GetConferenceRanking(acronym) for acronym in temp]#Parse Core WebPage
+		
 '''
 Confs=getDictFrom("AllCOREdata.json")
 ####################################
-SortedConfs = sorted(Confs, key=lambda k: k['Rank']) 
+SortedConfs = sorted(Confs, key=lambda k: k['Tier']) 
 body1=GetHTMLTemplate("TemplateTop.html")
 body3=GetHTMLTemplate("TemplateBottom.html")
 body2=[]
-Ranks=set([item['Rank'] for item in SortedConfs])
+#Ranks=set([item['Rank'] for item in SortedConfs])
 ####################################
+'''
 NAVBAR=[]
 for r in Ranks:
 	NAVBAR=NAVBAR+["<td class=\"Change Cicon\" style=\"width:75px\">",
 		"<a id=\"NavBarLink\" class=\"NavLink\" href=\"#%s\">%s</a>"%(r.encode('ascii'), r.encode('ascii')),
 		"</td>"]
 body2=body2+["<table><tr align=\"center\">"]+NAVBAR+["</tr></table>"]	
+'''
 body2=body2+["<!------------------------------------------------------------------------------------->"]
 ####################################
 ConfTable=["<tr><th>Rank</th><th>Acronym</th><th>Title</th></tr>"]
 for c in SortedConfs:
 	ConfTable=ConfTable+["<tr>",
 	"<td>%s</td>"%(c["Rank"].encode("ascii")),
-	"<td><button class=\"gsearch\" onClick=\"googleSearch()\">%s</button></td>"%(c["Acronym"].encode("ascii")),
+	"<td><button class=\"gsearch\" onClick=\"googleSearch(this);\">%s</button></td>"%(c["Acronym"].encode("ascii")),
 	"<td>%s</td></tr>"%(c["Title"].encode("ascii"))]
 body2=body2+["<table border=\"1\"  width=\"70\%\">"]+ConfTable+["</table>"]
 ####################################

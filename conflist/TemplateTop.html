@@ -52,20 +52,12 @@
 		</style>
 		<script type="text/javascript">
 			function googleSearch(e) {
-				e = e || window.event;
-				e = e.target || e.srcElement;
-				if (e.nodeName === 'BUTTON') {
-					var f=e.parentNode.nextSibling;
-					var d = new Date();
-					var yyyy = d.getUTCFullYear();
-					var url="http://www.google.com/search?ie=UTF-8&oe=utf-8&q="+f.innerHTML+" "+yyyy;
-					//alert("1."+e.innerHTML);
-					//alert("2."+f.innerHTML);
-					//window.location.assign("http://www.google.com/search?ie=UTF-8&oe=utf-8&q="+e.innerHTML+yyyy);
-					//window.location.assign("http://www.google.com/search?ie=UTF-8&oe=utf-8&q="+f.innerHTML+" "+yyyy);
-					window.open(url,'_blank');
-					//window.location.assign("http://www.google.com/search?btnI=I%27m+Feeling+Lucky&ie=UTF-8&oe=UTF-8&q="+e.innerHTML+yyyy);
-				}
+				//alert(e.innerHTML)
+				var d = new Date();
+				var yyyy = d.getUTCFullYear();
+				var url="http://www.google.com/search?ie=UTF-8&oe=utf-8&q="+e.innerHTML+" "+yyyy;
+				window.open(url,'_blank');
+				//window.location.assign("http://www.google.com/search?btnI=I%27m+Feeling+Lucky&ie=UTF-8&oe=UTF-8&q="+e.innerHTML+yyyy);
 			}
 			/********************************************/
 			$(function() {

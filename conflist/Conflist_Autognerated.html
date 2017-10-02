@@ -52,20 +52,12 @@ background-color: #c80000;
 </style>
 <script type="text/javascript">
 function googleSearch(e) {
-e = e || window.event;
-e = e.target || e.srcElement;
-if (e.nodeName === 'BUTTON') {
-var f=e.parentNode.nextSibling;
+//alert(e.innerHTML)
 var d = new Date();
 var yyyy = d.getUTCFullYear();
-var url="http://www.google.com/search?ie=UTF-8&oe=utf-8&q="+f.innerHTML+" "+yyyy;
-//alert("1."+e.innerHTML);
-//alert("2."+f.innerHTML);
-//window.location.assign("http://www.google.com/search?ie=UTF-8&oe=utf-8&q="+e.innerHTML+yyyy);
-//window.location.assign("http://www.google.com/search?ie=UTF-8&oe=utf-8&q="+f.innerHTML+" "+yyyy);
+var url="http://www.google.com/search?ie=UTF-8&oe=utf-8&q="+e.innerHTML+" "+yyyy;
 window.open(url,'_blank');
 //window.location.assign("http://www.google.com/search?btnI=I%27m+Feeling+Lucky&ie=UTF-8&oe=UTF-8&q="+e.innerHTML+yyyy);
-}
 }
 /********************************************/
 $(function() {
@@ -105,39 +97,307 @@ return false;
 
 <!------------------------------------------------------------------------------------->
 
-<table><tr align="center">
-<td class="Change Cicon" style="width:75px">
-<a id="NavBarLink" class="NavLink" href="#A">A</a>
-</td>
-<td class="Change Cicon" style="width:75px">
-<a id="NavBarLink" class="NavLink" href="#B">B</a>
-</td>
-</tr></table>
 <!------------------------------------------------------------------------------------->
 <table border="1"  width="70\%">
 <tr><th>Rank</th><th>Acronym</th><th>Title</th></tr>
 <tr>
-<td>A</td>
-<td><button class="gsearch" onClick="googleSearch()">OPENARCH</button></td>
-<td>IEEE Conference on Open Architecture and Network Programming</td></tr>
+<td>A*</td>
+<td><button class="gsearch" onClick="googleSearch(this);">SIGMETRICS</button></td>
+<td>ACM SIG on Computer and Communications Metrics and Performance</td></tr>
+<tr>
+<td>A*</td>
+<td><button class="gsearch" onClick="googleSearch(this);">MOBICOM</button></td>
+<td>ACM International Conference on Mobile Computing and Networking</td></tr>
+<tr>
+<td>A*</td>
+<td><button class="gsearch" onClick="googleSearch(this);">IPSN</button></td>
+<td>Information Processing in Sensor Networks</td></tr>
+<tr>
+<td>A*</td>
+<td><button class="gsearch" onClick="googleSearch(this);">PODC</button></td>
+<td>ACM Symposium on Principles of Distributed Computing</td></tr>
+<tr>
+<td>A*</td>
+<td><button class="gsearch" onClick="googleSearch(this);">UbiComp</button></td>
+<td>ACM International Joint Conference on Pervasive and Ubiquitous Computing (PERVASIVE and UbiComp combined from 2013)</td></tr>
+<tr>
+<td>A*</td>
+<td><button class="gsearch" onClick="googleSearch(this);">IEEE INFOCOM</button></td>
+<td>IEEE International Conference on Computer Communications</td></tr>
+<tr>
+<td>A*</td>
+<td><button class="gsearch" onClick="googleSearch(this);">WWW</button></td>
+<td>International World Wide Web Conference</td></tr>
+<tr>
+<td>A*</td>
+<td><button class="gsearch" onClick="googleSearch(this);">SIGCOMM</button></td>
+<td>ACM Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication</td></tr>
 <tr>
 <td>A</td>
-<td><button class="gsearch" onClick="googleSearch()">MOBIHOC</button></td>
-<td>ACM Symposium of Mobile and Ad Hoc Computing</td></tr>
-<tr>
-<td>A</td>
-<td><button class="gsearch" onClick="googleSearch()">NetStore</button></td>
+<td><button class="gsearch" onClick="googleSearch(this);">NetStore</button></td>
 <td>Network Storage Symposium</td></tr>
 <tr>
 <td>A</td>
-<td><button class="gsearch" onClick="googleSearch()">ICNP</button></td>
+<td><button class="gsearch" onClick="googleSearch(this);">ICNP</button></td>
 <td>International Conference on Network Protocols</td></tr>
 <tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">IM</button></td>
+<td>IFIP/IEEE International Symposium on Integrated Management (odd years sharing with NOMS)</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">MOBIHOC</button></td>
+<td>ACM Symposium of Mobile and Ad Hoc Computing</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">USITS</button></td>
+<td>Unix Symposium on Internet Technologies</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">DISC</button></td>
+<td>International Symposium on Distributed Computing (was WDAG)</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">EWSN</button></td>
+<td>European Conference on Wireless Sensor Networks</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">IPDPS</button></td>
+<td>IEEE International Parallel and Distributed Processing Symposium (was IPPS and SPDP)</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">MSWIM</button></td>
+<td>ACM/IEEE International Conference on Modelling, Analysis and Simulation of Wireless and Mobile Systems</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">OPENARCH</button></td>
+<td>IEEE Conference on Open Architecture and Network Programming</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">WoWMoM</button></td>
+<td>IEEE International Symposium on a World of Wireless, Mobile and Multimedia Networks</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">GRID</button></td>
+<td>IEEE/ACM International Conference on Grid Computing</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ACM IMC</button></td>
+<td>ACM SIGCOMM Internet Measurement Conference</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">IC3N</button></td>
+<td>International Conference on Computer Communication and Networks</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">PERFORMANCE</button></td>
+<td>IFIP International Symposium on Computing Performance, Modelling, Measurement and Evaluation</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">Mobiquitous</button></td>
+<td>International Conference on Mobile and Ubiquitous Systems: Networks and Services</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">RAID</button></td>
+<td>International Symposium on Recent Advances in Intrusion Detection</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">HOTNETS</button></td>
+<td>ACM Workshop on Hot Topics in Networks</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">HPDC</button></td>
+<td>ACM International Symposium on High Performance Distributed Computing</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">PERFORMANCE</button></td>
+<td>IFIP International Symposium on Computing Performance, Modelling, Measurement and Evaluation</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ICDCS</button></td>
+<td>International Conference on Distributed Computing Systems</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">Networking 200X</button></td>
+<td>IFIP Networking 200X</td></tr>
+<tr>
+<td>A</td>
+<td><button class="gsearch" onClick="googleSearch(this);">LCN</button></td>
+<td>IEEE Conference on Local Computer Networks</td></tr>
+<tr>
 <td>B</td>
-<td><button class="gsearch" onClick="googleSearch()">PDCAT</button></td>
+<td><button class="gsearch" onClick="googleSearch(this);">PDCAT</button></td>
 <td>International Conference on Parallel and Distributed Computing, Applications and Technologies</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">NOMS</button></td>
+<td>IEEE Network Operations and Management Symposium</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">WiOpt</button></td>
+<td>International Symposium on Modelling and Optimization in Mobile, Ad Hoc, and Wireless Networks</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">SECON</button></td>
+<td>IEEE Conference on Sensor, Mesh and Ad Hoc Communications and Networks</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">HPCN</button></td>
+<td>International Conference on High Performance Computing and Networking</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">PIMRC</button></td>
+<td>IEEE International Symposium on Personal and Indoor Mobile Radio Conference</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">Qsine</button></td>
+<td>International Conference on Quality of Service in Heterogeneous Wired/Wireless Networks</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">IPCCC</button></td>
+<td>IEEE International Performance Computing and Communications Conference</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">GLOBECOM</button></td>
+<td>IEEE Global Telecommunications Conference</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">DSS</button></td>
+<td>Distributed Simulation Symposium</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ICPADS</button></td>
+<td>International Conference on Parallel and Distributed Systems</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ODP</button></td>
+<td>IFIP International Conference on Open Distributed Processing</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">Broadnets</button></td>
+<td>International Conference on Broadband Communications, Networks and Systems</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">MASS</button></td>
+<td>IEEE International Conference on Mobile Ad-hoc and Sensor Systems</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">SECON</button></td>
+<td>IEEE Conference on Sensor, Mesh and Ad Hoc Communications and Networks</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">IWCMC</button></td>
+<td>ACM International Wireless Communications and Mobile Computing Conference</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">WDAG</button></td>
+<td>Workshop on Distributed Algorithms (DISC since 1998)</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">IWQoS</button></td>
+<td>IEEE International Workshop on Quality of Service</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ICC</button></td>
+<td>IEEE International Conference on Communications</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">IEEE-IV</button></td>
+<td>Intelligent Vehicles Conference</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ADHOC-NOW</button></td>
+<td>International Conference on AD-HOC Networks and Wireless</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">Mobisys</button></td>
+<td>ACM SIGMOBILE International Conference on Mobile Systems, Applications and Services</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">GLOBECOM</button></td>
+<td>IEEE Global Telecommunications Conference</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">VTC</button></td>
+<td>IEEE Vehicular Technology Conference</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">DAIS</button></td>
+<td>IFIP International Conference on Distributed Applications and Inoperable Systems</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ICON</button></td>
+<td>IEEE International Conference on Networks</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">WCNC</button></td>
+<td>IEEE Wireless Communications and Networking Conference</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">LATIN</button></td>
+<td>International Symposium on Latin American Theoretical Informatics</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">PADS</button></td>
+<td>ACM/IEEE/SCS Workshop on Parallel and Distributed Simulation</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">NOMS</button></td>
+<td>IEEE Network Operations and Management Symposium</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">OPODIS</button></td>
+<td>International Conference on Principles of Distributed Systems</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">AINA</button></td>
+<td>International Conference on Advanced Information Networking and Applications (was ICOIN)</td></tr>
+<tr>
+<td>B</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ICDCN</button></td>
+<td>International Conference on Distributed Computing and Networking</td></tr>
+<tr>
+<td>C</td>
+<td><button class="gsearch" onClick="googleSearch(this);">INET</button></td>
+<td>Internet Society Conference</td></tr>
+<tr>
+<td>C</td>
+<td><button class="gsearch" onClick="googleSearch(this);">HiPC</button></td>
+<td>International Conference on High Performance Computing</td></tr>
+<tr>
+<td>C</td>
+<td><button class="gsearch" onClick="googleSearch(this);">P2P</button></td>
+<td>IEEE International Conference on Peer to Peer Computing</td></tr>
+<tr>
+<td>C</td>
+<td><button class="gsearch" onClick="googleSearch(this);">Emnets</button></td>
+<td>Embedded Sensor Networks Workshop</td></tr>
+<tr>
+<td>C</td>
+<td><button class="gsearch" onClick="googleSearch(this);">AMOC</button></td>
+<td>Asian International Mobile Computing Conference</td></tr>
+<tr>
+<td>C</td>
+<td><button class="gsearch" onClick="googleSearch(this);">HPSR</button></td>
+<td>IEEE Workshop on High Performance Switching and Routing</td></tr>
+<tr>
+<td>C</td>
+<td><button class="gsearch" onClick="googleSearch(this);">NCC</button></td>
+<td>National Conference Communications</td></tr>
+<tr>
+<td>Australasian</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ACSC</button></td>
+<td>Australasian Computer Science Conference</td></tr>
+<tr>
+<td>Australasian</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ACSAC</button></td>
+<td>Australasian Computer Systems Architecture Conference (now Asia-Pacific Computer Systems Architecture Conference)</td></tr>
+<tr>
+<td>Australasian</td>
+<td><button class="gsearch" onClick="googleSearch(this);">ACISP</button></td>
+<td>Australasian Conference on Information Security and Privacy</td></tr>
 </table>
-<h6>Last Updated:2017-10-02 23:32:08.147894</h6>
+<h6>Last Updated:2017-10-03 05:08:15.699974</h6>
 <!------------------------------------------------------------------------------------->
 .<br>.<br>.<br>.<br>.<br>.<br>
 </center></body>
