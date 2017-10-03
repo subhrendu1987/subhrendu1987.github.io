@@ -33,6 +33,7 @@ def generateHTML(message):
 ConfList=getDictFrom("ConferenceRanking_All.json")
 Confs=[]
 TierPriority={"A*":1,"A+":1,"A":2,"B":3,"C":4,"Australasian":5}
+colors={100:"#ffffff",5:"#fdd0a2",4:"#fdae6b",3:"#fd8d3c",2:"#f16913",1:"#d94801"}
 ''' Use this part for Full list parsing
 failed=[]
 for acronym in ConfList:
@@ -73,7 +74,8 @@ body2=body2+["<!----------------------------------------------------------------
 ####################################
 ConfTable=["<tr><th>Rank</th><th>Acronym</th><th>Title</th></tr>"]
 for c in SortedConfs:
-	ConfTable=ConfTable+["<tr>",
+	cellcolor=colors[c["Tier"]]
+	ConfTable=ConfTable+["<tr bgcolor=\"%s\">"%(cellcolor),
 	"<td>%s</td>"%(c["Rank"].encode("ascii")),
 	"<td><button class=\"gsearch\" onClick=\"googleSearch(this);\">%s</button></td>"%(c["Acronym"].encode("ascii")),
 	"<td>%s</td></tr>"%(c["Title"].encode("ascii"))]
