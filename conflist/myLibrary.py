@@ -115,21 +115,54 @@ def GetConferenceRanking(acronym,Title=None):
 		return(None)
 	return(TabDict)
 ############################################################################
-def GetConferenceCFP(acronym):
+def recentDates(CFPDict):
+############################################################################
+def ParseTable(table_tag,head=None,Title=None):
+	now=datetime.datetime.now()
+	SoupRows=BeautifulSoup(table_tag)
+	rows=SoupRows.find_all("tr")
+	if(len(rows)==0):
+		print "No such conference"
+		return(None)
+	if head==None:
+		SoupCols=BeautifulSoup(str(rows[0]))
+		headers=SoupCols.findChildren("td")
+		H=[str(re.sub("\n","",c.get_text()).strip())  for c in headers]
+	else:
+		H=head
+	noOfItems=len(rows)
+	tab=[]
+	
+	for i,j in zip(xrange(1,noOfItems,2),xrange(2,noOfItems,2)):
+		tabDict={}
+		R=BeautifulSoup(str(rows[i])+str(rows[j]),"html.parser")
+		dt=R.text.split("\n")
+		try:
+			dt.remove('')
+		except ValueError:
+			pass
+		for x,h in enumerate(H):
+			tabDict[h]=str(dt[x])
+		tabDict["Deadline"]=datetime.datetime.strptime(tabDict["Deadline"],"%b %d, %Y")
+		tabDict["delta"]=(now - tabDict["Deadline"]).days
+		tabDict["match"]=SequenceMatcher(None, tabDict["Title"], Title).ratio()
+		tab=tab+[tabDict]
+	return(tab)
+############################################################################
+def GetConferenceCFP(acronym,Title=None):
 	''' Parse wikiCFP'''
-	URL="http://www.wikicfp.com/cfp/servlet/tool.search?q=%s&year=f"%(acronym)
+	URL="http://www.wikicfp.com/cfp/servlet/tool.search?q=%s&year=a"%(acronym)
 	r  = requests.get(URL)
 	data = r.text
 	discardPos=data.find("Matched Call For Papers for")
 	left=data[discardPos:]
 	DataSoup = BeautifulSoup(left)
-	table=str(DataSoup.find_all("table")[0]) # need to handle blank results
-	SoupRows=BeautifulSoup(table)
-	rows=SoupRows.find_all("tr")
-	SoupCols=BeautifulSoup(str(rows[0]))
-	headers=SoupCols.findChildren("td")
-	headers=SoupCols.findChildren("b")
-
+	table=str(DataSoup.find_all("table")[0]) # need to handle blank results acronym="aabbbb"
+	CFPDict=ParseTable(table,["Acronym","Title","When","Where","Deadline"],Title)
+	if CFPDict==None:
+		return(None)
+	else:
+		SortedConfs = sorted(CFPDict, key=lambda k: abs(k['delta']))
 
 ############################################################################
 def PullRemoteFile(ip,filename):

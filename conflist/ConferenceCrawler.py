@@ -4,7 +4,6 @@ Crawler for Conference ranking
 '''
 import datetime,subprocess,sys,os,json
 import time,hashlib
-import networkx as nx
 import matplotlib.pyplot as plt
 from random import randint
 import random, re, commands
@@ -48,6 +47,10 @@ for c in Confs:
 	else:
 		c.update( {"Tier":100}) # Very low priority
 putDictTo("AllCOREdata.json",Confs)
+####################################
+for c in Confs:
+	data=GetConferenceCFP(c["Acronym"],c["Title"])
+	
 '''
 ''' Use this part for Partial list parsing
 temp=TruncateDict(ConfList,5)
