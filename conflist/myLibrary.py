@@ -94,7 +94,7 @@ def GetConferenceRanking(acronym,Title=None):
 			dt=[str(re.sub("\n","",c.get_text()).strip())  for c in cols]
 			if (len(headers) <> len(dt)):
 				print "ERROR: Table Parsing Problem. "+acronym
-				#return(None)
+				return(None)
 			TabDict={j:dt[i] for i,j in enumerate(headers)}
 			ListOfRows=ListOfRows+[TabDict]
 			matchPercentage=SequenceMatcher(None, TabDict["Title"], Title).ratio()
@@ -115,26 +115,27 @@ def GetConferenceRanking(acronym,Title=None):
 		return(None)
 	return(TabDict)
 ############################################################################
-def recentDates(CFPDict):
+def recentDates(SortedConfs):
+	return(SortedConfs[0])
 ############################################################################
 def ParseTable(table_tag,head=None,Title=None):
 	now=datetime.datetime.now()
 	SoupRows=BeautifulSoup(table_tag)
 	rows=SoupRows.find_all("tr")
 	if(len(rows)==0):
-		print "No such conference"
+		print "Error(%s): No such conference"%(Title)
 		return(None)
 	if head==None:
-		SoupCols=BeautifulSoup(str(rows[0]))
+		SoupCols=BeautifulSoup(str(rows[0]),"html.parser")
 		headers=SoupCols.findChildren("td")
 		H=[str(re.sub("\n","",c.get_text()).strip())  for c in headers]
 	else:
 		H=head
 	noOfItems=len(rows)
 	tab=[]
-	
 	for i,j in zip(xrange(1,noOfItems,2),xrange(2,noOfItems,2)):
 		tabDict={}
+		
 		R=BeautifulSoup(str(rows[i])+str(rows[j]),"html.parser")
 		dt=R.text.split("\n")
 		try:
@@ -142,8 +143,17 @@ def ParseTable(table_tag,head=None,Title=None):
 		except ValueError:
 			pass
 		for x,h in enumerate(H):
-			tabDict[h]=str(dt[x])
-		tabDict["Deadline"]=datetime.datetime.strptime(tabDict["Deadline"],"%b %d, %Y")
+			tabDict[h]=dt[x].encode('ascii','replace')
+		try:
+			''' Get year from acronym'''
+			
+			if "(" in tabDict["Deadline"]:
+				tabDict["Deadline"]=tabDict["Deadline"][:(tabDict["Deadline"].find("("))].strip()
+			tabDict["Deadline"]=datetime.datetime.strptime(tabDict["Deadline"],"%b %d, %Y")
+			tabDict["delta"]=(now - tabDict["Deadline"]).days
+		except:
+			print "ERROR:%s"%(tabDict["Acronym"])+" Date is not parsable [%s]"%(tabDict["Deadline"])
+			return(None)
 		tabDict["delta"]=(now - tabDict["Deadline"]).days
 		tabDict["match"]=SequenceMatcher(None, tabDict["Title"], Title).ratio()
 		tab=tab+[tabDict]
@@ -151,19 +161,21 @@ def ParseTable(table_tag,head=None,Title=None):
 ############################################################################
 def GetConferenceCFP(acronym,Title=None):
 	''' Parse wikiCFP'''
-	URL="http://www.wikicfp.com/cfp/servlet/tool.search?q=%s&year=a"%(acronym)
+	URL="http://www.wikicfp.com/cfp/servlet/tool.search?q=%s&year=f"%(acronym)
 	r  = requests.get(URL)
 	data = r.text
 	discardPos=data.find("Matched Call For Papers for")
 	left=data[discardPos:]
 	DataSoup = BeautifulSoup(left)
-	table=str(DataSoup.find_all("table")[0]) # need to handle blank results acronym="aabbbb"
-	CFPDict=ParseTable(table,["Acronym","Title","When","Where","Deadline"],Title)
+	table=str(DataSoup.find_all("table")[0])
+	table_tag,head=table,["Acronym","Title","When","Where","Deadline"]
+	CFPDict=ParseTable(table_tag,head,Title)
 	if CFPDict==None:
 		return(None)
 	else:
 		SortedConfs = sorted(CFPDict, key=lambda k: abs(k['delta']))
-
+		data=recentDates(SortedConfs)
+	return(data)
 ############################################################################
 def PullRemoteFile(ip,filename):
 		CMD="sshpass -p \"raspberry\" scp -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no pi@%s:%s /tmp/tmp.json" %(ip,filename)

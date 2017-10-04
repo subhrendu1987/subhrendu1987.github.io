@@ -48,9 +48,16 @@ for c in Confs:
 		c.update( {"Tier":100}) # Very low priority
 putDictTo("AllCOREdata.json",Confs)
 ####################################
+Confs=getDictFrom("AllCOREdata.json")
+CFP_data=[]
+Confs=Confs[:10]
 for c in Confs:
-	data=GetConferenceCFP(c["Acronym"],c["Title"])
-	
+	acronym,Title=c["Acronym"],c["Title"]
+	try:
+		CFP_data=CFP_data+[GetConferenceCFP(acronym,Title)]
+	except:
+		print "ERROR:%s"+acronym
+putDictTo("AllWIKICFPdata.json",CFP_data)
 '''
 ''' Use this part for Partial list parsing
 temp=TruncateDict(ConfList,5)
