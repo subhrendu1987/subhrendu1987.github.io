@@ -35,6 +35,11 @@ def add_to_log(log):
 	file_handler.close()
 	return log_string
 ############################################################################
+def getDictTSV(filename):
+	lines=[line.strip().split("\t") for line in open(filename, 'r')]
+	variable={l[0]:l[1] for l in lines}
+	return(variable)
+############################################################################
 def getDictFrom(filename):
 	file_handler=open(filename,"r")
 	variable=json.load(file_handler)
@@ -116,14 +121,19 @@ def GetConferenceRanking(acronym,Title=None):
 	return(TabDict)
 ############################################################################
 def recentDates(SortedConfs):
-	return(SortedConfs[0])
+	now=datetime.datetime.now()
+	if len(SortedConfs) <> 1:
+		if SortedConfs[1]["Deadline"].year > now.year:
+			return(SortedConfs[1])
+	else:
+		return(SortedConfs[0])
 ############################################################################
-def ParseTable(table_tag,head=None,Title=None):
+def ParseTable(table_tag,head=None,Title=None,acronym=None):
 	now=datetime.datetime.now()
 	SoupRows=BeautifulSoup(table_tag)
 	rows=SoupRows.find_all("tr")
 	if(len(rows)==0):
-		print "Error(%s): No such conference"%(Title)
+		print "Error(%s:%s): No such conference"%(acronym,Title)
 		return(None)
 	if head==None:
 		SoupCols=BeautifulSoup(str(rows[0]),"html.parser")
@@ -145,10 +155,13 @@ def ParseTable(table_tag,head=None,Title=None):
 		for x,h in enumerate(H):
 			tabDict[h]=dt[x].encode('ascii','replace')
 		try:
-			''' Get year from acronym'''
-			
+			''' Get year from acronym'''	
 			if "(" in tabDict["Deadline"]:
 				tabDict["Deadline"]=tabDict["Deadline"][:(tabDict["Deadline"].find("("))].strip()
+			elif tabDict["Deadline"]=="TBD":
+				tabDict["Deadline"]="TBD"
+				tabDict["delta"]="TBD"
+				break
 			tabDict["Deadline"]=datetime.datetime.strptime(tabDict["Deadline"],"%b %d, %Y")
 			tabDict["delta"]=(now - tabDict["Deadline"]).days
 		except:
@@ -169,7 +182,7 @@ def GetConferenceCFP(acronym,Title=None):
 	DataSoup = BeautifulSoup(left)
 	table=str(DataSoup.find_all("table")[0])
 	table_tag,head=table,["Acronym","Title","When","Where","Deadline"]
-	CFPDict=ParseTable(table_tag,head,Title)
+	CFPDict=ParseTable(table_tag,head,Title,acronym)
 	if CFPDict==None:
 		return(None)
 	else:
