@@ -1,9 +1,8 @@
 #!/usr/bin/python
 '''
 Crawler for Conference ranking and call for papers
-GLOBCOM and IM is not found !!!!
 '''
-import datetime,subprocess,sys,os,json
+import datetime,subprocess,sys,os,json,pickle
 import time,hashlib
 import matplotlib.pyplot as plt
 from random import randint
@@ -62,17 +61,32 @@ Confs= [GetConferenceRanking(acronym) for acronym in temp]#Parse Core WebPage
 Confs=getDictFrom("AllCOREdata.json")
 failed=[]
 CFP_data={}
-for c in Confs:
+for i,c in enumerate(Confs):
 	acronym,Title=c["Acronym"],c["Title"]
+	print "<!------------------------------------------------------------------------------------->"
+	print i,acronym,Title
 	try:
-		CFP_data[acronym]=GetConferenceCFP(acronym,Title)
-		if CFP_data==None:
-			failed=failed+[(acronym,Title,"No CFP")]
+		if acronym in CFP_data.keys():
+			print "LOG:(%d. %s) Already exists"%(i,acronym)
+			if CFP_data[acronym] == None:
+				CFP_data[acronym]=GetConferenceCFP(acronym,Title)
+				failed=failed+[(acronym,Title,"No CFP")]
+				print "LOG:(%s) Retrying"%(i,acronym)
+		else:
+			CFP_data[acronym]=GetConferenceCFP(acronym,Title)
 	except:
+		raise
 		failed=failed+[(acronym,Title,"ERROR")]
-#putDictTo("AllWIKICFPdata.json",CFP_data)
+	notFound=[k for k in CFP_data.keys() if CFP_data[k] == None]
+pickle.dump( CFP_data, open( "AllWIKICFPdata.pkl", "wb" ) )
 ####################################
-SortedConfs = sorted(Confs, key=lambda k: k['Tier']) 
+'''
+acronym="PERFORMANCE"
+Data=GetConferenceCFPTable(acronym)
+[d["Acronym"],d["Title"] for d in Data]
+'''
+####################################
+SortedConfs = sorted(Confs, key=lambda k: k['Tier'])
 body1=GetHTMLTemplate("TemplateTop.html")
 body3=GetHTMLTemplate("TemplateBottom.html")
 body2=[]
