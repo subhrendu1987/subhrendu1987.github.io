@@ -2,8 +2,6 @@ git clone https://github.com/subhrendu1987/subhrendu1987.github.io
 
 cd subhrendu1987.github.io
 
-echo "Hello World" > index.html
-
 git add --all
 
 git commit -m "Initial commit"
