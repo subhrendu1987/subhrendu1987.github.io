@@ -3,17 +3,112 @@
 	<head>
 	<meta name=”description” content=”Personal homepage of Subhrendu Chattopadhyay, a student of Computer Science and Engineering. Find more personal information about him on this site.” />
 	<meta name=”keywords” content=”Subhrendu Chattopadhyay, computer science, student” />
-<meta name=”author” content=”Subhrendu Chattopadhyay” />
+	<meta name=”author” content=”Subhrendu Chattopadhyay” />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
-<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+	<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+			<script type="text/javascript">
+		    function sizeFrame(F) {
+				//var F = document.getElementById("mainframe1");
+				//alert(F.src);
+				if(F.contentDocument != null) {
+					F.height = F.contentDocument.documentElement.scrollHeight; //FF 3.0.11, Opera 9.63, and Chrome
+					//alert("DEBUG1="+F.height);
+				} else {
+					F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
+					//alert("DEBUG2="+F.height);
+				}
+				//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
+				//alert(""+innerDoc.getElementById("NavBar1").innerHTML);
+			}
+			/*****************************************/
+			document.ready(function(){
+			    //alert("size="+size);
+    			var F = document.getElementById("mainframe1");
+    			sizeFrame(F);
+    			var F = document.getElementById("footerframe");
+    			sizeFrame(F);
+				//alert(F.src);
+				if(F.contentDocument != null) {
+					F.height = F.contentDocument.documentElement.scrollHeight; //FF 3.0.11, Opera 9.63, and Chrome
+					//alert("DEBUG1="+F.height);
+				} else {
+					F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
+					//alert("DEBUG2="+F.height);
+				}
+	    		//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
+	    		//window.onload= 
+			});
+			/*****************************************/
+			$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+			  //alert("Hostname="+this.hostname +"("+location.hostname+")");
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			      }
+			    }
+			  });
+			});
+			/*****************************************/
+		</script>
 <title> Homepage of Subhrendu</title>
-<link rel="shortcut icon" href="Picture/rsz_BasicHome.png">
+<link rel="shortcut icon" href="../Picture/rsz_BasicHome.png">
 </head>
 <!--------------------------------------------------------------------------------------------------->
-<body id="index_body" background="Background/bg_lightwoodfloor.jpg" width="100%">
+<body id="index_body" width="100%">
+<center>
+
+</center>
 <!--------------------------------------------------------------------------------------------------->
-This is mobile site
-<!---------------------------------------------->
-<!--------------------------------------------------------------------------------------------------->
+<!--center>
+<table width="100%">
+<tr><td width="80%">
+            <iframe id="mainframe1" name="content" seamless class="contentframe" src="basic_pages/home.html" frameborder="0" onLoad='javascript:sizeFrame(this);' scroll="no">
+	        </iframe> 							
+</td></tr>
+</table>
+</center-->
+<center>
+<table width="100%" border="1">
+<tr height="100%">
+	<td width="10%">
+		<ul>Home Page </ul>
+		<ul>Academic</ul>
+		<ul>Publication</ul>
+		<ul>Contact</ul>
+		<ul>Important Links</ul>
+	</td>
+	<td width="80%">
+		<table width="62.5%">
+		    <tr>
+		        <td>
+					<div class="name">Subhrendu Chattopadhyay</div>
+					<div class="nameplate_addr">Cube-15, RS-2 Lab<br>
+					Department of Computer Science and Engineering<br>
+					Indian Institute of Technology, Guwahati<br>
+					Assam India 781039</div>
+		        </td>
+		        <td align="right">
+			        <div id="Logo">
+					    <img src="../Picture/iitg_web_mid.gif" alt="IITG_LOGO" href="index.html" height="64px">
+			        </div>
+		        </td>
+		    </tr>
+		</table>
+        <object>
+		    <embed src="../basic_pages/home.html" width="100%" height="100%"> </embed>
+		    	Error: Embedded data could not be displayed.
+		</object> 
+	</td>
+</tr>
+</table>
+</center>
 </body>
 </html>
