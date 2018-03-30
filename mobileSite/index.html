@@ -32,7 +32,7 @@
 	<script type="application/javascript">
 		    function sizeFrame(F) {
 				//var F = document.getElementById("mainframe1");
-				document.getElementById("message").innerHTML = "Debug";
+				//document.getElementById("message").innerHTML = "Debug";
 				if(F==null){
 					alert(F.src);
 				}
@@ -44,6 +44,9 @@
 					F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
 					alert("DEBUG2="+F.height);
 				}
+				/// Retrieve the table object from iframe
+				contentTable=F.contentWindow.document.getElementById("contenttable");
+				rotateTable(contenttable);
 				//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
 				//alert(""+innerDoc.getElementById("NavBar1").innerHTML);
 			}
@@ -63,13 +66,34 @@
 	    		//window.onload= 
 			}
 			/*****************************************/
+			function rotateTable(contentTable){
+			    $("table").each(function() {
+			        var $this = $(this);
+			        var newrows = [];
+			        $this.find("tr").each(function(){
+			            var i = 0;
+			            $(this).find("td").each(function(){
+			                i++;
+			                if(newrows[i] === undefined) { newrows[i] = $("<tr></tr>"); }
+			                newrows[i].append($(this));
+			            });
+			        });
+			        $this.find("tr").remove();
+			        $.each(newrows, function(){
+			            $this.append(this);
+			        });
+			    });    
+		    return false;
+			}
+			/*****************************************/
 			window.onload = bodyLoad;
+
 	</script>
 </head>
 <!--------------------------------------------------------------------------------------------------->
 <body id="index_body" width="100%" onload="javascript:bodyLoad();">
 <center>
-<p id="message">1</p>
+<p id="message"></p>
 </center>
 <!--------------------------------------------------------------------------------------------------->
 <!--center>
