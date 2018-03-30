@@ -25,6 +25,47 @@
 		    height: 100%;
 		}
 	</style>
+	<script type="application/javascript">
+		    function sizeFrame(F) {
+				//var F = document.getElementById("mainframe1");
+				//alert(F.src);
+				if(F.contentDocument != null) {
+					F.height = F.contentDocument.documentElement.scrollHeight; //FF 3.0.11, Opera 9.63, and Chrome
+					//alert("DEBUG1="+F.height);
+				} else {
+					F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
+					//alert("DEBUG2="+F.height);
+				}
+				//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
+				//alert(""+innerDoc.getElementById("NavBar1").innerHTML);
+			}
+			/*****************************************/
+			document.ready(function(){
+			    //alert("size="+size);
+    			var F = document.getElementById("home");
+    			sizeFrame(F);
+    			var F = document.getElementById("acad");
+    			sizeFrame(F);
+    			var F = document.getElementById("pub");
+    			sizeFrame(F);
+    			var F = document.getElementById("contact");
+    			sizeFrame(F);
+				var F = document.getElementById("links");
+    			sizeFrame(F);
+
+				//alert(F.src);
+				if(F.contentDocument != null) {
+					F.height = F.contentDocument.documentElement.scrollHeight; //FF 3.0.11, Opera 9.63, and Chrome
+					//alert("DEBUG1="+F.height);
+				} else {
+					F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
+					//alert("DEBUG2="+F.height);
+				}
+	    		//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
+	    		//window.onload= 
+			});
+			/*****************************************/
+	</script>
 </head>
 <!--------------------------------------------------------------------------------------------------->
 <body id="index_body" width="100%">
@@ -59,31 +100,31 @@
 </table>
 <!-------------------------------------------------------------------->
 <div class="fluidMedia">
-	<iframe src="../basic_pages/home.html" frameborder="0">
+	<iframe id="home" src="../basic_pages/home.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
 </div>
 <!-------------------------------------------------------------------->
 <div class="fluidMedia">
-	<iframe src="../basic_pages/academics.html" frameborder="0">
+	<iframe id="acad" src="../basic_pages/academics.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
 </div>
 <!-------------------------------------------------------------------->
 <div class="fluidMedia">
-	<iframe src="../basic_pages/publication.html" frameborder="0">
+	<iframe id="pub" src="../basic_pages/publication.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
 </div>
 <!-------------------------------------------------------------------->
 <div class="fluidMedia">
-	<iframe src="../basic_pages/contact.html" frameborder="0">
+	<iframe id="contact" src="../basic_pages/contact.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
 </div>
 <!-------------------------------------------------------------------->
 <div class="fluidMedia">
-	<iframe src="../Template/BottomLinks.html" frameborder="0">
+	<iframe id="links" src="../Template/BottomLinks.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
 </div>
