@@ -25,23 +25,30 @@
 		    height: 100%;
 		}
 	</style>
+	<script src="../script/menu.js"> </script>
+	<script src='../script/jquery.min.js'></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script type="application/javascript">
 		    function sizeFrame(F) {
 				//var F = document.getElementById("mainframe1");
-				//alert(F.src);
+				document.getElementById("message").innerHTML = "Debug";
+				if(F==null){
+					alert(F.src);
+				}
+				alert("<"+F.contentDocument+">");
 				if(F.contentDocument != null) {
 					F.height = F.contentDocument.documentElement.scrollHeight; //FF 3.0.11, Opera 9.63, and Chrome
-					//alert("DEBUG1="+F.height);
+					alert("DEBUG1="+F.height);
 				} else {
 					F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
-					//alert("DEBUG2="+F.height);
+					alert("DEBUG2="+F.height);
 				}
 				//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
 				//alert(""+innerDoc.getElementById("NavBar1").innerHTML);
 			}
 			/*****************************************/
-			document.ready(function(){
-			    //alert("size="+size);
+			function bodyLoad(){
     			var F = document.getElementById("home");
     			sizeFrame(F);
     			var F = document.getElementById("acad");
@@ -52,25 +59,17 @@
     			sizeFrame(F);
 				var F = document.getElementById("links");
     			sizeFrame(F);
-
-				//alert(F.src);
-				if(F.contentDocument != null) {
-					F.height = F.contentDocument.documentElement.scrollHeight; //FF 3.0.11, Opera 9.63, and Chrome
-					//alert("DEBUG1="+F.height);
-				} else {
-					F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
-					//alert("DEBUG2="+F.height);
-				}
 	    		//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
 	    		//window.onload= 
-			});
+			}
 			/*****************************************/
+			window.onload = bodyLoad;
 	</script>
 </head>
 <!--------------------------------------------------------------------------------------------------->
-<body id="index_body" width="100%">
+<body id="index_body" width="100%" onload="javascript:bodyLoad();">
 <center>
-
+<p id="message">1</p>
 </center>
 <!--------------------------------------------------------------------------------------------------->
 <!--center>
@@ -99,35 +98,34 @@
 	</tr>
 </table>
 <!-------------------------------------------------------------------->
-<div class="fluidMedia">
+<!--div class="fluidMedia"-->
 	<iframe id="home" src="../basic_pages/home.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
-</div>
+<!--/div-->
+<hr>
 <!-------------------------------------------------------------------->
-<div class="fluidMedia">
+<!--div class="fluidMedia"-->
 	<iframe id="acad" src="../basic_pages/academics.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
-</div>
+<!--/div-->
+<hr>
 <!-------------------------------------------------------------------->
-<div class="fluidMedia">
 	<iframe id="pub" src="../basic_pages/publication.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
-</div>
+<hr>
 <!-------------------------------------------------------------------->
-<div class="fluidMedia">
 	<iframe id="contact" src="../basic_pages/contact.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
-</div>
+<hr>
 <!-------------------------------------------------------------------->
-<div class="fluidMedia">
 	<iframe id="links" src="../Template/BottomLinks.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
-</div>
+<hr>
 <!-------------------------------------------------------------------->
 </center>
 </body>
