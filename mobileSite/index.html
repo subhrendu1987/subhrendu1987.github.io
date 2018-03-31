@@ -70,37 +70,30 @@
 	<script type="application/javascript">
 		/*****************************************/
 		function bodyLoad(){
-			pullPage("https://subhrendu1987.github.io/basic_pages/home.html","home_div");
-			pullPage("https://subhrendu1987.github.io/basic_pages/academics.html","acad_div");
-			pullPage("https://subhrendu1987.github.io/basic_pages/publication.html","pub_div");
-			pullPage("https://subhrendu1987.github.io/basic_pages/contact.html","contact_div");
-			pullPage("https://subhrendu1987.github.io/Template/BottomLinks.html","links_div"); 
+			pullPage("https://subhrendu1987.github.io/basic_pages/home.html","home_div",true);
+			pullPage("https://subhrendu1987.github.io/basic_pages/academics.html","acad_div",true);
+			pullPage("https://subhrendu1987.github.io/basic_pages/publication.html","pub_div",true);
+			pullPage("https://subhrendu1987.github.io/basic_pages/contact.html","contact_div",true);
+			pullPage("https://subhrendu1987.github.io/Template/BottomLinks.html","links_div",false); 
 		}
 		/*****************************************/
-		function rotateTable(contentTable){
-		    /*
-		    alert(contenttable.innerHTML);
-		    $("table").each(function() {
-		        var $this = $(this);
-		        var newrows = [];
-		        $this.find("tr").each(function(){
-		            var i = 0;
-		            $(this).find("td").each(function(){
-		                i++;
-		                if(newrows[i] === undefined) { newrows[i] = $("<tr></tr>"); }
-		                newrows[i].append($(this));
-		            });
-		        });
-		        $this.find("tr").remove();
-		        $.each(newrows, function(){
-		            $this.append(this);
-		        });
-		    });    
-	    return false;
-	    */
+		function rotateTable(HTML){
+		    //alert(HTML.getElementById("contenttable"));
+		    var newtbl=document.createElement('table');
+		    var tbl=HTML.getElementById("contenttable");
+		    for (var i = 0, row; row = tbl.rows[i]; i++) {
+			   	for (var j = 0, col; col = row.cells[j]; j++) {
+			   		r = newtbl.insertRow(-1);
+			   		c = r.insertCell(-1);
+			   		c.innerHTML=col.innerHTML;
+			   		//alert(col);
+				}  
+			}
+			//alert(newtbl.innerHTML);
+			return(newtbl);
 		}
 		/*****************************************/
-		function pullPage(URL,elementID){
+		function pullPage(URL,elementID,rotate){
 			//alert("PullPage");
 			var req = new XMLHttpRequest();
 			req.open('GET',URL, false);   
@@ -108,7 +101,13 @@
 			if(req.status == 200){
 				var HTML = new DOMParser().parseFromString(req.responseText, "text/html");
 				//alert(HTML.getElementById("contenttable").innerHTML);
-				document.getElementById(elementID).innerHTML = "<table width=\"100%\">"+HTML.getElementById("contenttable").innerHTML+"</table>";
+				if(rotate){
+					tbl=rotateTable(HTML);
+					document.getElementById(elementID).innerHTML = "<table width=\"100%\">"+tbl.innerHTML+"</table>";
+				}else{
+					alert(HTML.innerHTML);
+					document.getElementById(elementID)= HTML;
+				}
 			}
 		}
 		/*****************************************/
@@ -153,10 +152,15 @@
 	</tr>
 </table>
 <!-------------------------------------------------------------------->
+<hr>
 <div id="home_div"></div>
+<hr>
 <div id="acad_div"></div>
+<hr>
 <div id="pub_div"></div>
+<hr>
 <div id="contact_div"></div>
+<hr>
 <div id="links_div"></div>
 <!-------------------------------------------------------------------->
 	<!--iframe id="home" src="../basic_pages/home.html" frameborder="0" scroll="auto">
