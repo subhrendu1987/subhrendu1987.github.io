@@ -105,8 +105,8 @@
 					tbl=rotateTable(HTML);
 					document.getElementById(elementID).innerHTML = "<table width=\"100%\">"+tbl.innerHTML+"</table>";
 				}else{
-					alert(HTML.innerHTML);
-					document.getElementById(elementID)= HTML;
+					//alert(HTML.innerHTML);
+					document.getElementById(elementID).innerHTML= req.responseText;
 				}
 			}
 		}
