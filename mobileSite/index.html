@@ -67,46 +67,17 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script type="application/javascript">
-	    function sizeFrame(F) {
-			//var F = document.getElementById("mainframe1");
-			//document.getElementById("message").innerHTML = "Debug";
-			if(F==null){
-				alert(F.src);
-			}
-			//alert("<"+F.contentDocument+">");
-			if(F.contentDocument != null) {
-				F.height = F.contentDocument.documentElement.scrollHeight; //FF 3.0.11, Opera 9.63, and Chrome
-				alert("DEBUG1="+F.height);
-			} else {
-				F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
-				alert("DEBUG2="+F.height);
-			}
-			/// Retrieve the table object from iframe
-			
-			rotateTable(contenttable);
-			//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
-			//alert(""+innerDoc.getElementById("NavBar1").innerHTML);
-		}
 		/*****************************************/
 		function bodyLoad(){
-			var F = document.getElementById("home");
-			contentTable=F.contentWindow.document.getElementById("contenttable");
-			alert("<"+contenttable+">");
-			sizeFrame(F);
-			var F = document.getElementById("acad");
-			sizeFrame(F);
-			var F = document.getElementById("pub");
-			sizeFrame(F);
-			var F = document.getElementById("contact");
-			sizeFrame(F);
-			var F = document.getElementById("links");
-			sizeFrame(F);
-			//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
-			//window.onload= 
+			pullPage("https://subhrendu1987.github.io/basic_pages/home.html","home_div");
+			pullPage("https://subhrendu1987.github.io/basic_pages/academics.html","acad_div");
+			pullPage("https://subhrendu1987.github.io/basic_pages/publication.html","pub_div");
+			pullPage("https://subhrendu1987.github.io/basic_pages/contact.html","contact_div");
+			pullPage("https://subhrendu1987.github.io/Template/BottomLinks.html","links_div"); 
 		}
 		/*****************************************/
 		function rotateTable(contentTable){
-		    
+		    /*
 		    alert(contenttable.innerHTML);
 		    $("table").each(function() {
 		        var $this = $(this);
@@ -125,6 +96,17 @@
 		        });
 		    });    
 	    return false;
+	    */
+		}
+		/*****************************************/
+		function pullPage(URL,elementID){
+			//alert("PullPage");
+			var req = new XMLHttpRequest();
+			req.open('GET',URL, false);   
+			req.send(null);  
+			if(req.status == 200){
+				document.getElementById(elementID).innerHTML = req.responseText;
+			}
 		}
 		/*****************************************/
 		window.onload = bodyLoad;
@@ -133,6 +115,7 @@
 </head>
 <body id="index_body" onload="myFunction()" style="margin:0;">
 <!--------------------------------------------------------------------------------------------------->
+<div id="message"></div>
 <div id="loader"></div>
 <!--------------------------------------------------------------------------------------------------->
 <script>
@@ -140,7 +123,7 @@
 	function myFunction() {
 	    myVar = setTimeout(showPage, 3000);
 	}
-
+	/*****************************************/
 	function showPage() {
 	  document.getElementById("loader").style.display = "none";
 	  document.getElementById("mainpage").style.display = "block";
@@ -167,27 +150,33 @@
 	</tr>
 </table>
 <!-------------------------------------------------------------------->
-	<iframe id="home" src="../basic_pages/home.html" frameborder="0">
+<div id="home_div"></div>
+<div id="acad_div"></div>
+<div id="pub_div"></div>
+<div id="contact_div"></div>
+<div id="links_div"></div>
+<!-------------------------------------------------------------------->
+	<!--iframe id="home" src="../basic_pages/home.html" frameborder="0" scroll="auto">
 		Your browser doesn't support iframes
 	</iframe>
 <hr>
 <!-------------------------------------------------------------------->
-	<iframe id="acad" src="../basic_pages/academics.html" frameborder="0">
+	<!--iframe id="acad" src="../basic_pages/academics.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
 <hr>
 <!-------------------------------------------------------------------->
-	<iframe id="pub" src="../basic_pages/publication.html" frameborder="0">
+	<!--iframe id="pub" src="../basic_pages/publication.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
 <hr>
 <!-------------------------------------------------------------------->
-	<iframe id="contact" src="../basic_pages/contact.html" frameborder="0">
+	<!--iframe id="contact" src="../basic_pages/contact.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
 <hr>
 <!-------------------------------------------------------------------->
-	<iframe id="links" src="../Template/BottomLinks.html" frameborder="0">
+	<!--iframe id="links" src="../Template/BottomLinks.html" frameborder="0">
 		Your browser doesn't support iframes
 	</iframe>
 <hr>
