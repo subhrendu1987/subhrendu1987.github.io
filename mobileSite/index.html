@@ -34,7 +34,12 @@
 			   		r = newtbl.insertRow(-1);
 			   		c = r.insertCell(-1);
 			   		/// If col.innerhtml contains image then center
-			   		c.innerHTML=col.innerHTML;
+			   		img=col.getElementsByTagName("img");
+			   		if(img.length == 1){
+			   			c.innerHTML="<center>"+col.innerHTML+"</center>";
+			   		}else{
+			   			c.innerHTML=col.innerHTML;
+			   		}
 			   		//alert(col);
 				}  
 			}
