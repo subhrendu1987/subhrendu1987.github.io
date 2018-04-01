@@ -36,10 +36,9 @@
 			   		/// If col.innerhtml contains image then center
 			   		img=col.getElementsByTagName("img");
 			   		if(img.length == 1){
-			   			c.innerHTML="<center>"+col.innerHTML+"</center>";
-			   		}else{
-			   			c.innerHTML=col.innerHTML;
+			   			c.style.textAlign = "center";
 			   		}
+			   			c.innerHTML=col.innerHTML;
 			   		//alert(col);
 				}  
 			}
