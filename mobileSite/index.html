@@ -22,7 +22,7 @@
 			pullPage("https://subhrendu1987.github.io/basic_pages/academics.html","acad_div",true);
 			pullPage("https://subhrendu1987.github.io/basic_pages/publication.html","pub_div",true);
 			pullPage("https://subhrendu1987.github.io/basic_pages/contact.html","contact_div",true);
-			pullPage("https://subhrendu1987.github.io/Template/BottomLinks.html","links_div",false); 
+			pullTemplate("https://subhrendu1987.github.io/Template/BottomLinks.html","links_div"); 
 		}
 		/*****************************************/
 		function rotateTable(HTML){
@@ -46,6 +46,13 @@
 			return(newtbl);
 		}
 		/*****************************************/
+		function pullTemplate(URL,elementID){
+			var HTML=pullPage(URL,null,false);
+			alert(""+HTML.getElementById("ImportantLinks").innerHTML);
+			document.getElementById(elementID).innerHTML;
+			return;
+		}
+		/*****************************************/
 		function pullPage(URL,elementID,rotate){
 			//alert("PullPage");
 			var req = new XMLHttpRequest();
@@ -54,12 +61,16 @@
 			if(req.status == 200){
 				var HTML = new DOMParser().parseFromString(req.responseText, "text/html");
 				//alert(HTML.getElementById("contenttable").innerHTML);
-				if(rotate){
-					tbl=rotateTable(HTML);
-					document.getElementById(elementID).innerHTML = "<table width=\"100%\">"+tbl.innerHTML+"</table>";
+				if(elementID==null){
+					return(HTML);
 				}else{
-					//alert(HTML.innerHTML);
-					document.getElementById(elementID).innerHTML= req.responseText;
+					if(rotate){
+						tbl=rotateTable(HTML);
+						document.getElementById(elementID).innerHTML = "<table width=\"100%\">"+tbl.innerHTML+"</table>";
+					}else{
+						//alert(HTML.innerHTML);
+						document.getElementById(elementID).innerHTML= req.responseText;
+					}
 				}
 			}
 		}
