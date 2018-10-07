@@ -12,11 +12,16 @@
             $(".fade").hide(0).delay(500).fadeIn(3000)
         });
         /*****************************************/
+        function bodyLoad(){
+			pullTSV("https://subhrendu1987.github.io/util/Menu.tsv");
+		}
+        /*****************************************/
         function pullTSV(URL){
 			//alert("PullPage");
 			var req = new XMLHttpRequest();
 			req.open('GET',URL, false);   
 			req.send(null);
+			alert("debug");
 			var table[8][4];
 			if(req.status == 200){
 				var lines=req.responseText.split("\n");
@@ -47,7 +52,7 @@
 			}
 		}
 		/*****************************************/
-		window.onload = pullTSV("https://subhrendu1987.github.io/util/Menu.tsv");
+		window.onload = bodyLoad;
 	</script>
 	</head>
 <!--------------------------------------------------------------------------------------------------->
