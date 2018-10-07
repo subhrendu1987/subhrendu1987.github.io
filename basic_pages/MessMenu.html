@@ -6,14 +6,48 @@
     <meta name=”author” content=”Subhrendu Chattopadhyay” />
     <meta http-equiv=”content-type” content=”text/html;charset=UTF-8″ />
 		<link rel="stylesheet" type="text/css" href="../css/style.css" /> 
-	<title> Homepage </title>
-	<link rel="shortcut icon" href="../Picture/rsz_BasicHome.png">
-	<link href='../css/PinyonScript.css' rel='stylesheet' type='text/css'>
-	<link href='../css/AlexBrush.css' rel='stylesheet' type='text/css'>
+	<title> Today's Mess Menu </title>
 	<script type="text/javascript">
 		$(document).ready(function(){
             $(".fade").hide(0).delay(500).fadeIn(3000)
         });
+        /*****************************************/
+        function pullTSV(URL){
+			//alert("PullPage");
+			var req = new XMLHttpRequest();
+			req.open('GET',URL, false);   
+			req.send(null);
+			var table[8][4];
+			if(req.status == 200){
+				var lines=req.responseText.split("\n");
+				for(var i=0;i<lines.length;i++){
+	  				if(i=0){
+	  					var currentline=lines[i].split("\t");
+	  					for (var j = 1;currentline.length; j++) {
+							table[i][j]=currentline[j];
+	  					}
+	  				}else{
+	  					var currentline=lines[i].split("\t");
+	  	  				for (var j = 0;currentline.length; j++) {
+							table[i][j]=currentline[j];
+	  					}
+	  				}	  				
+	  				alert(lines[i]);
+	  			}
+	  			// Fill up current page
+	  			for(var i=1;i<table.length;i++){
+	  				for(var j=1;j<table[i].length;j++){
+	  					IDkey=table[i][0]+table[j][0];
+	  					document.getElementById(IDkey).innerHTML=table[i][j];
+	  				}
+	  				
+	  			}
+			}else{
+				alert("Error Pulling file");
+			}
+		}
+		/*****************************************/
+		window.onload = pullTSV("https://subhrendu1987.github.io/util/Menu.tsv");
 	</script>
 	</head>
 <!--------------------------------------------------------------------------------------------------->
@@ -56,35 +90,34 @@ document.getElementById("demo").innerHTML = day;
 		<tr><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr>
 		<tr>
 			<td>
-				<p class="sun">abc </p>
-				<p class="mon">def </p>
-				<p class="tue">ghi </p>
-				<p class="wed">jkl </p>
-				<p class="thu">mno </p>
-				<p class="fri">pqr </p>
-				<p class="sat">stu </p>
-			</td>
-						<td>
-				<p class="sun">abc </p>
-				<p class="mon">def </p>
-				<p class="tue">ghi </p>
-				<p class="wed">jkl </p>
-				<p class="thu">mno </p>
-				<p class="fri">pqr </p>
-				<p class="sat">stu </p>
+				<p class="breakfast" ID="SunBreakfast">abc </p>
+				<p class="breakfast" ID="MonBreakfast">def </p>
+				<p class="breakfast" ID="TueBreakfast">ghi </p>
+				<p class="breakfast" ID="WedBreakfast">jkl </p>
+				<p class="breakfast" ID="ThuBreakfast">mno </p>
+				<p class="breakfast" ID="FriBreakfast">pqr </p>
+				<p class="breakfast" ID="SatBreakfast">stu </p>
 			</td>
 			<td>
-				<p class="sun">abc </p>
-				<p class="mon">def </p>
-				<p class="tue">ghi </p>
-				<p class="wed">jkl </p>
-				<p class="thu">mno </p>
-				<p class="fri">pqr </p>
-				<p class="sat">stu </p>
+				<p class="lunch" ID="SunLunch">abc </p>
+				<p class="lunch" ID="MonLunch">def </p>
+				<p class="lunch" ID="TueLunch">ghi </p>
+				<p class="lunch" ID="WedLunch">jkl </p>
+				<p class="lunch" ID="ThuLunch">mno </p>
+				<p class="lunch" ID="FriLunch">pqr </p>
+				<p class="lunch" ID="SatLunch">stu </p>
+			</td>
+			<td>
+				<p class="dinner" ID="SunDinner">abc </p>
+				<p class="dinner" ID="MonDinner">def </p>
+				<p class="dinner" ID="TueDinner">ghi </p>
+				<p class="dinner" ID="WedDinner">jkl </p>
+				<p class="dinner" ID="ThuDinner">mno </p>
+				<p class="dinner" ID="FriDinner">pqr </p>
+				<p class="dinner" ID="SatDinner">stu </p>
 			</td>
 		</tr>
 </td>
-
 </tr></table>
 </center>
 </body>
