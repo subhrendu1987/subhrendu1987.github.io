@@ -13,11 +13,11 @@
         });
         /*****************************************/
         function bodyLoad(){
-			pullTSV("https://subhrendu1987.github.io/util/Menu.tsv");
+			return;
 		}
         /*****************************************/
         function pullTSV(URL){
-			//alert("PullPage");
+			alert("PullPage");
 			var req = new XMLHttpRequest();
 			req.open('GET',URL, false);   
 			req.send(null);
@@ -52,11 +52,27 @@
 			}
 		}
 		/*****************************************/
-		window.onload = bodyLoad;
 	</script>
 	</head>
 <!--------------------------------------------------------------------------------------------------->
-<body>
+<body id="index_body" onload="myFunction()" style="margin:0;">
+<!--------------------------------------------------------------------------------------------------->
+<div id="message"></div>
+<div id="loader"></div>
+<!--------------------------------------------------------------------------------------------------->
+<script>
+	var myVar;
+	function myFunction() {
+	    myVar = setTimeout(showPage, 3000);
+	}
+	/*****************************************/
+	function showPage() {
+	  document.getElementById("loader").style.display = "none";
+	  document.getElementById("mainpage").style.display = "block";
+	  bodyLoad();
+	}
+</script>
+<!--------------------------------------------------------------------------------------------------->
 <!---------------------------------MAIN BODY----------------------------------------------------------->
 <center>
 <table  id="contenttable">
@@ -88,7 +104,16 @@ switch (new Date().getDay()) {
 }
 document.getElementById("demo").innerHTML = day;
 </script>
+<script>
+	alert("Check");
+	//pullTSV("https://subhrendu1987.github.io/util/Menu.tsv");
+	var req = new XMLHttpRequest();
+	req.open('GET',URL, false);   
+	req.send(null);
+	alert("debug");
+	var table[8][4];
 
+</script>
 </td>
 <td>
 	<table border="1">
