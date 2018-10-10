@@ -19,20 +19,29 @@
 		$(document).ready(function(){
             $(".fade").hide(0).delay(500).fadeIn(3000)
         });
+       /*****************************************/
+        function makeArray(d1, d2) {
+        	var arr = [];
+        	for(i = 0; i < d2; i++) {
+        		arr.push(new Array(d1));
+    		}
+    		return arr;
+		}
         /*****************************************/
         function bodyLoad(){
-        	alert("Eta ki holo?");
+        	MessageShow("bodyLoad");
         	document.getElementById("message").innerHTML="BodyLoaded";
         	pullTSV("https://subhrendu1987.github.io/util/Menu.tsv");
 		}
         /*****************************************/
         function pullTSV(URL){
-			document.getElementById("message").innerHTML=URL;
 			var req = new XMLHttpRequest();
 			req.open('GET',URL, false);   
 			req.send(null);
-			var table[8][4];
+			//var table[8][4];
+			var table=makeArray(8,4);
 			if(req.status == 200){
+				document.getElementById("message").innerHTML=URL;
 				var lines=req.responseText.split("\n");
 				for(var i=0;i<lines.length;i++){
 	  				if(i=0){
@@ -61,6 +70,9 @@
 			}
 		}
 		/*****************************************/
+		function MessageShow(msg) {
+			document.getElementById("message").innerHTML=msg.toString();
+		}
 	</script>
 	</head>
 <!--------------------------------------------------------------------------------------------------->
@@ -72,13 +84,13 @@
 <script>
 	var myVar;
 	function myFunction() {
-	    myVar = setTimeout(showPage, 8000);
+	    myVar = setTimeout(showPage, 2000);
 	}
 	/*****************************************/
 	function showPage() {
 	  	document.getElementById("loader").style.display = "none";
 	  	document.getElementById("mainpage").style.display = "block";
-	  	document.getElementById("message").innerHTML="showPage";
+	  	MessageShow("showPage");
 	  	bodyLoad();
 	}
 </script>
