@@ -37,23 +37,18 @@
 			//var table[8][4];
 			var table=makeArray(8,4);
 			if(req.status == 200){
-				MessageShow(req.responseText);
+				//MessageShow(req.responseText);
 				var lines=req.responseText.split("\n");
 				MessageShow(lines[0]);
 				for(var i=0;i<lines.length;i++){
-	  				if(i=0){
-	  					var currentline=lines[i].split("\t");
-	  					for (var j = 1;currentline.length; j++) {
-							table[i][j]=currentline[j];
-	  					}
-	  				}else{
-	  					var currentline=lines[i].split("\t");
-	  	  				for (var j = 0;currentline.length; j++) {
-							table[i][j]=currentline[j];
-	  					}
-	  				}	  				
-	  				alert(lines[i]);
+	  				var currentline=lines[i].split("\t");
+	  				row=i%8;
+	  				col=(i/8)+1;
+	  				table[row][col]=currentline[1];
+	  				table[row][0]=currentline[0];
 	  			}
+	  			MessageShow(table[0].toString());
+	  			alert(table[1].toString());
 	  			// Fill up current page
 	  			for(var i=1;i<table.length;i++){
 	  				for(var j=1;j<table[i].length;j++){
@@ -63,7 +58,7 @@
 	  				
 	  			}
 			}else{
-				alert("Error Pulling file");
+				MessageShow("Error Pulling file");
 			}
 		}
 		/*****************************************/
@@ -146,13 +141,13 @@
 		<tr><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr>
 		<tr>
 			<td>
-				<p class="breakfast" ID="SunBreakfast">abc </p>
-				<p class="breakfast" ID="MonBreakfast">def </p>
-				<p class="breakfast" ID="TueBreakfast">ghi </p>
-				<p class="breakfast" ID="WedBreakfast">jkl </p>
-				<p class="breakfast" ID="ThuBreakfast">mno </p>
-				<p class="breakfast" ID="FriBreakfast">pqr </p>
-				<p class="breakfast" ID="SatBreakfast">stu </p>
+				<p class="breakfast" ID="SunBREAKFAST">abc </p>
+				<p class="breakfast" ID="MonBREAKFAST">def </p>
+				<p class="breakfast" ID="TueBREAKFAST">ghi </p>
+				<p class="breakfast" ID="WedBREAKFAST">jkl </p>
+				<p class="breakfast" ID="ThuBREAKFAST">mno </p>
+				<p class="breakfast" ID="FriBREAKFAST">pqr </p>
+				<p class="breakfast" ID="SatBREAKFAST">stu </p>
 			</td>
 			<td>
 				<p class="lunch" ID="SunLunch">abc </p>
