@@ -39,16 +39,18 @@
 			if(req.status == 200){
 				//MessageShow(req.responseText);
 				var lines=req.responseText.split("\n");
-				MessageShow(lines[0]);
-				for(var i=0;i<lines.length;i++){
+				//MessageShow(lines.length);
+				var i;
+				for(i=0;i<lines.length;i++){
 	  				var currentline=lines[i].split("\t");
 	  				row=i%8;
-	  				col=(i/8)+1;
+	  				col=Math.ceil(i/8);
 	  				table[row][col]=currentline[1];
 	  				table[row][0]=currentline[0];
+	  				alert(i);
+	  				MessageShow("i="+i+",r="+row+",c="+col+",line="+table[row][col]);
 	  			}
-	  			MessageShow(table[0].toString());
-	  			alert(table[1].toString());
+	  			MessageShow("i="+i);
 	  			// Fill up current page
 	  			for(var i=1;i<table.length;i++){
 	  				for(var j=1;j<table[i].length;j++){
