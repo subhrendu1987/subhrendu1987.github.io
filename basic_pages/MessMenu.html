@@ -16,10 +16,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	<script type="application/javascript">
-		$(document).ready(function(){
-            $(".fade").hide(0).delay(500).fadeIn(3000)
-        });
-       /*****************************************/
+		/*****************************************/
         function makeArray(d1, d2) {
         	var arr = [];
         	for(i = 0; i < d2; i++) {
@@ -27,36 +24,33 @@
     		}
     		return arr;
 		}
-        /*****************************************/
-        function bodyLoad(){
-        	MessageShow("bodyLoad");
-        	document.getElementById("message").innerHTML="BodyLoaded";
-        	pullTSV("https://subhrendu1987.github.io/util/Menu.html");
+		/*****************************************/
+		function bodyLoad(){
+			fillDate();
+			pullTSV("https://subhrendu1987.github.io/util/Menu.html");
 		}
-        /*****************************************/
-        function pullTSV(URL){
+		/*****************************************/
+		function pullTSV(URL){
 			var req = new XMLHttpRequest();
 			req.open('GET',URL, false);   
 			req.send(null);
 			//var table[8][4];
 			var table=makeArray(8,4);
 			if(req.status == 200){
-				document.getElementById("message").innerHTML=URL;
+				//MessageShow(req.responseText);
 				var lines=req.responseText.split("\n");
-				for(var i=0;i<lines.length;i++){
-	  				if(i=0){
-	  					var currentline=lines[i].split("\t");
-	  					for (var j = 1;currentline.length; j++) {
-							table[i][j]=currentline[j];
-	  					}
-	  				}else{
-	  					var currentline=lines[i].split("\t");
-	  	  				for (var j = 0;currentline.length; j++) {
-							table[i][j]=currentline[j];
-	  					}
-	  				}	  				
-	  				alert(lines[i]);
+				//MessageShow(lines.length);
+				var i;
+				for(i=0;i<lines.length;i++){
+	  				var currentline=lines[i].split("\t");
+	  				row=i%8;
+	  				col=Math.ceil(i/8);
+	  				table[row][col]=currentline[1];
+	  				table[row][0]=currentline[0];
+	  				alert(i);
+	  				MessageShow("i="+i+",r="+row+",c="+col+",line="+table[row][col]);
 	  			}
+	  			MessageShow("i="+i);
 	  			// Fill up current page
 	  			for(var i=1;i<table.length;i++){
 	  				for(var j=1;j<table[i].length;j++){
@@ -66,16 +60,43 @@
 	  				
 	  			}
 			}else{
-				alert("Error Pulling file");
+				MessageShow("Error Pulling file");
 			}
 		}
 		/*****************************************/
 		function MessageShow(msg) {
 			document.getElementById("message").innerHTML=msg.toString();
 		}
+		/*****************************************/
+		window.onload = bodyLoad;
+		/*****************************************/
+		function fillDate(){
+			switch (new Date().getDay()) {
+			    case 0:
+			        day = "Sunday";
+			        break;
+			    case 1:
+			        day = "Monday";
+			        break;
+			    case 2:
+			        day = "Tuesday";
+			        break;
+			    case 3:
+			        day = "Wednesday";
+			        break;
+			    case 4:
+			        day = "Thursday";
+			        break;
+			    case 5:
+			        day = "Friday";
+			        break;
+			    case 6:
+			        day = "Saturday";
+			}
+		document.getElementById("demo").innerHTML = day;
+		}
 	</script>
-	</head>
-<!--------------------------------------------------------------------------------------------------->
+</head>
 <body id="index_body" onload="myFunction()" style="margin:0;">
 <!--------------------------------------------------------------------------------------------------->
 <div id="message"></div>
@@ -84,62 +105,51 @@
 <script>
 	var myVar;
 	function myFunction() {
-	    myVar = setTimeout(showPage, 2000);
+	    myVar = setTimeout(showPage, 3000);
 	}
 	/*****************************************/
 	function showPage() {
-	  	document.getElementById("loader").style.display = "none";
-	  	document.getElementById("mainpage").style.display = "block";
-	  	MessageShow("showPage");
-	  	bodyLoad();
+	  document.getElementById("loader").style.display = "none";
+	  document.getElementById("mainpage").style.display = "block";
+	  bodyLoad();
 	}
 </script>
 <!--------------------------------------------------------------------------------------------------->
-<!---------------------------------MAIN BODY----------------------------------------------------------->
 <div id="mainpage" style="display:none;" class="animate-bottom">
 <center>
+<table width="100%" border="0">
+	<tr>
+        <td align="center">
+	        <div id="Logo">
+			    <img src="../Picture/iitg_web_mid.gif" alt="IITG_LOGO" href="index.html" height="64px">
+	        </div>
+        </td>
+        <td>
+			<div class="name">Subhrendu Chattopadhyay</div>
+			<div class="nameplate_addr">Cube-15, RS-2 Lab<br>
+			Department of Computer Science and Engineering<br>
+			Indian Institute of Technology, Guwahati<br>
+			Assam India 781039</div>
+        </td>
+	</tr>
+</table>
+<!-------------------------------------------------------------------->
 <table  id="contenttable">
 <tr><td width="30%" align="center">
 	<p id="demo"></p>
-
-<script>
-switch (new Date().getDay()) {
-    case 0:
-        day = "Sunday";
-        break;
-    case 1:
-        day = "Monday";
-        break;
-    case 2:
-        day = "Tuesday";
-        break;
-    case 3:
-        day = "Wednesday";
-        break;
-    case 4:
-        day = "Thursday";
-        break;
-    case 5:
-        day = "Friday";
-        break;
-    case 6:
-        day = "Saturday";
-}
-document.getElementById("demo").innerHTML = day;
-</script>
-</td>
-<td>
+	</td>
+	<td>
 	<table border="1">
 		<tr><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr>
 		<tr>
 			<td>
-				<p class="breakfast" ID="SunBreakfast">abc </p>
-				<p class="breakfast" ID="MonBreakfast">def </p>
-				<p class="breakfast" ID="TueBreakfast">ghi </p>
-				<p class="breakfast" ID="WedBreakfast">jkl </p>
-				<p class="breakfast" ID="ThuBreakfast">mno </p>
-				<p class="breakfast" ID="FriBreakfast">pqr </p>
-				<p class="breakfast" ID="SatBreakfast">stu </p>
+				<p class="breakfast" ID="SunBREAKFAST">abc </p>
+				<p class="breakfast" ID="MonBREAKFAST">def </p>
+				<p class="breakfast" ID="TueBREAKFAST">ghi </p>
+				<p class="breakfast" ID="WedBREAKFAST">jkl </p>
+				<p class="breakfast" ID="ThuBREAKFAST">mno </p>
+				<p class="breakfast" ID="FriBREAKFAST">pqr </p>
+				<p class="breakfast" ID="SatBREAKFAST">stu </p>
 			</td>
 			<td>
 				<p class="lunch" ID="SunLunch">abc </p>
@@ -163,5 +173,6 @@ document.getElementById("demo").innerHTML = day;
 </td>
 </tr></table>
 </center>
+</div>
 </body>
 </html>
