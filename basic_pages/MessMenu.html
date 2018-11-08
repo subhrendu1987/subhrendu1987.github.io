@@ -40,24 +40,19 @@
 				//MessageShow(req.responseText);
 				var lines=req.responseText.split("\n");
 				//MessageShow(lines.length);
-				var i;
+				var i,day;
 				for(i=0;i<lines.length;i++){
 	  				var currentline=lines[i].split("\t");
-	  				row=i%8;
-	  				col=Math.ceil(i/8);
-	  				table[row][col]=currentline[1];
-	  				table[row][0]=currentline[0];
-	  				alert(i);
-	  				MessageShow("i="+i+",r="+row+",c="+col+",line="+table[row][col]);
-	  			}
-	  			MessageShow("i="+i);
-	  			// Fill up current page
-	  			for(var i=1;i<table.length;i++){
-	  				for(var j=1;j<table[i].length;j++){
-	  					IDkey=table[i][0]+table[j][0];
-	  					document.getElementById(IDkey).innerHTML=table[i][j];
+	  				if(i%8==0 && currentline[0]=="Day"){
+	  					meal=currentline[1];
+	  				}else{
+		  				row=i%8;
+		  				col=Math.ceil(i/8);
+		  				var day=currentline[0];
+		  				IDkey=day+meal;
+		  				MessageShow("i/tot="+i+"/"+lines.length+",r="+row+",c="+col+",line="+table[col][row]);
+		  				document.getElementById(IDkey).innerHTML=currentline[1];
 	  				}
-	  				
 	  			}
 			}else{
 				MessageShow("Error Pulling file");
@@ -135,42 +130,116 @@
 </table>
 <!-------------------------------------------------------------------->
 <table  id="contenttable">
-<tr><td width="30%" align="center">
-	<p id="demo"></p>
-	</td>
+<tr><td width="30%" align="center"><p id="demo"></p></td>
 	<td>
 	<table border="1">
-		<tr><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr>
+		<tr><th>Day</th><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr>
 		<tr>
 			<td>
+				<p class="breakfast">Sun </p>
+			</td>
+			<td>
 				<p class="breakfast" ID="SunBREAKFAST">abc </p>
-				<p class="breakfast" ID="MonBREAKFAST">def </p>
+			</td>
+			<td>
+				<p class="lunch" ID="SunLUNCH">abc </p>
+			</td>
+			<td>
+				<p class="dinner" ID="SunDINNER">abc </p>
+			</td>
+		</tr>
+<!---------------------------------------------------------->
+		<tr>
+			<td>
+				<p class="breakfast">Mon </p>
+			</td>
+			<td>
+				<p class="breakfast" ID="MonBREAKFAST">def </p>				
+			</td>
+			<td>
+				<p class="lunch" ID="MonLUNCH">def </p>
+			</td>
+			<td>
+				<p class="dinner" ID="MonDINNER">def </p>				
+			</td>
+		</tr>
+<!---------------------------------------------------------->
+		<tr>
+			<td>
+				<p class="breakfast">Tue </p>
+			</td>
+			<td>
 				<p class="breakfast" ID="TueBREAKFAST">ghi </p>
+			</td>
+			<td>
+				<p class="lunch" ID="TueLUNCH">ghi </p>
+			</td>
+			<td>
+				<p class="dinner" ID="TueDINNER">ghi </p>
+			</td>
+		</tr>
+<!---------------------------------------------------------->
+		<tr>
+			<td>
+				<p class="breakfast">Wed </p>
+			</td>
+			<td>
 				<p class="breakfast" ID="WedBREAKFAST">jkl </p>
+			</td>
+			<td>
+				<p class="lunch" ID="WedLUNCH">jkl </p>
+			</td>
+			<td>
+				<p class="dinner" ID="WedDINNER">jkl </p>
+			</td>
+		</tr>
+<!---------------------------------------------------------->
+		<tr>
+			<td>
+				<p class="breakfast">Thu </p>
+			</td>
+			<td>
 				<p class="breakfast" ID="ThuBREAKFAST">mno </p>
+			</td>
+			<td>
+				<p class="lunch" ID="ThuLUNCH">mno </p>
+			</td>
+			<td>
+				<p class="dinner" ID="ThuDINNER">mno </p>
+			</td>
+		</tr>
+<!---------------------------------------------------------->
+		<tr>
+			<td>
+				<p class="breakfast">Fri </p>
+			</td>
+			<td>
 				<p class="breakfast" ID="FriBREAKFAST">pqr </p>
+			</td>
+			<td>
+				<p class="lunch" ID="FriLUNCH">pqr </p>
+			</td>
+			<td>
+				<p class="dinner" ID="FriDINNER">pqr </p>
+			</td>
+		</tr>
+<!---------------------------------------------------------->
+		<tr>
+			<td>
+				<p class="breakfast">Sat </p>
+			</td>
+			<td>
 				<p class="breakfast" ID="SatBREAKFAST">stu </p>
 			</td>
 			<td>
-				<p class="lunch" ID="SunLunch">abc </p>
-				<p class="lunch" ID="MonLunch">def </p>
-				<p class="lunch" ID="TueLunch">ghi </p>
-				<p class="lunch" ID="WedLunch">jkl </p>
-				<p class="lunch" ID="ThuLunch">mno </p>
-				<p class="lunch" ID="FriLunch">pqr </p>
-				<p class="lunch" ID="SatLunch">stu </p>
+				<p class="lunch" ID="SatLUNCH">stu </p>
 			</td>
 			<td>
-				<p class="dinner" ID="SunDinner">abc </p>
-				<p class="dinner" ID="MonDinner">def </p>
-				<p class="dinner" ID="TueDinner">ghi </p>
-				<p class="dinner" ID="WedDinner">jkl </p>
-				<p class="dinner" ID="ThuDinner">mno </p>
-				<p class="dinner" ID="FriDinner">pqr </p>
-				<p class="dinner" ID="SatDinner">stu </p>
+				<p class="dinner" ID="SatDINNER">stu </p>
 			</td>
 		</tr>
-</td>
+<!---------------------------------------------------------->
+	</table></td>
 </tr></table>
 </center>
 </div>
