@@ -89,6 +89,7 @@
 			        day = "Saturday";
 			}
 		document.getElementById("demo").innerHTML = day;
+		document.getElementById(day).style.display = "block";
 		}
 	</script>
 </head>
@@ -130,116 +131,114 @@
 </table>
 <!-------------------------------------------------------------------->
 <table  id="contenttable">
-<tr><td width="30%" align="center"><p id="demo"></p></td>
+<tr><td width="10%" align="center"><p id="demo"></p></td>
 	<td>
-	<table border="1">
-		<tr><th>Day</th><th>Breakfast</th><th>Lunch</th><th>Dinner</th></tr>
+		<table border="1" ID="Sunday" style="display:none">
+		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
 			<td>
-				<p class="breakfast">Sun </p>
+				<p class="Sunday" ID="SunBREAKFAST">abc </p>
 			</td>
 			<td>
-				<p class="breakfast" ID="SunBREAKFAST">abc </p>
+				<p class="Sunday" ID="SunLUNCH">abc </p>
 			</td>
 			<td>
-				<p class="lunch" ID="SunLUNCH">abc </p>
-			</td>
-			<td>
-				<p class="dinner" ID="SunDINNER">abc </p>
+				<p class="Sunday" ID="SunDINNER">abc </p>
 			</td>
 		</tr>
+		</table>
 <!---------------------------------------------------------->
+		<table border="1" ID="Monday" style="display:none">
+		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
 			<td>
-				<p class="breakfast">Mon </p>
+				<p class="Monday" ID="MonBREAKFAST">def </p>				
 			</td>
 			<td>
-				<p class="breakfast" ID="MonBREAKFAST">def </p>				
+				<p class="Monday" ID="MonLUNCH">def </p>
 			</td>
 			<td>
-				<p class="lunch" ID="MonLUNCH">def </p>
-			</td>
-			<td>
-				<p class="dinner" ID="MonDINNER">def </p>				
+				<p class="Monday" ID="MonDINNER">def </p>				
 			</td>
 		</tr>
+		</table>
 <!---------------------------------------------------------->
+		<table border="1" ID="Tuesday" style="display:none">
+		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
 			<td>
-				<p class="breakfast">Tue </p>
+				<p class="Tuesday" ID="TueBREAKFAST">ghi </p>
 			</td>
 			<td>
-				<p class="breakfast" ID="TueBREAKFAST">ghi </p>
+				<p class="Tuesday" ID="TueLUNCH">ghi </p>
 			</td>
 			<td>
-				<p class="lunch" ID="TueLUNCH">ghi </p>
-			</td>
-			<td>
-				<p class="dinner" ID="TueDINNER">ghi </p>
+				<p class="Tuesday" ID="TueDINNER">ghi </p>
 			</td>
 		</tr>
+		</table>
 <!---------------------------------------------------------->
+		<table border="1" ID="Wednesday" style="display:none">
+		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
 			<td>
-				<p class="breakfast">Wed </p>
+				<p class="Wednesday" ID="WedBREAKFAST">jkl </p>
 			</td>
 			<td>
-				<p class="breakfast" ID="WedBREAKFAST">jkl </p>
+				<p class="Wednesday" ID="WedLUNCH">jkl </p>
 			</td>
 			<td>
-				<p class="lunch" ID="WedLUNCH">jkl </p>
-			</td>
-			<td>
-				<p class="dinner" ID="WedDINNER">jkl </p>
+				<p class="Wednesday" ID="WedDINNER">jkl </p>
 			</td>
 		</tr>
+		</table>
 <!---------------------------------------------------------->
+		<table border="1" ID="Thursday" style="display:none">
+		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
 			<td>
-				<p class="breakfast">Thu </p>
+				<p class="Thursday" ID="ThuBREAKFAST">mno </p>
 			</td>
 			<td>
-				<p class="breakfast" ID="ThuBREAKFAST">mno </p>
+				<p class="Thursday" ID="ThuLUNCH">mno </p>
 			</td>
 			<td>
-				<p class="lunch" ID="ThuLUNCH">mno </p>
-			</td>
-			<td>
-				<p class="dinner" ID="ThuDINNER">mno </p>
+				<p class="Thursday" ID="ThuDINNER">mno </p>
 			</td>
 		</tr>
+		</table>
 <!---------------------------------------------------------->
+		<table border="1" ID="Friday" style="display:none"">
+		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
 			<td>
-				<p class="breakfast">Fri </p>
+				<p class="Friday" ID="FriBREAKFAST">pqr </p>
 			</td>
 			<td>
-				<p class="breakfast" ID="FriBREAKFAST">pqr </p>
+				<p class="Friday" ID="FriLUNCH">pqr </p>
 			</td>
 			<td>
-				<p class="lunch" ID="FriLUNCH">pqr </p>
-			</td>
-			<td>
-				<p class="dinner" ID="FriDINNER">pqr </p>
+				<p class="Friday" ID="FriDINNER">pqr </p>
 			</td>
 		</tr>
+		</table>
 <!---------------------------------------------------------->
+		<table border="1" ID="Saturday" style="display:none">
+		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
 			<td>
-				<p class="breakfast">Sat </p>
+				<p class="Saturday" ID="SatBREAKFAST">stu </p>
 			</td>
 			<td>
-				<p class="breakfast" ID="SatBREAKFAST">stu </p>
+				<p class="Saturday" ID="SatLUNCH">stu </p>
 			</td>
 			<td>
-				<p class="lunch" ID="SatLUNCH">stu </p>
-			</td>
-			<td>
-				<p class="dinner" ID="SatDINNER">stu </p>
+				<p class="Saturday" ID="SatDINNER">stu </p>
 			</td>
 		</tr>
+		</table>
 <!---------------------------------------------------------->
-	</table></td>
+	</td>
 </tr></table>
 </center>
 </div>
