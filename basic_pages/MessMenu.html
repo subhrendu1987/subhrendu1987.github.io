@@ -41,19 +41,23 @@
 				var lines=req.responseText.split("\n");
 				//MessageShow(lines.length);
 				var i,day;
-				for(i=0;i<lines.length;i++){
-	  				var currentline=lines[i].split("\t");
-	  				if(i%8==0 && currentline[0]=="Day"){
-	  					meal=currentline[1];
-	  				}else{
-		  				row=i%8;
-		  				col=Math.ceil(i/8);
-		  				var day=currentline[0];
-		  				IDkey=day+meal;
-		  				MessageShow("i/tot="+i+"/"+lines.length+",r="+row+",c="+col+",line="+table[col][row]);
-		  				document.getElementById(IDkey).innerHTML=currentline[1];
-	  				}
-	  			}
+				try {
+					for(i=0;i<lines.length;i++){
+		  				var currentline=lines[i].split("\t");
+		  				if(i%8==0 && currentline[0]=="Day"){
+		  					meal=currentline[1];
+		  				}else{
+			  				row=i%8;
+			  				col=Math.ceil(i/8);
+			  				var day=currentline[0];
+			  				IDkey=day+meal;
+			  				//MessageShow("i/tot="+i+"/"+lines.length+",r="+row+",c="+col+",line="+table[col][row]);
+			  				document.getElementById(IDkey).innerHTML=currentline[1];
+		  				}
+		  			}
+	  			}catch(err) {
+					MessageShow(err.message+"i/tot="+i+"/"+lines.length+",r="+row+",c="+col+",line="+table[col][row]);
+				} 
 			}else{
 				MessageShow("Error Pulling file");
 			}
@@ -131,17 +135,21 @@
 </table>
 <!-------------------------------------------------------------------->
 <table  id="contenttable">
-<tr><td width="10%" align="center"><p id="demo"></p></td>
+<tr><td width="10%" align="center"><p id="demo" style="vertical-align: bottom"></p></td>
 	<td>
 		<table border="1" ID="Sunday" style="display:none">
-		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Sunday" ID="SunBREAKFAST">abc </p>
 			</td>
+		</tr><tr>
+			<th>LUNCH</th>
 			<td>
 				<p class="Sunday" ID="SunLUNCH">abc </p>
 			</td>
+		</tr><tr>
+			<th>DINNER</th>
 			<td>
 				<p class="Sunday" ID="SunDINNER">abc </p>
 			</td>
@@ -149,14 +157,18 @@
 		</table>
 <!---------------------------------------------------------->
 		<table border="1" ID="Monday" style="display:none">
-		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Monday" ID="MonBREAKFAST">def </p>				
 			</td>
+		</tr><tr>
+			<th>LUNCH</th>
 			<td>
 				<p class="Monday" ID="MonLUNCH">def </p>
 			</td>
+		</tr><tr>
+			<th>DINNER</th>
 			<td>
 				<p class="Monday" ID="MonDINNER">def </p>				
 			</td>
@@ -164,14 +176,18 @@
 		</table>
 <!---------------------------------------------------------->
 		<table border="1" ID="Tuesday" style="display:none">
-		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Tuesday" ID="TueBREAKFAST">ghi </p>
 			</td>
+		</tr><tr>
+			<th>LUNCH</th>
 			<td>
 				<p class="Tuesday" ID="TueLUNCH">ghi </p>
 			</td>
+		</tr><tr>
+			<th>DINNER</th>
 			<td>
 				<p class="Tuesday" ID="TueDINNER">ghi </p>
 			</td>
@@ -179,14 +195,18 @@
 		</table>
 <!---------------------------------------------------------->
 		<table border="1" ID="Wednesday" style="display:none">
-		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Wednesday" ID="WedBREAKFAST">jkl </p>
 			</td>
+		</tr><tr>
+			<th>LUNCH</th>
 			<td>
 				<p class="Wednesday" ID="WedLUNCH">jkl </p>
 			</td>
+		</tr><tr>
+			<th>DINNER</th>
 			<td>
 				<p class="Wednesday" ID="WedDINNER">jkl </p>
 			</td>
@@ -194,29 +214,37 @@
 		</table>
 <!---------------------------------------------------------->
 		<table border="1" ID="Thursday" style="display:none">
-		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Thursday" ID="ThuBREAKFAST">mno </p>
 			</td>
+		</tr><tr>
+			<th>LUNCH</th>
 			<td>
 				<p class="Thursday" ID="ThuLUNCH">mno </p>
 			</td>
+		</tr><tr>
+			<th>DINNER</th>
 			<td>
 				<p class="Thursday" ID="ThuDINNER">mno </p>
 			</td>
 		</tr>
 		</table>
 <!---------------------------------------------------------->
-		<table border="1" ID="Friday" style="display:none"">
-		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
+		<table border="1" ID="Friday" style="display:none">
 		<tr>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Friday" ID="FriBREAKFAST">pqr </p>
 			</td>
+		</tr><tr>
+			<th>LUNCH</th>
 			<td>
 				<p class="Friday" ID="FriLUNCH">pqr </p>
 			</td>
+		</tr><tr>
+			<th>DINNER</th>
 			<td>
 				<p class="Friday" ID="FriDINNER">pqr </p>
 			</td>
@@ -224,14 +252,18 @@
 		</table>
 <!---------------------------------------------------------->
 		<table border="1" ID="Saturday" style="display:none">
-		<tr><th>BREAKFAST</th><th>LUNCH</th><th>DINNER</th></tr>
 		<tr>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Saturday" ID="SatBREAKFAST">stu </p>
 			</td>
+		</tr><tr>
+			<th>LUNCH</th>
 			<td>
 				<p class="Saturday" ID="SatLUNCH">stu </p>
 			</td>
+		</tr><tr>
+			<th>DINNER</th>
 			<td>
 				<p class="Saturday" ID="SatDINNER">stu </p>
 			</td>
