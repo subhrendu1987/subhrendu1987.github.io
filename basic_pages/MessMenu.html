@@ -15,6 +15,12 @@
 	<script src='../script/jquery.min.js'></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<style>
+		.menu{
+			//display:block;
+			display:none;
+		}
+	</style>
 	<script type="application/javascript">
 		/*****************************************/
         function makeArray(d1, d2) {
@@ -40,23 +46,28 @@
 				//MessageShow(req.responseText);
 				var lines=req.responseText.split("\n");
 				//MessageShow(lines.length);
-				var i,day;
+				var i,day,meal;
 				try {
 					for(i=0;i<lines.length;i++){
 		  				var currentline=lines[i].split("\t");
-		  				if(i%8==0 && currentline[0]=="Day"){
+		  				if(lines[i].length==0){
+		  					continue;
+		  				}else if(currentline[0]=="Day"){
 		  					meal=currentline[1];
 		  				}else{
-			  				row=i%8;
-			  				col=Math.ceil(i/8);
 			  				var day=currentline[0];
 			  				IDkey=day+meal;
+			  				var eleExists = document.getElementById(IDkey);
 			  				//MessageShow("i/tot="+i+"/"+lines.length+",r="+row+",c="+col+",line="+table[col][row]);
-			  				document.getElementById(IDkey).innerHTML=currentline[1];
+			  				if(eleExists){
+			  					document.getElementById(IDkey).innerHTML=currentline[1];
+			  				}else{
+			  					MessageShow("i/tot="+i+"/"+lines.length);
+			  				}
 		  				}
 		  			}
 	  			}catch(err) {
-					MessageShow(err.message+"i/tot="+i+"/"+lines.length+",r="+row+",c="+col+",line="+table[col][row]);
+					MessageShow(err.message+"i/tot="+(i+1)+"/"+lines.length);
 				} 
 			}else{
 				MessageShow("Error Pulling file");
@@ -137,9 +148,9 @@
 <table  id="contenttable">
 <tr><td width="10%" align="center"><p id="demo" style="vertical-align: bottom"></p></td>
 	<td>
-		<table border="1" ID="Sunday" style="display:none">
+		<table border="1" ID="Sunday" class="menu">
 		<tr>
-			<th>1.BREAKFAST</th>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Sunday" ID="SunBREAKFAST">abc </p>
 			</td>
@@ -156,9 +167,9 @@
 		</tr>
 		</table>
 <!---------------------------------------------------------->
-		<table border="1" ID="Monday" style="display:none">
+		<table border="1" ID="Monday" class="menu">
 		<tr>
-			<th>2.BREAKFAST</th>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Monday" ID="MonBREAKFAST">def </p>				
 			</td>
@@ -175,9 +186,9 @@
 		</tr>
 		</table>
 <!---------------------------------------------------------->
-		<table border="1" ID="Tuesday" style="display:none">
+		<table border="1" ID="Tuesday" class="menu">
 		<tr>
-			<th>3.BREAKFAST</th>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Tuesday" ID="TueBREAKFAST">ghi </p>
 			</td>
@@ -194,9 +205,9 @@
 		</tr>
 		</table>
 <!---------------------------------------------------------->
-		<table border="1" ID="Wednesday" style="display:none">
+		<table border="1" ID="Wednesday" class="menu">
 		<tr>
-			<th>4.BREAKFAST</th>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Wednesday" ID="WedBREAKFAST">jkl </p>
 			</td>
@@ -213,9 +224,9 @@
 		</tr>
 		</table>
 <!---------------------------------------------------------->
-		<table border="1" ID="Thursday" style="display:none">
+		<table border="1" ID="Thursday" class="menu">
 		<tr>
-			<th>5.BREAKFAST</th>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Thursday" ID="ThuBREAKFAST">mno </p>
 			</td>
@@ -232,9 +243,9 @@
 		</tr>
 		</table>
 <!---------------------------------------------------------->
-		<table border="1" ID="Friday" style="display:none">
+		<table border="1" ID="Friday" class="menu">
 		<tr>
-			<th>6.BREAKFAST</th>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Friday" ID="FriBREAKFAST">pqr </p>
 			</td>
@@ -251,9 +262,9 @@
 		</tr>
 		</table>
 <!---------------------------------------------------------->
-		<table border="1" ID="Saturday" style="display:none">
+		<table border="1" ID="Saturday" class="menu">
 		<tr>
-			<th>7.BREAKFAST</th>
+			<th>BREAKFAST</th>
 			<td>
 				<p class="Saturday" ID="SatBREAKFAST">stu </p>
 			</td>
