@@ -526,3 +526,7 @@ table{
     -o-transition: all 1s ease-out;  /* Opera 10.50–12.00 */
     transition: all 1s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
+
+.core_pub_td1{
+            border-bottom: 1px solid;
+}
