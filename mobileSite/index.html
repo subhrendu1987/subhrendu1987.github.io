@@ -75,6 +75,29 @@
 			}
 		}
 		/*****************************************/
+		function isAnyNumeric(str) {
+	  	    var ret="";
+	  	    for(var i = 0, len = str.length; i < len; i++){
+	  		if ((str[i]-0==str[i]) && ((""+str[i]).trim().length >0) ){
+	  		    //ret=ret+","+str[i]+"=True";
+	  		    return(true);
+	  		}else{
+	  		    ret=ret+","+str[i]+"=False";
+	  		}
+	  	    }
+	  	    return(false);
+		}
+		/*****************************************/
+		function get_table_row() {
+		    tabs=document.getElementById("core_pub").rows;
+		    //alert(tabs[1].innerHTML);
+		    for (var i = 0, len = tabs.length; i < len; i++) {
+			newHTML='<td><b>' +(i+1) +'</b>.</td>'+tabs[i].innerHTML;
+			//alert(newHTML);
+			tabs[i].innerHTML= newHTML;
+		    }
+		}
+		/*****************************************/
 		window.onload = bodyLoad;
 	</script>
 </head>

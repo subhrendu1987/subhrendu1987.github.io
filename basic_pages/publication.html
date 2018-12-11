@@ -27,10 +27,12 @@
 	/*****************************************/
 	function get_table_row() {
 	    tabs=document.getElementById("core_pub").rows;
-	    //alert(tabs[1].innerHTML);
-	    for (var i = 0, len = tabs.length; i < len; i++) {
-		newHTML='<td><b>' +(i+1) +'</b>.</td>'+tabs[i].innerHTML;
-		//alert(newHTML);
+	    // Header
+	    newHTML='<th class="core_h_sl"> Sl. </th>'+tabs[0].innerHTML;
+	    tabs[0].innerHTML= newHTML;
+	    // Content rows
+	    for (var i = 1, len = tabs.length; i < len; i++) {
+newHTML='<td><b>' +(i) +'</b>.</td>'+tabs[i].innerHTML;newHTML='<td><b>' +(i) +'</b>.</td>'+tabs[i].innerHTML
 		tabs[i].innerHTML= newHTML;
 	    }
 	}
@@ -46,6 +48,16 @@
 	<h2>List of Publications</h2>
 	<table class="core_pub" id="core_pub">
 <!------------------------------------------------------------------>				
+	<tr class="core_h" align="center">
+		<th class="core_h_det" align="center"> Details </th>
+		<!------>
+		<th class="core_h_dt"> Date</th>
+		<!------>
+		<!--th class="core_h_p" style="vertical-align: top;"> <img class="pub_icon" alt="D" src="../Picture/dload.png"> </th>
+		<!------>
+		<!--th class="core_h_s" style="vertical-align: top;"> <img class="pub_icon" alt="P" src="../Picture/slides.png"> </th>
+	</tr>
+<!------------------------------------------------------------------>				
 	<tr class="core_pub_tr">
 		<td class="core_pub_td1">
 			<div class="pub_auth">
@@ -53,8 +65,12 @@
 			</div><div class="pub_name"><q> 
 			Aloe: An Elastic Auto-Scaled and Self-stabilized Orchestration Framework for IoT Applications
 			</q></div><div class="pub_conf">
-			in the proc. of the 38th IEEE International Conference on Computer Communications (INFOCOM 2019), Paris, France, April 29-2 May, 2019 (accepted).
+			in the proc. of the 38th IEEE International Conference on Computer Communications (INFOCOM 2019), Paris, France (accepted).
 	 		</div>
+		</td>
+		<!------>
+		<td class="core_pub_dt">
+			29/04/2019- 02/05/2019
 		</td>
 		<!------>
 		<td class="core_pub_td2">
@@ -75,9 +91,15 @@
 		</div><div class="pub_name"><q> 
 		Improving MPTCP Performance by Enabling Sub-Flow Selection over a SDN Supported Network
 		</q></div><div class="pub_conf">
-		in the proc. of the 14th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob 2014), Limassol, Cyprus, October 15-17, 2018.
+		in the proc. of the 14th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob 2014), Limassol, Cyprus.
 	 	</div>
-	</td><td class="core_pub_td2">
+	</td>
+	<!------>
+	<td class="core_pub_dt">
+		15/10/2018- 17/10/2018
+	</td>
+	<!------>
+	<td class="core_pub_td2">
 		<a class="pub_link" target="_top" href="../pub/WiMobPaper.pdf">
 <img class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">
@@ -92,9 +114,15 @@
 		</div><div class="pub_name"><q> 
 		Fast and Secure Handoffs for V2I communication in Smart City Wi-Fi Deployement
 		</q></div><div class="pub_conf">
-		in the proc. of the 14th International Conference on Distributed Computing and Internet Technology (ICDCIT 2018),   Bhubaneswar, Odisha, India, January 11-13, 2018.
+		in the proc. of the 14th International Conference on Distributed Computing and Internet Technology (ICDCIT 2018),   Bhubaneswar, Odisha, India.
 	 	</div>
-	</td><td class="core_pub_td2">
+	</td>
+	<!------>
+	<td class="core_pub_dt">
+		11/01/2018- 13/01/2018
+	</td>
+	<!------>
+	<td class="core_pub_td2">
 		<a class="pub_link" target="_top" href="https://link.springer.com/chapter/10.1007/978-3-319-72344-0_15">
 <img class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">
@@ -109,9 +137,15 @@
 		</div><div class="pub_name"><q> 
 		Poster: Primary Path Effect in Multi-Path TCP: How Serious Is It for Deployment Consideration?
 		</q></div><div class="pub_conf">
-		in the proc. of the 18th ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc 2017),  Chennai, India, July 10-14, 2017.
+		in the proc. of the 18th ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc 2017),  Chennai, India.
 	 	</div>
-	</td><td class="core_pub_td2">
+	</td>
+	<!------>
+	<td class="core_pub_dt">
+		10/07/2017- 14/07/2017
+	</td>
+	<!------>
+	<td class="core_pub_td2">
 		<a class="pub_link" target="_top" href="http://dl.acm.org/citation.cfm?id=3084076">
 <img class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">
@@ -125,9 +159,15 @@
 		</div><div class="pub_name"><q> 
 		Flipper: Fault-Tolerant Distributed Network Management and Control
 		</q></div><div class="pub_conf">
-		in the proc. of the 15th IFIP/IEEE International Symposium on Integrated Network Management (IM 2017), Lisbon, Portugal, May 8-12, 2017.
+		in the proc. of the 15th IFIP/IEEE International Symposium on Integrated Network Management (IM 2017), Lisbon, Portugal.
 	 	</div>
-	</td><td class="core_pub_td2">
+	</td>
+	<!------>
+	<td class="core_pub_dt">
+		08/05/2017- 12/05/2017
+	</td>
+	<!------>
+	<td class="core_pub_td2">
 		<a class="pub_link" target="_top" href="http://ieeexplore.ieee.org/document/7987307/">
         <img class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">
@@ -141,9 +181,15 @@
 		</div><div class="pub_name"><q>
 		A time agnostic method for predicting dull nodes and links in evolving networks for data cleaning
 		</q></div><div class="pub_conf">
-		 in the proc. of the 14th IEEE/WIC/ACM International Conference on Web Intelligence (WI 2016), Omaha, Nebraska, USA, October 13-16, 2016.
+		 in the proc. of the 14th IEEE/WIC/ACM International Conference on Web Intelligence (WI 2016), Omaha, Nebraska, USA.
 		 </div>
- 	</td><td class="core_pub_td2">
+ 	</td>
+	<!------>
+	<td class="core_pub_dt">
+		13/10/2016- 16/10/2016
+	</td>
+	<!------>
+ 	<td class="core_pub_td2">
 		<a class="pub_link" target="_top" href="https://ieeexplore.ieee.org/document/7817067">
 <img class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">
@@ -158,9 +204,15 @@
 		Leveraging the Trade-off Between Spatial Reuse and Channel Contention in Wireless Mesh Networks
 		</q></div><div class="pub_conf">
 		 in the proc. of the 8th International Conference on COMmunication System & NETworks (COMSNET 2016)
-		 , Bangalore, India, January 5-9, 2016.
+		 , Bangalore, India.
 		 </div>
- 	</td><td class="core_pub_td2">
+ 	</td>
+	<!------>
+	<td class="core_pub_dt">
+		05/01/2016- 09/01/2016
+	</td>
+	<!------>
+ 	<td class="core_pub_td2">
 		<a class="pub_link" target="_top" href="http://ieeexplore.ieee.org/document/7439963/?reload=true&arnumber=7439963">
 <img class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">
@@ -175,9 +227,15 @@
 		ES2: Managing Link Level Parameters for Elevating Data Rate and Stability in High Throughput WLAN
 		</q></div><div class="pub_conf">
 		 in the proc. of the 8th International Conference on COMmunication System & NETworks (COMSNET 2016)
-		 , Bangalore, India, January 5-9, 2016 <em>(Best paper Award)</em>. 
+		 , Bangalore, India, <em>(Best paper Award)</em>. 
 		 </div>
-	 </td><td class="core_pub_td2">
+	 </td>
+	<!------>
+	<td class="core_pub_dt">
+		05/01/2016- 09/01/2016
+	</td>
+	<!------>
+	 <td class="core_pub_td2">
 		<a class="pub_link" target="_top" href="http://ieeexplore.ieee.org/document/7439977/?reload=true&arnumber=7439977">
 <img class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">
@@ -191,9 +249,15 @@
  		 </div><div class="pub_name"><q>
 		 Alleviating Hidden and Exposed Nodes in High-Throughput Wireless Mesh Networks
 		 </q></div><div class="pub_conf">
-		 in IEEE Transactions on Wireless Communication, Volume 15, Issue 2, Feb 2016, Pages 928-937.
+		 in IEEE Transactions on Wireless Communication, Volume 15, Issue 2, Pages 928-937.
 		 </div>
-	</td><td class="core_pub_td2">
+	</td>
+	<!------>
+	<td class="core_pub_dt">
+		02/02/2016- 02/02/2016
+	</td>
+	<!------>
+	<td class="core_pub_td2">
 		<a class="pub_link" target="_top" href="http://ieeexplore.ieee.org/document/7273973/">
 <img class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">
@@ -208,9 +272,15 @@
 		 A Trigger Counting Mechanism for Ring Topology
 		 </q></div><div class="pub_conf">
 		in the proc. of the 37th Australasian Computer Science Conference (ACSC 2014)
-		 , Auckland, New Zealand, January 20-23, 2014.
+		 , Auckland, New Zealand.
 		 </div>
-	 </td><td class="core_pub_td2">
+	 </td>
+	<!------>
+	<td class="core_pub_dt">
+		20/01/2014- 23/01/2014
+	</td>
+	<!------>
+	 <td class="core_pub_td2">
  		<a class="pub_link" target="_top" href="https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0CCgQFjAA&url=http%3A%2F%2Fcrpit.com%2Fconfpapers%2FCRPITV147Karmakar.pdf&ei=oxIfU7jBIKWK0AXdjICADA&usg=AFQjCNGTUgGj20zCj1XG8dHTZMWiG4zVLA&sig2=s5_ECXBtj0Zt8odCuiokgg">
 <img class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">
@@ -225,9 +295,15 @@
 		 Defending Concealedness in IEEE 802.11n
 		 </q></div><div class="pub_conf">
 		in the proc. of the 6th International Conference on COMmunication System & NETworks (COMSNET 2014)
-		 , Bangalore, India, January 7-10, 2014.
+		 , Bangalore, India.
 		 </div>
-	 </td><td class="core_pub_td2">
+	 </td>
+	<!------>
+	<td class="core_pub_dt">
+		07/01/2014- 10/01/2014
+	</td>
+	<!------>
+	 <td class="core_pub_td2">
  		<a class="pub_link" target="_top" href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6734873">
 <img class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">
@@ -242,9 +318,15 @@
 		 Surpassing Flow Fairness in a Mesh Network: How to Ensure Equity among End Users?
 		 </q></div><div class="pub_conf">
 		in the proc. of the 7th IEEE International Conference on Advanced Networks and Telecommunication Systems (ANTS 2013)
-		 , Chennai, India, December 15-18, 2013 <em>(Best paper Award).
+		 , Chennai, India <em>(Best paper Award).
 		 </div>
-	 </td><td class="core_pub_td2">
+	 </td>
+	<!------>
+	<td class="core_pub_dt">
+		15/12/2013- 18/12/2013
+	</td>
+	<!------>
+	 <td class="core_pub_td2">
  		<a class="pub_link" target="_top" href="http://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=6802836">
 <img class="pub_icon" class="pub_icon" class="pub_icon" alt="D" src="../Picture/dload.png"></a><br>
 	</td><td class="core_pub_td2">

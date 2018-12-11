@@ -527,6 +527,22 @@ table{
     transition: all 1s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 
-.core_pub_td1{
+.core_h{
+            border-bottom: 1px solid;
+            border-top: 1px solid;            
+            
+}
+.core_h_det{
+			text-align: center;
+}
+
+.core_h_dt{
+			text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+}
+.core_pub_tr{
             border-bottom: 1px solid;
 }
