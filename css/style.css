@@ -281,10 +281,10 @@ hr {
 #contenttable{
     width:65%;
     background:#E1E1E1;
-    background: -webkit-linear-gradient(0deg, #B2B2D1, #ffffff); /* For Safari */
-    background: -o-linear-gradient(0deg,#B2B2D1, #ffffff); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(0deg,#B2B2D1, #ffffff); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(0deg, #B2B2D1, #ffffff); /* Standard syntax (must be last) */
+    background: -webkit-linear-gradient(to left, #B2B2D1, #ffffff); /* For Safari */
+    background: -o-linear-gradient(to left,#B2B2D1, #ffffff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to left,#B2B2D1, #ffffff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to left, #B2B2D1, #ffffff); /* Standard syntax (must be last) */
     //height:400px;
     border:2px solid #a1a1a1;
     box-shadow: 30px 30px 15px #222222;
