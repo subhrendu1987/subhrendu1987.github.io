@@ -1,7 +1,31 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" type="text/css" href="../css/style.css" /> 
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<!------------------------->
+		<style type="text/css">
+			.tiptext {
+			    color:#069; 
+			    cursor:pointer;
+			}
+			.description {
+			    display:none;
+			    position:absolute;
+			    border:1px solid #000;
+			    //width:400px;
+			    //height:400px;
+			}
+		</style>
+		<!------------------------->
+		<script src="http://code.jquery.com/jquery-1.4.2.js"></script>
+		<!------------------------->
+		<script>
+			$(".tiptext").mouseover(function() {
+			    $(this).children(".description").show();
+			}).mouseout(function() {
+			    $(this).children(".description").hide();
+			});
+		</script>
 	</head>
 <body>
 <!--------------------------------------------------------------------------------------------------->
@@ -21,30 +45,14 @@
 </td>
 <td align="center">
 	<div id="Logo">
-			<a href="http://www.iitg.ac.in/cse/"><img src="../Picture/iitg_web_mid.gif" alt="IITG_LOGO" href="../index.html" height="64px"> </a>
+			<a href="http://www.iitg.ac.in/cse/"><img src="../Picture/iitg_web_mid.gif" alt="IITG_LOGO" height="64px" class="tiptext"><iframe class="description" src="http://www.iitg.ac.in/cse/"></iframe></a>
 	</div>
 </td></tr></table>
 <hr>
 </center>
 <!--------------------------------------------------------------------------------------------------->
-<!--center>
-<table class="NavBar">
-	<tr align="center">
-		<td class="Change Hicon">
-			<a id="NavBarLink" class="NavLink" href="../index.html" target="_top">Home</a>
-		</td>
-		<td class="Change Aicon">
-			<a id="NavBarLink" class="NavLink" href="../academics.html" target="_top">Academics</a>
-		</td>
-		<td class="Change Picon">
-			<a id="NavBarLink" class="NavLink" href="../publication.html" target="_top">Publication</a>
-		</td>
-		<td class="Change Cicon">
-			<a id="NavBarLink" class="NavLink" href="../contact.html" target="_top">Contact</a>
-		</td>
-	</tr>
-</table>
-</center-->
+
+
 <!--------------------------------------------------------------------------------------------------->
 </body>
 </html>
