@@ -1,87 +1,27 @@
+<html>
 <HEAD>
-
-<style type=”text/css”>
-a.ln
-{
-	font-family: “Courier New”, Courier, monospace;
-	font-size: 11pt;
-	color: Teal;
-}
-
-a.ln:hover
-{
-	font-family: “Courier New”, Courier, monospace;
-	font-size: 11pt;
-	color: #32CD32;	
-}
-
-span.txt
-{
-	font-family: “Courier New”, Courier, monospace;
-	font-size: 10pt;
-	color: Navy;
-}
-
-.box
-{
-	border: solid 1px #000000;
-}
-</style>
-
-<script language=”javascript” type=”text/javascript”>
-/*****************************************************
-THIS FUNCTION WILL GENERATE THE PREVIEW. IT TAKES 5
-ARGUMENTS. THE FIRST ARGUMENT IS REQUIRED. OTHERS ARE
-OPTIONAL.
-******************************************************/
-function showPreview(url, border, width, height, desc){
-  border = typeof(border) == “undefined” ? 0 : border;
-  width = typeof(width) == “undefined” ? 100 : width;
-  height = typeof(height) == “undefined” ? 100 : height;
-  desc = typeof(desc) == “undefined” ? “” : desc;
-  document.getElementById(“sp”).innerHTML = ‘<img src=”‘ + url + ‘” border=”‘ + border + ‘” width=”‘ + width + ‘” height=”‘ + height + ‘”><br>’ + desc;
-}
-/***************************************************
-THIS FUNCTION WILL CLEAR THE GENERATED PREVIEW. IT
-DOES NOT TAKE ANY ARGUMENTS.
-****************************************************/
-function clearPreview(){
-
-  document.getElementById(“sp”).innerHTML = “Move you mouse over a link to generate a preview.”;
-
-}
-</script>
+<!--script async
+	src="http://guteurls.de/guteurls.js"
+	selector=".aCssClass">
+</script-->
+<!----------------------------------------------------------------------------------->
+<styles>
+	.myP {}
+</styles>
 </HEAD>
+<!----------------------------------------------------------------------------------->
 <BODY>
-<table width=50% border=”0″ cellspacing=”10″ cellpadding=”4″ class=”box”>
+  Bla:
+  <div class="myP">
+	My first text block. https://www.youtube.com/watch?v=_XZ8VVBXaNA End.
+  </div>
 
-<tr><td valign=”top” width=”40%”>
+  <div class="myP">
+    This is my
+    <a href=""http://www.nytimes.com/2016/08/28/opinion/sunday/even-roger-federer-gets-old.html">
+       Second text</a> block
+  </div>
 
-<ul type=”square”>
-<li><a href=”./images/ball.html” onMouseOver=’showPreview(“./images/ball.jpg”, 0, 100, 100, “This is a photo of a football. It is a very popular game all over the world.”);’ onMouseOut=”clearPreview();” class=”ln” title=”Browse this category”>Football</a>
-
-<br><br>
-<li><a href=”./images/butterfly.html” onMouseOver=’showPreview(“./images/butterfly.jpg”);’ onMouseOut=”clearPreview();” class=”ln” title=”Browse this category”>Butterfly</a>
-
-<br><br>
-<li><a href=”./images/rabbit.html” onMouseOver='showPreview(“./images/rabbit.jpg”, 0, 100, 100, “<b><font color=red>You are allowed to use HTML tags and attributes as description.</font></b>”);' onMouseOut=”clearPreview();” class=”ln” title=”Browse this category”>Rabbit</a>
-
-<br><br>
-<li><a href=”./images/spider.html” onMouseOver=’showPreview(“./images/spider.jpg”, 0, 100);’ onMouseOut=”clearPreview();” class=”ln” title=”Browse this category”>Spider</a>
-
-</ul>
-<br><br>
-</td>
-
-<td width=”60%”>
-
-<span id=”sp” class=”txt”>Move you mouse over a link to generate a preview.</span>
-
-</td></tr>
-</table>
-
-<p><center>
-<font face=”arial, helvetica” size”-2″>Free JavaScripts provided<br>
-by <a href=”https://javascriptsource.com”>The JavaScript Source</a></font>
-</center><p>
-</body>
+  <script async src="http://guteurls.de/guteurls.js" selector=".myP"></script>
+</BODY>
+</html>
