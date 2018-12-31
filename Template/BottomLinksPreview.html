@@ -5,16 +5,14 @@
 		<script src="http://code.jquery.com/jquery-1.4.2.js"></script>
 		<!------------------------->
 		<style id="compiled-css" type="text/css">
-		  .tiptext {
-			color:#069; 
-			cursor:pointer;
-		  }
 		  .description {
 			display:none;
 			position:absolute;
 			border:1px solid #000;
-			width:400px;
-			height:400px;
+			//width:400px;
+			//height:400px;
+			-webkit-transform: scale(0.25);
+			-webkit-transform-origin: 0 0;
 		  }
 		</style>
 		<!------------------------->
@@ -33,11 +31,11 @@
 <body>
 <center>
 		<!------------------------->
-	    <a class="tiptext">Example1<iframe class="description" src="https://subhrendu1987.github.io/mobileSite/index.html"></iframe></a>
+	    
 
 	    <a class="tiptext">Example2<iframe class="description" src="http://en.wikipedia.org/wiki/Cognitive_network"></iframe></a>
 
-		<script>
+		<!--script>
 		// tell the embed parent frame the height of the content
 		if (window.parent && window.parent.parent){
 		  window.parent.parent.postMessage(["resultsFrame", {
@@ -45,14 +43,14 @@
 		    slug: "q29tP"
 		  }], "*")
 		}
-		</script>
+		</script-->
 		<!------------------------->  
 <div >
 	<table id="ImportantLinks">
 	<tr>
 		<th>Social<hr align="left"></th>
 		<th>Publishers<hr align="left"></th>
-		<th>IIT Guwahati<hr align="left"></th>
+		<th>IITG<hr align="left"></th>
 		<th>Research<hr align="left"></th>
 		<th>People<hr align="left"></th>
 		<th>Xtra<hr align="left"></th>
@@ -127,7 +125,8 @@
 		<!------------------------------------------------------------------------------------------------------------------------------------------>
 		<td><table>
 		<tr><td id="ImpLinksCell">
-		<a href="http://www.iitg.ernet.in/sukumar/" id="ImpLinks" target="_blank">Prof. Nandi</a><br>
+			<a id="ImpLinks" target="_blank" href="http://www.iitg.ernet.in/sukumar/">Prof. Nandi<iframe class="description" src="http://www.iitg.ernet.in/sukumar/" allowfullscreen></iframe></a>
+		<br>
 		</td></tr>
 		<tr><td id="ImpLinksCell">
 			<a href="http://cse.iitkgp.ac.in/~sandipc/" id="ImpLinks" target="_blank">Dr. Chakraborty</a><br>
