@@ -38,14 +38,13 @@
 .contentframe{
     position:relative;
     //top:0px;
-    width:100%;
+    width:90%;
 }
 
 #nav_panel{
     z-index:50;
     position:fixed;
     top:60px;
-    width:1366px;
 }
 
 img{
@@ -279,7 +278,7 @@ hr {
 
 
 #contenttable{
-    width:65%;
+    width:100%;
     background:#E1E1E1;
     background: -webkit-linear-gradient(to left, #B2B2D1, #ffffff); /* For Safari */
     background: -o-linear-gradient(to left,#B2B2D1, #ffffff); /* For Opera 11.1 to 12.0 */
@@ -408,7 +407,7 @@ hr {
     font-size:85%;
     padding:10px 40px; 
     background:#333333;
-    width:70%;
+    width:100%;
     background: -webkit-linear-gradient(0deg, #000000, #333333); /* For Safari */
     background: -o-linear-gradient(0deg,#000000, #333333); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(0deg,#000000, #333333); /* For Firefox 3.6 to 15 */
@@ -455,7 +454,7 @@ th{
 } 
 .NavBarLink:hover{
     text-decoration:none;
-    //color:#C80000;
+    color:#000000;
 }
 .NavBarLink{
     align:center;
@@ -468,7 +467,7 @@ th{
     width:100%;
 }
 .NavBarLink:active{
-    //color:#C80000;
+    color:#C80000;
     //font-size:80%;
 }
 a.NavLinkHover:hover{
@@ -493,11 +492,11 @@ table{
 
 .NavBar{
     display:inline-block;
-    border:0px solid #333333;
+    padding: 1rem;
     position: fixed;
     z-index:50;
     left:30px;
-    top:25%;
+    top:5%;
     border-radius:10px;
     background: -webkit-linear-gradient(0deg, #000000, #333333); /* For Safari */
     background: -o-linear-gradient(0deg,#000000, #333333); /* For Opera 11.1 to 12.0 */
@@ -546,3 +545,18 @@ table{
 .core_pub_tr{
             border-bottom: 1px solid;
 }
+
+.collab{
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.collab:hover{
+    font-weight:bold;
+    text-decoration:none;
+    -webkit-transition: all .5s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: all .5s ease-out;  /* Firefox 4-15 */
+    -o-transition: all .5s ease-out;  /* Opera 10.50–12.00 */
+    transition: all .5s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+}
+

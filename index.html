@@ -21,7 +21,8 @@
 		<script type="text/javascript">
 		    function sizeFrame(F) {
 				//var F = document.getElementById("mainframe1");
-				//alert(F.src);
+				F.height="";
+				//setTimeout(function() { alert(""+F.height); }, 10);
 				if(F.contentDocument != null) {
 					F.height = F.contentDocument.documentElement.scrollHeight; //FF 3.0.11, Opera 9.63, and Chrome
 					//alert("DEBUG1="+F.height);
@@ -29,6 +30,7 @@
 					F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
 					//alert("DEBUG2="+F.height);
 				}
+				ready();
 				//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
 				//alert(""+innerDoc.getElementById("NavBar1").innerHTML);
 			}
@@ -82,20 +84,6 @@
 <!--------------------------------------------------------------------------------------------------->
 <center>
 <table width="62.5%">
-    <tr>
-        <td>
-			<div class="name">Subhrendu Chattopadhyay</div>
-			<div class="nameplate_addr">Cube-15, RS-2 Lab<br>
-			Department of Computer Science and Engineering<br>
-			Indian Institute of Technology, Guwahati<br>
-			Assam India 781039</div>
-        </td>
-        <td align="right">
-	        <div id="Logo">
-			    <img src="Picture/iitg_web_mid.gif" alt="IITG_LOGO" href="index.html" height="64px">
-	        </div>
-        </td>
-    </tr>
 </table>
 </center>
 <!--------------------------------------------------------------------------------------------------->
@@ -118,42 +106,48 @@
 				<!--content frame-->
 <center>
 <table width="100%">
-<tr><td width="80%">
-            <iframe id="mainframe1" name="content" seamless class="contentframe" src="basic_pages/home.html" frameborder="0" onLoad='javascript:sizeFrame(this);' scroll="no">
-	        </iframe> 							
-</td></tr>
+	<tr><td width="20%"></td><td width="80%">
+		    <iframe id="headerframe" seamless class="contentframe" src="Template/TopBar.html" frameborder="0" onload='javascript:sizeFrame(this);' align="left">
+		    </iframe>
+	</td></tr>
 <!------------------------------------------------->
-<tr><td width="100%">
-	    <iframe id="footerframe" seamless class="contentframe" src="Template/BottomLinks.html" frameborder="0" onload='javascript:sizeFrame(this);'>
-	    </iframe>
-</td></tr>
+	<tr><td width="20%"></td><td width="80%" style="text-align:left">
+        <iframe id="mainframe1" name="content" seamless class="contentframe" src="basic_pages/home.html" frameborder="0" onLoad='javascript:sizeFrame(this);' scroll="no"></iframe>
+	</td></tr>
+<!------------------------------------------------->
+	<tr><td width="20%"></td><td width="80%">
+		    <iframe id="footerframe" seamless class="contentframe" src="Template/BottomLinks.html" frameborder="0" onload='javascript:sizeFrame(this);' align="left">
+		    </iframe>
+	</td></tr>
+<!------------------------------------------------->
 </table>
 </center>
 <!------------------------------------------------->
-<table class="NavBar" width="8%">
+<table class="NavBar"> 
     <tr><td align="center"><br></td></tr>
-    <tr><td class="Change Hicon" align="center">
+    <tr><td class="Change Hicon" align="right">
 	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/home.html" title="Home Page">Home</a>
     </td></tr>
     <!--------------------->
     <tr><td><hr></td></tr>
-    <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
+    <tr align="center" width="100%"><td class="Change Hicon" align="right" width="100%">
 	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/academics.html" title="Academic Achievements">Academics</a>
     </td></tr>
     <!--------------------->
     <tr><td><hr></td></tr>
-    <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
-            <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/publication.html" title="<iframe id='previewframe' seamless class='contentframe' src='Template/BottomLinks.html' frameborder='0' >
-	    </iframe>">Publication</a>
+    <tr align="center" width="100%"><td class="Change Hicon" align="right" width="100%">
+            <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/publication.html" title="List of Publications" frameborder='0' >
+	    </iframe>Publication</a>
+	    <!---title="<iframe id='previewframe' seamless class='contentframe' src='Template/BottomLinks.html' -->
     </td></tr>
     <!--------------------->
     <tr><td><hr></td></tr>
-    <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
+    <tr align="center" width="100%"><td class="Change Hicon" align="right" width="100%">
 	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/people.html" title="Contact Information">People</a>
     </td></tr>
     <!--------------------->
     <tr><td><hr></td></tr>
-    <tr align="center" width="100%"><td class="Change Hicon" align="center" width="100%">
+    <tr align="center" width="100%"><td class="Change Hicon" align="right" width="100%">
 	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/contact.html" title="Contact Information">Contact</a>
     </td></tr>
     <!--------------------->
