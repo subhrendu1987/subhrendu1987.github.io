@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name=”description” content=”Personal homepage of Subhrendu Chattopadhyay, a student of Computer Science and Engineering. Find more personal information about him on this site.” />
+	<meta name=”keywords” content=”Subhrendu Chattopadhyay, computer science, student” />
+<meta name=”author” content=”Subhrendu Chattopadhyay” />
+	<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+<title> Homepage of Subhrendu</title>
+<link rel="shortcut icon" href="Picture/rsz_BasicHome.png">
+<script type="text/javascript">
+        if (screen.width <= 720) {
+        window.location = "https://subhrendu1987.github.io/mobileSite/";
+    }
+</script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="script/menu.js"> </script>
+		<script src='script/jquery.min.js'></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+		    function sizeFrame(F) {
+				//var F = document.getElementById("mainframe1");
+				F.height="";
+				//setTimeout(function() { alert(""+F.height); }, 10);
+				if(F.contentDocument != null) {
+					F.height = F.contentDocument.documentElement.scrollHeight; //FF 3.0.11, Opera 9.63, and Chrome
+					//alert("DEBUG1="+F.height);
+				} else {
+					F.height = F.contentWindow.document.body.scrollHeight; //IE6, IE7 and Chrome
+					//alert("DEBUG2="+F.height);
+				}
+				ready();
+				//var innerDoc = (F.contentDocument) ? F.contentDocument : F.contentWindow.document;
+				//alert(""+innerDoc.getElementById("NavBar1").innerHTML);
+			}
+			/*****************************************/
+			document.ready(function(){
+    			var F = document.getElementById("headerframe");
+    			sizeFrame(F);
+    			var F = document.getElementById("mainframe1");
+    			sizeFrame(F);
+    			var F = document.getElementById("footerframe");
+    			sizeFrame(F);
+			});
+			/*****************************************/
+			$(function() {
+			  $('a[href*=#]:not([href=#])').click(function() {
+			  //alert("Hostname="+this.hostname +"("+location.hostname+")");
+			    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+			      var target = $(this.hash);
+			      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+			      if (target.length) {
+				$('html,body').animate({
+				  scrollTop: target.offset().top
+				}, 1000);
+				return false;
+			      }
+			    }
+			  });
+			});
+			/*****************************************/
+		</script>
+		<link href="css/style.css" rel="stylesheet" type="text/css" /> 
+		<link href='css/PinyonScript.css' rel='stylesheet' type='text/css'>
+		<link href='css/AlexBrush.css' rel='stylesheet' type='text/css'>
+		<link rel='stylesheet' type='text/css' href='css/styles.css' />
+		<script type='text/javascript' src='script/menu_jquery.js'></script>
+	</head>
+
+<!--------------------------------------------------------------------------------------------------->
+<!--body id="index_body" background="Background/bg_darkblue.png" width="100%"-->
+<body id="index_body" style="background-image: linear-gradient(to right, #bdc3c7, #2c3e50);" width="100%">
+<!--------------------------------------------------------------------------------------------------->
+<center>
+<table width="62.5%">
+</table>
+</center>
+<!--------------------------------------------------------------------------------------------------->
+<!--div id="search">
+	<script>
+	  (function() {
+	    var cx = '013697055635752398758:dkis1vsdf_w';
+	    var gcse = document.createElement('script');
+	    gcse.type = 'text/javascript';
+	    gcse.async = true;
+	    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+		'//www.google.com/cse/cse.js?cx=' + cx;
+	    var s = document.getElementsByTagName('script')[0];
+	    s.parentNode.insertBefore(gcse, s);
+	  })();
+	</script>
+	<gcse:search></gcse:search>
+</div-->
+<!--------------------------------------------------------------------------------------------------->
+				<!--content frame-->
+<center>
+<table width="100%">
+	<tr><td width="20%"></td><td width="80%">
+		    <iframe id="headerframe" seamless class="contentframe" src="Template/TopBar.html" frameborder="0" onload='javascript:sizeFrame(this);' align="left">
+		    </iframe>
+	</td></tr>
+<!------------------------------------------------->
+	<tr><td width="20%"></td><td width="80%" style="text-align:left">
+        <iframe id="mainframe1" name="content" seamless class="contentframe" src="basic_pages/home.html" frameborder="0" onLoad='javascript:sizeFrame(this);' scroll="no"></iframe>
+	</td></tr>
+<!------------------------------------------------->
+	<tr><td width="20%"></td><td width="80%">
+		    <iframe id="footerframe" seamless class="contentframe" src="Template/BottomLinks.html" frameborder="0" onload='javascript:sizeFrame(this);' align="left">
+		    </iframe>
+	</td></tr>
+<!------------------------------------------------->
+</table>
+</center>
+<!------------------------------------------------->
+<table class="NavBar"> 
+    <tr><td align="center"><br></td></tr>
+    <tr><td class="Change Hicon" align="right">
+	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/home.html" title="Home Page">Home</a>
+    </td></tr>
+    <!--------------------->
+    <tr><td><hr></td></tr>
+    <tr align="center" width="100%"><td class="Change Hicon" align="right" width="100%">
+	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/academics.html" title="Academic Achievements">Academics</a>
+    </td></tr>
+    <!--------------------->
+    <tr><td><hr></td></tr>
+    <tr align="center" width="100%"><td class="Change Hicon" align="right" width="100%">
+            <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/publication.html" title="List of Publications" frameborder='0' >
+	    </iframe>Publication</a>
+	    <!---title="<iframe id='previewframe' seamless class='contentframe' src='Template/BottomLinks.html' -->
+    </td></tr>
+    <!--------------------->
+    <tr><td><hr></td></tr>
+    <tr align="center" width="100%"><td class="Change Hicon" align="right" width="100%">
+	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/people.html" title="Contact Information">People</a>
+    </td></tr>
+    <!--------------------->
+    <tr><td><hr></td></tr>
+    <tr align="center" width="100%"><td class="Change Hicon" align="right" width="100%">
+	        <a id="NavBarLink" class="NavBarLink NavLink" target="content" href="basic_pages/contact.html" title="Contact Information">Contact</a>
+    </td></tr>
+    <!--------------------->
+    <tr><td><br></td></tr>
+</table>
+<!------------------------------------------------->
+<!--/tr-->
+<!--------------------------------------------------------------------------------------------------->
+<!--div id="sticker_bottom" style="background-image: url(Picture/Aiga_downarrow_inv.gif);"><a href="#footerframe"> Quick Links</a></div>
+<div id="sticker_top" style="background-image: url(Picture/Aiga_uparrow_inv.gif);"><a href="#NamePlate"> Goto Top</a></div-->
+<!---------------------------------------------->
+<!--------------------------------------------------------------------------------------------------->
+</body>
+</html>

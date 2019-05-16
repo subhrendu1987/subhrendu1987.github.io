@@ -1,0 +1,102 @@
+body{
+  width: 85%;
+  text-align: justify;
+}
+a{
+  text-decoration: none;
+}
+body{
+  font-family: Century Gothic, sans-serif;
+}
+h1{
+  font-size: 40px;
+}
+p{
+  font-size: 20px;
+}
+/*...........................................*/
+/* sidenav is the side navigation bar */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-top: 20px;
+  background-color: #000000;
+}
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  font-size: 28px;
+  display: block;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+}
+.sidenav a:hover {
+  border-radius: 8px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+.sidenav img{     /*Subhrendu's Photo*/
+  border-radius: 80px;
+ max-width: 180px;
+ padding-left: 8px;
+}
+/*...................................................*/
+.main {               /*entire body apart from the side nav bar*/
+  margin-left: 200px; /* Same as the width of the sidenav */
+  padding: 10px 10px;
+  padding-left: 25px;
+}
+/*........................................*/
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#mail{   /*email address*/
+  font-size: 20px;
+  padding-top: 25px;
+}
+#academics{
+  font-size: 20px;
+  padding-top: 20px;
+}
+#collab a{     /* name of collaborators; publications page*/
+  font-weight: bold;
+  color: #C80000;
+}
+}
+q{             /* name of papers in quotes; publications page*/
+  font-weight: bold;
+  font-size: 20px;
+}
+#extLinks    /*external links in the 'others' page; it's a table*/
+{
+width: 100%;
+font-weight: bold;
+background-color: #faebd7;
+}
+#extLinks a{
+font-weight: bold;
+color: #C80000;
+}
+#people2 a{
+  font-weight: bold;
+color: #C80000;
+}
+#resume{
+  color: #C80000;
+  font-weight: bold;
+  }
+  .fa, .fas, .fab, .iconify{
+    color: #000000;
+    font-size: 30px;
+  }
+#abc{
+  width: 100%;
+background-color: #faebd7;
+}
