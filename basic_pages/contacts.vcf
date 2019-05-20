@@ -1,0 +1,23 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Subhrendu Chattopadhyay
+N:Chattopadhyay;Subhrendu;;;
+EMAIL;TYPE=INTERNET;TYPE=HOME:subhrendu.subho@gmail.com
+EMAIL;TYPE=INTERNET;TYPE=WORK:subhrendu@iitg.ac.in
+item1.X-SKYPE:subhrendu.chattopadhyay
+item1.X-ABLabel:
+TEL;TYPE=WORK:+91 -9435658234
+TEL;TYPE=HOME:+91 -8473894164
+item2.ADR:Nabadwip;55 Charichara Bazar Lane;c/o Subhas Ch. Chattopadhyay;Na
+ badwip;West Bengal;741302;IN
+item2.X-ABLabel:Permanent
+ADR;TYPE=WORK:IIT Guwahati;H Block\, Academic Complex\, IIT Guwahati;Networ
+ k and Security Lab\, Department of Computer Scienece and Engineering;Guwah
+ ati;Assam;781039;IN
+item3.ORG:Indian Institute of Technology\, Guwahati
+item3.X-ABLabel:
+item4.TITLE:Research Scholar
+item4.X-ABLabel:
+item5.URL:https\://subhrendu1987.github.io/
+item5.X-ABLabel:Home Page
+END:VCARD
