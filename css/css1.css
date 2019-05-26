@@ -1,6 +1,7 @@
 body{
-  width: 85%;
+  width: 100%;
   text-align: justify;
+  margin: 25px;
 }
 a{
   text-decoration: none;
