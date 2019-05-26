@@ -12,7 +12,7 @@
 
     <style type="text/css">
     	
-    	.mbar{
+    	/*.mbar{
     		overflow: hidden;
     	}
     	.mbar a{
@@ -40,8 +40,33 @@
     	}
     	body{
     		margin: 25px;
-    	}
+    	}*/
 
+#mbar{
+	overflow: hidden;
+	background-color: #333;
+}
+#mbar a{
+	float: left;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
 
 
 
@@ -53,37 +78,17 @@
 </style>
 </head>
     <body>
-    	<div class="mbar">
-  <div class="dropdown"> 
-  <button class="dropbtn" onclick="myFunction()">Menu
-  </button>
-  <div class="dropdown-content" id="myDropdown">
-      <a href="#about">About</a>
-	  <a href="#academics">Academics</a>
-	  <a href="#publications">Publication</a>
-	  <a href="#people">People</a>
-	  <a href="#others">Others</a>
-	  <a href="#contact">Contact</a>
-  </div>
-  </div> 
-</div>
-    	<script>
-			/* When the user clicks on the button, 
-			toggle between hiding and showing the dropdown content */
-			function myFunction() {
-			  document.getElementById("myDropdown").classList.toggle("show");
-			}
+       <div id="mbar">
+		  <a class="active" href="javascript:void(0)">About</a>
+		  <a href="javascript:void(0)">Academics</a>
+		  <a href="javascript:void(0)">Publication</a>
+		  <a href="javascript:void(0)">People</a>
+		  <a href="javascript:void(0)">Contact</a>
+		</div>
+		</div>
 
-			// Close the dropdown if the user clicks outside of it
-			window.onclick = function(e) {
-			  if (!e.target.matches('.dropbtn')) {
-			  var myDropdown = document.getElementById("myDropdown");
-			    if (myDropdown.classList.contains('show')) {
-			      myDropdown.classList.remove('show');
-			    }
-			  }
-			}
-		</script>
+<div class="content">
+
 
 		 <div>
                   <script>
@@ -139,6 +144,20 @@
         <footer class="main">
 			Last Modified on 02/11/2019 02:56:17| Copyright © 2013 - All Rights Reserved by Subhrendu
 		</footer>
+		<script>
+window.onscroll = function() {myFunction()};
+
+var mbar = document.getElementById("mbar");
+var sticky = mbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    mbar.classList.add("sticky")
+  } else {
+    mbar.classList.remove("sticky");
+  }
+}
+</script>
     </body>
     </html>
 
