@@ -1,24 +1,24 @@
-\documentclass{res} 
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font 
+\documentclass{article} 
+\usepackage{comment}
 \usepackage{hyperref}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{cite}
+\usepackage[utf8]{inputenc}
 %%%%%%%%%%%%%%%%%%%%
-\newcommand{\papertitle}[1]{\textbf{ ``#1''}}
-\newcommand{\authorMe}{{\bf Subhrendu Chattopadhyay}}
+\input{resCommands}
+\renewcommand\refname{List of Publications}
 %%%%%%%%%%%%%%%%%%%%
-\setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
+%\setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
 
 \begin{document} 
-
-\name{SUBHRENDU CHATTOPADHYAY\\[12pt]}     % the \\[12pt] adds a blank
-				        % line after name      
-
-%
+\begin{center}
+	\Large{\bf \name}
+\end{center}
 %{\bf  PRESENT ADDRESS\\Dept. Of CSE\\IIT Guwahati\\Assam India-7810398}
 %\address{\bf PERMANENT ADDRESS \\ Rail Bazar \\Beldanga, Murshidabad\\  West Bengal India-742189}
 %\address{\bf \\Email: \\ subhrendu@iitg.ernet.in}
 %                                  
-\begin{resume}
+%\begin{resume}
 	\begin{table}[h]
 	\centering
 	\begin{tabular}{|lll|}
@@ -58,25 +58,14 @@
   \begin{enumerate}
    \item Conference Reviewer: IEEE International Conference on Advanced Networks and Telecommunications Systems (ANTS) 2014 - 2018.
    \item Conference Reviewer: IEEE  International Conference on Communications (ICC) 2017
-   \item Conference Reviewer: IEEE National Conference on Communication (NCC) 2017.
+   \item Conference Reviewer: IEEE National Conference on Communication (NCC) 2017
+      \item Conference Reviewer: IEEE  International Conference on Communication Systems and Networks (COMSNETS) 2020
   \end{enumerate}
-\section{List of Publication} 
-	\begin{enumerate}
-        \item \authorMe, Soumyajit Chatterjee, Sukumar Nandi and Sandip Chakraborty \papertitle{Aloe: Fault-Tolerant Network Management and Orchestration Framework for IoT Applications} ACM/IEEE Transactions on Networking, (Under Major Revision)
-        \item \authorMe,  Sukumar Nandi, Sandip Chakraborty and Abhinandan Sridhara Rao Prasad \papertitle{"Amalgam: Distributed Network Control With Scalable Service Chaining"} in the Proceedings of Nineteenth IFIP Networking 2020 (NETWORKING 2020), Paris, France, 22th-25th June, 2020.
-        \item Shubha Brata Nath, \authorMe, Raja Karmakar, Sourav Kanti Addya, Sandip Chakraborty and Soumya K Ghosh \papertitle{PTC: Pick-Test-Choose to Place Containerized Micro-services in IoT} in the Proceedings of the IEEE Global Communications Conference (Globecom 2019), Waikoloa, HI, USA, 9th-13th December, 2019.
-        \item  \authorMe, Soumyajit Chatterjee, Sukumar Nandi and Sandip Chakraborty \papertitle{Aloe: An Elastic Auto-Scaled and Self-stabilized Orchestration Framework for IoT Applications} in the Proceedings of the Thity Eighth IEEE International Conference on Computer Communications (INFOCOM 2019), Paris, France, 29th April-2nd May, 2019.
-        \item \authorMe, Samar Shailendra, Sukumar Nandi and Sandip Chakraborty \papertitle{Improving MPTCP Performance by Enabling Sub-Flow Selection over a SDN Supported Network} in the Proceedings of the Fourteenth International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob 2018), Limassol, Cyprus, 15th-17th October, 2018.
-		\item Pranav Kumar Singh, \authorMe, Pradeepkumar Gajendra Bhale and Sukumar Nandi, \papertitle{Fast and Secure Handoffs for V2I communication in Smart City Wi-Fi Deployement} in the Proceedings of the Fourteenth International Conference on Distributed Computing and Internet Technology (ICDCIT 2018), Bhubaneswar, Odisha, India, January 11-13, 2018. 
-		\item \authorMe, Sukumar Nandi, Samar Shailendra, and Sandip Chakraborty,\papertitle{Poster: Primary Path Effect in Multi-Path TCP: How Serious Is It for Deployment Consideration?} in the Proceedings of the Eighteenth ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc 2017), Chennai, India, July 10-14, 2017. 
-		\item \authorMe, Niladri Sett, Sukumar Nandi, and Sandip Chakraborty,\papertitle{Flipper: Fault-Tolerant Distributed Network Management and Control} in Proceedings of the Fifteenth IFIP/IEEE International Symposium on Integrated Network Management (IM 2017), Lisbon, Portugal, May 8-12, 2017. 
-		\item 	Niladri Sett, \authorMe, Sanasam Ranbir Singh, and Sukumar Nandi, \papertitle{A time agnostic method for predicting dull nodes and links in evolving networks for data cleaning} IEEE/WIC/ACM International Conference on Web Intelligence (WI 2016), Omaha, Nebraska, USA, October 13-16, 2016. 
-		\item \authorMe, Sandip Chakraborty, Sukumar Nandi, \papertitle{Leveraging the Trade-off Between Spatial Reuse and Channel Contention in Wireless Mesh Networks} in the Proceedings of the Eighth International Conference on COMmunication System \& NETworks {(COMSNET 2016)} , Bangalore, India, January 5-9, 2016 .
-		\item Sandip Chakraborty, \authorMe, \papertitle{ES2: Managing Link Level Parameters for Elevating Data Rate and Stability in High Throughput WLAN} in the Proceedings of the Eighth International Conference on COMmunication System \& NETworks {(COMSNET 2016)} , Bangalore, India, January 5-9, 2016 {\bf (Best paper Award)}.
-		\item Sandip Chakraborty, Sukumar Nandi, \authorMe, \papertitle{Alleviating Hidden and Exposed Nodes in High-Throughput Wireless Mesh Networks} in IEEE Transactions on Wireless Communications, Volume 15, Issue 2, Feb 2016, Pages 928-937.
-		\item Sushanta Karmakar, \authorMe,  \papertitle{A Trigger Counting Mechanism for Ring Topology}  in the Proceedings of the 37th Australasian Computer Science Conference (ACSC 2014) , Auckland, New Zealand, January 20-23, 2014
-		\item Sandip Chakraborty, \authorMe, Suchetana Chakraborty,Sukumar Nandi,  \papertitle{Defending Concealedness in IEEE 802.11n}  in the Proceedings of the Sixth International Conference on COMmunication System \& NETworks (COMSNET 2014) , Bangalore, India, January 7-10, 2014.
-		\item Sandip Chakraborty, Sukumar Nandi, \authorMe, \papertitle{Surpassing Flow Fairness in a Mesh Network: How to Ensure Equity among End Users?}  in the Proceedings of the Seventh IEEE International Conference on Advanced Networks and Telecommunication Systems (ANTS 2013), Chennai, India, December 15-18, 2013 {\bf (Best paper Award)} 
-	\end{enumerate}        
-\end{resume}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+   \nocite{*}
+  \bibliographystyle{plainyr-rev}
+  \bibliography{mypub}
+%\end{resume}
+
 \end{document}
