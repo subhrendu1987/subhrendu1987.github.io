@@ -1,456 +1,367 @@
-RE2 regular expression syntax reference
--------------------------­-------­-----
+@INPROCEEDINGS{8628349,
+  author={S. {Toufga} and S. {Abdellatif} and P. {Owezarski} and T. {Villemur}},
+  booktitle={2018 IEEE Vehicular Networking Conference (VNC)}, 
+  title={OpenFlow based Topology Discovery Service in Software Defined Vehicular Networks: limitations and future approaches}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={1-4},}
 
-Single characters:
-.	any character, possibly including newline (s=true)
-[xyz]	character class
-[^xyz]	negated character class
-\d	Perl character class
-\D	negated Perl character class
-[[:alpha:]]	ASCII character class
-[[:^alpha:]]	negated ASCII character class
-\pN	Unicode character class (one-letter name)
-\p{Greek}	Unicode character class
-\PN	negated Unicode character class (one-letter name)
-\P{Greek}	negated Unicode character class
+@article{AWAN20191,
+title = {An improved mechanism for flow rule installation in-band SDN},
+journal = {Journal of Systems Architecture},
+volume = {96},
+pages = {1 - 19},
+year = {2019},
+issn = {1383-7621},
+author = {Israr Iqbal Awan and Nadir Shah and Muhammad Imran and Muhammad Shoaib and Nasir Saeed},
+}
 
-Composites:
-xy	«x» followed by «y»
-x|y	«x» or «y» (prefer «x»)
+@INPROCEEDINGS{7774594,
+  author={Y. {Goto} and H. {Masuyama} and B. {Ng} and W. K. G. {Seah} and Y. {Takahashi}},
+  booktitle={2016 IEEE 24th International Symposium on Modeling, Analysis and Simulation of Computer and Telecommunication Systems (MASCOTS)}, 
+  title={Queueing Analysis of Software Defined Network with Realistic OpenFlow–Based Switch Model}, 
+  year={2016},
+  volume={},
+  number={},
+  pages={301-306},}
 
-Repetitions:
-x*	zero or more «x», prefer more
-x+	one or more «x», prefer more
-x?	zero or one «x», prefer one
-x{n,m}	«n» or «n»+1 or ... or «m» «x», prefer more
-x{n,}	«n» or more «x», prefer more
-x{n}	exactly «n» «x»
-x*?	zero or more «x», prefer fewer
-x+?	one or more «x», prefer fewer
-x??	zero or one «x», prefer zero
-x{n,m}?	«n» or «n»+1 or ... or «m» «x», prefer fewer
-x{n,}?	«n» or more «x», prefer fewer
-x{n}?	exactly «n» «x»
-x{}	(== x*) NOT SUPPORTED vim
-x{-}	(== x*?) NOT SUPPORTED vim
-x{-n}	(== x{n}?) NOT SUPPORTED vim
-x=	(== x?) NOT SUPPORTED vim
+@article{KILLI2019106883,
+title = {Controller placement in software defined networks: A Comprehensive survey},
+journal = {Computer Networks},
+volume = {163},
+pages = {106883},
+year = {2019},
+issn = {1389-1286},
+author = {Bala Prakasa Rao Killi and Seela Veerabhadreswara Rao},
+}
 
-Implementation restriction: The counting forms «x{n,m}», «x{n,}», and «x{n}»
-reject forms that create a minimum or maximum repetition count above 1000.
-Unlimited repetitions are not subject to this restriction.
 
-Possessive repetitions:
-x*+	zero or more «x», possessive NOT SUPPORTED
-x++	one or more «x», possessive NOT SUPPORTED
-x?+	zero or one «x», possessive NOT SUPPORTED
-x{n,m}+	«n» or ... or «m» «x», possessive NOT SUPPORTED
-x{n,}+	«n» or more «x», possessive NOT SUPPORTED
-x{n}+	exactly «n» «x», possessive NOT SUPPORTED
+@INPROCEEDINGS{8990704,
+  author={N. {Farrugia} and V. {Buttigieg} and J. A. {Briffa}},
+  booktitle={2019 IEEE 44th Conference on Local Computer Networks (LCN)}, 
+  title={Multi-Stream TCP: Leveraging the Performance of a Per-Packet Multipath Routing Algorithm When Using TCP and SDN}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={218-221},}
 
-Grouping:
-(re)	numbered capturing group (submatch)
-(?P<name>re)	named & numbered capturing group (submatch)
-(?<name>re)	named & numbered capturing group (submatch) NOT SUPPORTED
-(?'name're)	named & numbered capturing group (submatch) NOT SUPPORTED
-(?:re)	non-capturing group
-(?flags)	set flags within current group; non-capturing
-(?flags:re)	set flags during re; non-capturing
-(?#text)	comment NOT SUPPORTED
-(?|x|y|z)	branch numbering reset NOT SUPPORTED
-(?>re)	possessive match of «re» NOT SUPPORTED
-re@>	possessive match of «re» NOT SUPPORTED vim
-%(re)	non-capturing group NOT SUPPORTED vim
+@INPROCEEDINGS{9013255, author={D. {Ghosal} and S. {Shukla} and A. {Sim} and A. V. {Thakur} and K. {Wu}}, booktitle={2019 IEEE Global Communications Conference (GLOBECOM)}, title={A Reinforcement Learning Based Network Scheduler for Deadline-Driven Data Transfers}, year={2019}, volume={}, number={}, pages={1-6},} 
 
-Flags:
-i	case-insensitive (default false)
-m	multi-line mode: «^» and «$» match begin/end line in addition to begin/end text (default false)
-s	let «.» match «\n» (default false)
-U	ungreedy: swap meaning of «x*» and «x*?», «x+» and «x+?», etc (default false)
-Flag syntax is «xyz» (set) or «-xyz» (clear) or «xy-z» (set «xy», clear «z»).
+@INPROCEEDINGS{8990704,
+  author={N. {Farrugia} and V. {Buttigieg} and J. A. {Briffa}},
+  booktitle={2019 IEEE 44th Conference on Local Computer Networks (LCN)}, 
+  title={Multi-Stream TCP: Leveraging the Performance of a Per-Packet Multipath Routing Algorithm When Using TCP and SDN}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={218-221},}
 
-Empty strings:
-^	at beginning of text or line («m»=true)
-$	at end of text (like «\z» not «\Z») or line («m»=true)
-\A	at beginning of text
-\b	at ASCII word boundary («\w» on one side and «\W», «\A», or «\z» on the other)
-\B	not at ASCII word boundary
-\G	at beginning of subtext being searched NOT SUPPORTED pcre
-\G	at end of last match NOT SUPPORTED perl
-\Z	at end of text, or before newline at end of text NOT SUPPORTED
-\z	at end of text
-(?=re)	before text matching «re» NOT SUPPORTED
-(?!re)	before text not matching «re» NOT SUPPORTED
-(?<=re)	after text matching «re» NOT SUPPORTED
-(?<!re)	after text not matching «re» NOT SUPPORTED
-re&	before text matching «re» NOT SUPPORTED vim
-re@=	before text matching «re» NOT SUPPORTED vim
-re@!	before text not matching «re» NOT SUPPORTED vim
-re@<=	after text matching «re» NOT SUPPORTED vim
-re@<!	after text not matching «re» NOT SUPPORTED vim
-\zs	sets start of match (= \K) NOT SUPPORTED vim
-\ze	sets end of match NOT SUPPORTED vim
-\%^	beginning of file NOT SUPPORTED vim
-\%$	end of file NOT SUPPORTED vim
-\%V	on screen NOT SUPPORTED vim
-\%#	cursor position NOT SUPPORTED vim
-\%'m	mark «m» position NOT SUPPORTED vim
-\%23l	in line 23 NOT SUPPORTED vim
-\%23c	in column 23 NOT SUPPORTED vim
-\%23v	in virtual column 23 NOT SUPPORTED vim
+@article{THOMAS2020264,
+title = {Multipath congestion control with network assistance},
+journal = {Computer Communications},
+volume = {153},
+pages = {264 - 278},
+year = {2020},
+issn = {0140-3664},
+author = {Yannis Thomas and George Xylomenos and George C. Polyzos},
+}
 
-Escape sequences:
-\a	bell (== \007)
-\f	form feed (== \014)
-\t	horizontal tab (== \011)
-\n	newline (== \012)
-\r	carriage return (== \015)
-\v	vertical tab character (== \013)
-\*	literal «*», for any punctuation character «*»
-\123	octal character code (up to three digits)
-\x7F	hex character code (exactly two digits)
-\x{10FFFF}	hex character code
-\C	match a single byte even in UTF-8 mode
-\Q...\E	literal text «...» even if «...» has punctuation
+@INPROCEEDINGS{7502424, author={H. {Nam} and D. {Calin} and H. {Schulzrinne}}, booktitle={2016 IEEE NetSoft Conference and Workshops (NetSoft)}, title={Towards dynamic MPTCP Path control using SDN}, year={2016}, volume={}, number={}, pages={286-294},} 
 
-\1	backreference NOT SUPPORTED
-\b	backspace NOT SUPPORTED (use «\010»)
-\cK	control char ^K NOT SUPPORTED (use «\001» etc)
-\e	escape NOT SUPPORTED (use «\033»)
-\g1	backreference NOT SUPPORTED
-\g{1}	backreference NOT SUPPORTED
-\g{+1}	backreference NOT SUPPORTED
-\g{-1}	backreference NOT SUPPORTED
-\g{name}	named backreference NOT SUPPORTED
-\g<name>	subroutine call NOT SUPPORTED
-\g'name'	subroutine call NOT SUPPORTED
-\k<name>	named backreference NOT SUPPORTED
-\k'name'	named backreference NOT SUPPORTED
-\lX	lowercase «X» NOT SUPPORTED
-\ux	uppercase «x» NOT SUPPORTED
-\L...\E	lowercase text «...» NOT SUPPORTED
-\K	reset beginning of «$0» NOT SUPPORTED
-\N{name}	named Unicode character NOT SUPPORTED
-\R	line break NOT SUPPORTED
-\U...\E	upper case text «...» NOT SUPPORTED
-\X	extended Unicode sequence NOT SUPPORTED
+@INPROCEEDINGS{8459917, author={A. A. {Barakabitze} and I. {Mkwawa} and L. {Sun} and E. {Ifeachor}}, booktitle={2018 4th IEEE Conference on Network Softwarization and Workshops (NetSoft)}, title={QualitySDN: Improving Video Quality using MPTCP and Segment Routing in SDN/NFV}, year={2018}, volume={}, number={}, pages={182-186},} 
 
-\%d123	decimal character 123 NOT SUPPORTED vim
-\%xFF	hex character FF NOT SUPPORTED vim
-\%o123	octal character 123 NOT SUPPORTED vim
-\%u1234	Unicode character 0x1234 NOT SUPPORTED vim
-\%U12345678	Unicode character 0x12345678 NOT SUPPORTED vim
+@article{LIU201973,
+title = {Improve MPTCP with SDN: From the perspective of resource pooling},
+journal = {Journal of Network and Computer Applications},
+volume = {141},
+pages = {73 - 85},
+year = {2019},
+issn = {1084-8045},
+author = {Yanbing Liu and Xiaowei Qin and Ting Zhu and Xiaohui Chen and Guo Wei},}
 
-Character class elements:
-x	single character
-A-Z	character range (inclusive)
-\d	Perl character class
-[:foo:]	ASCII character class «foo»
-\p{Foo}	Unicode character class «Foo»
-\pF	Unicode character class «F» (one-letter name)
+@INPROCEEDINGS{8685652, author={Q. {Zhao} and M. {Chen} and P. {Du} and T. {Le} and M. {Gerla}}, booktitle={2019 International Conference on Computing, Networking and Communications (ICNC)}, title={Towards Efficient Cellular Traffic Offloading via Dynamic MPTCP Path Configuration with SDN}, year={2019}, volume={}, number={}, pages={520-525},}
 
-Named character classes as character class elements:
-[\d]	digits (== \d)
-[^\d]	not digits (== \D)
-[\D]	not digits (== \D)
-[^\D]	not not digits (== \d)
-[[:name:]]	named ASCII class inside character class (== [:name:])
-[^[:name:]]	named ASCII class inside negated character class (== [:^name:])
-[\p{Name}]	named Unicode property inside character class (== \p{Name})
-[^\p{Name}]	named Unicode property inside negated character class (== \P{Name})
+@ARTICLE{8723306,
+  author={J. {Nam} and H. {Jo} and Y. {Kim} and P. {Porras} and V. {Yegneswaran} and S. {Shin}},
+  journal={IEEE/ACM Transactions on Networking}, 
+  title={Operator-Defined Reconfigurable Network OS for Software-Defined Networks}, 
+  year={2019},
+  volume={27},
+  number={3},
+  pages={1206-1219},}
 
-Perl character classes (all ASCII-only):
-\d	digits (== [0-9])
-\D	not digits (== [^0-9])
-\s	whitespace (== [\t\n\f\r ])
-\S	not whitespace (== [^\t\n\f\r ])
-\w	word characters (== [0-9A-Za-z_])
-\W	not word characters (== [^0-9A-Za-z_])
 
-\h	horizontal space NOT SUPPORTED
-\H	not horizontal space NOT SUPPORTED
-\v	vertical space NOT SUPPORTED
-\V	not vertical space NOT SUPPORTED
+@INPROCEEDINGS{8614785,
+  author={F. {Li} and X. {Xu}},
+  booktitle={2018 IEEE 9th Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON)}, 
+  title={A Discrete Cuckoo Search Algorithm for the Controller Placement Problem in Software Defined Networks}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={292-296},}
 
-ASCII character classes:
-[[:alnum:]]	alphanumeric (== [0-9A-Za-z])
-[[:alpha:]]	alphabetic (== [A-Za-z])
-[[:ascii:]]	ASCII (== [\x00-\x7F])
-[[:blank:]]	blank (== [\t ])
-[[:cntrl:]]	control (== [\x00-\x1F\x7F])
-[[:digit:]]	digits (== [0-9])
-[[:graph:]]	graphical (== [!-~] == [A-Za-z0-9!"#$%&'()*+,\-./:;<=>?@[\\\]^_`{|}~])
-[[:lower:]]	lower case (== [a-z])
-[[:print:]]	printable (== [ -~] == [ [:graph:]])
-[[:punct:]]	punctuation (== [!-/:-@[-`{-~])
-[[:space:]]	whitespace (== [\t\n\v\f\r ])
-[[:upper:]]	upper case (== [A-Z])
-[[:word:]]	word characters (== [0-9A-Za-z_])
-[[:xdigit:]]	hex digit (== [0-9A-Fa-f])
+@article{PRIYADARSINI2019106918,
+title = {An adaptive load balancing scheme for software-defined network controllers},
+journal = {Computer Networks},
+volume = {164},
+pages = {106918},
+year = {2019},
+issn = {1389-1286},
+author = {Madhukrishna Priyadarsini and Joy Chandra Mukherjee and Padmalochan Bera and Shailesh Kumar and A.âH.âM. Jakaria and M. Ashiqur Rahman},
+}
 
-Unicode character class names--general category:
-C	other
-Cc	control
-Cf	format
-Cn	unassigned code points NOT SUPPORTED
-Co	private use
-Cs	surrogate
-L	letter
-LC	cased letter NOT SUPPORTED
-L&	cased letter NOT SUPPORTED
-Ll	lowercase letter
-Lm	modifier letter
-Lo	other letter
-Lt	titlecase letter
-Lu	uppercase letter
-M	mark
-Mc	spacing mark
-Me	enclosing mark
-Mn	non-spacing mark
-N	number
-Nd	decimal number
-Nl	letter number
-No	other number
-P	punctuation
-Pc	connector punctuation
-Pd	dash punctuation
-Pe	close punctuation
-Pf	final punctuation
-Pi	initial punctuation
-Po	other punctuation
-Ps	open punctuation
-S	symbol
-Sc	currency symbol
-Sk	modifier symbol
-Sm	math symbol
-So	other symbol
-Z	separator
-Zl	line separator
-Zp	paragraph separator
-Zs	space separator
+@INPROCEEDINGS{8718110,
+  author={W. {Shim} and K. {Kim}},
+  booktitle={2019 International Conference on Information Networking (ICOIN)}, 
+  title={A Study on Communication Optimization in Multi-SDN Controller}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={461-464},}
 
-Unicode character class names--scripts:
-Adlam
-Ahom
-Anatolian_Hieroglyphs
-Arabic
-Armenian
-Avestan
-Balinese
-Bamum
-Bassa_Vah
-Batak
-Bengali
-Bhaiksuki
-Bopomofo
-Brahmi
-Braille
-Buginese
-Buhid
-Canadian_Aboriginal
-Carian
-Caucasian_Albanian
-Chakma
-Cham
-Cherokee
-Chorasmian
-Common
-Coptic
-Cuneiform
-Cypriot
-Cyrillic
-Deseret
-Devanagari
-Dives_Akuru
-Dogra
-Duployan
-Egyptian_Hieroglyphs
-Elbasan
-Elymaic
-Ethiopic
-Georgian
-Glagolitic
-Gothic
-Grantha
-Greek
-Gujarati
-Gunjala_Gondi
-Gurmukhi
-Han
-Hangul
-Hanifi_Rohingya
-Hanunoo
-Hatran
-Hebrew
-Hiragana
-Imperial_Aramaic
-Inherited
-Inscriptional_Pahlavi
-Inscriptional_Parthian
-Javanese
-Kaithi
-Kannada
-Katakana
-Kayah_Li
-Kharoshthi
-Khitan_Small_Script
-Khmer
-Khojki
-Khudawadi
-Lao
-Latin
-Lepcha
-Limbu
-Linear_A
-Linear_B
-Lisu
-Lycian
-Lydian
-Mahajani
-Makasar
-Malayalam
-Mandaic
-Manichaean
-Marchen
-Masaram_Gondi
-Medefaidrin
-Meetei_Mayek
-Mende_Kikakui
-Meroitic_Cursive
-Meroitic_Hieroglyphs
-Miao
-Modi
-Mongolian
-Mro
-Multani
-Myanmar
-Nabataean
-Nandinagari
-New_Tai_Lue
-Newa
-Nko
-Nushu
-Nyiakeng_Puachue_Hmong
-Ogham
-Ol_Chiki
-Old_Hungarian
-Old_Italic
-Old_North_Arabian
-Old_Permic
-Old_Persian
-Old_Sogdian
-Old_South_Arabian
-Old_Turkic
-Oriya
-Osage
-Osmanya
-Pahawh_Hmong
-Palmyrene
-Pau_Cin_Hau
-Phags_Pa
-Phoenician
-Psalter_Pahlavi
-Rejang
-Runic
-Samaritan
-Saurashtra
-Sharada
-Shavian
-Siddham
-SignWriting
-Sinhala
-Sogdian
-Sora_Sompeng
-Soyombo
-Sundanese
-Syloti_Nagri
-Syriac
-Tagalog
-Tagbanwa
-Tai_Le
-Tai_Tham
-Tai_Viet
-Takri
-Tamil
-Tangut
-Telugu
-Thaana
-Thai
-Tibetan
-Tifinagh
-Tirhuta
-Ugaritic
-Vai
-Wancho
-Warang_Citi
-Yezidi
-Yi
-Zanabazar_Square
+@INPROCEEDINGS{8697022,
+  author={S. {Hätönen} and P. {Savolainen} and A. {Rao} and H. {Flinck} and S. {Tarkoma}},
+  booktitle={2018 IFIP Networking Conference (IFIP Networking) and Workshops}, 
+  title={SWIFT: Bringing SDN-Based Flow Management to Commodity Wi-Fi Access Points}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={1-9},}
 
-Vim character classes:
-\i	identifier character NOT SUPPORTED vim
-\I	«\i» except digits NOT SUPPORTED vim
-\k	keyword character NOT SUPPORTED vim
-\K	«\k» except digits NOT SUPPORTED vim
-\f	file name character NOT SUPPORTED vim
-\F	«\f» except digits NOT SUPPORTED vim
-\p	printable character NOT SUPPORTED vim
-\P	«\p» except digits NOT SUPPORTED vim
-\s	whitespace character (== [ \t]) NOT SUPPORTED vim
-\S	non-white space character (== [^ \t]) NOT SUPPORTED vim
-\d	digits (== [0-9]) vim
-\D	not «\d» vim
-\x	hex digits (== [0-9A-Fa-f]) NOT SUPPORTED vim
-\X	not «\x» NOT SUPPORTED vim
-\o	octal digits (== [0-7]) NOT SUPPORTED vim
-\O	not «\o» NOT SUPPORTED vim
-\w	word character vim
-\W	not «\w» vim
-\h	head of word character NOT SUPPORTED vim
-\H	not «\h» NOT SUPPORTED vim
-\a	alphabetic NOT SUPPORTED vim
-\A	not «\a» NOT SUPPORTED vim
-\l	lowercase NOT SUPPORTED vim
-\L	not lowercase NOT SUPPORTED vim
-\u	uppercase NOT SUPPORTED vim
-\U	not uppercase NOT SUPPORTED vim
-\_x	«\x» plus newline, for any «x» NOT SUPPORTED vim
 
-Vim flags:
-\c	ignore case NOT SUPPORTED vim
-\C	match case NOT SUPPORTED vim
-\m	magic NOT SUPPORTED vim
-\M	nomagic NOT SUPPORTED vim
-\v	verymagic NOT SUPPORTED vim
-\V	verynomagic NOT SUPPORTED vim
-\Z	ignore differences in Unicode combining characters NOT SUPPORTED vim
+@ARTICLE{8624502,
+  author={K. {Qiu} and J. {Yuan} and J. {Zhao} and X. {Wang} and S. {Secci} and X. {Fu}},
+  journal={IEEE Journal on Selected Areas in Communications}, 
+  title={FastRule: Efficient Flow Entry Updates for TCAM-Based OpenFlow Switches}, 
+  year={2019},
+  volume={37},
+  number={3},
+  pages={484-498},}
 
-Magic:
-(?{code})	arbitrary Perl code NOT SUPPORTED perl
-(??{code})	postponed arbitrary Perl code NOT SUPPORTED perl
-(?n)	recursive call to regexp capturing group «n» NOT SUPPORTED
-(?+n)	recursive call to relative group «+n» NOT SUPPORTED
-(?-n)	recursive call to relative group «-n» NOT SUPPORTED
-(?C)	PCRE callout NOT SUPPORTED pcre
-(?R)	recursive call to entire regexp (== (?0)) NOT SUPPORTED
-(?&name)	recursive call to named group NOT SUPPORTED
-(?P=name)	named backreference NOT SUPPORTED
-(?P>name)	recursive call to named group NOT SUPPORTED
-(?(cond)true|false)	conditional branch NOT SUPPORTED
-(?(cond)true)	conditional branch NOT SUPPORTED
-(*ACCEPT)	make regexps more like Prolog NOT SUPPORTED
-(*COMMIT)	NOT SUPPORTED
-(*F)	NOT SUPPORTED
-(*FAIL)	NOT SUPPORTED
-(*MARK)	NOT SUPPORTED
-(*PRUNE)	NOT SUPPORTED
-(*SKIP)	NOT SUPPORTED
-(*THEN)	NOT SUPPORTED
-(*ANY)	set newline convention NOT SUPPORTED
-(*ANYCRLF)	NOT SUPPORTED
-(*CR)	NOT SUPPORTED
-(*CRLF)	NOT SUPPORTED
-(*LF)	NOT SUPPORTED
-(*BSR_ANYCRLF)	set \R convention NOT SUPPORTED pcre
-(*BSR_UNICODE)	NOT SUPPORTED pcre
 
+@article{10.1145/3309709,
+author = {Vasconcelos, D. R. and Andrade, R. M. C. and Severino, V. and Souza, J. N. De},
+title = {Cloud, Fog, or Mist in IoT? That Is the Question},
+year = {2019},
+issue_date = {April 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {19},
+number = {2},
+issn = {1533-5399},
+url = {https://doi.org/10.1145/3309709},
+doi = {10.1145/3309709},
+journal = {ACM Trans. Internet Technol.},
+month = mar,
+articleno = {25},
+numpages = {20},
+keywords = {Fog computing, edge computing, mist computing, internet of things}
+}
+
+
+@INPROCEEDINGS{8805756,author={G. A. N. {Yasa} and N. {Bisht} and A. A. {Ansari} and V. P. R. {Idamakanti} and S. {Tangudu}},booktitle={2019 49th Annual IEEE/IFIP International Conference on Dependable Systems and Networks – Industry Track},title={Neferion: Time Bound, Fail-Safe and Deterministic Propagation of Network Connectivity Policies Across Large Multi-datacenter Networks},year={2019},volume={},number={},pages={25-28},}
+
+@article{Caltais_2019,
+   title={Explaining SDN Failures via Axiomatisations},
+   volume={303},
+   ISSN={2075-2180},
+   url={http://dx.doi.org/10.4204/EPTCS.303.4},
+   DOI={10.4204/eptcs.303.4},
+   journal={Electronic Proceedings in Theoretical Computer Science},
+   publisher={Open Publishing Association},
+   author={Caltais, Georgiana},
+   year={2019},
+   month={Sep},
+   pages={48–60}
+}
+
+
+@article{XU2019106891,
+title = {Reducing controller response time with hybrid routing in software defined networks,
+journal = {Computer Networks},
+volume = {164},
+pages = {106891},
+year = {2019},
+issn = {1389-1286},
+author = {Hongli Xu and Jianchun Liu and Chen Qian and He Huang and Chunming Qiao},
+}
+
+@inproceedings{inproceedings,
+author = {Krosche, Robert and Thimmaraju, Kashyap and Schiff, Liron and Schmid, Stefan},
+year = {2018},
+month = {05},
+pages = {217-225},
+title = {I DPID It My Way! A Covert Timing Channel in Software-Defined Networks},
+doi = {10.23919/IFIPNetworking.2018.8696597}
+}
+
+@InProceedings{10.1007/978-3-030-10659-1_11,
+author={Killi, Bala Prakasa Rao
+and Reddy, Ellore Akhil
+and Rao, Seela Veerabhadreswara},
+title={Game Theory Based Network Partitioning Approaches for Controller Placement in SDN},
+booktitle={Communication Systems and Networks,
+year={2019},
+publisher={Springer International Publishing},
+address={Cham},
+pages={245--267},
+}
+
+
+
+@InProceedings{10.1007/978-3-030-12385-7_49,
+author={Ghalwash, Haitham
+and Huang, Chun-Hsi},
+title={QoS for SDN-Based Fat-Tree Networks},
+booktitle={Advances in Information and Communication},
+year={2020},
+publisher={Springer International Publishing},
+address={Cham},
+pages={691--705},
+}
+
+
+
+@ARTICLE{8715685,
+  author={J. {Xie} and D. {Guo} and C. {Qian} and L. {Liu} and B. {Ren} and H. {Chen}},
+  journal={IEEE/ACM Transactions on Networking}, 
+  title={Validation of Distributed SDN Control Plane Under Uncertain Failures}, 
+  year={2019},
+  volume={27},
+  number={3},
+  pages={1234-1247},}
+
+
+@InProceedings{10.1007/978-3-030-23162-0_40,
+author={Rashma, B. M. and Poornima, G.},
+title={Performance Evaluation of Multi Controller Software Defined Network Architecture on Mininet},
+booktitle={Cyber-physical Systems and Digital Twins},
+year={2020},
+publisher={Springer International Publishing},
+address={Cham},
+pages={442--455},
+}
+
+
+
+@inproceedings{10.1145/3307334.3328617,
+author = {Ali, Jehad and Lee, Seungwoon and Roh, Byeong-hee},
+title = {Using the Analytical Network Process for Controller Placement in Software Defined Networks (Poster)},
+year = {2019},
+isbn = {9781450366618},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3307334.3328617},
+doi = {10.1145/3307334.3328617},
+booktitle = {Proceedings of the 17th Annual International Conference on Mobile Systems, Applications, and Services},
+pages = {545–546},
+numpages = {2},
+keywords = {multi-objective, SDN, analytical network process, controller placement problem},
+location = {Seoul, Republic of Korea},
+series = {MobiSys ’19}
+}
+
+
+@INPROCEEDINGS{8817804,
+  author={K. {Minou} and S. {Aso} and O. {Koyama} and M. {Yamaguchi} and Y. {Tomioka} and Y. {Ogura} and K. {Ikeda} and M. {Yamada}},
+  booktitle={2019 24th OptoElectronics and Communications Conference (OECC) and 2019 International Conference on Photonics in Switching and Computing (PSC)}, 
+  title={OpenFlow-based Remote Control of Optical Switch Employing IoT Device in AWG-STAR with Loop-back Function}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={1-3},}
+
+@article{CHIEN2019577,
+title = {A SFC-based access point switching mechanism for Software-Defined Wireless Network in IoV},
+journal = {Future Generation Computer Systems},
+volume = {98},
+pages = {577 - 585},
+year = {2019},
+issn = {0167-739X},
+author = {Wei-Che Chien and Hung-Yen Weng and Chin-Feng Lai and Zhang Fan and Han-Chieh Chao and Ying Hu},
+}
+
+@article{NADJARANTOOSI2019108,
+title = {ElasticSFC: Auto-scaling techniques for elastic service function chaining in network functions virtualization-based clouds},
+journal = {Journal of Systems and Software},
+volume = {152},
+pages = {108 - 119},
+year = {2019},
+author = {Adel [Nadjaran Toosi] and Jungmin Son and Qinghua Chi and Rajkumar Buyya},
+}
+
+@ARTICLE{8598769, author={M. {Otokura} and K. {Leibnitz} and Y. {Koizumi} and D. {Kominami} and T. {Shimokawa} and M. {Murata}}, journal={IEEE Transactions on Network and Service Management}, title={Evolvable Virtual Network Function Placement Method: Mechanism and Performance Evaluation}, year={2019}, volume={16}, number={1}, pages={27-40},} 
+
+@article{YI201951,
+title = {A multi-criteria decision approach for minimizing the influence of VNF migration},
+journal = {Computer Networks},
+volume = {159},
+pages = {51 - 62},
+year = {2019},
+issn = {1389-1286},
+author = {Bo Yi and Xingwei Wang and Min Huang and Anwei Dong},
+}
+
+@article{10.1145/3172866,
+author = {Bonfim, Michel S. and Dias, Kelvin L. and Fernandes, Stenio F. L.},
+title = {Integrated NFV/SDN Architectures: A Systematic Literature Review},
+year = {2019},
+issue_date = {February 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {51},
+number = {6},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3172866},
+doi = {10.1145/3172866},
+journal = {ACM Comput. Surv.},
+month = feb,
+articleno = {Article 114},
+numpages = {39},
+keywords = {Software-defined networking, elasticity, security, quality of service, resource provisioning, cloud computing, scalability, network virtualization, resource management, autonomic management, mobile networks, service-level agreement, resource scheduling, network function virtualization, reliability}
+}
+
+  
+
+
+
+@InProceedings{10.1007/978-3-030-29035-1_32,
+author={Shimokawa, Shumpei
+and Kanaoka, Takuya
+and Taenaka, Yuzo
+and Tsukamoto, Kazuya
+and Lee, Myung},
+title={SDN-Based Time-Domain Error Correction for In-Network Video QoE Estimation in Wireless Networks},
+booktitle=Advances in Intelligent Networking and Collaborative Systems},
+year={2020},
+publisher={Springer International Publishing},
+address={Cham},
+pages={331--341},
+}
+
+
+@INPROCEEDINGS{8737387, author={S. {Xiong} and Q. {Cao} and W. {Si}}, booktitle={IEEE INFOCOM 2019 - IEEE Conference on Computer Communications}, title={Adaptive Path Tracing with Programmable Bloom Filters in Software-Defined Networks}, year={2019}, volume={}, number={}, pages={496-504},} 
+
+@article{TAJIKI2019106850,
+title = {Joint failure recovery, fault prevention, and energy-efficient resource management for real-time SFC in fog-supported SDN},
+journal = {Computer Networks},
+volume = {162},
+pages = {106850},
+year = {2019},
+author = {Mohammad M. Tajiki and Mohammad Shojafar and Behzad Akbari and Stefano Salsano and Mauro Conti and Mukesh Singhal},
+}
+
+@INPROCEEDINGS{8743237, author={T. C. {Luz} and G. A. {Nunez} and C. B. {Margi} and F. L. {Verdi}}, booktitle={2019 IEEE 16th International Conference on Networking, Sensing and Control (ICNSC)}, title={In-network performance measurements for Software Defined Wireless Sensor Networks}, year={2019}, volume={}, number={}, pages={206-211},} 
+
+@article{TOLGABAGCI2019106845,
+title = {SDN-enabled distributed open exchange: Dynamic QoS-path optimization in multi-operator services},
+journal = {Computer Networks},
+volume = {162},
+pages = {106845},
+year = {2019},
+issn = {1389-1286},
+author = {K. [Tolga Bagci] and A. [Murat Tekalp]},
+}
+
+@ARTICLE{8877780, author={G. {Bianchi} and M. {Welzl} and A. {Tulumello} and F. {Gringoli} and G. {Belocchi} and M. {Faltelli} and S. {Pontarelli}}, journal={IEEE Transactions on Network and Service Management}, title={XTRA: Towards Portable Transport Layer Functions}, year={2019}, volume={16}, number={4}, pages={1507-1521},} 
