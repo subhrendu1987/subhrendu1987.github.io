@@ -84,6 +84,11 @@ background-color: #faebd7;
 font-weight: bold;
 color: #C80000;
 }
+.myname{
+font-weight: bold;
+color: #002699;
+display: inline;
+}
 #people2 a{
   font-weight: bold;
 color: #C80000;
