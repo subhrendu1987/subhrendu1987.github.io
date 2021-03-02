@@ -19,8 +19,8 @@ em{
 }
 .list-inline{display:block;}
 .list-inline li{display:inline-block;}
-.list-inline li:before{content:'\ffed'; margin:0 10px;}
-.list-inline li:after{content:'|'; margin:0 10px;}
+.list-inline li:before{content:''; margin:0 1px;}
+.list-inline li:after{content:'|'; margin:0 1px;}
 /*...........................................*/
 /* sidenav is the side navigation bar */
 .sidenav {
