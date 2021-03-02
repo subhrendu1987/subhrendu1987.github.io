@@ -14,6 +14,12 @@ h1{
 p{
   font-size: 20px;
 }
+em{
+  color: #ff2222;
+}
+.list-inline{display:block;}
+.list-inline li{display:inline-block;}
+.list-inline li:before{content:'\ffed'; margin:0 10px;}
 /*...........................................*/
 /* sidenav is the side navigation bar */
 .sidenav {
