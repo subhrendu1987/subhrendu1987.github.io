@@ -14,6 +14,13 @@ h1{
 p{
   font-size: 20px;
 }
+em{
+  color: #ff2222;
+}
+.list-inline{display:block;}
+.list-inline li{display:inline-block;}
+.list-inline li:before{content:''; margin:0 1px;}
+.list-inline li:after{content:'|'; margin:0 1px;}
 /*...........................................*/
 /* sidenav is the side navigation bar */
 .sidenav {
@@ -83,6 +90,11 @@ background-color: #faebd7;
 #extLinks a{
 font-weight: bold;
 color: #C80000;
+}
+.myname{
+font-weight: bold;
+color: #002699;
+display: inline;
 }
 #people2 a{
   font-weight: bold;

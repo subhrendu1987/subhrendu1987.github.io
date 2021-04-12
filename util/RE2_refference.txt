@@ -1,0 +1,367 @@
+@INPROCEEDINGS{8628349,
+  author={S. {Toufga} and S. {Abdellatif} and P. {Owezarski} and T. {Villemur}},
+  booktitle={2018 IEEE Vehicular Networking Conference (VNC)}, 
+  title={OpenFlow based Topology Discovery Service in Software Defined Vehicular Networks: limitations and future approaches}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={1-4},}
+
+@article{AWAN20191,
+title = {An improved mechanism for flow rule installation in-band SDN},
+journal = {Journal of Systems Architecture},
+volume = {96},
+pages = {1 - 19},
+year = {2019},
+issn = {1383-7621},
+author = {Israr Iqbal Awan and Nadir Shah and Muhammad Imran and Muhammad Shoaib and Nasir Saeed},
+}
+
+@INPROCEEDINGS{7774594,
+  author={Y. {Goto} and H. {Masuyama} and B. {Ng} and W. K. G. {Seah} and Y. {Takahashi}},
+  booktitle={2016 IEEE 24th International Symposium on Modeling, Analysis and Simulation of Computer and Telecommunication Systems (MASCOTS)}, 
+  title={Queueing Analysis of Software Defined Network with Realistic OpenFlow–Based Switch Model}, 
+  year={2016},
+  volume={},
+  number={},
+  pages={301-306},}
+
+@article{KILLI2019106883,
+title = {Controller placement in software defined networks: A Comprehensive survey},
+journal = {Computer Networks},
+volume = {163},
+pages = {106883},
+year = {2019},
+issn = {1389-1286},
+author = {Bala Prakasa Rao Killi and Seela Veerabhadreswara Rao},
+}
+
+
+@INPROCEEDINGS{8990704,
+  author={N. {Farrugia} and V. {Buttigieg} and J. A. {Briffa}},
+  booktitle={2019 IEEE 44th Conference on Local Computer Networks (LCN)}, 
+  title={Multi-Stream TCP: Leveraging the Performance of a Per-Packet Multipath Routing Algorithm When Using TCP and SDN}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={218-221},}
+
+@INPROCEEDINGS{9013255, author={D. {Ghosal} and S. {Shukla} and A. {Sim} and A. V. {Thakur} and K. {Wu}}, booktitle={2019 IEEE Global Communications Conference (GLOBECOM)}, title={A Reinforcement Learning Based Network Scheduler for Deadline-Driven Data Transfers}, year={2019}, volume={}, number={}, pages={1-6},} 
+
+@INPROCEEDINGS{8990704,
+  author={N. {Farrugia} and V. {Buttigieg} and J. A. {Briffa}},
+  booktitle={2019 IEEE 44th Conference on Local Computer Networks (LCN)}, 
+  title={Multi-Stream TCP: Leveraging the Performance of a Per-Packet Multipath Routing Algorithm When Using TCP and SDN}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={218-221},}
+
+@article{THOMAS2020264,
+title = {Multipath congestion control with network assistance},
+journal = {Computer Communications},
+volume = {153},
+pages = {264 - 278},
+year = {2020},
+issn = {0140-3664},
+author = {Yannis Thomas and George Xylomenos and George C. Polyzos},
+}
+
+@INPROCEEDINGS{7502424, author={H. {Nam} and D. {Calin} and H. {Schulzrinne}}, booktitle={2016 IEEE NetSoft Conference and Workshops (NetSoft)}, title={Towards dynamic MPTCP Path control using SDN}, year={2016}, volume={}, number={}, pages={286-294},} 
+
+@INPROCEEDINGS{8459917, author={A. A. {Barakabitze} and I. {Mkwawa} and L. {Sun} and E. {Ifeachor}}, booktitle={2018 4th IEEE Conference on Network Softwarization and Workshops (NetSoft)}, title={QualitySDN: Improving Video Quality using MPTCP and Segment Routing in SDN/NFV}, year={2018}, volume={}, number={}, pages={182-186},} 
+
+@article{LIU201973,
+title = {Improve MPTCP with SDN: From the perspective of resource pooling},
+journal = {Journal of Network and Computer Applications},
+volume = {141},
+pages = {73 - 85},
+year = {2019},
+issn = {1084-8045},
+author = {Yanbing Liu and Xiaowei Qin and Ting Zhu and Xiaohui Chen and Guo Wei},}
+
+@INPROCEEDINGS{8685652, author={Q. {Zhao} and M. {Chen} and P. {Du} and T. {Le} and M. {Gerla}}, booktitle={2019 International Conference on Computing, Networking and Communications (ICNC)}, title={Towards Efficient Cellular Traffic Offloading via Dynamic MPTCP Path Configuration with SDN}, year={2019}, volume={}, number={}, pages={520-525},}
+
+@ARTICLE{8723306,
+  author={J. {Nam} and H. {Jo} and Y. {Kim} and P. {Porras} and V. {Yegneswaran} and S. {Shin}},
+  journal={IEEE/ACM Transactions on Networking}, 
+  title={Operator-Defined Reconfigurable Network OS for Software-Defined Networks}, 
+  year={2019},
+  volume={27},
+  number={3},
+  pages={1206-1219},}
+
+
+@INPROCEEDINGS{8614785,
+  author={F. {Li} and X. {Xu}},
+  booktitle={2018 IEEE 9th Annual Information Technology, Electronics and Mobile Communication Conference (IEMCON)}, 
+  title={A Discrete Cuckoo Search Algorithm for the Controller Placement Problem in Software Defined Networks}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={292-296},}
+
+@article{PRIYADARSINI2019106918,
+title = {An adaptive load balancing scheme for software-defined network controllers},
+journal = {Computer Networks},
+volume = {164},
+pages = {106918},
+year = {2019},
+issn = {1389-1286},
+author = {Madhukrishna Priyadarsini and Joy Chandra Mukherjee and Padmalochan Bera and Shailesh Kumar and A.âH.âM. Jakaria and M. Ashiqur Rahman},
+}
+
+@INPROCEEDINGS{8718110,
+  author={W. {Shim} and K. {Kim}},
+  booktitle={2019 International Conference on Information Networking (ICOIN)}, 
+  title={A Study on Communication Optimization in Multi-SDN Controller}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={461-464},}
+
+@INPROCEEDINGS{8697022,
+  author={S. {Hätönen} and P. {Savolainen} and A. {Rao} and H. {Flinck} and S. {Tarkoma}},
+  booktitle={2018 IFIP Networking Conference (IFIP Networking) and Workshops}, 
+  title={SWIFT: Bringing SDN-Based Flow Management to Commodity Wi-Fi Access Points}, 
+  year={2018},
+  volume={},
+  number={},
+  pages={1-9},}
+
+
+@ARTICLE{8624502,
+  author={K. {Qiu} and J. {Yuan} and J. {Zhao} and X. {Wang} and S. {Secci} and X. {Fu}},
+  journal={IEEE Journal on Selected Areas in Communications}, 
+  title={FastRule: Efficient Flow Entry Updates for TCAM-Based OpenFlow Switches}, 
+  year={2019},
+  volume={37},
+  number={3},
+  pages={484-498},}
+
+
+@article{10.1145/3309709,
+author = {Vasconcelos, D. R. and Andrade, R. M. C. and Severino, V. and Souza, J. N. De},
+title = {Cloud, Fog, or Mist in IoT? That Is the Question},
+year = {2019},
+issue_date = {April 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {19},
+number = {2},
+issn = {1533-5399},
+url = {https://doi.org/10.1145/3309709},
+doi = {10.1145/3309709},
+journal = {ACM Trans. Internet Technol.},
+month = mar,
+articleno = {25},
+numpages = {20},
+keywords = {Fog computing, edge computing, mist computing, internet of things}
+}
+
+
+@INPROCEEDINGS{8805756,author={G. A. N. {Yasa} and N. {Bisht} and A. A. {Ansari} and V. P. R. {Idamakanti} and S. {Tangudu}},booktitle={2019 49th Annual IEEE/IFIP International Conference on Dependable Systems and Networks – Industry Track},title={Neferion: Time Bound, Fail-Safe and Deterministic Propagation of Network Connectivity Policies Across Large Multi-datacenter Networks},year={2019},volume={},number={},pages={25-28},}
+
+@article{Caltais_2019,
+   title={Explaining SDN Failures via Axiomatisations},
+   volume={303},
+   ISSN={2075-2180},
+   url={http://dx.doi.org/10.4204/EPTCS.303.4},
+   DOI={10.4204/eptcs.303.4},
+   journal={Electronic Proceedings in Theoretical Computer Science},
+   publisher={Open Publishing Association},
+   author={Caltais, Georgiana},
+   year={2019},
+   month={Sep},
+   pages={48–60}
+}
+
+
+@article{XU2019106891,
+title = {Reducing controller response time with hybrid routing in software defined networks,
+journal = {Computer Networks},
+volume = {164},
+pages = {106891},
+year = {2019},
+issn = {1389-1286},
+author = {Hongli Xu and Jianchun Liu and Chen Qian and He Huang and Chunming Qiao},
+}
+
+@inproceedings{inproceedings,
+author = {Krosche, Robert and Thimmaraju, Kashyap and Schiff, Liron and Schmid, Stefan},
+year = {2018},
+month = {05},
+pages = {217-225},
+title = {I DPID It My Way! A Covert Timing Channel in Software-Defined Networks},
+doi = {10.23919/IFIPNetworking.2018.8696597}
+}
+
+@InProceedings{10.1007/978-3-030-10659-1_11,
+author={Killi, Bala Prakasa Rao
+and Reddy, Ellore Akhil
+and Rao, Seela Veerabhadreswara},
+title={Game Theory Based Network Partitioning Approaches for Controller Placement in SDN},
+booktitle={Communication Systems and Networks,
+year={2019},
+publisher={Springer International Publishing},
+address={Cham},
+pages={245--267},
+}
+
+
+
+@InProceedings{10.1007/978-3-030-12385-7_49,
+author={Ghalwash, Haitham
+and Huang, Chun-Hsi},
+title={QoS for SDN-Based Fat-Tree Networks},
+booktitle={Advances in Information and Communication},
+year={2020},
+publisher={Springer International Publishing},
+address={Cham},
+pages={691--705},
+}
+
+
+
+@ARTICLE{8715685,
+  author={J. {Xie} and D. {Guo} and C. {Qian} and L. {Liu} and B. {Ren} and H. {Chen}},
+  journal={IEEE/ACM Transactions on Networking}, 
+  title={Validation of Distributed SDN Control Plane Under Uncertain Failures}, 
+  year={2019},
+  volume={27},
+  number={3},
+  pages={1234-1247},}
+
+
+@InProceedings{10.1007/978-3-030-23162-0_40,
+author={Rashma, B. M. and Poornima, G.},
+title={Performance Evaluation of Multi Controller Software Defined Network Architecture on Mininet},
+booktitle={Cyber-physical Systems and Digital Twins},
+year={2020},
+publisher={Springer International Publishing},
+address={Cham},
+pages={442--455},
+}
+
+
+
+@inproceedings{10.1145/3307334.3328617,
+author = {Ali, Jehad and Lee, Seungwoon and Roh, Byeong-hee},
+title = {Using the Analytical Network Process for Controller Placement in Software Defined Networks (Poster)},
+year = {2019},
+isbn = {9781450366618},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3307334.3328617},
+doi = {10.1145/3307334.3328617},
+booktitle = {Proceedings of the 17th Annual International Conference on Mobile Systems, Applications, and Services},
+pages = {545–546},
+numpages = {2},
+keywords = {multi-objective, SDN, analytical network process, controller placement problem},
+location = {Seoul, Republic of Korea},
+series = {MobiSys ’19}
+}
+
+
+@INPROCEEDINGS{8817804,
+  author={K. {Minou} and S. {Aso} and O. {Koyama} and M. {Yamaguchi} and Y. {Tomioka} and Y. {Ogura} and K. {Ikeda} and M. {Yamada}},
+  booktitle={2019 24th OptoElectronics and Communications Conference (OECC) and 2019 International Conference on Photonics in Switching and Computing (PSC)}, 
+  title={OpenFlow-based Remote Control of Optical Switch Employing IoT Device in AWG-STAR with Loop-back Function}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={1-3},}
+
+@article{CHIEN2019577,
+title = {A SFC-based access point switching mechanism for Software-Defined Wireless Network in IoV},
+journal = {Future Generation Computer Systems},
+volume = {98},
+pages = {577 - 585},
+year = {2019},
+issn = {0167-739X},
+author = {Wei-Che Chien and Hung-Yen Weng and Chin-Feng Lai and Zhang Fan and Han-Chieh Chao and Ying Hu},
+}
+
+@article{NADJARANTOOSI2019108,
+title = {ElasticSFC: Auto-scaling techniques for elastic service function chaining in network functions virtualization-based clouds},
+journal = {Journal of Systems and Software},
+volume = {152},
+pages = {108 - 119},
+year = {2019},
+author = {Adel [Nadjaran Toosi] and Jungmin Son and Qinghua Chi and Rajkumar Buyya},
+}
+
+@ARTICLE{8598769, author={M. {Otokura} and K. {Leibnitz} and Y. {Koizumi} and D. {Kominami} and T. {Shimokawa} and M. {Murata}}, journal={IEEE Transactions on Network and Service Management}, title={Evolvable Virtual Network Function Placement Method: Mechanism and Performance Evaluation}, year={2019}, volume={16}, number={1}, pages={27-40},} 
+
+@article{YI201951,
+title = {A multi-criteria decision approach for minimizing the influence of VNF migration},
+journal = {Computer Networks},
+volume = {159},
+pages = {51 - 62},
+year = {2019},
+issn = {1389-1286},
+author = {Bo Yi and Xingwei Wang and Min Huang and Anwei Dong},
+}
+
+@article{10.1145/3172866,
+author = {Bonfim, Michel S. and Dias, Kelvin L. and Fernandes, Stenio F. L.},
+title = {Integrated NFV/SDN Architectures: A Systematic Literature Review},
+year = {2019},
+issue_date = {February 2019},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {51},
+number = {6},
+issn = {0360-0300},
+url = {https://doi.org/10.1145/3172866},
+doi = {10.1145/3172866},
+journal = {ACM Comput. Surv.},
+month = feb,
+articleno = {Article 114},
+numpages = {39},
+keywords = {Software-defined networking, elasticity, security, quality of service, resource provisioning, cloud computing, scalability, network virtualization, resource management, autonomic management, mobile networks, service-level agreement, resource scheduling, network function virtualization, reliability}
+}
+
+  
+
+
+
+@InProceedings{10.1007/978-3-030-29035-1_32,
+author={Shimokawa, Shumpei
+and Kanaoka, Takuya
+and Taenaka, Yuzo
+and Tsukamoto, Kazuya
+and Lee, Myung},
+title={SDN-Based Time-Domain Error Correction for In-Network Video QoE Estimation in Wireless Networks},
+booktitle=Advances in Intelligent Networking and Collaborative Systems},
+year={2020},
+publisher={Springer International Publishing},
+address={Cham},
+pages={331--341},
+}
+
+
+@INPROCEEDINGS{8737387, author={S. {Xiong} and Q. {Cao} and W. {Si}}, booktitle={IEEE INFOCOM 2019 - IEEE Conference on Computer Communications}, title={Adaptive Path Tracing with Programmable Bloom Filters in Software-Defined Networks}, year={2019}, volume={}, number={}, pages={496-504},} 
+
+@article{TAJIKI2019106850,
+title = {Joint failure recovery, fault prevention, and energy-efficient resource management for real-time SFC in fog-supported SDN},
+journal = {Computer Networks},
+volume = {162},
+pages = {106850},
+year = {2019},
+author = {Mohammad M. Tajiki and Mohammad Shojafar and Behzad Akbari and Stefano Salsano and Mauro Conti and Mukesh Singhal},
+}
+
+@INPROCEEDINGS{8743237, author={T. C. {Luz} and G. A. {Nunez} and C. B. {Margi} and F. L. {Verdi}}, booktitle={2019 IEEE 16th International Conference on Networking, Sensing and Control (ICNSC)}, title={In-network performance measurements for Software Defined Wireless Sensor Networks}, year={2019}, volume={}, number={}, pages={206-211},} 
+
+@article{TOLGABAGCI2019106845,
+title = {SDN-enabled distributed open exchange: Dynamic QoS-path optimization in multi-operator services},
+journal = {Computer Networks},
+volume = {162},
+pages = {106845},
+year = {2019},
+issn = {1389-1286},
+author = {K. [Tolga Bagci] and A. [Murat Tekalp]},
+}
+
+@ARTICLE{8877780, author={G. {Bianchi} and M. {Welzl} and A. {Tulumello} and F. {Gringoli} and G. {Belocchi} and M. {Faltelli} and S. {Pontarelli}}, journal={IEEE Transactions on Network and Service Management}, title={XTRA: Towards Portable Transport Layer Functions}, year={2019}, volume={16}, number={4}, pages={1507-1521},} 
