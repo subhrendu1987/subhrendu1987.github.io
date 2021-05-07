@@ -1,33 +1,40 @@
-Subhrendu Chattopadhyay, Soumyajit Chatterjee, Sukumar Nandi, and Sandip Chakraborty. "Aloe: An elastic auto-scaled and self-stabilized orchestration framework for IoT applications". In Thirty Eighth IEEE International Conference on Computer Communications (INFOCOM), volume 38, 2019.
+Format: (Authors; title; Journal / Conference; Year; Volume. Page Numbers)
 
-Subhrendu Chattopadhyay, Soumyajit Chatterjee, Sukumar Nandi, and Sandip Chakraborty. "Aloe: Fault-tolerant network management and orchestration framework for IoT applications". IEEE Transactions on Network and Service Management, 17(4):2396–2409, 2020.
+Subhrendu Chattopadhyay, Soumyajit Chatterjee, Sukumar Nandi, Sandip Chakraborty; Aloe: Fault-tolerant network management and orchestration framework for IoT applications; IEEE Transactions on Network and Service Management; 17;4;2396–2409; 2020. 10.1109/TNSM.2020.3008426
 
-Subhrendu Chattopadhyay, Sukumar Nandi, Sandip Chakraborty, and Abhinandan Prasad. "Amalgam:Distributed network control with scalable service chaining". In Nineteenth IFIP Networking Conference (IFIP Networking), 2020. 
-
-
-Shubha Brata Nath, Subhrendu Chattopadhyay, Raja Karmakar, Sourav Kanti Addya, Sandip Chakraborty, and Soumya K. Ghosh. "PTC: Pick-test-choose to place containerized micro-services in IoT". In 2019 IEEE Global Communications Conference (GLOBECOM), pages 1–6, 2019.
-
-Subhrendu Chattopadhyay, Sukumar Nandi, Samar Shailendra, and Sandip Chakraborty. "Poster: Primary path effect in multi-path TCP: How serious is it for deployment consideration?"" In Eigthteenth ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc), page 36, 2017.
-
-Subhrendu Chattopadhyay, Samar Shailendra, Sukumar Nandi, and Sandip Chakraborty. "Improving MPTCP performance by enabling sub-flow selection over a SDN supported network". In Fourteenth International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob),2018.
-
-Sandip Chakraborty, Sukumar Nandi, and Subhrendu Chattopadhyay. "Alleviating hidden and exposednodes in high-throughput wireless mesh networks". IEEE Transactions on Wireless communications,15(2):928–937, 2016.
-
-Subhrendu Chattopadhyay, Niladri Sett, Sukumar Nandi, and Sandip Chakraborty. "Flipper: Fault-tolerant distributed network management and control". In Fifteenth IFIP/IEEE International Symposium on Integrated Network Management (IM), 2017.
-
-Niladri Sett, Subhrendu Chattopadhyay, Sanasam Ranbir Singh, and Sukumar Nandi. "A time aware method for predicting dull nodes and links in evolving networks for data cleaning". In Fourteenth IEEE/WIC/ACM International Conference on Web Intelligence (WI), pages 304–310, 2016.
-
-Pranav Kumar Singh, Subhrendu Chattopadhyay, Pradeepkumar Gajendra Bhale, and Sukumar Nandi. "Fast and secure handoffs for V2I communication in smart city wi-fi deployement". In Fourteenth International Conference on Distributed Computing and Internet Technology (ICDCIT), 2017.
-
-Sandip Chakraborty and Subhrendu Chattopadhyay. "ES2: Managing link level parameters for elevating data rate and stability in high throughput wlan". In Eighth International Conference on COMmunicationSystem & NETworks (COMSNET 2016), volume 8, 2016.
+Sandip Chakraborty, Sukumar Nandi, Subhrendu Chattopadhyay; Alleviating hidden and exposed nodes in high-throughput wireless mesh networks; IEEE Transactions on Wireless communications; 15; 2; 928–937; 2016.  10.1109/TWC.2015.2480398
 
 
+Authors;Title;Vol;No;Pages. DOI
 
-Subhrendu Chattopadhyay, Sandip Chakraborty, and Sukumar Nandi. "Leveraging the trade-off betweenspatial reuse and channel contention in wireless mesh networks". In Eighth International Conference on COMmunication System & NETworks (COMSNET 2016), volume 8, 2016.
+Subhrendu Chattopadhyay, Soumyajit Chatterjee, Sukumar Nandi, Sandip Chakraborty; Aloe: An elastic auto-scaled and self-stabilized orchestration framework for IoT applications; In 38th IEEE International Conference on Computer Communications (INFOCOM); 38; 802-810; 2019. 10.1109/INFOCOM.2019.8737656
 
 
-Sandip Chakraborty, Subhrendu Chattopadhyay, Suchetana Chakraborty, and Sukumar Nandi. "Defending concealedness in IEEE 802.11n". In Sixth IEEE International Conference on COMmunication System & NETworks (COMSNET 2014), pages 1–8, 2014.
+Subhrendu Chattopadhyay, Sukumar Nandi, Sandip Chakraborty, Abhinandan Prasad; Amalgam:Distributed network control with scalable service chaining; In 19th IFIP Networking Conference (IFIP Networking); 19; 519-523; 2020.
 
-Sushanta Karmakar and Subhrendu Chattopadhyay. "A trigger counting mechanism for ring topology". In Thirty Seventh Australasian Computer Science Conference, Volume (ACSC 2014), pages 81–87, 2014.
+Shubha Brata Nath, Subhrendu Chattopadhyay, Raja Karmakar, Sourav Kanti Addya, Sandip Chakraborty, Soumya K. Ghosh; PTC: Pick-test-choose to place containerized micro-services in IoT. In 2019 IEEE Global Communications Conference (GLOBECOM); 1–6; 2019. 10.1109/GLOBECOM38437.2019.9013163
 
-Sandip Chakraborty, Sukumar Nandi, and Subhrendu Chattopadhyay. "Surpassing flow fairness in a mesh network: How to ensure equity among end users?" In Seventh IEEE International Conference on Advanced Networks and Telecommunication Systems (ANTS 2013), 2013.
+Subhrendu Chattopadhyay, Sukumar Nandi, Samar Shailendra, Sandip Chakraborty; Poster: Primary path effect in multi-path TCP: How serious is it for deployment consideration?; In 18th ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc); 18; 36; 2017. 10.1145/3084041.3084076
+
+
+Subhrendu Chattopadhyay, Samar Shailendra, Sukumar Nandi, Sandip Chakraborty; Improving MPTCP performance by enabling sub-flow selection over a SDN supported network; In 14th International Conference on Wireless and Mobile Computing; Networking and Communications (WiMob); 14; 1-8; 2018. 10.1109/WiMOB.2018.8589143
+
+
+Subhrendu Chattopadhyay, Niladri Sett, Sukumar Nandi, Sandip Chakraborty; Flipper: Fault-tolerant distributed network management and control; In 15th IFIP/IEEE International Symposium on Integrated Network Management (IM); 15; 421-427; 2017. 10.23919/INM.2017.7987307
+
+Niladri Sett, Subhrendu Chattopadhyay, Sanasam Ranbir Singh, Sukumar Nandi; A time aware method for predicting dull nodes and links in evolving networks for data cleaning; In 14th IEEE/WIC/ACM International Conference on Web Intelligence (WI); 14; 304–310; 2016. 10.1109/WI.2016.0050
+
+Pranav Kumar Singh, Subhrendu Chattopadhyay, Pradeepkumar Gajendra Bhale, Sukumar Nandi; Fast and secure handoffs for V2I communication in smart city wi-fi deployment; In 14th International Conference on Distributed Computing and Internet Technology (ICDCIT); ;189-204; 2017.  10.1007/978-3-319-72344-0_15
+
+
+Sandip Chakraborty, Subhrendu Chattopadhyay; ES2: Managing link level parameters for elevating data rate and stability in high throughput WLAN; In 8th International Conference on COMmunicationSystem & NETworks (COMSNETS); 8; 1-8 2016. 10.1109/COMSNETS.2016.7439977
+
+
+Subhrendu Chattopadhyay, Sandip Chakraborty, Sukumar Nandi; Leveraging the trade-off between spatial reuse and channel contention in wireless mesh networks; In 8th International Conference on COMmunication System & NETworks (COMSNETS); 8; 1-8; 2016. 10.1109/COMSNETS.2016.7439963
+
+
+Sandip Chakraborty, Subhrendu Chattopadhyay, Suchetana Chakraborty, Sukumar Nandi; Defending concealedness in IEEE 802.11n; In 6th IEEE International Conference on COMmunication System & NETworks (COMSNETS); 6; 1–8; 2014. 10.1109/COMSNETS.2014.6734873
+
+Sushanta Karmakar, Subhrendu Chattopadhyay; A trigger counting mechanism for ring topology; In 37th Australasian Computer Science Conference (ACSC); 37; pages 81–87; 2014.
+
+Sandip Chakraborty, Sukumar Nandi, Subhrendu Chattopadhyay; Surpassing flow fairness in a mesh network: How to ensure equity among end users?; In 7th IEEE International Conference on Advanced Networks and Telecommunication Systems (ANTS); 7; 1-6; 2013. DOI: 10.1109/ANTS.2013.6802836
