@@ -1,10 +1,11 @@
+Journals:
 Format: (Authors; title; Journal / Conference; Year; Volume. Page Numbers)
 
 Subhrendu Chattopadhyay, Soumyajit Chatterjee, Sukumar Nandi, Sandip Chakraborty; Aloe: Fault-tolerant network management and orchestration framework for IoT applications; IEEE Transactions on Network and Service Management; 17;4;2396–2409; 2020. 10.1109/TNSM.2020.3008426
 
 Sandip Chakraborty, Sukumar Nandi, Subhrendu Chattopadhyay; Alleviating hidden and exposed nodes in high-throughput wireless mesh networks; IEEE Transactions on Wireless communications; 15; 2; 928–937; 2016.  10.1109/TWC.2015.2480398
 
-
+Conferences:
 Authors;Title;Vol;No;Pages. DOI
 
 Subhrendu Chattopadhyay, Soumyajit Chatterjee, Sukumar Nandi, Sandip Chakraborty; Aloe: An elastic auto-scaled and self-stabilized orchestration framework for IoT applications; In 38th IEEE International Conference on Computer Communications (INFOCOM); 38; 802-810; 2019. 10.1109/INFOCOM.2019.8737656
@@ -27,7 +28,7 @@ Niladri Sett, Subhrendu Chattopadhyay, Sanasam Ranbir Singh, Sukumar Nandi; A ti
 Pranav Kumar Singh, Subhrendu Chattopadhyay, Pradeepkumar Gajendra Bhale, Sukumar Nandi; Fast and secure handoffs for V2I communication in smart city wi-fi deployment; In 14th International Conference on Distributed Computing and Internet Technology (ICDCIT); ;189-204; 2017.  10.1007/978-3-319-72344-0_15
 
 
-Sandip Chakraborty, Subhrendu Chattopadhyay; ES2: Managing link level parameters for elevating data rate and stability in high throughput WLAN; In 8th International Conference on COMmunicationSystem & NETworks (COMSNETS); 8; 1-8 2016. 10.1109/COMSNETS.2016.7439977
+Sandip Chakraborty, Subhrendu Chattopadhyay; ES2: Managing link level parameters for elevating data rate and stability in high throughput WLAN; In 8th International Conference on COMmunication System & NETworks (COMSNETS); 8; 1-8 2016. 10.1109/COMSNETS.2016.7439977
 
 
 Subhrendu Chattopadhyay, Sandip Chakraborty, Sukumar Nandi; Leveraging the trade-off between spatial reuse and channel contention in wireless mesh networks; In 8th International Conference on COMmunication System & NETworks (COMSNETS); 8; 1-8; 2016. 10.1109/COMSNETS.2016.7439963
@@ -37,4 +38,4 @@ Sandip Chakraborty, Subhrendu Chattopadhyay, Suchetana Chakraborty, Sukumar Nand
 
 Sushanta Karmakar, Subhrendu Chattopadhyay; A trigger counting mechanism for ring topology; In 37th Australasian Computer Science Conference (ACSC); 37; pages 81–87; 2014.
 
-Sandip Chakraborty, Sukumar Nandi, Subhrendu Chattopadhyay; Surpassing flow fairness in a mesh network: How to ensure equity among end users?; In 7th IEEE International Conference on Advanced Networks and Telecommunication Systems (ANTS); 7; 1-6; 2013. DOI: 10.1109/ANTS.2013.6802836
+Sandip Chakraborty, Sukumar Nandi, Subhrendu Chattopadhyay; Surpassing flow fairness in a mesh network: How to ensure equity among end users?; In 7th IEEE International Conference on Advanced Networks and Telecommunication Systems (ANTS); 7; 1-6; 2013. 10.1109/ANTS.2013.6802836

@@ -112,3 +112,40 @@ color: #C80000;
   width: 100%;
 background-color: #faebd7;
 }
+
+/**************************************************/
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: #ff6600;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 25%;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  border-width: 30px 5px 5px; // Triangle: Height base NA
+  bottom: -30px;
+  margin-left: -5px;
+  border-style: solid;
+  border-color: #ff6600 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
