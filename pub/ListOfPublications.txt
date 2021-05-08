@@ -36,6 +36,6 @@ Subhrendu Chattopadhyay, Sandip Chakraborty, Sukumar Nandi; Leveraging the trade
 
 Sandip Chakraborty, Subhrendu Chattopadhyay, Suchetana Chakraborty, Sukumar Nandi; Defending concealedness in IEEE 802.11n; In 6th IEEE International Conference on COMmunication System & NETworks (COMSNETS); 6; 1–8; 2014. 10.1109/COMSNETS.2014.6734873
 
-Sushanta Karmakar, Subhrendu Chattopadhyay; A trigger counting mechanism for ring topology; In 37th Australasian Computer Science Conference (ACSC); 37; pages 81–87; 2014.
+Sushanta Karmakar, Subhrendu Chattopadhyay; A trigger counting mechanism for ring topology; In 37th Australasian Computer Science Conference (ACSC); 37; pages 81–87; 2014. 10.5555/2667473.2667483
 
 Sandip Chakraborty, Sukumar Nandi, Subhrendu Chattopadhyay; Surpassing flow fairness in a mesh network: How to ensure equity among end users?; In 7th IEEE International Conference on Advanced Networks and Telecommunication Systems (ANTS); 7; 1-6; 2013. 10.1109/ANTS.2013.6802836
