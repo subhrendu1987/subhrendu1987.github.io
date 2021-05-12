@@ -1,0 +1,58 @@
+%=============================================================================
+% SEGREGATE THE BIBLIOGRAPHY
+%=============================================================================
+%\usepackage[labelnumber, maxbibnames=99,defernumbers=true,style=numeric,backend=bibtex,maxcitenames=50, sorting=none]{biblatex}
+%\newcites{th}{Publications Related to Thesis}
+%\newcites{gen}{Other Publications of the Author}
+%\addbibresource{../common/20_bibilography/ref-article.bib}
+%\addbibresource{../common/20_bibilography/ref-proc.bib}
+%\addbibresource{../common/20_bibilography/ref-oth.bib}
+\addbibresource{mypub.bib}
+%%%%%%%%%%%%%%%%
+\DeclareCiteCommand{\citenum}
+  {}
+  {\printfield{labelnumber}}
+  {}
+  {}
+%%%%%%%%%%%%%%%%  
+\defbibenvironment{mypubs}
+  {\enumerate[label={[T.\arabic*]}]
+     {}
+     {\setlength{\labelwidth}{\labelnumberwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}%
+      \renewcommand*{\makelabel}[1]{\hss##1}}
+  {\endenumerate}
+  {\item}
+%%%%%%%%%%%%%%%%
+\defbibenvironment{mypuboth}
+  {\enumerate[label={[O.\arabic*]}]
+     {}
+     {\setlength{\labelwidth}{\labelnumberwidth}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}%
+      \renewcommand*{\makelabel}[1]{\hss##1}}
+  {\endenumerate}
+  {\item}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%\usepackage{xstring}
+%%\newcommand{\makeauthorsbold}[1]{%
+%%\DeclareNameFormat{author}{%
+%%  \ifnumequal{\value{listcount}}{1}
+%%    {\ifnumequal{\value{liststop}}{1}
+%%      {\expandafter\IfSubStr{#1}{##1}{\textbf{##1\addcomma\addspace ##4\addcomma\isdot}}{##1\addcomma\addspace ##4\addcomma\isdot}}
+%%      {\expandafter\IfSubStr{#1}{##1}{\textbf{##1\addcomma\addspace ##4}}{##1\addcomma\addspace ##4}}}
+%%    {\ifnumless{\value{listcount}}{\value{liststop}}
+%%      {\expandafter\IfSubStr{#1}{##1}{\textbf{\addcomma\addspace ##1\addcomma\addspace ##4}}{\addcomma\addspace ##1\addcomma\addspace ##4}}
+%%          {\expandafter\IfSubStr{#1}{##1}{\textbf{\addcomma\addspace ##1\addcomma\addspace ##4\addcomma\isdot}}{\addcomma\addspace ##1\addcomma\addspace ##4\addcomma\isdot}}%
+%%    }%
+%%}%
+%%}
+%%\makeauthorsbold{Chattopadhyay,Doe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,10 +1,10 @@
 \documentclass{article} 
-\usepackage{comment}
-\usepackage{hyperref}
+\input{lib/usepackage}
+\input{lib/newcommands}
+\input{lib/bibformat}
 %\usepackage[a4paper, margin=2.5cm]{geometry}
 \usepackage{geometry}
 \geometry{a4paper,left=.8in,right=.8in,top=.8in,bottom=.8in}
-\usepackage{cite}
 \usepackage[utf8]{inputenc}
 %%%%%%%%%%%%%%%%%%%%
 \input{resCommands}
@@ -118,9 +118,9 @@ I had the opportunity to collaborate with the following distinguished faculty me
   \item Prof. Soumya Kanti Ghosh, Professor\\Department of CSE, IIT Kharagpur, West Bengal, India-721302, skg@cse.iitkgp.ac.in, (+91~322~228~2332)
   \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-   \nocite{*}
-  \bibliographystyle{plainyr-rev}
-  \bibliography{mypub}
+  \input{bib_section}
+%  \bibliographystyle{plainyr-rev}
+%  \bibliography{mypub}
 %\end{resume}
 
 \end{document}

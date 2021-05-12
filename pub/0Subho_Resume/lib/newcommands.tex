@@ -1,0 +1,119 @@
+\usepackage[capitalize]{cleveref}
+%%%%%%%		Enable subsubsection numbering		%%%%%%%
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+\renewcommand\thesubsubsection{\alph{subsubsection}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%====== For Cover page
+\definecolor{coverfont}{RGB}{255, 255, 255}  %White
+\definecolor{covercolor}{HTML}{D4A138}
+%\newcommand\crule[3][black]{\textcolor{#1}{\rule{#2}{#3}}}
+\newcommand{\mycbox}[3]{\tikz{\path[draw=#1,fill=#1,rounded corners=10pt] (0,0) rectangle (#2,#3);}} 
+%%%%%%%		For Code listing		%%%%%%%
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{style=mystyle}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\nosemic}{\renewcommand{\@endalgocfline}{\relax}}% Drop semi-colon ;
+\newcommand{\dosemic}{\renewcommand{\@endalgocfline}{\algocf@endline}}% Reinstate semi-colon ;
+\newcommand{\pushline}{\Indp}% Indent
+\newcommand{\popline}{\Indm\dosemic}% Undent
+\let\oldnl\nl% Store \nl in \oldnl
+\newcommand{\nonl}{\renewcommand{\nl}{\let\nl\oldnl}}% Remove line number 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\providecommand{\Thcite}[1]{[T.\citenum{#1}]}
+\providecommand{\fullcitenum}[1]{[T.\citenum{#1}] \fullcite{#1}}
+\providecommand{\Othcite}[1]{[O.\citenum{#1}]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{question}{Question}[section]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%		Beamer Only		%%%%%%%
+\providecommand{\figtext}[1]{{\fontsize{30}{30}\selectfont #1}}
+\providecommand{\reducecounter}[1]{%
+\ifthenelse{\equal{#1}{}}{\addtocounter{framenumber}{-1}}{\addtocounter{framenumber}{-#1}}%
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%		Paper Only		%%%%%%%
+\crefname{appsec}{Appendix}{Appendices}
+\crefname{algocf}{Alg.}{Algs.}
+\Crefname{algocf}{Algorithm}{Algorithms}
+\Crefname{chapter}{Chapter}{Chapters}
+\Crefname{subequation}{Sub-eq.}{Sub-eqs.}
+\crefname{subequation}{sub-eq.}{sub-eqs.}
+\newcommand{\csubref}[1]{\namecref{#1}~(\ref{#1})}
+\newcommand{\pairsum}{\mathbin{\ooalign{$\circ$\cr$\sum$\cr}}}
+%\newcounter{problemCounter}[section]
+\crefname{problem}{Problem}{Problems}
+%\newenvironment{problem}[1][]{\refstepcounter{problemCounter}\par\medskip
+%   \noindent \textbf{Problem~\theproblemCounter} \rmfamily}{\medskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%		For all		%%%%%%%
+\providecommand{\etal}{\emph{et.al.}}
+%%% Add note for addressing later
+\providecommand{\noteS}[1]{\pdfbookmark[-1]{AttentionNote}{AttentionNote}\textcolor{red}{Subho: #1}}
+\providecommand{\notesu}[1]{\pdfbookmark[-1]{AttentionNote}{AttentionNote}\textcolor{blue}{Subho: #1}}
+\providecommand{\notesc}[1]{\pdfbookmark[-1]{AttentionNote}{AttentionNote}s\textcolor{red}{Sandip: #1}}
+\providecommand{\redtext}[1]{\todo[color=blue!20]{#1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\authorMe}{Chattopadhyay, Subhrendu}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\iflabelexists}[3]{\ifcsundef{r@#1}{#3}{#2}}
+%%%%%%%
+\providecommand{\paperName}[1]{\uppercase{\texttt{#1}}}
+%%%% 
+%%		Wrapper acronym with index commands
+%%%%
+\providecommand{\addac}[2][]{%\addac[RTT]{Round Trip Time} OR \addac{RTT}
+    \ifthenelse{\equal{#1}{}}%
+    {\ac{#2}\index{\acs{#2}}}% Single Arg
+    {\acrodef{#1}{#2}\ac{#1}\index{#1}\index{#2|seealso{#1}}}}
+%%%%%%%    
+\providecommand{\addacp}[1]{\acp{#1}\index{\acs{#1}}}
+%%%%%%%
+\providecommand{\addacm}[3]{\acrodef{#1}[#2]{#3}\ac{#1}\index{#3|seealso{#2}}\index{#2}}
+%%%%%%%
+\providecommand{\term}[1]{``\textit{#1}''\index{#1}}
+%%%%%%%%
+\providecommand{\firstOcc}[1]{
+	\acf{#1} \index{\acl{#1}} \index{\acl{#1}|seealso{\acs{#1}}}}
+%%%%%%%
+\providecommand{\termit}[1]{\addTerm{\textit{#1}}}
+%%%%%%%
+\providecommand{\termtt}[1]{\addTerm{\texttt{#1}}}
+%%%%%%%
+\providecommand{\addTerm}[1]{``\emph{#1}"\index{\normalfont{#1}}}
+%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=rectangle,draw,inner sep=2pt] (char) {#1};}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\providecommand{\maxsection}[1]{\section*{#1}}
+\providecommand{\minisection}[1]{\subsection*{#1:}}
