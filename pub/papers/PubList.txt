@@ -1,0 +1,29 @@
+Subhrendu Chattopadhyay, Soumyajit Chatterjee, Sukumar Nandi, and Sandip Chakraborty."Aloe: Fault-Tolerant Network Management and Orchestration Framework for IoT Applications." In: IEEE Transactions on Network and Service Management 17.4 (2020), pp. 2396-2409. DOI: 10. 1109/TNSM.2020.3008426.
+<----------------------------------->
+Subhrendu Chattopadhyay, Sukumar Nandi, Samar Shailendra, and Sandip Chakraborty. "Poster: Primary Path Effect in Multi-Path TCP: How Serious Is It for Deployment Consideration?" In: Eighteenth ACM International Symposium on Mobile Ad Hoc Networking and Computing (Mobi- Hoc). Vol. 18. Chennai, IN, 2017, p. 36. DOI: 10.1145/3084041.3084076.
+
+Subhrendu Chattopadhyay, Samar Shailendra, Sukumar Nandi, and Sandip Chakraborty. "Improving MPTCP Performance by Enabling Sub-Flow Selection over a SDN Supported Network." In: Fourteenth International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob). Vol. 14. Limassol, CY, 2018. DOI: 10.1109/WiMOB.2018.8589143.
+
+Subhrendu Chattopadhyay, Niladri Sett, Sukumar Nandi, and Sandip Chakraborty. "Flipper: Fault-Tolerant Distributed Network Management and Control." In: Fifteenth IFIP/IEEE International Symposium on Integrated Network Management (IM). Vol. 15. Lisbon, PT, 2017. DOI: 10.23919/INM.2017.7987307.
+
+Subhrendu Chattopadhyay, Soumyajit Chatterjee, SukumarNandi, and SandipChakraborty."Aloe: An Elastic Auto-Scaled and Self-stabilized Orchestration Framework for IoT Applications." In: Thirty Eighth IEEE International Conference on Computer Communications (INFOCOM). Vol. 38. Paris, FR, 2019. DOI: 10.1109/INFOCOM.2019.8737656.
+
+Subhrendu Chattopadhyay, Sukumar Nandi, Sandip Chakraborty, and Abhinandan Prasad."Amalgam: Distributed Network Control With Scalable Service Chaining." In: Nineteenth IFIP Networking Conference (IFIP Networking). Vol. 19. Paris, FR, 2020, pp. 519-523.
+<----------------------------------->
+Sandip Chakraborty, Sukumar Nandi, and Subhrendu Chattopadhyay. "Alleviating hidden and exposed nodes in high-throughput wireless mesh networks." In: IEEE Transactions on Wireless Communications 15.2 (2016), pp. 928-937. DOI: 10.1109/TWC.2015.2480398.
+<----------------------------------->
+Sushanta Karmakar and Subhrendu Chattopadhyay. "A Trigger Counting Mechanism for Ring Topology." In: Thirty Seventh Australasian Computer Science Conference-Volume (ACSC 2014). Vol. 37. Auckland, NZ, Jan. 2014, pp. 81-87. DOI: 10.5555/2667473.2667483.
+
+Sandip Chakraborty, Sukumar Nandi, and Subhrendu Chattopadhyay. "Surpassing Flow Fairness in a Mesh Network: How to Ensure Equity among End Users?" In: Seventh IEEE International Conference on Advanced Networks and Telecommunication Systems (ANTS 2013). Vol. 7. Chennai, IN, 2013. DOI: 10.1109/ANTS.2013.6802836.
+
+Sandip Chakraborty, Subhrendu Chattopadhyay, Suchetana Chakraborty, and Sukumar Nandi. "Defending Concealedness in IEEE 802.11n". In: Sixth IEEE International Conference on COMmunication System & NETworks (COMSNET 2014). Vol. 6. Bangalore, IN, 2014, pp. 1-8. DOI: 10.1109/COMSNETS.2014.6734873.
+
+Sandip Chakraborty and Subhrendu Chattopadhyay. "ES2: Managing Link Level Parameters for Elevating Data Rate and Stability in High Throughput WLAN". In: Eighth International Conference on COMmunication System & NETworks (COMSNET 2016). Vol. 8. Bangalore, IN, 2016. DOI: 10.1109/COMSNETS.2016.7439977.
+
+Subhrendu Chattopadhyay, Sandip Chakraborty, and Sukumar Nandi. "Leveraging the Trade-off Between Spatial Reuse and Channel Contention in Wireless Mesh Networks." In: Eighth International Conference on COMmunication System & NETworks (COMSNET 2016). Vol. 8. Bangalore, IN, 2016. DOI: 10.1109/COMSNETS.2016.7439963.
+
+Niladri Sett, Subhrendu Chattopadhyay, Sanasam Ranbir Singh, and Sukumar Nandi. "A time aware method for predicting dull nodes and links in evolving networks for data cleaning." In: Fourteenth IEEE/WIC/ACM International Conference on Web Intelligence (WI). Vol. 14. Omaha, US, 2016, pp. 304-310. DOI: 10.1109/WI.2016.0050.
+
+Pranav Kumar Singh, Subhrendu Chattopadhyay, Pradeepkumar Gajendra Bhale, and Sukumar Nandi. "Fast and Secure Handoffs for V2I communication in Smart City Wi-Fi Deployement". In: Fourteenth International Conference on Distributed Computing and Internet Technology (ICDCIT). Vol. 14. Bhubaneswar, IN, 2017. DOI: 10.1007/978-3-319-72344-0_15.
+
+Shubha Brata Nath, Subhrendu Chattopadhyay, Raja Karmakar, Sourav Kanti Addya, Sandip Chakraborty, and Soumya K. Ghosh. "PTC: Pick-Test-Choose to Place Containerized Micro- Services in IoT." In: 2019 IEEE Global Communications Conference (GLOBECOM). Waikoloa, US, 2019, pp. 1-6. DOI: 10.1109/GLOBECOM38437.2019.9013163.
