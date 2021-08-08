@@ -1,12 +1,13 @@
 \documentclass{article} 
-\input{lib/usepackage}
-\input{lib/newcommands}
-\input{lib/bibformat}
+\usepackage{comment}
+\usepackage{hyperref}
 %\usepackage[a4paper, margin=2.5cm]{geometry}
 \usepackage{geometry}
 \geometry{a4paper,left=.8in,right=.8in,top=.8in,bottom=.8in}
+\usepackage{cite}
 \usepackage[utf8]{inputenc}
 %%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thesection}{\Alph{section}}
 \input{resCommands}
 \renewcommand\refname{List of Publications}
 %%%%%%%%%%%%%%%%%%%%
@@ -22,47 +23,37 @@
 %                                  
 %\begin{resume}
 
-%	\begin{table}[h]
-%	\centering
-%	\begin{tabular}{|ll|l|}
-%	\hline
-%	\multicolumn{2}{|c|}{\bf Address:}            								&	\multicolumn{1}{|c|}{\bf Email:}               \\
-%	%{\bf Present Address:}    & {\bf Permanent Address:}        	&	{\bf Email:}               \\
-%	 \multicolumn{2}{|l|}{c/o Subhas Ch. Chattopadhyay,} 			&	subhrendu.subho@gmail.com         \\\cline{3-3}
-%	 \multicolumn{2}{|l|}{55, Charichara Bazar Lane} 					&	\multicolumn{1}{|c|}{\bf Mobile:}  \\
-%	 \multicolumn{2}{|l|}{Nabadwip, Nadia} 									&	+91-9435658234, +91-8918796261  \\
-%  	\multicolumn{2}{|l|}{ Westbengal, India 741302}					&	\\\cline{1-3}
-%  	\multicolumn{2}{|l|}{\bf Website:}											& 	\multicolumn{1}{|c|}{\bf Skype:}  \\
-%	\multicolumn{2}{|l|}{https://subhrendu1987.github.io/}			&	 live:subhrendu.subho_1 \\ \hline
-%	\end{tabular}
-%	\end{table}
  \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \section{Contact Information}
 	\begin{itemize}
 		\item {\bf Address:} c/o Subhas Ch. Chattopadhyay, 55-Charichara Bazar Lane, Nabadwip, Nadia, Westbengal, India 741302
-		\item {\bf Website:} \url{https://subhrendu1987.github.io/}
+		\item {\bf Website:} https://subhrendu1987.github.io/
 		\item {\bf Email:} subhrendu.subho@gmail.com
-		\item {\bf Mobile:} +91-9435~658~234, +91-8473894164
+		\item {\bf Mobile:} +91-9435~658~234, +91-8473~894~164
 		\item {\bf Skype:} live:subhrendu.subho\_1
 	\end{itemize}
 \section{Current Position}          
-	Assistant Professor\\
+	Assistant Professor (From June 2021)\\
 	Department of CSE\\
-	SRM-University, AP
+	SRM-University, AP\\
+	Neerukonda, Mangalagiri Mandal\\
+	Dist: Guntur\\
+	Andhra Pradesh 522240
 \section{Previous Position}
-	Temporary Project Staff
-	Department of Computer Science and Engineering (From October 2020)\\
+	Temporary Project Staff\\
+	Department of Computer Science and Engineering (October 2020 - March 2021)\\
 	Indian Institute of Technology, Kharagpur\\
 	Project Name: Development of Algorithms and Tools for Log Analytics  and Vulnerability Assessment \\
 	Principal Investigator: Dr. Sandip Chakraborty
+    Supervisor: Prof. Sukumar Nandi
 \section{Area of Interests}    
  		My research interests include Software Defined Networking, Fog Computing, Next Generation Wireless Networks, Distributed Algorithms and Performance Modeling of Network and Communication System.
 \section{Academic Qualification} 
-	{\bf Post Graduation:} Doctor of Philosophy in Computer Science and Engineering from Indian Institute of Technology, Guwahati (July 2014 - April 2021), Thesis Title: "SDN for Large Scale IoT Networks", Supervisor: Prof. Sukumar Nandi\\[3ex]
-	{\bf Post Graduation:} Master of Technology in Computer Science and Engineering with {\bf CGPA: 8.81/10} from Indian Institute of Technology, Guwahati (June 2012 - July 2014)\\[3ex]
-	{\bf Graduation:}Bachelor of Technology in Computer Science and Engineering with {\bf CGPA: 8.04/10} from B.P Poddar Institute of Management and Technology, WestBengal University of Technology (July 2006 - June 2010)\\[3ex]
-	{\bf Higher Secondary (10+2):} with {\bf 77.5\%} from Beldanga C.R.G.S High School, under West Bengal Council of Higher Secondary Examination (May, 2006)\\[3ex]
-	{\bf Secondary (10):} Madhyamik with {\bf 81.5\%} from Sargachhi Ramakarishna Mission High School, under West Bengal Board of Secondary Education (April, 2003)
+	{\bf Post Graduation:} Doctor  of Philosophy in Computer Science and Engineering from Indian Institute of Technology, Guwahati (July,2014 - April,2021)\\[3ex]
+	{\bf Post Graduation:} Master of Technology in Computer Science and Engineering with {\bf CGPA: 8.81/10} from Indian Institute of Technology, Guwahati (June,2012 - July,2014)\\[3ex]
+	{\bf Graduation:}Bachelor of Technology in Computer Science and Engineering with {\bf CGPA: 8.04/10} from B.P Poddar Institute of Management and Technology, WestBengal University of Technology (July,2006 - June,2010)\\[3ex]
+	{\bf Higher Secondary (10+2):} with {\bf 77.5\%} from Beldanga C.R.G.S High School, under West Bengal Council of Higher Secondary Examination (May,2006)\\[3ex]
+	{\bf Secondary (10):} Madhyamik with {\bf 81.5\%} from Sargachhi Ramakarishna Mission High School, under West Bengal Board of Secondary Education (April,2003)
 \section{Awards}
 	\begin{enumerate}
 		\item{\bf Fellowship:} Recipient of TCS Research scholarship (Cycle 10) and Fellowship from MHRD
@@ -88,7 +79,7 @@
 	 \item {\bf Teaching Assistant} in IIT, Guwahati For Computing Laboratory (CS110) (2013 Winter)
 	 \item {\bf Teaching Assistant} in IIT, Guwahati For Discrete Mathematics (CS202)  (2012 Monsoon)
 	\end{enumerate}
-\section{Professional Experiences}
+\section{Professional Experience}
 	{\bf Automation Test Engineer:} Programmer Analyst Trainee in Cognizant Technology Solution India Pvt. Ltd. (July 2010 - July 2011)\\[3ex]
 	{\bf Professional Certification:} LOMA 280 certified with 99.2\%         
 \section{Voluntary Services}
@@ -115,9 +106,9 @@ I had the opportunity to collaborate with the following distinguished faculty me
   \item Prof. Soumya Kanti Ghosh, Professor\\Department of CSE, IIT Kharagpur, West Bengal, India-721302, skg@cse.iitkgp.ac.in, (+91~322~228~2332)
   \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \input{bib_section}
-%  \bibliographystyle{plainyr-rev}
-%  \bibliography{mypub}
+   \nocite{*}
+  \bibliographystyle{plainyr-rev}
+  \bibliography{mypub}
 %\end{resume}
 
 \end{document}
