@@ -1,5 +1,6 @@
 \documentclass{article} 
 \usepackage{comment}
+\usepackage{multicol}
 \usepackage{hyperref}
 %\usepackage[a4paper, margin=2.5cm]{geometry}
 \usepackage{geometry}
@@ -17,42 +18,44 @@
 \begin{center}
 	\Large{\bf \name}
 \end{center}
-%{\bf  PRESENT ADDRESS\\Dept. Of CSE\\IIT Guwahati\\Assam India-7810398}
-%\address{\bf PERMANENT ADDRESS \\ Rail Bazar \\Beldanga, Murshidabad\\  West Bengal India-742189}
-%\address{\bf \\Email: \\ subhrendu@iitg.ernet.in}
-%                                  
-%\begin{resume}
-
  \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
 \section{Contact Information}
+\setlength{\columnsep}{-2.5cm}
+
+\begin{multicols}{2}
 	\begin{itemize}
-		\item {\bf Address:} c/o Subhas Ch. Chattopadhyay, 55-Charichara Bazar Lane, Nabadwip, Nadia, Westbengal, India 741302
-		\item {\bf Website:} https://subhrendu1987.github.io/
-		\item {\bf Email:} subhrendu.subho@gmail.com
+		\item{\bf Address:} c/o Subhas Ch. Chattopadhyay,\\ 55-Charichara Bazar Lane, Nabadwip,\\ Nadia, Westbengal, India 741302
+%	\end{itemize}
+\columnbreak
+%	\begin{itemize}
+		\item {\bf Website:} \url{https://subhrendu1987.github.io/}
+		\item {\bf Email:} \email{subhrendu.subho@gmail.com}
 		\item {\bf Mobile:} +91-9435~658~234, +91-8473~894~164
 		\item {\bf Skype:} live:subhrendu.subho\_1
 	\end{itemize}
-\section{Current Position}          
-	Assistant Professor (From June 2021)\\
-	Department of CSE\\
-	SRM-University, AP\\
-	Neerukonda, Mangalagiri Mandal\\
-	Dist: Guntur\\
-	Andhra Pradesh 522240
-\section{Previous Position}
-	Temporary Project Staff\\
-	Department of Computer Science and Engineering (October 2020 - March 2021)\\
-	Indian Institute of Technology, Kharagpur\\
+\end{multicols}
+\section{Research Objective}
+	My research interests include Software Defined Networking (SDN), Network Function Virtualization (NFV), Fog Computing, Next Generation Networks and Performance Modeling of Network and Communication System. Particularly I am interested in network management and future network architecture using SDN and NFV. So far I have worked on the scalability issues that arise during deployment of SDN to provide network management to the large scale networks consisting of Internet of things (IoT) devices. I have developed multiple ``orchestration" frameworks that automate the deployment challenges and provide fault and partition tolerance to the system. I am particularly interested in developing a management-free and future-proof network architecture. My approach is to identify a systems problem, reduce it to its core by stripping away unnecessary details, and look for clean conceptual solutions. Such an approach often clarifies the issue and shows possible connections to other areas where we can borrow ideas and develop innovative solutions.
+\section{Academic Qualification} 
+	\begin{itemize}
+		\item{\bf Post Graduation:} Doctor  of Philosophy in Computer Science and Engineering from Indian Institute of Technology, Guwahati (July,2014 - April,2021)
+		\item{\bf Post Graduation:} Master of Technology in Computer Science and Engineering with {\bf CGPA: 8.81/10} from Indian Institute of Technology, Guwahati (June,2012 - July,2014)
+		\item{\bf Graduation:}Bachelor of Technology in Computer Science and Engineering with {\bf CGPA: 8.04/10} from B.P Poddar Institute of Management and Technology, WestBengal University of Technology (July,2006 - June,2010)
+		\item{\bf Higher Secondary (10+2):} with {\bf 77.5\%} from Beldanga C.R.G.S High School, under West Bengal Council of Higher Secondary Examination (May,2006)
+		\item{\bf Secondary (10):} Madhyamik with {\bf 81.5\%} from Sargachhi Ramakarishna Mission High School, under West Bengal Board of Secondary Education (April,2003)
+	\end{itemize}
+
+\section{Professional Experience}
+	\begin{itemize}
+		\item{\bf Assistant Professor:} Department of CSE in SRM-University, AP(From June 2021)
+		\item{\bf Temporary Project Staff:} Department of Computer Science and Engineering in Indian Institute of Technology, Kharagpur (October 2020 - March 2021)\\
 	Project Name: Development of Algorithms and Tools for Log Analytics  and Vulnerability Assessment \\
 	Principal Investigator: Dr. Sandip Chakraborty
-\section{Area of Interests}    
- 		My research interests include Software Defined Networking, Fog Computing, Next Generation Wireless Networks, Distributed Algorithms and Performance Modeling of Network and Communication System.
-\section{Academic Qualification} 
-	{\bf Post Graduation:} Doctor  of Philosophy in Computer Science and Engineering from Indian Institute of Technology, Guwahati (July,2014 - April,2021)\\[3ex]
-	{\bf Post Graduation:} Master of Technology in Computer Science and Engineering with {\bf CGPA: 8.81/10} from Indian Institute of Technology, Guwahati (June,2012 - July,2014)\\[3ex]
-	{\bf Graduation:}Bachelor of Technology in Computer Science and Engineering with {\bf CGPA: 8.04/10} from B.P Poddar Institute of Management and Technology, WestBengal University of Technology (July,2006 - June,2010)\\[3ex]
-	{\bf Higher Secondary (10+2):} with {\bf 77.5\%} from Beldanga C.R.G.S High School, under West Bengal Council of Higher Secondary Examination (May,2006)\\[3ex]
-	{\bf Secondary (10):} Madhyamik with {\bf 81.5\%} from Sargachhi Ramakarishna Mission High School, under West Bengal Board of Secondary Education (April,2003)
+		\item{\bf Automation Test Engineer:} Programmer Analyst Trainee in Cognizant Technology Solution India Pvt. Ltd. (July 2010 - July 2011)
+	\end{itemize}
+
+\section{Thesis}
+Subhrendu Chattopadhyay,{\em SDN for Large Scale IoT Networks}, PhD thesis, Supervised by Prof. Sukumar Nandi, Indian Institute of Technology Guwahati, \url{http://gyan.iitg.ernet.in/handle/123456789/1854}, 2021.
 \section{Awards}
 	\begin{enumerate}
 		\item{\bf Fellowship:} Recipient of TCS Research scholarship (Cycle 10) and Fellowship from MHRD
@@ -68,6 +71,7 @@
 				\item IEEE ANTS 2013~\cite{chakraborty2013surpassing}
 			\end{enumerate}
 	\end{enumerate}
+\begin{comment}
 \section{Teaching Assistance}	
 	\begin{enumerate}
 	 \item {\bf Teaching Assistant} in IIT, Guwahati For Operating Systems (CS341) (2018 Monsoon)
@@ -78,9 +82,7 @@
 	 \item {\bf Teaching Assistant} in IIT, Guwahati For Computing Laboratory (CS110) (2013 Winter)
 	 \item {\bf Teaching Assistant} in IIT, Guwahati For Discrete Mathematics (CS202)  (2012 Monsoon)
 	\end{enumerate}
-\section{Professional Experience}
-	{\bf Automation Test Engineer:} Programmer Analyst Trainee in Cognizant Technology Solution India Pvt. Ltd. (July 2010 - July 2011)\\[3ex]
-	{\bf Professional Certification:} LOMA 280 certified with 99.2\%         
+\end{comment}
 \section{Voluntary Services}
   \begin{enumerate}
    \item Conference Reviewer: IEEE ANTS (2014 - 2018), IEEE ICC 2017, IEEE NCC 2017, IEEE ISED 2017, IEEE COMSNETS (2018-2019)
@@ -95,7 +97,7 @@ I had the opportunity to collaborate with the following distinguished faculty me
 	\item Dr. Samar Shailendra, Scientist, TCS Networks Lab
 	\item Dr. Sushanta Karmakar, Associate Professor, IIT Guwahati
 	\item Dr. Abhinandan S. Prasad, Associate Professor, NIE Mysore
-	\item Dr. Debarati Sen, Associate Professor, IIT Kharagpur
+	\item Dr. Debarati Sen, Associate Professor, IIT Kharagpur [On-going]
 	\item Dr. Niladri Sett, Assistant Professor, SRM University AP
   \end{enumerate}
 \section{Reference Persons}
