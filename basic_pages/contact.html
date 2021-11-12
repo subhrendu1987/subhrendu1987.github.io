@@ -5,7 +5,20 @@
     <title>Contact</title>
     <link rel="stylesheet" type="text/css" href="../css/css1.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <script src="https://code.iconify.design/1/1.0.2/iconify.min.js"></script><!---dblb icon--->
+    <script src="https://code.iconify.design/1/1.0.2/iconify.min.js"></script><!---Social icons--->
+    <script type="text/javascript">
+    function srmIcon() {
+        Array.from(document.getElementsByClassName("x-srm")).forEach(
+        function(element, index, array) {
+          var icon_obj=element.innerHTML;
+          if(icon_obj==""){
+            element.innerHTML="<img src=\"../imgs/SRMLogo.png\" width=\"30\"></img>";
+          }else{
+          element.innerHTML = "<img src=\"../imgs/SRMLogo.png\" width=\"30\"></img>";}
+          });
+      }
+      window.onload=function(){srmIcon();};
+    </script>
 </head>
 <body>
 	<div id="mail">
@@ -26,7 +39,7 @@
                                               Nabadwip, Nadia, <br>Westbengal 741302, India</td>
                       <td align="right" style="width:55%"> <center><strong>Office:</strong></center><br>
                                               Neerukonda, Mangalagiri Mandal<br>
-                                              Guntur District, Mangalagiri,<br> ,<br>
+                                              Guntur District, Mangalagiri,<br> <br>
                                               Andhra Pradesh, India 522240
                       </td>
                   </tr>
@@ -62,6 +75,12 @@
                 <a href="https://join.skype.com/invite/jmSFsx0nNXyM" target="_blank"  class="tooltip">
                   <span class="tooltiptext">Skype</span>
                   <span class="iconify" data-icon="fa-brands:skype" data-inline="false"></span></a>
+                <!--a href="https://srmap.edu.in/faculty/dr-subhrendu-chattopadhyay/" target="_blank"  class="tooltip">
+                  <span class="tooltiptext">SRM</span>
+                  <span class="iconify" data-icon="fa-brands:srm" data-inline="false"></span></a-->
+                <a href="https://srmap.edu.in/faculty/dr-subhrendu-chattopadhyay/" target="_blank"  class="tooltip">
+                  <span class="tooltiptext">SRM</span>
+                  <div class="x-srm"></div></a>
               </td>
             </tr>
           </table></div>
