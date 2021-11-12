@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../css/css1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+   <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
    	<script type="text/javascript">
 	function createDOI() {
     	Array.from(document.getElementsByClassName("x-doi")).forEach(
@@ -14,7 +15,7 @@
         if(DOI==""){
         	element.innerHTML="<tr><td><img src=\"../imgs/DOI.png\" width=\"25\"></img></td><td><span style=\"color: red;\">NA</span></td></tr>";
         }else{
-        element.innerHTML = "<tr><td><img src=\"../imgs/DOI.png\" width=\"25\"></img></td><td><a href=\"https://doi.org/"+DOI+"\" target=\"_blank\" style=\"color: green;\">"+DOI+"<\a></td></tr>";}
+        element.innerHTML = "<tr><td><img src=\"../imgs/DOI.png\" width=\"25\"></img></td><td><a href=\""+DOI+"\" target=\"_blank\" style=\"color: green;\">"+DOI+"<\a></td></tr>";}
   			});
     }
 	</script>
@@ -34,19 +35,21 @@
 	           Springer The Journal of Supercomputing, Springer US, Volume 77, Issue 11, Pages 1573-0484<br>
 	           <i>Impact Factor: 3.878</i> <br>
 	          <div class="x-doi">https://doi.org/10.1007/s11227-021-04135-2</div>
-	           <a href="https://link.springer.com/article/10.1007/s11227-021-04135-2" target="_blank" ><i class="fas fa-file-alt" style="color: #000000
-	           font-weight: bold"></i></a>
+	           <!--a href="https://link.springer.com/article/10.1007/s11227-021-04135-2" target="_blank" ><i class="fas fa-file-alt" style="color: #000000
+	           font-weight: bold"></i></a-->
           </li>
 
           <li>
 	           <q>Aloe: Fault-Tolerant Network Management and Orchestration Framework for IoT Applications</q><br>
 
-	           <div class="myname">Subhrendu Chattopadhyay</div>, <a href="https://stilllearningsoumya.github.io/" target="_blank"> Soumyajit Chatterjee</a>, <a href="http://www.iitg.ac.in/sukumar/" target="_blank">Sukumar Nandi</a> and <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank"> Sandip Chakraborty</a><br>
+	           <div class="myname">Subhrendu Chattopadhyay</div>, <a href="https://stilllearningsoumya.github.io/" target="_blank"> Soumyajit Chatterjee</a>, <a href="http://www.iitg.ac.in/sukumar/" ta rget="_blank">Sukumar Nandi</a> and <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank"> Sandip Chakraborty</a><br>
 	           ACM/IEEE Transactions on Network and Service Management, Volume 17, Issue 4, Pages 2396-2409<br>
 	           <i>Impact Factor: 3.878</i> <br>
-	          <div class="x-doi">10.1109/TNSM.2020.3008426</div>
-	           <a href="https://ieeexplore.ieee.org/document/9138447" target="_blank" ><i class="fas fa-file-alt" style="color: #000000
-	           font-weight: bold"></i></a>
+	           <div class="x-doi">https://doi.org/10.1109/TNSM.2020.3008426</div>
+	           <!--a href="https://doi.org/10.1109/TNSM.2020.3008426" target="_blank"><span class="iconify" data-icon="carbon:document-epdf"></span></a-->
+	          
+	           <!--a href="https://ieeexplore.ieee.org/document/9138447" target="_blank" ><i class="fas fa-file-alt" style="color: #000000
+	           font-weight: bold"></i></a-->
           </li>
           <li>
 	           <q>Amalgam: Distributed Network Control With Scalable Service Chaining</q><br>
@@ -58,7 +61,7 @@
 	           Paris, France. <br>
 	           <i>Ranked: A</i> <br>
 	           22th-25th June, 2020<br>
-	           <div class="x-doi"></div><br>
+	           <!--div class="x-doi"></div><br-->
 	           <a href="https://ieeexplore.ieee.org/document/9142727" target="_blank" ><i class="fas fa-file-alt" style="color: #000000
 	           font-weight: bold"></i></a>
 	           <!--a href="https://subhrendu1987.github.io/slides/Aloe.pptx" target="_blank" ><i class='fas fa-laptop'></i></a-->
@@ -73,8 +76,9 @@
 	           Waikoloa, HI, USA. <br>
 	           <i>Ranked: B</i> <br>
 	           9th-13th December, 2019<br>
-	           <div class="x-doi">10.1109/GLOBECOM38437.2019.9013163</div><br>
-	           <a href="https://ieeexplore.ieee.org/document/9013163" target="_blank"><i class="fas fa-file-alt"></i></a><a href="https://subhrendu1987.github.io/slides/Globecom19.pptx" target="_blank" ><i class='fas fa-laptop'></i></a>
+	           <div class="x-doi">https://doi.org/10.1109/GLOBECOM38437.2019.9013163</div><br>
+	           <!--a href="https://ieeexplore.ieee.org/document/9013163" target="_blank"><i class="fas fa-file-alt"></i></a-->
+	           <a href="https://subhrendu1987.github.io/slides/Globecom19.pptx" target="_blank" ><i class='fas fa-laptop'></i></a>
           </li>
           <li>
 	           <q>Aloe: An Elastic Auto-Scaled and Self-stabilized Orchestration Framework for IoT Applications</q><br>
@@ -86,9 +90,10 @@
 	           Paris, France <br>
 	           <i>Ranked: A* </i> <br>
 	           29th April-2nd May, 2019<br>
-	           <div class="x-doi">10.1109/INFOCOM.2019.8737656</div><br>
-	           <a href="https://ieeexplore.ieee.org/document/8737656" target="_blank" ><i class="fas fa-file-alt" style="color: #000000
-	           font-weight: bold"></i></a> <a href="https://subhrendu1987.github.io/slides/Aloe.pptx" target="_blank" ><i class='fas fa-laptop'></i></a>
+	           <div class="x-doi">https://doi.org/10.1109/INFOCOM.2019.8737656</div><br>
+	           <!--a href="https://ieeexplore.ieee.org/document/8737656" target="_blank" ><i class="fas fa-file-alt" style="color: #000000
+	           font-weight: bold"></i></a-->
+	           <a href="https://subhrendu1987.github.io/slides/Aloe.pptx" target="_blank" ><i class='fas fa-laptop'></i></a>
           </li>
           <li>
 	          <q>Improving MPTCP Performance by Enabling Sub-Flow Selection over a SDN Supported Network</q><br>
@@ -100,8 +105,9 @@
 	          Limassol, Cyprus.<br>
 	          <i>Ranked: B</i> <br>
 	          15th-17th October, 2018<br>
-	          <div class="x-doi">10.1109/WiMOB.2018.8589143</div><br>
-	          <a href="https://ieeexplore.ieee.org/abstract/document/8589143" target="_blank"><i class="fas fa-file-alt"></i></a> <a href="https://subhrendu1987.github.io/slides/WiMobPpt.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
+	          <div class="x-doi">https://doi.org/10.1109/WiMOB.2018.8589143</div><br>
+	          <!--a href="https://ieeexplore.ieee.org/abstract/document/8589143" target="_blank"><i class="fas fa-file-alt"></i></a-->
+	          <a href="https://subhrendu1987.github.io/slides/WiMobPpt.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
           </li>
           <li>
 	          <q>Fast and Secure Handoffs for V2I communication in Smart City Wi-Fi Deployement</q><br>
@@ -113,8 +119,8 @@
 	          Bhubaneswar, India. <br>
 	          <i>Ranked: C</i><br>
 	          11th-13th January, 2018<br>
-	          <div class="x-doi">10.1007/978-3-319-72344-0_15</div><br>
-	          <a href="https://link.springer.com/chapter/10.1007/978-3-319-72344-0_15" target="_blank"><i class="fas fa-file-alt"></i></a>
+	          <div class="x-doi">https://doi.org/10.1007/978-3-319-72344-0_15</div><br>
+	          <!--a href="https://link.springer.com/chapter/10.1007/978-3-319-72344-0_15" target="_blank"><i class="fas fa-file-alt"></i></a-->
           </li>
           <li>
 	         <q> Poster: Primary Path Effect in Multi-Path TCP: How Serious Is It for Deployment Consideration?</q><br>
@@ -126,8 +132,9 @@
 	          Chennai, India. <br>
 	          <i>Ranked: A</i><br>
 	          10th-14th July, 2017<br>
-	          <div class="x-doi">10.1145/3084041.3084076</div><br>
-	          <a href="http://dl.acm.org/citation.cfm?id=3084076" target="_blank"><i class="fas fa-file-alt"></i></a> <a href="https://subhrendu1987.github.io/slides/Mobihoc_2017_Poster.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
+	          <div class="x-doi">https://doi.org/10.1145/3084041.3084076</div><br>
+	          <!--a href="http://dl.acm.org/citation.cfm?id=3084076" target="_blank"><i class="fas fa-file-alt"></i></a-->
+	          <a href="https://subhrendu1987.github.io/slides/Mobihoc_2017_Poster.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
           <li>
 	         <q> Flipper: Fault-Tolerant Distributed Network Management and Control</q><br>
 
@@ -138,8 +145,9 @@
 	          Lisbon, Portugal.<br>
 	          <i>Ranked: A</i><br>
 	          8th-12th May, 2017<br>
-	          <div class="x-doi">10.23919/INM.2017.7987307</div><br>
-	          <a href="http://ieeexplore.ieee.org/document/7987307/" target="_blank"><i class="fas fa-file-alt"></i></a> <a href="https://subhrendu1987.github.io/slides/IM_2017_Flipper.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
+	          <div class="x-doi">https://doi.org/10.23919/INM.2017.7987307</div><br>
+	          <!--a href="http://ieeexplore.ieee.org/document/7987307/" target="_blank"><i class="fas fa-file-alt"></i></a-->
+	          <a href="https://subhrendu1987.github.io/slides/IM_2017_Flipper.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
           </li>
           <li>
 	          <q>A time agnostic method for predicting dull nodes and links in evolving networks for data cleaning.</q><br>
@@ -151,8 +159,8 @@
 	          Omaha, Nebraska, USA.<br>
 	          <i>Ranked: A2 Qualis</i><br>
 	          13th-16th October, 2016<br>
-	          <div class="x-doi">10.1109/WI.2016.0050</div><br>
-	          <a href="https://ieeexplore.ieee.org/document/7817067" target="_blank"><i class="fas fa-file-alt"></i></a>
+	          <div class="x-doi">https://doi.org/10.1109/WI.2016.0050</div><br>
+	          <!--a href="https://ieeexplore.ieee.org/document/7817067" target="_blank"><i class="fas fa-file-alt"></i></a-->
           </li>
           <li>
 	          <q>Leveraging the Trade-off Between Spatial Reuse and Channel Contention in Wireless Mesh Networks</q><br>
@@ -163,8 +171,9 @@
 
 	          Bangalore, India.<br>
 	          5th-9th January, 2016<br>
-	          <div class="x-doi">10.1109/COMSNETS.2016.7439963</div><br>
-	         <a href="http://ieeexplore.ieee.org/document/7439963/?reload=true&arnumber=7439963" target="_blank"><i class="fas fa-file-alt"></i></a> <a href="https://subhrendu1987.github.io/slides/COMSNETS_2016_P1.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
+	          <div class="x-doi">https://doi.org/10.1109/COMSNETS.2016.7439963</div><br>
+	         <!--a href="http://ieeexplore.ieee.org/document/7439963/?reload=true&arnumber=7439963" target="_blank"><i class="fas fa-file-alt"></i></a-->
+	         <a href="https://subhrendu1987.github.io/slides/COMSNETS_2016_P1.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
           </li>
           <li>
 	          <q>ES2: Managing Link Level Parameters for Elevating Data Rate and Stability in High Throughput WLAN</q><br>
@@ -174,8 +183,9 @@
 
 	          Bangalore, India.<br>
 	          5th-9th January, 2016<br>
-	          <div class="x-doi">10.1109/COMSNETS.2016.7439977</div><br>
-	          <a href="http://ieeexplore.ieee.org/document/7439977/?reload=true&arnumber=7439977" target="_blank"><i class="fas fa-file-alt"></i></a> <a href="https://subhrendu1987.github.io/slides/COMSNETS_2016_P2.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
+	          <div class="x-doi">https://doi.org/10.1109/COMSNETS.2016.7439977</div><br>
+	          <!--a href="http://ieeexplore.ieee.org/document/7439977/?reload=true&arnumber=7439977" target="_blank"><i class="fas fa-file-alt"></i></a-->
+	          <a href="https://subhrendu1987.github.io/slides/COMSNETS_2016_P2.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
           </li> 
           <li>
 	          <q>Alleviating Hidden and Exposed Nodes in High-Throughput Wireless Mesh Networks</q> <br>
@@ -185,8 +195,8 @@
 	          IEEE Transactions on Wireless Communication, Volume 15, Issue 2, Pages 928-937.<br>
 	          2nd February, 2016.<br>
 	          <i>Impact Factor: 6.779</i><br>
-	          <div class="x-doi">10.1109/TWC.2015.2480398</div><br>
-	          <a href="http://ieeexplore.ieee.org/document/7273973/" target="_blank"><i class="fas fa-file-alt"></i></a>
+	          <div class="x-doi">https://doi.org/10.1109/TWC.2015.2480398</div><br>
+	          <!--a href="http://ieeexplore.ieee.org/document/7273973/" target="_blank"><i class="fas fa-file-alt"></i></a-->
           </li>
           <li>
 	          <q>A Trigger Counting Mechanism for Ring Topology.</q><br>
@@ -198,7 +208,7 @@
 	          Auckland, New Zealand.<br>
 	          <i>Ranked: B</i><br>
 	          20th-23rd January, 2014<br>
-	          <div class="x-doi"></div><br>
+	          <!--div class="x-doi"></div><br-->
 			  <a href="https://dl.acm.org/citation.cfm?id=2667483" target="_blank"><i class="fas fa-file-alt"></i></a>	          
           </li>
           <li>
@@ -210,8 +220,9 @@
 
 	          Bangalore, India.<br>
 	          7th-10th January, 2014.<br>
-	          <div class="x-doi">10.1109/COMSNETS.2014.6734873</div><br>
-	          <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6734873" target="_blank"><i class="fas fa-file-alt"></i></a><a href="https://subhrendu1987.github.io/slides/COMSNETS_2014_P1.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
+	          <div class="x-doi">https://doi.org/10.1109/COMSNETS.2014.6734873</div><br>
+	          <!--a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6734873" target="_blank"><i class="fas fa-file-alt"></i></a3-->
+	          <a href="https://subhrendu1987.github.io/slides/COMSNETS_2014_P1.pdf" target="_blank" ><i class='fas fa-laptop'></i></a>
           </li>
           <li>
 	          <q>Surpassing Flow Fairness in a Mesh Network: How to Ensure Equity among End Users?</q><br>
@@ -223,9 +234,9 @@
 	          Chennai, India.<br>
 	          <i>Ranked: B4 Qualis</i><br>
 	          15th-18th December, 2013<br>
-	          <div class="x-doi">10.1109/ANTS.2013.6802836</div><br>
+	          <div class="x-doi">https://doi.org/10.1109/ANTS.2013.6802836</div><br>
 	          
-	          <a href="https://ieeexplore.ieee.org/document/6802836" target="_blank"><i class="fas fa-file-alt"></i></a>
+	          <!--a href="https://ieeexplore.ieee.org/document/6802836" target="_blank"><i class="fas fa-file-alt"></i></a-->
           </li>
         </ol>
     </body>
