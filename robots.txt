@@ -4,4 +4,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: https://subhrendu1987.github.io/sitemap.txt
+Sitemap: https://raw.githubusercontent.com/subhrendu1987/subhrendu1987.github.io/master/sitemap.xml
