@@ -1,0 +1,84 @@
+\documentclass{article}
+\input{../common/17_Util/usepackage}
+\input{../common/17_Util/newcommands}
+\input{../common/17_Util/bibformat}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{geometry}
+ \geometry{a4paper,total={170mm,257mm},left=1in,right=1in,top=1in,bottom=1in}
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%  Custom Title Section  %%
+ \begin{center}
+ 	\Large{\textbf{List of Publications}}\\
+ 	\large{Subhrendu Chattopadhyay}
+ \end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%  Standard References %%
+ %%  except given keywords  %%  
+  	\phantomsection
+  		\pdfbookmark{References}{References}
+  	\printbibliography[title={References},notkeyword=own,notkeyword=ownth]
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%  Author's Corner  %%
+ %%%%%%%%%%%%%%%%%%%%%
+  %%  Publication Related to thesis %%
+  		%\phantomsection
+		\section{Publications Related to Thesis}
+  		\pdfbookmark{Publications Related to Thesis}{Publications Related to Thesis}
+  		%\printbibliography[env=mypubs,title={Publications Related to Thesis},keyword=ownth, resetnumbers]
+  		\label{sec:th_bib}
+  		\pdfbookmark{Journals}{Journals from Thesis}
+  		\printbibliography[env=mypubs,
+  			type=article,
+  			title={Journals},
+  			heading=subbibliography,
+  			keyword=ownth, resetnumbers]
+  		%%%%%%%%
+  		\phantom{\nocite{*}}
+%  		\phantom{\cite{chakraborty2013surpassing}
+% 		\cite{chattopadhyay2017primary,chattopadhyay2018improving,chattopadhyay2017flipper}
+% 		\cite{chattopadhyay2018aloe,chattopadhyay2020aloe,chattopadhyay2020amalgam}}
+  		%%%%%%%%
+  		\pdfbookmark{Conferences}{Conferences from Thesis}
+  		 \printbibliography[env=mypubs,
+  		 	type=inproceedings,
+  		 	title={Conferences},
+  		 	heading=subbibliography,
+  		 	keyword=ownth, resetnumbers]
+%  		\phantom{\nocite{*}}
+  		\phantom{\cite{chakraborty2013surpassing}
+  		\cite{chattopadhyay2017primary,chattopadhyay2018improving,chattopadhyay2017flipper}
+  		\cite{chattopadhyay2018aloe,chattopadhyay2020aloe,chattopadhyay2020amalgam}}
+  	%%%%%%%%%%%%%%%%%%%%%
+   	%%  Publication Outside to thesis %%
+   		%\printbibliography[env=mypuboth,title={Other Publications},keyword=own,resetnumbers]
+   		\label{sec:oth_bib}
+   		\section{Other Publications}
+   		\pdfbookmark{Other Publications}{Other Publications}
+   		%%%%%%%%   
+  		\pdfbookmark{Journals}{Journals outside Thesis}
+  		\printbibliography[env=mypuboth,
+  			type=article,
+  			title={Journals},
+  			heading=subbibliography,
+  			keyword=own,resetnumbers]
+  		%%%%%%%%
+%  		\phantom{\nocite{*}}
+  		\phantom{\cite{chakraborty2013surpassing,nath2021containerized}
+  		\cite{chattopadhyay2017primary,chattopadhyay2018improving,chattopadhyay2017flipper}
+  		\cite{chattopadhyay2018aloe,chattopadhyay2020aloe,chattopadhyay2020amalgam}}
+  		%%%%%%%%
+  		\pdfbookmark{Conferences}{Conferences outside Thesis}
+   		\printbibliography[env=mypuboth,
+   			type=inproceedings,
+			title={Conferences},
+			title={Conferences},
+			heading=subbibliography,
+			keyword=own,resetnumbers]
+%  		\phantom{\nocite{*}}
+  		\phantom{\cite{chakraborty2013surpassing}
+  		\cite{chattopadhyay2017primary,chattopadhyay2018improving,chattopadhyay2017flipper}
+  		\cite{chattopadhyay2018aloe,chattopadhyay2020aloe,chattopadhyay2020amalgam}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \input{../common/20_bibilography/bib_section}
+\end{document}

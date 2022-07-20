@@ -1,5 +1,7 @@
 Journals:
-Format: (Authors; title; Journal / Conference; Year; Volume. Page Numbers)
+Format: (Authors; title; Journal / Conference; Year; Volume. Page Numbers). DOI
+
+Shubha Brata Nath, Subhrendu Chattopadhyay, Raja Karmakar, Sourav Kanti Addya, Sandip Chakraborty, and Soumya K Ghosh. Containerized deployment of micro-services in fog devices: A reinforcement learning-based approach. The Journal of Supercomputing (JSUP), Springer, 78(5):6817–6845, 2022. 10.1007/s11227-021-04135-2
 
 Subhrendu Chattopadhyay, Soumyajit Chatterjee, Sukumar Nandi, Sandip Chakraborty; Aloe: Fault-tolerant network management and orchestration framework for IoT applications; IEEE Transactions on Network and Service Management; 17;4;2396–2409; 2020. 10.1109/TNSM.2020.3008426
 

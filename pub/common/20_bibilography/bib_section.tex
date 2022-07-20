@@ -1,0 +1,27 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%  Standard References %%
+ %%  except given keywords  %%  
+  	\phantomsection
+  		\pdfbookmark{References}{References}
+  	\printbibliography[title={References},notkeyword=own,notkeyword=ownth]
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %%  Author's Corner  %%
+ %%%%%%%%%%%%%%%%%%%%%
+  %%  Publication Related to thesis %%
+  		%\phantomsection
+  		\pdfbookmark{Publications Related to Thesis}{Publications Related to Thesis}
+  		\printbibliography[env=mypubs,title={Publications Related to Thesis},keyword=ownth, resetnumbers]
+  		\label{sec:th_bib}
+  		%%%%%%%%
+  		\phantom{\cite{chakraborty2013surpassing}
+  			\cite{chattopadhyay2017primary,chattopadhyay2018improving,chattopadhyay2017flipper}
+  			\cite{chattopadhyay2018aloe,chattopadhyay2020aloe,chattopadhyay2020amalgam}}
+  	%%%%%%%%%%%%%%%%%%%%%
+   	%%  Publication Outside to thesis %%
+   		\printbibliography[env=mypuboth,title={Other Publications},keyword=own,resetnumbers]
+   		\label{sec:oth_bib}
+   		\pdfbookmark{Other Publications}{Other Publications}
+   		%%%%%%%%   
+   		\phantom{\cite{chakraborty2013surpassing}
+   			\cite{chakraborty2014defending,karmakar2014trigger,chattopadhayay2016leveraging}
+   			\cite{chakraborty2016es2,sett2016time,chakraborty2016alleviating,pranav2017fast,nath2019ptc:own}}

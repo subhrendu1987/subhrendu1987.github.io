@@ -1,0 +1,51 @@
+To make the readjustment of switch-flippers and DHT-flippers fault-tolerant, we consider the use of self-stabilization dijkstra1974self which is a popular technique to provide defense against transient failures. A transient failure is defined as irregular and unpredictable brief failure. In this work, we propose  a novel flipper readjustment algorithm which expectedly converges with linear time complexity. Our proposed algorithm also satisfies the basic properties of self-stabilization which are as following. 
+enumerate
+ Convergence: From any state, the system must reach a legitimate or desired state eventually.
+ Closure: In case of no failure, the system is guaranteed to remain in legitimate states.
+enumerate
+We consider the network as a graph , where  is the set of flippers, and  is the set of the edges representing physical connections among flippers. Each flipper periodically senses the physical medium for detecting link failure. A flipper  maintains label  and priority variable ,  where  denotes the maximum degree of . Any flipper  with  signify that, the flipper  is ready to act as a DHT-flipper. Similarly, a flipper  with  acts as an switch-flipper. We consider flipper with  as a flipper with intermediate state whose role is yet to decide. Neighborhood of flipper  is denoted by . Flipper  also maintains  and . We consider the state of  as . Each flipper also maintains the state of its adjacent neighbor flippers. When a flipper changes its state, it pro-actively notifies its neighbors. Upon detecting a link failure, flipper removes the entry about the corresponding neighbor from its table.   
+
+ We represent our proposed algorithm as a set of guarded actions, where each guarded action is termed as a rule. A rule , uses the following representation, , where  represents the condition which is required to be satisfied to execute action . Upon receiving an update from the neighbor, each flipper checks the guard statements of the rules. If any one of the guard is found to be true, then the corresponding action is executed. 
+ 
+
+
+
+
+
+
+
+
+
+flipper Readjustment in Case of Failure
+ Following the aforementioned model, the flipper readjustment problem is defined as follows. Given a network graph , the objective of the flipper readjustment problem is to find the set of DHT-flippers in such a way that all switch-flippers can have at least one DHT-flipper in their neighborhoods, so that the policy updates can be done with minimal control plane delay and network overhead. The solution approach must find an alternative DHT-flipper dynamically when any flipper or link fails, to incorporate fault-tolerance property. The flipper readjustment mechanism is similar to finding a maximal independent set (MIS) in flipper connectivity graph. We propose a novel distributed anonymous ``self-stabilizing MIS'' (SS-MIS) algorithm to find DHT-flippers dynamically. The reason for using anonymous algorithm is to remove the unfairness issue caused by the identifier system. Our proposed anonymous SS-MIS protocol has a step complexity  Execution of an action is called a step. Step complexity of a distributed system is defined as the number of steps executed by the system. Throughout this work, the terms step and move are used invariably. of . Although there exists a linear time self-stabilizing distributed algorithm turau2007linear for solving MIS problem, to the best of our knowledge in case of anonymous systems the best proposed solution gradinariu2000self has  step complexity. In this work, we propose a linear time algorithm for anonymous systems that can significantly reduce the control plane overhead in FLIPPER.  
+ 
+SS-MIS Algorithm for flipper Readjustment
+algorithm[!t]
+
+!
+
+
+
+
+
+SS-MIS Protocol
+ fig:algo
+algorithm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The proposed SS-MIS protocol selects switch-flippers and DHT-flippers in terms of assigning  and  respectively. According to MIS properties, no two DHT-flipper can be adjacent and, each switch-flipper should have at least one DHT-flipper in its adjacency list. The proposed protocol is described in Figure fig:algo.
+
+A flipper  which has  or , violates the independence property if any of its neighbor is in  state. Hence, it must execute (), and must go to a state having . If two adjacent flipper have , and no other neighbor of them are in  state, then both the adjacent flippers will try to enter in a state with  state which requires a tie breaking mechanism. Although, the tie breaking can be done using an identifier (ID) of the flipper, in this work ID based tie breaking is not used. ID based tie breaking introduces unfairness problem, because a flipper with higher ID always gets a priority. Therefore, to break this tie, a randomized trial is performed. The proposed random trial is designed in the following way. Each node in  state generates a random number in the range , and assigns to . A Winner is decided based on the unique maximum  value in a closed neighborhood. If no winner is found in a single experiment, it is repeated until there is a winner. The winner gets the privilege to enter into the  state. 
+
