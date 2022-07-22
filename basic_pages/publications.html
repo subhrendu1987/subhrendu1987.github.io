@@ -17,7 +17,45 @@
         }else{
         element.innerHTML = "<tr><td><img src=\"../imgs/DOI.png\" width=\"25\"></img></td><td><a href=\""+DOI+"\" target=\"_blank\" style=\"color: green;\">"+DOI+"<\a></td></tr>";}
   			});
-    }
+  }
+  /*********************************/
+  function displaySetting(itemArray,val){
+  	for(var i = 0; i < itemArray.length; i++){
+    			itemArray[i].style.display = val;
+		}
+  }
+  /*********************************/
+  function pubTypeSelector() {
+	  var input, filter, listed, entries, i;
+	  input = document.getElementById("pubtype");
+	  filter = input.value;
+	  listed = document.getElementById("collab");
+	  entries = listed.getElementsByTagName("li");
+	  journals=document.getElementsByClassName("journal");
+	  conferences=document.getElementsByClassName("conference");
+	  posters=document.getElementsByClassName("poster");
+    switch (filter) {
+			case "journal":  //filter=Journal
+				displaySetting(journals,"");
+				displaySetting(conferences,"none");
+				displaySetting(posters,"none");
+  		break;
+			case "conference": // filter=Conference
+				displaySetting(journals,"none");
+				displaySetting(conferences,"");
+				displaySetting(posters,"none");
+				break;
+  		case "poster": // filter=Conference
+				displaySetting(journals,"none");
+				displaySetting(conferences,"none");
+				displaySetting(posters,"");
+				break;
+  		default: // filter=All
+				displaySetting(journals,"");
+				displaySetting(conferences,"");
+				displaySetting(posters,"");
+		}
+	}
 	</script>
 	<script>
 		window.onload=function(){createDOI();};
@@ -26,9 +64,19 @@
   <body>
   	<!--button onclick="createDOI()">Show DOI</button-->
      <h2>Publications</h2>
-     <center><a href="pub/0Subho_Resume/mypub.bib" target="_blank" id="resume">Get Bibtex</a></center>
+     <center>
+     		<a href="pub/0Subho_Resume/mypub.bib" target="_blank" id="resume">Get Bibtex</a><br>
+        <!------------------------------------------------------------------------>
+        <select name="pubtype" id="pubtype" onchange="pubTypeSelector()">
+			  	<option value="all">All</option>
+			  	<option value="journal">Journal</option>
+			  	<option value="conference">Conference</option>
+			  	<option value="poster">Poster</option>
+				</select>
+				<!------------------------------------------------------------------------>
+		 </center>
         <ol id="collab">
-          <li>
+          <li class="journal">
 	           <q>Containerized Deployment of Micro-services in Fog Devices: A Reinforcement Learning-based Approach</q><br>
 
 	           <a href="https://shubhabratanath.github.io/" target="_blank">Shubha Brata Nath</a>, <div class="myname">Subhrendu Chattopadhyay</div>, <a href="https://scholar.google.com/citations?user=C6nv3s8AAAAJ&hl=en" target="_blank"> Raja Karmakar</a>, <a href="http://sourav.sinchan.in/" target="_blank">Sourav Kanti Addya</a>, <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank">Sandip Chakraborty</a> and <a href="http://www.facweb.iitkgp.ac.in/~skg/" target="_blank">Soumya K Ghosh</a><br>
@@ -41,7 +89,7 @@
                   <span class="iconify" data-icon="et:document" data-inline="false"></span></a>
           </li>
 
-          <li>
+          <li class="journal">
 	           <q>Aloe: Fault-Tolerant Network Management and Orchestration Framework for IoT Applications</q><br>
 
 	           <div class="myname">Subhrendu Chattopadhyay</div>, <a href="https://stilllearningsoumya.github.io/" target="_blank"> Soumyajit Chatterjee</a>, <a href="http://www.iitg.ac.in/sukumar/" ta rget="_blank">Sukumar Nandi</a> and <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank"> Sandip Chakraborty</a><br>
@@ -54,7 +102,7 @@
 	          			<span class="tooltiptext">Article</span>
                   <span class="iconify" data-icon="et:document" data-inline="false"></span></a>
           </li>
-          <li>
+          <li class="conference">
 	           <q>Amalgam: Distributed Network Control With Scalable Service Chaining</q><br>
 
 	           <div class="myname">Subhrendu Chattopadhyay</div>, <a href="http://www.iitg.ac.in/sukumar/" target="_blank">Sukumar Nandi</a>, <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank"> Sandip Chakraborty</a> and <a href="https://dblp.org/pers/p/Prasad:Abhinandan_S=.html" target="_blank"> Abhinandan Sridhara Rao Prasad</a><br>
@@ -70,7 +118,7 @@
                   <span class="iconify" data-icon="et:document" data-inline="false"></span></a>
 	           <!--a href="https://subhrendu1987.github.io/slides/Aloe.pptx" target="_blank" ><i class='fas fa-laptop'></i></a-->
           </li>
-          <li>
+          <li class="conference">
 	           <q>PTC: Pick-Test-Choose to Place Containerized Micro-services in IoT</q><br>
 
 	           <a href="https://shubhabratanath.github.io/" target="_blank">Shubha Brata Nath</a>, <div class="myname">Subhrendu Chattopadhyay</div>, Raja Karmakar,<a href="http://sourav.sinchan.in/" target="_blank">Sourav Kanti Addya</a>, <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank">Sandip Chakraborty</a> and <a href="http://www.facweb.iitkgp.ac.in/~skg/" target="_blank">Soumya K Ghosh</a><br>
@@ -88,7 +136,7 @@
                   <span class="tooltiptext">Slides</span>
                   <span class="iconify" data-icon="ri:file-ppt-2-fill" data-inline="false"></span></a>
           </li>
-          <li>
+          <li class="conference">
 	           <q>Aloe: An Elastic Auto-Scaled and Self-stabilized Orchestration Framework for IoT Applications</q><br>
 
 	           <div class="myname">Subhrendu Chattopadhyay</div>, <a href="https://stilllearningsoumya.github.io/" target="_blank"> Soumyajit Chatterjee</a>, <a href="http://www.iitg.ac.in/sukumar/" target="_blank">Sukumar Nandi</a> and <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank"> Sandip Chakraborty</a><br>
@@ -106,7 +154,7 @@
                   <span class="tooltiptext">Slides</span>
                   <span class="iconify" data-icon="ri:file-ppt-2-fill" data-inline="false"></span></a>
           </li>
-          <li>
+          <li class="conference">
 	          <q>Improving MPTCP Performance by Enabling Sub-Flow Selection over a SDN Supported Network</q><br>
 
 	          <div class="myname">Subhrendu Chattopadhyay</div>, <a href="http://www.iitg.ac.in/stud/samar/index.html" target="_blank">Samar Shailendra</a>, <a href="http://www.iitg.ac.in/sukumar/" target="_blank"> Sukumar Nandi </a> and <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank">Sandip Chakraborty</a><br>
@@ -124,7 +172,7 @@
                   <span class="tooltiptext">Slides</span>
                   <span class="iconify" data-icon="ri:file-ppt-2-fill" data-inline="false"></span></a>
           </li>
-          <li>
+          <li class="conference">
 	          <q>Fast and Secure Handoffs for V2I communication in Smart City Wi-Fi Deployement</q><br>
 
 	          <a href="https://www.researchgate.net/profile/Pranav_Singh24" target="_blank"> Pranav Kumar Singh </a>,<div class="myname">Subhrendu Chattopadhyay</div> , <a href="https://scholar.google.co.in/citations?user=hHpL0uEAAAAJ&hl=en" target="_blank"> Pradeepkumar Gajendra Bhale</a> and <a href="http://www.iitg.ac.in/sukumar/" target="_blank">Sukumar Nandi</a><br>
@@ -139,7 +187,7 @@
 	          			<span class="tooltiptext">Article</span>
                   <span class="iconify" data-icon="et:document" data-inline="false"></span></a>
           </li>
-          <li>
+          <li class="poster">
 	         <q> Poster: Primary Path Effect in Multi-Path TCP: How Serious Is It for Deployment Consideration?</q><br>
 
 	          <div class="myname">Subhrendu Chattopadhyay</div>,  <a href="http://www.iitg.ac.in/sukumar/" target="_blank"> Sukumar Nandi</a>,<a href="http://www.iitg.ac.in/stud/samar/index.html" target="_blank"> Samar Shailendra </a>, and <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank"> Sandip Chakraborty</a><br>
@@ -156,7 +204,7 @@
 	          <a href="https://subhrendu1987.github.io/slides/Mobihoc_2017_Poster.pdf" target="_blank" class="tooltip">
                   <span class="tooltiptext">Slides</span>
                   <span class="iconify" data-icon="ri:file-ppt-2-fill" data-inline="false"></span></a>
-          <li>
+          <li class="conference">
 	         <q> Flipper: Fault-Tolerant Distributed Network Management and Control</q><br>
 
 	          <div class="myname">Subhrendu Chattopadhyay</div> , <a href="https://scholar.google.co.in/citations?user=fxvZbYsAAAAJ&hl=en" target="_blank">Niladri Sett</a>,<a href="http://www.iitg.ac.in/sukumar/" target="_blank"> Sukumar Nandi</a>, and <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank">Sandip Chakraborty</a><br>
@@ -174,7 +222,7 @@
                   <span class="tooltiptext">Slides</span>
                   <span class="iconify" data-icon="ri:file-ppt-2-fill" data-inline="false"></span></a>
           </li>
-          <li>
+          <li class="conference">
 	          <q>A time agnostic method for predicting dull nodes and links in evolving networks for data cleaning.</q><br>
 
 	          <a href="https://scholar.google.co.in/citations?user=fxvZbYsAAAAJ&hl=en" target="_blank" >Niladri Sett</a>, <div class="myname">Subhrendu Chattopadhyay</div>, <a href="https://www.iitg.ac.in/ranbir/" target="_blank">Sanasam Ranbir Singh</a>, and <a href="http://www.iitg.ac.in/sukumar/" target="_blank">Sukumar Nandi</a><br>
@@ -189,7 +237,7 @@
 	          			<span class="tooltiptext">Article</span>
                   <span class="iconify" data-icon="et:document" data-inline="false"></span></a>
           </li>
-          <li>
+          <li class="conference">
 	          <q>Leveraging the Trade-off Between Spatial Reuse and Channel Contention in Wireless Mesh Networks</q><br>
 
 	          <div class="myname">Subhrendu Chattopadhyay</div>,<a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank"> Sandip Chakraborty</a>,<a href="http://www.iitg.ac.in/sukumar/" target="_blank"> Sukumar Nandi<br></a>
@@ -206,7 +254,7 @@
                   <span class="tooltiptext">Slides</span>
                   <span class="iconify" data-icon="ri:file-ppt-2-fill" data-inline="false"></span></a>
           </li>
-          <li>
+          <li class="conference">
 	          <q>ES2: Managing Link Level Parameters for Elevating Data Rate and Stability in High Throughput WLAN</q><br>
 
 	          <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank">Sandip Chakraborty</a>, <div class="myname">Subhrendu Chattopadhyay</div><br>
@@ -222,7 +270,7 @@
                   <span class="tooltiptext">Slides</span>
                   <span class="iconify" data-icon="ri:file-ppt-2-fill" data-inline="false"></span></a>
           </li> 
-          <li>
+          <li class="journal">
 	          <q>Alleviating Hidden and Exposed Nodes in High-Throughput Wireless Mesh Networks</q> <br>
 
 	          <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank">Sandip Chakraborty</a> , <a href="http://www.iitg.ac.in/sukumar/" target="_blank"> Sukumar Nandi</a>, <div class="myname">Subhrendu Chattopadhyay</div><br>
@@ -235,7 +283,7 @@
 	          			<span class="tooltiptext">Article</span>
                   <span class="iconify" data-icon="et:document" data-inline="false"></span></a>
           </li>
-          <li>
+          <li class="conference">
 	          <q>A Trigger Counting Mechanism for Ring Topology.</q><br>
 
 	          <a href="https://www.iitg.ac.in/sushantak/" target="_blank">Sushanta Karmakar</a>, <div class="myname">Subhrendu Chattopadhyay</div><br>
@@ -251,7 +299,7 @@
                   <span class="iconify" data-icon="et:document" data-inline="false"></span></a>
           </li>
           <!--------------------------------------------------------------------------->
-          <li>
+          <li class="conference">
 	          <q>Defending Concealedness in IEEE 802.11n.</q><br>
 
 	          <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank">Sandip Chakraborty</a>, <div class="myname">Subhrendu Chattopadhyay</div>,<a href="http://iiitg.ac.in/faculty/suchetana/#home" target="_blank"> Suchetana Chakraborty</a> , <a href="http://www.iitg.ac.in/sukumar/" target="_blank">Sukumar Nandi</a><br>
@@ -268,7 +316,7 @@
                   <span class="tooltiptext">Slides</span>
                   <span class="iconify" data-icon="ri:file-ppt-2-fill" data-inline="false"></span></a>
           </li>
-          <li>
+          <li class="conference">
 	          <q>Surpassing Flow Fairness in a Mesh Network: How to Ensure Equity among End Users?</q><br>
 
 	          <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank">Sandip Chakraborty</a> ,<a href="http://www.iitg.ac.in/sukumar/" target="_blank"> Sukumar Nandi</a> , <div class="myname">Subhrendu Chattopadhyay</div><br>
