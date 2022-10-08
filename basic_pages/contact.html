@@ -36,7 +36,7 @@
                 </table>
               </td>
               <td rowspan="2" align="right" style="width:20%">
-              	<img src="../imgs/QRContacts.png" alt="Download Contact" width="50%">
+              	<img id="QRmodal" src="../imgs/QRContacts.png" alt="Download Contact" width="50%">
               </td>
             </tr>
             <tr><td>
@@ -73,14 +73,39 @@
                 <!--a href="https://srmap.edu.in/faculty/dr-subhrendu-chattopadhyay/" target="_blank"  class="tooltip">
                   <span class="tooltiptext">SRM</span>
                   <span class="iconify" data-icon="fa-brands:srm" data-inline="false"></span></a-->
-                <a href="https://www.idrbt.ac.in/subhrendu.html" target="_blank"  class="tooltip">
+                <a href="https://www.idrbt.ac.in/dr-subhrendu-chattopadhyay/" target="_blank"  class="tooltip">
                   <span class="tooltiptext">IDRBT</span>
                   <img src="../imgs/idrbtLogo.png" width="60"></img></a>
             </td></tr>
           </table></div>
-        </body></html>
+          <!-- The QR Modal -->
+          <div id="myModal" class="modal">
+            <!-- The Close Button -->
+            <span class="close">&times;</span>
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="QRmodalImg">
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"> Scan QR Code to Download Contact</div>
+          </div>
+          <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            var img = document.getElementById("QRmodal");
+            var modalImg = document.getElementById("QRmodalImg");
+            var captionText = document.getElementById("caption");
+            img.onclick = function(){
+              modal.style.display = "block";
+              modalImg.src = this.src;
+              captionText.innerHTML = this.alt;
+            }
 
-<!--Neerukonda - Kuragallu Village
-Mangalagiri Mandal,
-Guntur District,
-Andhra Pradesh 522 502-->
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() { 
+              modal.style.display = "none";
+            }
+          </script>
+        </body></html>

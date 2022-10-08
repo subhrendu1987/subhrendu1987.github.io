@@ -1,0 +1,19 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Subhrendu Chattopadhyay
+N:Chattopadhyay;Subhrendu;;;
+EMAIL;TYPE=INTERNET;TYPE=HOME:subhrendu.subho@gmail.com
+EMAIL;TYPE=INTERNET;TYPE=WORK:subhrendu@idrbt.ac.in
+item1.X-SKYPE:subhrendu.chattopadhyay
+item1.X-ABLabel:
+TEL;TYPE=WORK:+91 -9435658234
+TEL;TYPE=HOME:+91 -8473894164
+ADR;TYPE=WORK:311;IDRBT; Castle Hills; Road No.1;
+Masab Tank; Hyderabad-500057;IN
+item3.ORG:Institute for Development and Research in Banking Technology (IDRBT); Hyderabad
+item3.X-ABLabel:
+item4.TITLE:Assistant Professor
+item4.X-ABLabel:
+item5.URL:https\://subhrendu1987.github.io/
+item5.X-ABLabel:Home Page
+END:VCARD
