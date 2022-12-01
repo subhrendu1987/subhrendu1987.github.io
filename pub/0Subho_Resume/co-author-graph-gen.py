@@ -2,6 +2,7 @@ import bibtexparser
 import json
 from serpapi import GoogleSearch
 import urllib.parse
+from chord import Chord
 
 SerpAPIkey="d6df6cf2b22e2b86f319abb1a995cfbfb9e3e9eb21bc1f65dc0087eff134a350"
 params = {
@@ -10,7 +11,8 @@ params = {
 	"engine": "google_scholar",
 	"q": "Subhrendu",
 	"num": "1",
-	"hl": "en"
+	"hl": "en",
+	"output":"JSON"
 }
 #############################################################
 with open('mypub.bib') as bibtex_file:
@@ -28,6 +30,9 @@ for item in bibList:
 	results = search.get_dict()
 	results['organic_results'][0]['publication_info']['authors'][0]
 
+# Names of the features.
+names = ["Co-Author","Cumulative Citation"]
+Chord(matrix, names, colors="d3.schemeDark2").to_html()
 #############################################################
 	print(item['author'])
 print(bib_database.entries)
