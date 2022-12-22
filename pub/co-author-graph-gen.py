@@ -1,52 +1,64 @@
 import bibtexparser
 import json
-from serpapi import GoogleSearch
+import urllib
 import urllib.parse
 from chord import Chord
 from itertools import combinations
 import pandas as pd
 import networkx as nx
-
+import xmltodict
+import os
 import holoviews as hv
 from holoviews import opts, dim
 import holoviews.plotting.bokeh
+DBLP_URL="https://dblp.org/pid/141/2034.xml"
+BIB_FILE="0Subho_Resume/mypub.bib"
 #############################################################
-'''
-# Pandas is gonna be used to read the csv file stored on the web:
-
-
-SerpAPIkey="d6df6cf2b22e2b86f319abb1a995cfbfb9e3e9eb21bc1f65dc0087eff134a350"
-params = {
-	"api_key": "d6df6cf2b22e2b86f319abb1a995cfbfb9e3e9eb21bc1f65dc0087eff134a350",
-	"device": "desktop",
-	"engine": "google_scholar",
-	"q": "Subhrendu",
-	"num": "1",
-	"hl": "en",
-	"output":"JSON"
-}
-'''
+def fetchFromDBLP():
+    file = urllib.request.urlopen(DBLP_URL)
+    data = file.read()
+    file.close()
+    data = xmltodict.parse(data)
+    pubList=data['dblpperson']['r']
+    return (pubList)
 #############################################################
-with open('mypub.bib') as bibtex_file:
-    bib_database = bibtexparser.load(bibtex_file)
-bibList=bib_database.entries
+def fetchFromBib():
+	with open(BIB_FILE) as bibtex_file:
+	    bib_database = bibtexparser.load(bibtex_file)
+	bibList=bib_database.entries
+	return(bibList)
 #############################################################
-coauthCount={}
-G=nx.multigraph.Graph()
+def bibListToNetx(bibList)
+	coauthCount={}
+	G=nx.multigraph.Graph()
+	bibList=fetchFromBib()
+	for pub in bibList:
+		title=pub['title']
+		authors=pub['author'].split(" and ")
+		coauthors=list(combinations(authors, 2))
+		for auth2 in coauthors:
+			if G.has_edge(auth2[0],auth2[1]):
+				G.add_edge(auth2[0],auth2[1],weight=G[auth2[0]][auth2[1]]['weight']+1)
+			else:
+				G.add_edge(auth2[0],auth2[1],weight=1)
+	return(G)
 #############################################################
-for pub in bibList:
-	title=pub['title']
-	authors=pub['author'].split(" and ")
-	coauthors=list(combinations(authors, 2))
-	for auth2 in coauthors:
-		if G.has_edge(auth2[0],auth2[1]):
-			G.add_edge(auth2[0],auth2[1],weight=G[auth2[0]][auth2[1]]['weight']+1)
-		else:
-			G.add_edge(auth2[0],auth2[1],weight=1)
-
+G=bibListToNetx(bibList)
 df=nx.to_pandas_adjacency(G)
 names = list(df.columns.values)
 data = df.values.tolist()
+df.to_csv('out.csv')  
+
+
+'''
+pos=nx.spring_layout(G) # pos = nx.nx_agraph.graphviz_layout(G)
+nx.draw_networkx(G,pos)
+labels = nx.get_edge_attributes(G,'weight')
+nx.draw_networkx_edge_labels(G,pos,edge_labels=labels)
+'''
+#############################################################
+import plotly.plotly as py
+
 '''
 #add node labels
 nodes = hv.Dataset(pd.DataFrame(data['nodes']), 'index')#create chord object
@@ -56,7 +68,6 @@ chord.opts(
            labels='nodes', node_color=dim('index').str()))
 '''
 '''		
-Chord(data, names).to_html("chord-diagram.html")
 		if(auth in list(coauthCount.keys())):
 			coauthCount[auth]=coauthCount[auth]+1
 		else:
