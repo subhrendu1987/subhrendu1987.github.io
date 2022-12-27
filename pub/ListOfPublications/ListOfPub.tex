@@ -2,6 +2,24 @@
 \input{../common/17_Util/usepackage}
 \input{../common/17_Util/newcommands}
 \input{../common/17_Util/bibformat}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\citeall}{\phantom{\cite{satapathy2023disprotrack,
+chattopadhyay2017primary,
+chattopadhyay2018improving,
+chattopadhyay2017flipper,
+chattopadhyay2018aloe,
+chattopadhyay2020aloe,
+chattopadhyay2020amalgam,
+karmakar2014trigger,
+chakraborty2013surpassing,
+chakraborty2014defending,
+chakraborty2016alleviating,
+chakraborty2016es2,
+chattopadhayay2016leveraging,
+sett2016time,
+nath2021containerized,
+pranav2017fast,
+nath2019ptc}}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{geometry}
  \geometry{a4paper,total={170mm,257mm},left=1in,right=1in,top=1in,bottom=1in}
@@ -34,7 +52,8 @@
   			heading=subbibliography,
   			keyword=ownth, resetnumbers]
   		%%%%%%%%
-  		\phantom{\nocite{*}}
+  		%\phantom{\nocite{*}}
+  		\citeall
 %  		\phantom{\cite{chakraborty2013surpassing}
 % 		\cite{chattopadhyay2017primary,chattopadhyay2018improving,chattopadhyay2017flipper}
 % 		\cite{chattopadhyay2018aloe,chattopadhyay2020aloe,chattopadhyay2020amalgam}}
@@ -46,9 +65,7 @@
   		 	heading=subbibliography,
   		 	keyword=ownth, resetnumbers]
 %  		\phantom{\nocite{*}}
-  		\phantom{\cite{chakraborty2013surpassing}
-  		\cite{chattopadhyay2017primary,chattopadhyay2018improving,chattopadhyay2017flipper}
-  		\cite{chattopadhyay2018aloe,chattopadhyay2020aloe,chattopadhyay2020amalgam}}
+  		\citeall  		
   	%%%%%%%%%%%%%%%%%%%%%
    	%%  Publication Outside to thesis %%
    		%\printbibliography[env=mypuboth,title={Other Publications},keyword=own,resetnumbers]
@@ -64,9 +81,7 @@
   			keyword=own,resetnumbers]
   		%%%%%%%%
 %  		\phantom{\nocite{*}}
-  		\phantom{\cite{chakraborty2013surpassing,nath2021containerized}
-  		\cite{chattopadhyay2017primary,chattopadhyay2018improving,chattopadhyay2017flipper}
-  		\cite{chattopadhyay2018aloe,chattopadhyay2020aloe,chattopadhyay2020amalgam}}
+		\citeall
   		%%%%%%%%
   		\pdfbookmark{Conferences}{Conferences outside Thesis}
    		\printbibliography[env=mypuboth,
@@ -76,9 +91,7 @@
 			heading=subbibliography,
 			keyword=own,resetnumbers]
 %  		\phantom{\nocite{*}}
-  		\phantom{\cite{chakraborty2013surpassing}
-  		\cite{chattopadhyay2017primary,chattopadhyay2018improving,chattopadhyay2017flipper}
-  		\cite{chattopadhyay2018aloe,chattopadhyay2020aloe,chattopadhyay2020amalgam,Satapathy2023disprotrack}}
+  		\citeall
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \input{../common/20_bibilography/bib_section}
 \end{document}
