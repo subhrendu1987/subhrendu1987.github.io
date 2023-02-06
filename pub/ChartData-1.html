@@ -1,0 +1,42 @@
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/flow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am5.ready(function() {
+
+// Create root element
+// https://www.amcharts.com/docs/v5/getting-started/#Root_element
+var root = am5.Root.new("chartdiv");
+
+
+// Set themes
+// https://www.amcharts.com/docs/v5/concepts/themes/
+root.setThemes([
+  am5themes_Animated.new(root)
+]);
+
+
+// Create series
+// https://www.amcharts.com/docs/v5/charts/flow-charts/
+var series = root.container.children.push(am5flow.Chord.new(root, {
+  sourceIdField: "source",
+  targetIdField: "target",
+  valueField: "value"
+}));
+series.nodes.get("colors").set("step", 2);
+
+
+// Set data
+// https://www.amcharts.com/docs/v5/charts/flow-charts/#Setting_data
+series.data.setAll([
