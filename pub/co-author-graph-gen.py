@@ -127,7 +127,7 @@ def legendToHTML(reverseLegend,chart_gen_code_legend_file):
 	return
 #############################################################
 def createWordCloud(d,file):
-	wordcloud = WordCloud()
+	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap='RdYlGn')
 	wordcloud.generate_from_frequencies(frequencies=d)
 	plt.figure()
 	plt.imshow(wordcloud, interpolation="bilinear")
