@@ -9,8 +9,9 @@ import networkx as nx
 #import xmltodict
 import os
 import matplotlib.pyplot as plt
+from PIL import Image
 from wordcloud import WordCloud
-#import numpy as np
+import numpy as np
 #import holoviews as hv
 #from holoviews import opts, dim
 #import holoviews.plotting.bokeh
@@ -126,9 +127,13 @@ def legendToHTML(reverseLegend,chart_gen_code_legend_file):
 		myfile.write("<h6>Used https://www.amcharts.com/demos/chord-diagram/ to generate chord diagram.</h6>")
 	return
 #############################################################
-def createWordCloud(d,file):
-	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap='RdYlGn')
-	wordcloud.generate_from_frequencies(frequencies=d)
+def createWordCloud(freq,file,maskFile=None):
+	if(maskFile):
+		mask_arr = np.array(Image.open(maskFile))
+	else:
+		mask_arr=None
+	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap='RdYlGn', mask=mask_arr)
+	wordcloud.generate_from_frequencies(frequencies=freq)
 	plt.figure()
 	plt.imshow(wordcloud, interpolation="bilinear")
 	plt.axis("off")
@@ -145,7 +150,7 @@ legendToHTML(reverseLegend,chart_gen_code_legend_file)
 os.system("cat Charts/ChartData-1.html Charts/ChartData-2.html Charts/ChartData-3.html> Charts/ChartData.html")
 
 freqList=bibListToFreq([])
-createWordCloud(freqList,"Charts/authorWordCloud.png")
+createWordCloud(freqList,"Charts/authorWordCloud.png",maskFile="../imgs/NIL_Logo.bw.png")
 #print("cat Charts/ChartData-1.html Charts/ChartData-2.html Charts/ChartData-3.html > Charts/ChartData.html")
 print("Use https://www.amcharts.com/demos/chord-diagram/ to generate chord diagram.")
 #############################################################
