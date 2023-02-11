@@ -132,7 +132,7 @@ def createWordCloud(freq,file,maskFile=None):
 		mask_arr = np.array(Image.open(maskFile))
 	else:
 		mask_arr=None
-	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap='RdYlGn', mask=mask_arr)
+	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap='tab10', mask=mask_arr)
 	wordcloud.generate_from_frequencies(frequencies=freq)
 	plt.figure()
 	plt.imshow(wordcloud, interpolation="bilinear")
@@ -150,7 +150,8 @@ legendToHTML(reverseLegend,chart_gen_code_legend_file)
 os.system("cat Charts/ChartData-1.html Charts/ChartData-2.html Charts/ChartData-3.html> Charts/ChartData.html")
 
 freqList=bibListToFreq([])
-createWordCloud(freqList,"Charts/authorWordCloud.png",maskFile="../imgs/NIL_Logo.bw.png")
+createWordCloud(freqList,"Charts/authorWordCloud.png",maskFile="../imgs/clipartclouds.png")
+#createWordCloud(freqList,"Charts/authorWordCloud.png",maskFile="../imgs/clipartclouds.jpg")
 #print("cat Charts/ChartData-1.html Charts/ChartData-2.html Charts/ChartData-3.html > Charts/ChartData.html")
 print("Use https://www.amcharts.com/demos/chord-diagram/ to generate chord diagram.")
 #############################################################
