@@ -4,25 +4,17 @@ import urllib
 import urllib.parse
 #from chord import Chord
 from itertools import combinations
-import pandas as pd
+#import pandas as pd
 import networkx as nx
-import xmltodict
+#import xmltodict
 import os
-import numpy as np
+#import numpy as np
 #import holoviews as hv
 #from holoviews import opts, dim
 #import holoviews.plotting.bokeh
 DBLP_URL="https://dblp.org/pid/141/2034.xml"
 BIB_FILE="common/20_bibilography/mypub.bib"
-PI=np.pi
-#############################################################
-def createLegend(G):
-    legendList={}
-    reverseLegend={}
-    for i,name in enumerate(list(G.nodes())):
-    	legendList[name]=i+1
-    	reverseLegend[i+1]=name
-    return ((legendList,reverseLegend))
+#PI=np.pi
 #############################################################
 def fetchFromDBLP():
     file = urllib.request.urlopen(DBLP_URL)
@@ -61,7 +53,18 @@ def bibListToNetx(bibList):
 				G.add_edge(auth2[0],auth2[1],weight=G[auth2[0]][auth2[1]]['weight']+1)
 			else:
 				G.add_edge(auth2[0],auth2[1],weight=1)
+	G.remove_node('Subhrendu Chattopadhyay')  # Remove own entry
 	return(G)
+#############################################################
+def createLegend(G):
+    sortedNodeList=sorted(G.degree, key=lambda x: x[1], reverse=True)
+    legendList={}
+    reverseLegend={}
+    for i,item in enumerate(sortedNodeList):
+    	name=item[0]
+    	legendList[name]=i+1
+    	reverseLegend[i+1]=name
+    return ((legendList,reverseLegend))
 #############################################################
 def graphToHTML(G,chart_gen_code_body_file):
 	#HTMLs=[]
@@ -85,28 +88,31 @@ def graphToHTML(G,chart_gen_code_body_file):
 def legendToHTML(reverseLegend,chart_gen_code_legend_file):
 	#HTMLs=[]
 	with open(chart_gen_code_legend_file, "w+") as myfile:
-		myfile.write("<div id=\"chartdiv\"></div>\n")
-		myfile.write("<h2>Legends</h2>\n")
+		
+		myfile.write("<div style=\"width: 100%;\">\n")
+		myfile.write("<div style=\"width: 70%; float: left;\" id=\"chartdiv\"></div>\n")
+		myfile.write("<div style=\"width: 30%; float: left;\" id=\"chartlegend\">\n<h2>Legends</h2>\n")
 		myfile.write("<ol>\n")
 		for k in reverseLegend.keys():
 			htmlSyntax="<li> "+str(reverseLegend[k])+"</li>"
 			#HTMLs.append(htmlSyntax)
 			myfile.write(htmlSyntax+"\n")
-		myfile.write("</ol>")
+		myfile.write("</ol>\n</div>\n</div>\n")
+		myfile.write("<h6>Used https://www.amcharts.com/demos/chord-diagram/ to generate chord diagram.</h6>")
 	return
 #############################################################
 G=bibListToNetx([])
 legendList,reverseLegend =createLegend(G)
 nx.write_weighted_edgelist(G, "weighted.coauthlist.tmp", delimiter=",")
-chart_gen_code_body_file="ChartData-2.html"
+chart_gen_code_body_file="Charts/ChartData-2.html"
 graphToHTML(G,chart_gen_code_body_file)
 
-chart_gen_code_legend_file="ChartData-3.html"
+chart_gen_code_legend_file="Charts/ChartData-3.html"
 legendToHTML(reverseLegend,chart_gen_code_legend_file)
 
 
-os.system("cat ChartData-1.html ChartData-2.html ChartData-3.html> ChartData.html")
+os.system("cat Charts/ChartData-1.html Charts/ChartData-2.html Charts/ChartData-3.html> Charts/ChartData.html")
 
-print("cat ChartData-1.html ChartData-2.html ChartData-3.html ChartData-4.html > ChartData.html")
+#print("cat Charts/ChartData-1.html Charts/ChartData-2.html Charts/ChartData-3.html > Charts/ChartData.html")
 print("Use https://www.amcharts.com/demos/chord-diagram/ to generate chord diagram.")
 #############################################################

@@ -1,0 +1,143 @@
+<!-- Styles -->
+<style>
+#chartdiv {
+  width: 100%;
+  height: 500px;
+}
+</style>
+
+<!-- Resources -->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/flow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+
+<!-- Chart code -->
+<script>
+am5.ready(function() {
+
+// Create root element
+// https://www.amcharts.com/docs/v5/getting-started/#Root_element
+var root = am5.Root.new("chartdiv");
+
+
+// Set themes
+// https://www.amcharts.com/docs/v5/concepts/themes/
+root.setThemes([
+  am5themes_Animated.new(root)
+]);
+
+
+// Create series
+// https://www.amcharts.com/docs/v5/charts/flow-charts/
+var series = root.container.children.push(am5flow.ChordNonRibbon.new(root, {
+  sourceIdField: "from",
+  targetIdField: "to",
+  valueField: "value"
+}));
+
+series.nodes.get("colors").set("step", 2);
+
+series.bullets.push(function (_root, _series, dataItem) {
+  var bullet = am5.Bullet.new(root, {
+    locationY: Math.random(),
+    sprite: am5.Circle.new(root, {
+      radius: 5,
+      fill: dataItem.get("source").get("fill")
+    })
+  });
+
+  bullet.animate({
+    key: "locationY",
+    to: 1,
+    from: 0,
+    duration: Math.random() * 1000 + 2000,
+    loops: Infinity,
+    easing: am5.ease.yoyo(am5.ease.cubic)
+  });
+
+  return bullet;
+});
+
+series.nodes.labels.template.setAll({
+  textType: "regular",
+  fill: root.interfaceColors.get("background"),
+  fontSize: "1.1em",
+  radius: -5
+});
+
+series.nodes.bullets.push(function (_root, _series, dataItem) {
+  return am5.Bullet.new(root, {
+    sprite: am5.Circle.new(root, {
+      radius: 20,
+      fill: dataItem.get("fill")
+    })
+  });
+});
+
+series.children.moveValue(series.bulletsContainer, 0);
+
+
+// Set data
+// https://www.amcharts.com/docs/v5/charts/flow-charts/#Setting_data
+series.data.setAll([
+{ source: "8", target: "9", value: 1},
+{ source: "8", target: "1", value: 1},
+{ source: "9", target: "1", value: 1},
+{ source: "1", target: "2", value: 10},
+{ source: "1", target: "10", value: 2},
+{ source: "1", target: "7", value: 1},
+{ source: "1", target: "11", value: 2},
+{ source: "1", target: "12", value: 1},
+{ source: "1", target: "13", value: 1},
+{ source: "1", target: "3", value: 2},
+{ source: "1", target: "4", value: 2},
+{ source: "1", target: "5", value: 2},
+{ source: "1", target: "6", value: 2},
+{ source: "2", target: "10", value: 2},
+{ source: "2", target: "7", value: 2},
+{ source: "2", target: "11", value: 2},
+{ source: "2", target: "12", value: 1},
+{ source: "2", target: "13", value: 1},
+{ source: "2", target: "14", value: 1},
+{ source: "2", target: "15", value: 1},
+{ source: "2", target: "16", value: 1},
+{ source: "7", target: "14", value: 1},
+{ source: "3", target: "4", value: 2},
+{ source: "3", target: "5", value: 2},
+{ source: "3", target: "6", value: 2},
+{ source: "4", target: "5", value: 2},
+{ source: "4", target: "6", value: 2},
+{ source: "5", target: "6", value: 2},
+{ source: "15", target: "16", value: 1},
+]); // Make stuff animate on load
+ series.appear(500, 100);
+}); // end
+
+ am5.ready()
+</script>
+<div style="width: 100%;">
+<div style="width: 70%; float: left;" id="chartdiv"></div>
+<div style="width: 30%; float: left;" id="chartlegend">
+<h2>Legends</h2>
+<ol>
+<li> Sandip Chakraborty</li>
+<li> Sukumar Nandi</li>
+<li> Shubha Brata Nath</li>
+<li> Raja Karmakar</li>
+<li> Sourav Kanti Addya</li>
+<li> Soumya K. Ghosh</li>
+<li> Niladri Sett</li>
+<li> Utkalika Satapathy</li>
+<li> Rishabh Thakur</li>
+<li> Samar Shailendra</li>
+<li> Soumyajit Chatterjee</li>
+<li> Abhinandan Prasad</li>
+<li> Suchetana Chakraborty</li>
+<li> Sanasam Ranbir Singh</li>
+<li> Pranav Kumar Singh</li>
+<li> Pradeepkumar Gajendra Bhale</li>
+<li> Sushanta Karmakar</li>
+</ol>
+</div>
+</div>
+<h6>Used https://www.amcharts.com/demos/chord-diagram/ to generate chord diagram.</h6>
