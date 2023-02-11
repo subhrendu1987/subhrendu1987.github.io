@@ -190,6 +190,11 @@ background-color: #faebd7;
   max-width: 700px;
 }
 
+#fn1 {
+  text-align: center;
+  color: #ff2222;
+  font-weight: bold;
+}
 /* Caption of Modal Image (Image Text) - Same Width as the Image */
 #caption {
   margin: auto;
