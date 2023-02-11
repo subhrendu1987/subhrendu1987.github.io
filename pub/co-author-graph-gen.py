@@ -8,6 +8,7 @@ from itertools import combinations
 import networkx as nx
 #import xmltodict
 import os
+import matplotlib
 import matplotlib.pyplot as plt
 from PIL import Image
 from wordcloud import WordCloud
@@ -18,6 +19,9 @@ import numpy as np
 DBLP_URL="https://dblp.org/pid/141/2034.xml"
 BIB_FILE="common/20_bibilography/mypub.bib"
 #PI=np.pi
+cmap = matplotlib.colors.ListedColormap(["#1A2C42","#BE2F29","#ECAF44"], name='from_list', N=None)
+#cmap = matplotlib.colors.ListedColormap([rgba(26, 44, 66, 1),rgba(190, 47, 41, 1),rgba(236, 175, 68, 1),rgba(12, 17, 21, 1)], name='from_list', N=None)
+#cmap = matplotlib.colors.ListedColormap([#1A2C42,#BE2F29,#ECAF44,#0C1115], name='from_list', N=None)
 #############################################################
 def fetchFromDBLP():
     file = urllib.request.urlopen(DBLP_URL)
@@ -32,6 +36,24 @@ def fetchFromBib():
 	    bib_database = bibtexparser.load(bibtex_file)
 	bibList=bib_database.entries
 	return(bibList)
+#############################################################
+def bibListToAuthList(bibList):
+	authList={}
+	if(len(bibList)==0):
+		bibList=fetchFromBib()
+	for pub in bibList:
+		title=pub['title']
+		authors=pub['author'].split(" and ")  # Last Name First Format
+		## Process Authors
+		authors_formatted=[]
+		for auth in authors:
+			temp=auth.split(",")
+			if(len(temp)==2):
+				authors_formatted.append((temp[1]+" "+temp[0]).strip())
+			else:
+				print("3 Part Author name: Check entry: "+title)
+		authList[title]=authors_formatted
+	return(authList)
 #############################################################
 def bibListToNetx(bibList):
 	coauthCount={}
@@ -132,7 +154,8 @@ def createWordCloud(freq,file,maskFile=None):
 		mask_arr = np.array(Image.open(maskFile))
 	else:
 		mask_arr=None
-	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap='tab10', mask=mask_arr)
+	#wordcloud = WordCloud(mode="RGBA", background_color=None, colormap='tab10', mask=mask_arr)
+	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap=cmap, mask=mask_arr)
 	wordcloud.generate_from_frequencies(frequencies=freq)
 	plt.figure()
 	plt.imshow(wordcloud, interpolation="bilinear")
@@ -140,6 +163,7 @@ def createWordCloud(freq,file,maskFile=None):
 	plt.savefig(file)
 #############################################################
 G=bibListToNetx([])
+authList=bibListToAuthList([])
 legendList,reverseLegend =createLegend(G)
 nx.write_weighted_edgelist(G, "weighted.coauthlist.tmp", delimiter=",")
 chart_gen_code_body_file="Charts/ChartData-2.html"
