@@ -8,6 +8,8 @@ from itertools import combinations
 import networkx as nx
 #import xmltodict
 import os
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
 #import numpy as np
 #import holoviews as hv
 #from holoviews import opts, dim
@@ -56,6 +58,29 @@ def bibListToNetx(bibList):
 	G.remove_node('Subhrendu Chattopadhyay')  # Remove own entry
 	return(G)
 #############################################################
+def bibListToFreq(bibList):
+	freqList={}
+	if(len(bibList)==0):
+		bibList=fetchFromBib()
+	for pub in bibList:
+		title=pub['title']
+		authors=pub['author'].split(" and ")  # Last Name First Format
+		## Process Authors
+		authors_formatted=[]
+		for auth in authors:
+			temp=auth.split(",")
+			if(len(temp)==2):
+				authors_formatted.append((temp[1]+" "+temp[0]).strip())
+			else:
+				print("3 Part Author name: Check entry: "+title)
+		for auth in authors_formatted:
+			if(auth in freqList):
+				freqList[auth]=freqList[auth]+1
+			else:
+				freqList[auth]=1
+	del freqList['Subhrendu Chattopadhyay']  # Remove own entry
+	return(freqList)
+#############################################################
 def createLegend(G):
     sortedNodeList=sorted(G.degree, key=lambda x: x[1], reverse=True)
     legendList={}
@@ -101,6 +126,14 @@ def legendToHTML(reverseLegend,chart_gen_code_legend_file):
 		myfile.write("<h6>Used https://www.amcharts.com/demos/chord-diagram/ to generate chord diagram.</h6>")
 	return
 #############################################################
+def createWordCloud(d,file):
+	wordcloud = WordCloud()
+	wordcloud.generate_from_frequencies(frequencies=d)
+	plt.figure()
+	plt.imshow(wordcloud, interpolation="bilinear")
+	plt.axis("off")
+	plt.savefig(file)
+#############################################################
 G=bibListToNetx([])
 legendList,reverseLegend =createLegend(G)
 nx.write_weighted_edgelist(G, "weighted.coauthlist.tmp", delimiter=",")
@@ -109,10 +142,10 @@ graphToHTML(G,chart_gen_code_body_file)
 
 chart_gen_code_legend_file="Charts/ChartData-3.html"
 legendToHTML(reverseLegend,chart_gen_code_legend_file)
-
-
 os.system("cat Charts/ChartData-1.html Charts/ChartData-2.html Charts/ChartData-3.html> Charts/ChartData.html")
 
+freqList=bibListToFreq([])
+createWordCloud(freqList,"Charts/authorWordCloud.png")
 #print("cat Charts/ChartData-1.html Charts/ChartData-2.html Charts/ChartData-3.html > Charts/ChartData.html")
 print("Use https://www.amcharts.com/demos/chord-diagram/ to generate chord diagram.")
 #############################################################
