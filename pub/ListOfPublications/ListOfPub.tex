@@ -39,59 +39,14 @@ nath2019ptc}}}
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %%  Author's Corner  %%
  %%%%%%%%%%%%%%%%%%%%%
-  %%  Publication Related to thesis %%
-  		%\phantomsection
-		\section{Publications Related to Thesis}
-  		\pdfbookmark{Publications Related to Thesis}{Publications Related to Thesis}
-  		%\printbibliography[env=mypubs,title={Publications Related to Thesis},keyword=ownth, resetnumbers]
-  		\label{sec:th_bib}
-  		\pdfbookmark{Journals}{Journals from Thesis}
-  		\printbibliography[env=mypubs,
-  			type=article,
-  			title={Journals},
-  			heading=subbibliography,
-  			keyword=ownth, resetnumbers]
-  		%%%%%%%%
-  		%\phantom{\nocite{*}}
-  		\citeall
-%  		\phantom{\cite{chakraborty2013surpassing}
-% 		\cite{chattopadhyay2017primary,chattopadhyay2018improving,chattopadhyay2017flipper}
-% 		\cite{chattopadhyay2018aloe,chattopadhyay2020aloe,chattopadhyay2020amalgam}}
-  		%%%%%%%%
-  		\pdfbookmark{Conferences}{Conferences from Thesis}
-  		 \printbibliography[env=mypubs,
-  		 	type=inproceedings,
-  		 	title={Conferences},
-  		 	heading=subbibliography,
-  		 	keyword=ownth, resetnumbers]
-%  		\phantom{\nocite{*}}
-  		\citeall  		
-  	%%%%%%%%%%%%%%%%%%%%%
-   	%%  Publication Outside to thesis %%
-   		%\printbibliography[env=mypuboth,title={Other Publications},keyword=own,resetnumbers]
-   		\label{sec:oth_bib}
-   		\section{Other Publications}
-   		\pdfbookmark{Other Publications}{Other Publications}
-   		%%%%%%%%   
-  		\pdfbookmark{Journals}{Journals outside Thesis}
-  		\printbibliography[env=mypuboth,
-  			type=article,
-  			title={Journals},
-  			heading=subbibliography,
-  			keyword=own,resetnumbers]
-  		%%%%%%%%
-%  		\phantom{\nocite{*}}
-		\citeall
-  		%%%%%%%%
-  		\pdfbookmark{Conferences}{Conferences outside Thesis}
-   		\printbibliography[env=mypuboth,
-   			type=inproceedings,
-			title={Conferences},
-			title={Conferences},
-			heading=subbibliography,
-			keyword=own,resetnumbers]
-%  		\phantom{\nocite{*}}
-  		\citeall
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\printbibliography[type=article, title={Journals}, heading=subbibliography, resetnumbers]
+  	\citeall
+  	%%%%%%%%
+\printbibliography[type=inproceedings, title={Conferences}, heading=subbibliography, resetnumbers]
+  	\citeall
+  	%%%%%%%%
+\printbibliography[type=misc, title={Others}, heading=subbibliography, resetnumbers]
+  	\citeall
+  	%%%%%%%%  		
 % \input{../common/20_bibilography/bib_section}
 \end{document}
