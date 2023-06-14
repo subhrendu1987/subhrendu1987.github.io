@@ -91,61 +91,73 @@
 </html>
 <!---------------------------------------------------------------------------------------------------------------->
 <!---
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-  <title>Spiral Image Placement</title>
+  <title>Modal with Caption</title>
   <style>
-    .spiral-container {
-      position: relative;
-      width: 400px;
-      height: 400px;
-      margin: 50px auto;
-    }
-    
-    .spiral-item {
-      position: absolute;
-      top: 0;
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
       left: 0;
-      width: 100px;
-      height: 100px;
-      transform-origin: center center;
-    }
-    
-    .spiral-item:nth-child(1) {
-      transform: rotate(0deg) translate(0, 0);
-    }
-    
-    .spiral-item:nth-child(2) {
-      transform: rotate(45deg) translate(70px, 0);
-    }
-    
-    .spiral-item:nth-child(3) {
-      transform: rotate(90deg) translate(140px, 0);
-    }
-    
-    /* Add more .spiral-item classes as needed */
-    
-    img {
+      top: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .modal-content {
+      display: block;
+      margin: auto;
+      width: 80%;
+      max-width: 600px;
+      max-height: 80%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #fefefe;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .modal-caption {
+      font-style: italic;
+      color: white;
+      margin-top: 10px;
     }
   </style>
+  <script>
+    // JavaScript to handle modal functionality
+    function openModal(imageSrc, caption) {
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("modal-img");
+      var modalCaption = document.getElementById("modal-caption");
+      
+      modal.style.display = "block";
+      modalImg.src = imageSrc;
+      modalCaption.innerText = caption;
+    }
+    
+    function closeModal() {
+      var modal = document.getElementById("modal");
+      modal.style.display = "none";
+    }
+  </script>
 </head>
 <body>
-  <div class="spiral-container">
-    <div class="spiral-item">
-      <img src="image1.jpg" alt="Image 1">
+
+  <img src="IMC-Team.png" alt="Team 5GUCL@IMC2022" onclick="openModal('IMC-Team.png', 'Caption Text')">
+  
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="Modal Image">
+      <div id="modal-caption" class="modal-caption"></div>
     </div>
-    <div class="spiral-item">
-      <img src="image2.jpg" alt="Image 2">
-    </div>
-    <div class="spiral-item">
-      <img src="image3.jpg" alt="Image 3">
-    </div>
-    
   </div>
 </body>
 </html>
