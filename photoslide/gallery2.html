@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery</title>
+  <link rel="stylesheet" type="text/css" href="photoslide.css">
+  <script src="photoslide.js"></script>
+</head>
+<body style="background-color: black;">
+  <div class="gallery">
+    <figure><div class="gallery-item">
+      <img src="photos/5G_MEC.png" alt="5G-Van Demonstration for Dr. K.V. Subramanian (ED-IMF)" onclick="openModal('photos/5G_MEC.png')">
+    </div>
+    <figcaption>5G-Van demonstration for Dr. K.V. Subramanian (ED-IMF)</figcaption>
+    </figure>
+    <!------>
+    <figure><div class="gallery-item">
+      <img src="photos/5G-VAN.png" alt="5G VAN for Rural Financial Literacy" onclick="openModal('photos/5G-VAN.png')">
+    </div>
+    <figcaption>5G Van for Rural Financial Literacy</figcaption>
+    </figure>
+    <!------>
+    <figure><div class="gallery-item">
+      <img src="photos/IMC-Team.png" alt="Team 5GUCL@IMC2022" onclick="openModal('photos/IMC-Team.png', 'Team 5GUCL@IMC2022')">
+    </div>
+    <figcaption>Team 5GUCL@IMC2022</figcaption>
+    </figure>
+    <!------>
+    <figure><div class="gallery-item">
+      <img src="photos/OAI_Lab.png" alt="Running OpenAirInterface@5GUCL" onclick="openModal('photos/OAI_Lab.png')">
+    </div>
+    <figcaption>Running OpenAirInterface@5GUCL</figcaption>
+    </figure>
+  </div>
+  <br><!-------------------------------------->
+  <div class="gallery">
+    <figure><div class="gallery-item">
+      <img src="photos/WINS_Lab.jpg" alt="Visit to WINLAB@Rutgers" onclick="openModal('photos/WINS_Lab.jpg')">
+    </div>
+    <figcaption>Prof. Dipankar Raychaudhuri (Director, WINLAB@Ruthgers)</figcaption>
+    </figure>
+    <!------>
+    <figure><div class="gallery-item">
+      <img src="photos/Univ_princeton.jpg" alt="Visit to Princeton University. Thanks to Satadal Sengupta" onclick="openModal('photos/Univ_princeton.jpg')">
+    </div>
+    <figcaption>Visit to Princeton University. Thanks to Satadal Sengupta</figcaption>
+    </figure>
+    <!------>
+    <figure><div class="gallery-item">
+      <img src="photos/UMD.jpg" alt="Visit to UMD, College Park. Thanks to Dr. Nirupam Roy" onclick="openModal('photos/UMD.jpg')">
+    </div>
+    <figcaption>Visit to UMD, College Park. Thanks to Dr. Nirupam Roy</figcaption>
+    </figure>
+    <!------>
+    <figure><div class="gallery-item">
+      <img src="photos/GeorgeMason.jpg" alt="Visit to George Mason University. Thanks to Dr. Vijay K Shah" onclick="openModal('photos/GeorgeMason.jpg')">
+    </div>
+    <figcaption>Visit to George Mason University. Thanks to Dr. Vijay K Shah</figcaption>
+    </figure>
+  </div>
+  <br><!-------------------------------------->
+  <div class="gallery">
+    <figure><div class="gallery-item">
+      <img src="photos/TalkBySandip.jpg" alt="Talk by Dr. Sandip Chakraborty @IDRBT" onclick="openModal('photos/TalkBySandip.jpg')">
+    </div>
+    <figcaption>Talk by Dr. Sandip Chakraborty @IDRBT</figcaption>
+    </figure>
+    <!------>
+    <figure><div class="gallery-item">
+      <img src="photos/blank.jpg" alt="" >
+    </div>
+    </figure>
+    <!------>
+    <figure><div class="gallery-item">
+      <img src="photos/blank.jpg" alt="" >
+    </div>
+    </figure>
+    <!------>
+    <figure><div class="gallery-item">
+      <img src="photos/blank.jpg" alt="" >
+    </div>
+    </figure>
+    <!------>
+  </div>
+  <!---------------------------------------------------------------------------------------------------------------->
+  <div id="modal" class="modal">
+    <span class="modal-content">
+      <img id="modal-image" src="" alt="">
+    </span>
+  </div>
+</body>
+</html>
+<!---------------------------------------------------------------------------------------------------------------->
+<!---
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modal with Caption</title>
+  <style>
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .modal-content {
+      display: block;
+      margin: auto;
+      width: 80%;
+      max-width: 600px;
+      max-height: 80%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #fefefe;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    .modal-caption {
+      font-style: italic;
+      color: white;
+      margin-top: 10px;
+    }
+  </style>
+  <script>
+    // JavaScript to handle modal functionality
+    function openModal(imageSrc, caption) {
+      var modal = document.getElementById("modal");
+      var modalImg = document.getElementById("modal-img");
+      var modalCaption = document.getElementById("modal-caption");
+      
+      modal.style.display = "block";
+      modalImg.src = imageSrc;
+      modalCaption.innerText = caption;
+    }
+    
+    function closeModal() {
+      var modal = document.getElementById("modal");
+      modal.style.display = "none";
+    }
+  </script>
+</head>
+<body>
+
+  <img src="IMC-Team.png" alt="Team 5GUCL@IMC2022" onclick="openModal('IMC-Team.png', 'Caption Text')">
+  
+
+  <div id="modal" class="modal" onclick="closeModal()">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img id="modal-img" src="" alt="Modal Image">
+      <div id="modal-caption" class="modal-caption"></div>
+    </div>
+  </div>
+</body>
+</html>
+-->
