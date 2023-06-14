@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photo Gallery</title>
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 10px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease-in-out;
+    }
+    
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 999;
+    }
+    
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 90%;
+      max-height: 90%;
+    }
+    
+    .modal-content img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="gallery-item">
+      <img src="5G_MEC.png" alt="Demonstration for Dr. K.V. Subramanian (ED-IMF)" onclick="openModal('5G_MEC.png')">
+    </div>
+    <div class="gallery-item">
+      <img src="5G-VAN.png" alt="5G VAN for Rural Financial Literacy" onclick="openModal('5G-VAN.png')">
+    </div>
+    <div class="gallery-item">
+      <img src="IMC-Team.png" alt="Team 5GUCL@IMC2022" onclick="openModal('IMC-Team.png')">
+    </div>
+    <div class="gallery-item">
+      <img src="OAI_Lab.png" alt="Running OpenAirInterface@5GUCL" onclick="openModal('OAI_Lab.png')">
+    </div>
+  </div>
+  
+  <div id="modal" class="modal">
+    <span class="modal-content">
+      <img id="modal-image" src="" alt="">
+    </span>
+  </div>
+
+  <script>
+    function openModal(imageSrc) {
+      var modal = document.getElementById("modal");
+      var modalImage = document.getElementById("modal-image");
+      
+      modal.style.display = "block";
+      modalImage.src = imageSrc;
+    }
+    
+    function closeModal() {
+      var modal = document.getElementById("modal");
+      
+      modal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+      var modal = document.getElementById("modal");
+      
+      if (event.target == modal) {
+        closeModal();
+      }
+    }
+  </script>
+</body>
+</html>
