@@ -1,4 +1,4 @@
-function findFigures() {
+function figCaptionGen() {
   var figures = document.getElementsByTagName('figure');
   for (var i = 0; i < figures.length; i++) {
     var figure = figures[i];
