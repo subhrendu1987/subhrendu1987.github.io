@@ -1,3 +1,14 @@
+figcaption {
+  font-style: italic;
+  color: white;
+  text-align: center;
+}
+
+.home-icon {
+  font-size: 40px; /* Adjust the font size as desired */
+  color: white; /* Set the color to white */
+}
+
 .gallery {
   //display: grid;
   //grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
