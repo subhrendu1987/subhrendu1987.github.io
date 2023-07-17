@@ -6,17 +6,7 @@
   <meta http-equiv="Expires" content="0">
   <title>Photos</title>
   <link rel="stylesheet" type="text/css" href="mphotoslide.css">
-  <script type="text/javascript">
-    function figCaptionGen() {
-      var figures = document.getElementsByTagName('figure');
-      for (var i = 0; i < figures.length; i++) {
-        var figure = figures[i];
-        var img = figure.querySelector('img');
-        var figcaption = figure.querySelector('figcaption');
-        figcaption.textContent = img.alt; 
-      }
-    }
-  </script>
+  <script src="mphotoslide.js"></script>
 </head>
 
 <body onload="figCaptionGen()">
@@ -24,75 +14,83 @@
   <!------------------------------>
   <div class="gallery">
     <figure>
-      <img src="photos/5G-VAN.webp" alt="5G VAN for Rural Financial Literacy">
-    <figcaption>5G VAN for Rural Financial Literacy</figcaption></figure><br>
+      <img src="photos/5G-VAN.webp" alt="5G VAN for Rural Financial Literacy" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!----------------->
     <figure>
-      <img src="photos/5G_MEC.webp" alt="5G-Van Demonstration for Dr. K.V. Subramanian (ED-IMF)">
-    <figcaption>5G-Van Demonstration for Dr. K.V. Subramanian (ED-IMF)</figcaption></figure><br>
+      <img src="photos/5G_MEC.webp" alt="5G-Van Demonstration for Dr. K.V. Subramanian (ED-IMF)" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!----------------->
     <figure>
-      <img src="photos/RBI-ED.webp" alt="5G-Van Demonstration for Shri Ajay K. Choudhary (ED-RBI)">
-    <figcaption>5G-Van Demonstration for Shri Ajay K. Choudhary (ED-RBI)</figcaption></figure><br>
+      <img src="photos/RBI-ED.webp" alt="5G-Van Demonstration for Shri Ajay K. Choudhary (ED-RBI)" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!----------------->
     <figure>
-      <img src="photos/CIO-Van-Demo.webp" alt="5G-Van Demonstration for CIOs">
-    <figcaption>5G-Van Demonstration for CIOs</figcaption></figure><br>
+      <img src="photos/CIO-Van-Demo.webp" alt="5G-Van Demonstration for CIOs" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!----------------->
     <figure>
-      <img src="photos/DashScreenshot.webp" alt="Dash demo">
-    <figcaption>DASH in Edge Demo</figcaption></figure><br>
+      <img src="photos/DashScreenshot.webp" alt="Demo: Dash in Edge" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!----------------->
     <figure>
-      <img src="photos/IMC-Team.webp" alt="Team 5GUCL@IMC2022">
-    <figcaption>Team 5GUCL@IMC2022</figcaption></figure><br>
+      <img src="photos/IMC-Team.webp" alt="Team 5GUCL@IMC2022" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!----------------->
     <figure>
-      <img src="photos/TalkBySandip.webp" alt="Talk by Dr. Sandip Chakraborty @IDRBT">
-    <figcaption>Talk by Dr. Sandip Chakraborty @IDRBT</figcaption></figure><br>
+      <img src="photos/TalkBySandip.webp" alt="Talk by Dr. Sandip Chakraborty @IDRBT" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!----------------->
     <figure>
-      <img src="photos/OAI_Lab.webp" alt="Running OpenAirInterface@5GUCL">
-    <figcaption>Running OpenAirInterface@5GUCL</figcaption></figure><br>
+      <img src="photos/OAI_Lab.webp" alt="Running OpenAirInterface@5GUCL" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!------>
     <figure>
-      <img src="photos/atm.webp" alt="5G ATM">
-    <figcaption>Lab Equipments@5GUCL</figcaption></figure><br>
+      <img src="photos/atm.webp" alt="5G ATM" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!------>
     <figure>
-      <img src="photos/Quectel.webp" alt="Quectel 5G Modem">
-    <figcaption>Lab Equipments@5GUCL</figcaption></figure><br>
+      <img src="photos/Quectel.webp" alt="Quectel 5G Modem" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!------>
     <figure>
-      <img src="photos/n310.webp" alt="USRP N310">
-      <figcaption>Lab Equipments@5GUCL</figcaption></figure><br>
+      <img src="photos/n310.webp" alt="USRP N310" onclick="openFrame(this)">
+      <figcaption></figcaption></figure><br>
     <!------>
     <figure>
-      <img src="photos/usrp.webp" alt="USRP B210">
-      <figcaption>Lab Equipments@5GUCL</figcaption></figure><br>
+      <img src="photos/usrp.webp" alt="USRP B210" onclick="openFrame(this)">
+      <figcaption></figcaption></figure><br>
     <!------>
     <figure>
-      <img src="photos/pvt5g_speedtest.webp" alt="Speedtest results of private 5G-Van">
-    <figcaption>Speedtest results of private 5G-Van</figcaption></figure><br>
+      <img src="photos/pvt5g_speedtest.webp" alt="Speedtest results of private 5G-Van" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <figure>
-      <img src="photos/WINS_Lab.webp" alt="Visit to WINLAB@Rutgers">
-    <figcaption>With Prof. Dipankar Raychaudhuri (Director@ WINLAB,Rutgers)</figcaption></figure><br>
+      <img src="photos/WINS_Lab.webp" alt="Visit to WINLAB@Rutgers" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!------>
     <figure>
-      <img src="photos/Univ_princeton.webp" alt="Visit to Princeton University. Thanks to Satadal Sengupta">
-    <figcaption>Visit to Princeton University. Thanks to Satadal Sengupta</figcaption></figure><br>
+      <img src="photos/Univ_princeton.webp" alt="Visit to Princeton University. Thanks to Satadal Sengupta" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!------>
     <figure>
-      <img src="photos/UMD.webp" alt="Visit to UMD, College Park. Thanks to Dr. Nirupam Roy">
-    <figcaption>Visit to UMD, College Park. Thanks to Dr. Nirupam Roy</figcaption></figure><br>
+      <img src="photos/UMD.webp" alt="Visit to UMD, College Park. Thanks to Dr. Nirupam Roy" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!------>
     <figure>
-      <img src="photos/GeorgeMason.webp" alt="Visit to George Mason University. Thanks to Dr. Vijay K Shah">
-    <figcaption>Visit to George Mason University. Thanks to Dr. Vijay K Shah</figcaption></figure><br>
+      <img src="photos/GeorgeMason.webp" alt="Visit to George Mason University. Thanks to Dr. Vijay K Shah" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
     <!------>
     <figure>
-      <img src="photos/CISOForum.webp" alt="Participating in bank CIO forum 2022">
-    <figcaption>Participating in bank CIO forum 2022</figcaption></figure><br>
+      <img src="photos/CISOForum.webp" alt="Participating in bank CIO forum 2022" onclick="openFrame(this)">
+    <figcaption></figcaption></figure><br>
+  </div>
+  <!----------------------------------------------->
+  <div id="modal" class="modal" onclick="closeFrame()">
+    <div class="modal-content">
+      <span class="close" onclick="closeFrame()">&times;</span>
+      <img id="modal-img" src="" alt="Modal Image">
+      <div id="modal-caption" class="modal-caption"></div>
+    </div>
   </div>
 </body>
 </html>

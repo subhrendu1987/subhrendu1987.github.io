@@ -1,76 +1,76 @@
-    figcaption {
-      font-style: italic;
-      color: white;
-      text-align: center;
-    }
+figcaption {
+  font-style: italic;
+  color: white;
+  text-align: center;
+}
 
-    .home-icon {
-      font-size: 40px; /* Adjust the font size as desired */
-      color: white; /* Set the color to white */
-    }
+.home-icon {
+  font-size: 40px; /* Adjust the font size as desired */
+  color: white; /* Set the color to white */
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      grid-gap: 10px;
-    }
-    
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .gallery-item img {
-      width: auto;
-      height: 200px;
-      transition: transform 0.3s ease-in-out;
-    }
-    
-    .gallery-item:hover img {
-      transform: scale(1.1);
-    }
-    
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 80%;
-      height: 80%;
-      overflow: auto;
-      background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .modal-content {
-      display: block;
-      margin: auto;
-      width: 70%;
-      height: 70%;
-      max-width: 100%;
-      max-height: 100%;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.8);
-      padding: 10px;
-      overflow: hidden;
-      text-align: center;
-    }
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px;
+}
 
-    .modal-content img{
-      height:400px;
-    }
-    
-    .modal-caption {
-      font-style: italic;
-      color: white;
-      margin-top: 10px;
-      text-align: center;
-    }
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-item img {
+  width: auto;
+  height: 200px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  width: 70%;
+  height: 70%;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.modal-content img{
+  height:400px;
+}
+
+.modal-caption {
+  font-style: italic;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
     
 body {
   height: 100vh;
