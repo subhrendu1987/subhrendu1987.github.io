@@ -6,7 +6,6 @@ function findFigures() {
     var figcaption = figure.querySelector('figcaption');
     figcaption.textContent = img.alt; 
   }
-  alert("Figures ="+figures.length);
 }
 
 

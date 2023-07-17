@@ -6,9 +6,20 @@
   <meta http-equiv="Expires" content="0">
   <title>Photos</title>
   <link rel="stylesheet" type="text/css" href="mphotoslide.css">
+  <script type="text/javascript">
+    function figCaptionGen() {
+      var figures = document.getElementsByTagName('figure');
+      for (var i = 0; i < figures.length; i++) {
+        var figure = figures[i];
+        var img = figure.querySelector('img');
+        var figcaption = figure.querySelector('figcaption');
+        figcaption.textContent = img.alt; 
+      }
+    }
+  </script>
 </head>
 
-<body>
+<body onload="figCaptionGen()">
   <center><a href="https://subhrendu1987.github.io/"><img src="white-house-logo.png" width="50"></img></a></center><br>
   <!------------------------------>
   <div class="gallery">
