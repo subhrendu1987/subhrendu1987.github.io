@@ -1,3 +1,4 @@
+#python3 co-author-graph-gen.py 
 import bibtexparser
 import json
 import urllib
@@ -159,10 +160,11 @@ def createWordCloud(freq,file,maskFile=None):
 	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap=cmap, mask=mask_arr,collocations=False,width=800,height=400)
 	wordcloud.generate_from_frequencies(frequencies=freq)
 	plt.tight_layout(pad=0)
-	plt.figure(figsize=(20,10))
+	plt.figure(figsize=(200,100))
 	plt.imshow(wordcloud, interpolation="bilinear")
 	plt.axis("off")
 	plt.savefig(file)
+	print("File Name:" + file)
 #############################################################
 def createWordCloudKeyword(keyList,file,maskFile=None):
 	if(maskFile):
@@ -173,10 +175,11 @@ def createWordCloudKeyword(keyList,file,maskFile=None):
 	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap=cmap, mask=mask_arr,collocations=False,width=800,height=400)
 	wordcloud.generate(" ".join(keyList))
 	plt.tight_layout(pad=0)
-	plt.figure(figsize=(20,10))
+	plt.figure(figsize=(200,100))
 	plt.imshow(wordcloud, interpolation="bilinear")
 	plt.axis("off")
 	plt.savefig(file)
+	print("File Name:" + file)
 #############################################################
 G=bibListToNetx([])
 authList=bibListToAuthList([])
