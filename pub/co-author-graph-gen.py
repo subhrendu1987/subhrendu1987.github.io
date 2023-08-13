@@ -3,27 +3,19 @@ import bibtexparser
 import json
 import urllib
 import urllib.parse
-#from chord import Chord
 from itertools import combinations
-#import pandas as pd
 import networkx as nx
-#import xmltodict
 import os
 import matplotlib
 import matplotlib.pyplot as plt
 from PIL import Image
 from wordcloud import WordCloud
 import numpy as np
-#import holoviews as hv
-#from holoviews import opts, dim
-#import holoviews.plotting.bokeh
+#############################################################
 DBLP_URL="https://dblp.org/pid/141/2034.xml"
 BIB_FILE="common/20_bibilography/mypub.bib"
 KEY_FILE="keywords"
-#PI=np.pi
 cmap = matplotlib.colors.ListedColormap(["#1A2C42","#BE2F29","#ECAF44"], name='from_list', N=None)
-#cmap = matplotlib.colors.ListedColormap([rgba(26, 44, 66, 1),rgba(190, 47, 41, 1),rgba(236, 175, 68, 1),rgba(12, 17, 21, 1)], name='from_list', N=None)
-#cmap = matplotlib.colors.ListedColormap([#1A2C42,#BE2F29,#ECAF44,#0C1115], name='from_list', N=None)
 #############################################################
 def fetchFromDBLP():
     file = urllib.request.urlopen(DBLP_URL)
@@ -160,10 +152,12 @@ def createWordCloud(freq,file,maskFile=None):
 	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap=cmap, mask=mask_arr,collocations=False,width=800,height=400)
 	wordcloud.generate_from_frequencies(frequencies=freq)
 	plt.tight_layout(pad=0)
-	plt.figure(figsize=(200,100))
+	plt.figure(figsize=(200,200))
 	plt.imshow(wordcloud, interpolation="bilinear")
 	plt.axis("off")
 	plt.savefig(file)
+	changeDimension(file)
+	#changeDimension(file)
 	print("File Name:" + file)
 #############################################################
 def createWordCloudKeyword(keyList,file,maskFile=None):
@@ -175,11 +169,18 @@ def createWordCloudKeyword(keyList,file,maskFile=None):
 	wordcloud = WordCloud(mode="RGBA", background_color=None, colormap=cmap, mask=mask_arr,collocations=False,width=800,height=400)
 	wordcloud.generate(" ".join(keyList))
 	plt.tight_layout(pad=0)
-	plt.figure(figsize=(200,100))
+	plt.figure(figsize=(200,200))
 	plt.imshow(wordcloud, interpolation="bilinear")
 	plt.axis("off")
 	plt.savefig(file)
+	#changeDimension(file)
 	print("File Name:" + file)
+#############################################################
+def changeDimension(save_path):
+    with Image.open(save_path) as img:
+        new_dimensions = (200, 100)
+        resized_img = img.resize(new_dimensions, Image.ANTIALIAS)
+        resized_img.save(save_path)
 #############################################################
 G=bibListToNetx([])
 authList=bibListToAuthList([])

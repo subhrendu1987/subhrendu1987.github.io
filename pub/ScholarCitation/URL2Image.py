@@ -1,3 +1,4 @@
+#python3 URL2Image.py 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options 
@@ -30,6 +31,13 @@ def capture_div_as_image(url, div_id, save_path='output.png'):
     # Convert to a PIL Image and save
     image = Image.open(BytesIO(element_png))
     image.save(save_path)
+    changeDimension(save_path)
     print("Screenshot saved as: "+save_path)
+#############################################################################################
+def changeDimension(save_path):
+    with Image.open(save_path) as img:
+        new_dimensions = (200, 100)  # Change this to your desired dimensions
+        resized_img = img.resize(new_dimensions, Image.ANTIALIAS)
+        resized_img.save(save_path)
 #############################################################################################
 capture_div_as_image(URL, DIV_ID, save_path="GoogleScholarCitation.png")
