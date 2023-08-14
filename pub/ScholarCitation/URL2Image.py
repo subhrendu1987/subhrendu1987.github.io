@@ -36,7 +36,7 @@ def capture_div_as_image(url, div_id, save_path='output.png'):
 #############################################################################################
 def changeDimension(save_path):
     with Image.open(save_path) as img:
-        new_dimensions = (200, 100)  # Change this to your desired dimensions
+        new_dimensions = (100, 100)  # Change this to your desired dimensions
         resized_img = img.resize(new_dimensions, Image.ANTIALIAS)
         resized_img.save(save_path)
 #############################################################################################
