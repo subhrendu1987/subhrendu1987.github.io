@@ -176,6 +176,46 @@ def createWordCloudKeyword(keyList,file,maskFile=None):
 	#changeDimension(file)
 	print("File Name:" + file)
 #############################################################
+def acronym(name):
+	clean_input = (name.replace('of', ''))
+	phrase = clean_input.split()
+	acronym=""
+	for w in phrase:
+	        acronym = acronym + w[0].upper()
+	return(acronym)
+#############################################################
+def authorHTMLPieChart(keylist,file):
+	import plotly.graph_objects as go
+	labels=list(freqList.keys())
+	acronyms = [''.join(word[0].upper() for word in label.split()) for label in labels]
+	values=list(freqList.values())
+	fig = go.Figure(data=[go.Pie(
+		labels=labels,
+	    values=values,
+	    text=acronyms,
+	    hole=.1,
+	    textinfo='label+value',
+	    texttemplate='<b>%{text}</b>',
+	    #texttemplate='[%{value}]',
+	    hovertemplate='%{label}   [%{value}]',
+	    insidetextfont=dict(size=20),  # Increase font size here,
+	    outsidetextfont=dict(size=20)  # Increase font size here
+	)])
+	# Update layout to remove the legend
+	fig.update_layout(
+	    hoverlabel=dict(
+	    	bgcolor="white",
+	    	bordercolor="black",
+	    	font=dict(
+	    		family="Arial",
+	    		size=30,
+	    		color="black"
+	    	)
+	    ),
+	    showlegend=False
+	)
+	fig.write_html(file,config={'displayModeBar': False, 'showLink': False, 'displaylogo': False})
+#############################################################
 def changeDimension(save_path):
     with Image.open(save_path) as img:
         new_dimensions = (200, 100)
@@ -195,6 +235,11 @@ os.system("cat Charts/ChartData-1.html Charts/ChartData-2.html Charts/ChartData-
 
 freqList=bibListToFreq([])
 createWordCloud(freqList,"Charts/authorWordCloud.png",maskFile="../imgs/clipartclouds.png")
+authorHTMLPieChart(freqList,"Charts/authorPieChart.html")
+
+
+
+
 
 keywords=fetchKeywords()
 createWordCloudKeyword(keywords,"Charts/keywordWordCloud.png",maskFile="../imgs/clipartclouds.png")
