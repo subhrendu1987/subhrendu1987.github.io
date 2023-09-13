@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collab Info</title>
+    <style>
+        figcaption {
+          position: relative;
+          font-size: 20px;
+          font-weight: bold;
+          z-index: 10; /* This ensures the figcaption will be rendered above other elements with a lower z-index */
+        }
+        .iframe-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            overflow: hidden;  /* This will hide the overflowed content */
+        }
+
+        .iframe-container iframe.authorPieChart {
+            width: 39%;
+            height: 500px; /* Adjust height if needed */
+            border: none;
+            overflow: hidden;  /* This will hide the overflowed content */
+            transform: scale(1.25);
+            transform-origin: center center;  /* Scaling from the top left corner */
+        }
+
+        .iframe-container iframe.ChartData {
+            width: 60%;
+            height: 500px; /* Adjust height if needed */
+            border: none;
+            transform: scale(0.9);
+            transform-origin: top left;  /* Scaling from the top left corner */
+        }
+    </style>
+</head>
+<body>
+  <div class="iframe-container" style="width: 100%; padding: 0;">
+    <figure style="padding: 0;width:100%">
+      <!-- Embedding authorPieChart.html -->
+      <iframe src="authorPieChart.html" title="Author Pie Chart" class="authorPieChart"></iframe>
+      <!-- Embedding ChartData.html -->
+      <iframe src="ChartData.html" title="Chart Data" class="ChartData"></iframe>
+      <figcaption style="border: 0px dotted blue;text-align: center;">
+        Co-author Network and Statistics
+      </figcaption>
+    </figure>
+  </div>
+</body>
+</html>
