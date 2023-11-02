@@ -1,0 +1,50 @@
+<!---https://subhrendu1987.github.io/redir/redirect.html/?goto=serverless-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Redirect Example</title>
+</head>
+<body>
+    <p>This is the current page content.</p>
+    <!--script src="script.js"></script-->
+    <script>
+        const jsonURL = 'https://script.googleusercontent.com/macros/echo?user_content_key=-nf7HtnAq_0htG1VeTn-eIqjG7DG2zmJVAB9hWC3ghXihLe0aPd4Z5uHfso8dyf3px8_s0aqadWfwTLmhpF3F8T4JLVykrupm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnBgmdpr5BW5TgBjlEPPDofIM2_kNrBC71ajuEfM6JLC4DUaHCjcXJ17FzCh84gbx3gVxNwEBAPUaEcM9aEljYTZS6Ic6skGQNdz9Jw9Md8uu&lib=MiS8nA0IP1S5-p0rxnHc8P-ZNomVPhu3r';
+        // Function to extract the URL parameter by name
+        function getURLParameter(name) {
+            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        // Get the value from the URL
+        var value = getURLParameter('goto');
+        alert(value);
+        // Fetch the JSON data
+        fetch(jsonURL)
+            .then(response => response.json())
+            .then(redirectMap => {
+                // Use the redirectMap as needed
+                console.log(redirectMap);
+            })
+            .catch(error => {
+                alert(error.message);
+            });
+
+        // Define a mapping of values to URLs
+        //var redirectMap = {
+        //    '123': 'https://example.com/destination1.html',
+        //    '456': 'https://example.com/destination2.html',
+            // Add more mappings as needed
+        //};
+
+        // Check if the value exists in the mapping
+        if (redirectMap.hasOwnProperty(value)) {
+            // Redirect to the URL based on the value
+            //window.location.href = redirectMap[value][ShortURL];
+            alert(value+" -> "+redirectMap[value][URL]);
+        } else {
+            alert('No matching URL for the value: ' + value);
+        }
+    </script>
+</body>
+</html>
