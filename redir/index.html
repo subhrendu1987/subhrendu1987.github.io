@@ -2,6 +2,37 @@
 <html>
 <head>
     <title>JSON to HTML Table</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ffffff;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #333;
+        }
+        tr:nth-child(even) {
+            background-color: #111;
+        }
+        a {
+            text-decoration: none;
+            color: #f00; /* Red for links */
+        }
+        a:visited {
+            color: #0f0; /* Green for visited links */
+        }
+    </style>
 </head>
 <body>
     <table id="data-table" border="1">
