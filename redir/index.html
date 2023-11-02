@@ -28,9 +28,15 @@
         a {
             text-decoration: none;
             color: #f00; /* Red for links */
+            display: inline-block;
+            position: relative;
+            transition: transform 0.3s ease-in-out; /* Slide transition */
         }
         a:visited {
             color: #0f0; /* Green for visited links */
+        }
+        a:hover {
+            transform: translateX(10px); /* Slide to the right on hover */
         }
     </style>
 </head>
