@@ -1,65 +1,21 @@
-<!--https://docs.google.com/spreadsheets/d/1KL-Azsg_x2LUYTzNSQTgU5Kz_oQd1yWsqW6JD3ayf9g/export?exportFormat=csv-->
-
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSV Reader with Message Box</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <title>JSON to HTML Table</title>
 </head>
 <body>
-    <button onclick="startCSVReading()">Start CSV Reading</button>
+    <table id="data-table" border="1">
+        <thead>
+            <tr>
+                <th>Filename</th>
+                <th>Actual URL</th>
+                <th>ShortURL</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
 
-    <script>
-        let csvData = null;
-        let currentRow = 0;
-
-        function startCSVReading() {
-            // Replace this URL with your CSV file's URL
-            const csvUrl = 'https://raw.githubusercontent.com/subhrendu1987/subhrendu1987.github.io/master/redir/PresentationURL.csv';
-
-            // Fetch the CSV file
-            fetch(csvUrl)
-                .then(response => response.text())
-                .then(data => {
-                    // Parse the CSV data using PapaParse
-                    Papa.parse(data, {
-                        header: true,
-                        dynamicTyping: true,
-                        complete: function (results) {
-                            csvData = results.data;
-                            currentRow = 0;
-                            displayNextRow();
-                        },
-                    });
-                })
-                .catch(error => {
-                    console.error('Error loading the CSV:', error);
-                });
-        }
-
-        function displayNextRow() {
-            if (csvData && currentRow < csvData.length) {
-                const rowData = csvData[currentRow];
-                const message = `Row ${currentRow + 1}:\n\n`;
-
-                for (const key in rowData) {
-                    message += `${key}: ${rowData[key]}\n`;
-                }
-
-                const userChoice = window.confirm(message + '\nGo to the next row?');
-
-                if (userChoice) {
-                    currentRow++;
-                    displayNextRow();
-                } else {
-                    // The user clicked "Cancel" or closed the dialog
-                    alert('CSV reading stopped.');
-                }
-            } else {
-                alert('End of CSV file reached.');
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
