@@ -26,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             link.href = rowData[cellKey];
                             link.textContent = rowData[cellKey];
                             cell.appendChild(link);
+                        } else if(cellKey === 'ShortURL'){
+                            const link = document.createElement('a');
+                            link.href = "https://subhrendu1987.github.io/redir/goto.html/?url="+rowData[cellKey];
+                            link.textContent = "https://subhrendu1987.github.io/redir/goto.html/?url="+rowData[cellKey];
+                            cell.appendChild(link);
                         } else {
                             cell.textContent = rowData[cellKey];
                         }
