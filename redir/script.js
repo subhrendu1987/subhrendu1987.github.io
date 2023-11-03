@@ -28,8 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             cell.appendChild(link);
                         } else if(cellKey === 'ShortURL'){
                             const link = document.createElement('a');
-                            link.href = "https://subhrendu1987.github.io/redir/goto.html/?url="+rowData[cellKey];
-                            link.textContent = "https://subhrendu1987.github.io/redir/goto.html/?url="+rowData[cellKey];
+                            link.href = "https://subhrendu1987.github.io/redir/index.html/?url="+rowData[cellKey];
+                            link.textContent = "https://subhrendu1987.github.io/redir/index.html/?url="+rowData[cellKey];
                             cell.appendChild(link);
                         } else {
                             cell.textContent = rowData[cellKey];
@@ -44,6 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(error.message); // Display an alert with the error message
         })
         .finally(() => {
-            alert('Code execution is over.'); // Display an alert once code execution is complete
+            //alert('Code execution is over.'); // Display an alert once code execution is complete
         });
 });

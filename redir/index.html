@@ -1,8 +1,29 @@
+<!---https://subhrendu1987.github.io/redir/goto.html/?url=serverless-->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>List of Short URLs</title>
+    <title>URL Redirection</title>
     <style>
+        .loading-container {
+            text-align: center;
+        }
+        .loading-message {
+            font-size: 18px;
+            color: #333;
+        }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #3498db;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+            margin: 15px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
         body {
             background-color: black;
             color: white;
@@ -25,6 +46,9 @@
         tr:nth-child(even) {
             background-color: #111;
         }
+        #data-table {
+            display: none; /* Initially hide the table */
+        }
         a {
             text-decoration: none;
             color: #f00; /* Red for links */
@@ -41,18 +65,47 @@
     </style>
 </head>
 <body>
-    <table id="data-table" border="1">
-        <thead>
-            <tr>
-                <th>Filename</th>
-                <th>Actual URL</th>
-                <th>ShortURL</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <script>
+        const jsonURL = 'https://script.googleusercontent.com/macros/echo?user_content_key=-nf7HtnAq_0htG1VeTn-eIqjG7DG2zmJVAB9hWC3ghXihLe0aPd4Z5uHfso8dyf3px8_s0aqadWfwTLmhpF3F8T4JLVykrupm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnBgmdpr5BW5TgBjlEPPDofIM2_kNrBC71ajuEfM6JLC4DUaHCjcXJ17FzCh84gbx3gVxNwEBAPUaEcM9aEljYTZS6Ic6skGQNdz9Jw9Md8uu&lib=MiS8nA0IP1S5-p0rxnHc8P-ZNomVPhu3r';
 
+        // Function to extract the URL parameter by name
+        function getURLParameter(name) {
+            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        var body = document.body;
+        // Get the value from the URL
+        var value = getURLParameter('url');
+        alert("ShortURL="+(""+value).length);
+        if((""+value).length != 0){
+            body.innerHTML = '<div class="loading-container"><div class="loading-message">Please wait while redirecting...</div><div class="loader"></div></div>';
+            // Fetch the JSON data
+            fetch(jsonURL)
+                .then(response => response.json())
+                .then(redirectMap => {
+                    if (redirectMap.hasOwnProperty(value)) {
+                        var URL = redirectMap[value].URL;
+                        // Redirect to the URL based on the value
+                        window.location.href = URL;
+                        //alert(value+" -> "+URL);
+                    } else {
+                        alert('No matching URL for the value: ' + value);
+                    }
+                })
+                .catch(error => {
+                    alert(error.message);
+                });
+        }else{
+            document.title = 'List of Short URLs';
+            body.innerHTML = '<table id="data-table" border="1"><thead><tr><th>Filename</th><th>Actual URL</th><th>ShortURL</th></tr></thead><tbody></tbody></table>';
+            var table = document.getElementById('data-table');
+            table.style.display = 'block';
+            //alert("Show Links table");
+        }
+    </script>
+    
     <script src="script.js"></script>
 </body>
 </html>
