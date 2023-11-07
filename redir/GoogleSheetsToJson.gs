@@ -1,6 +1,16 @@
 /*
+Create Google Sheet
+
+In the first sheet 
+    add three columns "Description", "URL", "ShortURLID"
+    Sample entry "Homepage", "https://subhrendu1987.github.io/", "home"
+
+Write app script
+    "Extention" -> "App Script" -> Add this text in the IDE provided
+    Save script    
+
 Publish the Web App:
-    Save script
+
     Click on the "Publish" menu, select "Deploy as web app," and configure it as follows:
         Project Version: New
         Execute the app as: Me
@@ -10,6 +20,7 @@ Deploy the Web App:
 Access the JSON Data:
     After deploying the web app, you'll receive a URL. Open this URL in your web browser, and it will return the JSON data.
 */
+
 function doGet() {
   var sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0]; // Use the first sheet
   var data = sheet.getDataRange().getValues();
