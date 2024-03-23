@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Publications</title>
     <link rel="stylesheet" type="text/css" href="../css/css1.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -96,19 +100,20 @@
      <center>
           <ul class="list-inline">
             <li><a href="pub/common/20_bibilography/mypub.bib" target="_blank" id="resume" style="padding: 20px;">Get Bibtex</a></li>
-            <li><a href="pub/Charts/ChartData.html" target="_blank" id="resume" style="padding: 20px;">View Co-author Network</a></li>
+            <li><a href="pub/Charts/collabInfo.html" target="_blank" id="resume" style="padding: 20px;">View Co-author Network</a></li>
           </ul>
         <!------------------------------------------------------------------------>
-        <div style="width: 100%; display: table;">
-	        <div style="width: 35%; display: table-cell;padding: 0;">
+        <div style="width: 50%; display: table;">
+	        <!--div style="width: 35%; display: table-cell;padding: 0;">
 		        <center><figure style="padding: 0;">
-		        	<img style="width: 100%;padding: 0;  border: 2px solid #555;" src="pub/Charts/authorWordCloud.png" alt="Co-author Word Cloud">
-		        	<figcaption style="border: 1px dotted blue;text-align: center;">
+		        	<img style="width: 100%;padding: 0;  border: 2px solid #555;" src="pub/Charts/authorWordCloud.png" alt="Co-author Word Cloud"-->
+		        	<!--iframe src="pub/Charts/authorPieChart.html" style="width: 400px; height: 400px; transform: scale(.25); transform-origin: 0 0; border: none;"></iframe-->
+		        	<!--figcaption style="border: 1px dotted blue;text-align: center;">
 		        		List of Co-authors
 		        	</figcaption>
 		      	</figure></center>
-	      	</div>
-	      	<div style="width: 35%; display: table-cell;padding: 0;">
+	      	</div-->
+	      	<div style="width: 50%; display: table-cell;padding: 0;">
 	      		<center><figure style="padding: 0;">
 		        	<img style="width: 100%;padding: 0; border: 2px solid #555;" src="pub/Charts/keywordWordCloud.png" alt="Keyword Word Cloud">
 		        	<figcaption style="border: 1px dotted blue;text-align: center;">
@@ -116,9 +121,9 @@
 		        	</figcaption>
 		      	</figure></center>
 	      	</div>
-	      	<div style="width: 30%; display: table-cell;padding: 0;">
+	      	<div style="width: 50%; display: table-cell;padding: 0;">
 	      		<center><figure style="padding: 0;">
-		        	<img style="width: 100%;padding: 0; border: 2px solid #555;" src="pub/ScholarCitation/GoogleScholarCitation.png" alt="Google Scholar citations">
+		        	<img style="width: 87%;padding: 0; border: 2px solid #555;" src="pub/ScholarCitation/GoogleScholarCitation.png" alt="Google Scholar citations">
 		        	<figcaption style="border: 1px dotted blue;text-align: center;">
 		        		Google Scholar Data
 		        	</figcaption>
@@ -127,29 +132,28 @@
       	</div>
       	<br>
         <!------------------------------------------------------------------------>
-        Filter Publications:<select name="pubtype" id="pubtype" onchange="pubTypeSelector()">
+        <div id="resume">Filter Publications:<select name="pubtype" id="pubtype" onchange="pubTypeSelector()">
 			  	<option value="all">All</option>
 			  	<option value="journal">Journal</option>
 			  	<option value="conference">Conference</option>
 			  	<option value="poster">Poster</option>
-				</select>
+				</select></div>
 				<!------------------------------------------------------------------------>
 		 </center>
         <ol id="collab">
           <li class="conference">
 	           <q>DisProTrack: Distributed Provenance Tracking over Serverless Applications</q><br>
 	           <a href="https://utkalikasatapathy0.wixsite.com/aboutme" target="_blank">Utkalika Satapathy</a>, Rishabh Thakur, <div class="myname">Subhrendu Chattopadhyay</div>, and <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank"> Sandip Chakraborty</a><br>
-	           41rst IEEE International Conference on Computer Communications (INFOCOM 2023) <h6 style="display:inline">(Accepted)</h6>
-	           New York, USA. <br>
+	           41rst IEEE International Conference on Computer Communications (INFOCOM 2023), New York, USA. <br>
 	           <i>Ranked: A*</i> <br>
 	           17th-20th May, 2023<br>
-	           <!--div class="x-doi"></div><br-->
-	           <!--a href="https://ieeexplore.ieee.org/document/9142727" target="_blank" class="tootltip">
+	           <div class="x-doi">10.1109/INFOCOM53939.2023.10228884</div><br>
+	           <a href="https://ieeexplore.ieee.org/document/10228884" target="_blank" class="tootltip">
 	          			<span class="tooltiptext">Article</span>
-                  <span class="iconify" data-icon="et:document" data-inline="false"></span></a-->
-	         	 <a href="https://subhrendu1987.github.io/slides/DisProTrack_INFOCOM_2023.pdf" target="_blank" class="tooltip">
+                  <span class="iconify" data-icon="et:document" data-inline="false"></span></a>
+	         	 <!--a href="https://subhrendu1987.github.io/slides/DisProTrack_INFOCOM_2023.pdf" target="_blank" class="tooltip">
                   <span class="tooltiptext">Slides</span>
-                  <span class="iconify" data-icon="ri:file-ppt-2-fill" data-inline="false"></span>
+                  <span class="iconify" data-icon="ri:file-ppt-2-fill" data-inline="false"></span-->
              </a>
              <a href="https://www.youtube.com/watch?v=0nJBD3hPIpA" target="_blank" class="tooltip">
                   <span class="tooltiptext">Teaser</span>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collab Info</title>
+    <style>
+        figcaption {
+          position: relative;
+          font-size: 20px;
+          font-weight: bold;
+          z-index: 10; /* This ensures the figcaption will be rendered above other elements with a lower z-index */
+        }
+        .iframe-container {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .iframe-container iframe.authorPieChart {
+            width: 39%;
+            height: 500px;
+            border: none;
+            overflow: hidden;
+            transform: scale(1.25);
+            transform-origin: center center;
+        }
+
+        .iframe-container iframe.ChartData {
+            width: 60%;
+            height: 500px;
+            border: none;
+            overflow: hidden;
+            transform: scale(0.9);
+            transform-origin: top left;
+        }
+    </style>
+</head>
+<body>
+  <!-- Add collaboration notes -->
+  <div class="iframe-container" style="width: 100%; padding: 0;">
+    <figure style="padding: 0;width:100%">
+      <!-- Embedding authorPieChart.html -->
+      <iframe src="authorPieChart.html" title="Author Pie Chart" class="authorPieChart"></iframe>
+      <!-- Embedding ChartData.html -->
+      <iframe src="ChartData.html" title="Chart Data" class="ChartData"></iframe>
+      <figcaption style="border: 0px dotted blue;text-align: center;">
+        Co-author Network and Statistics
+      </figcaption>
+    </figure>
+  </div>
+  <center>
+    <a href="https://subhrendu1987.github.io/" 
+   style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #FFFFFF; text-decoration: none; border-radius: 4px; font-weight: bold;">Home</a>
+ </center>
+</body>
+</html>
