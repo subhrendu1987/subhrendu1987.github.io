@@ -16,8 +16,9 @@ all:
 acm:
 	# Compile using PDF-Latex
 	make file=$(source) single
-synopsis:
-	make file=SubhrenduSynopsis.tex single
+	make pub
+pub:
+	make file=ListofPublication.tex single
 ieee:
 	# Compile using DVI->PS->PDF
 	latex -interaction=nonstopmode $(source).tex

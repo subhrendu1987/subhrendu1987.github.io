@@ -1,0 +1,48 @@
+\documentclass{article} 
+\usepackage{comment}
+\usepackage{multicol}
+\usepackage{hyperref}
+%\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage{geometry}
+\geometry{a4paper,left=.8in,right=.8in,top=.8in,bottom=.8in}
+\usepackage{cite}
+\usepackage[utf8]{inputenc}
+%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\thesection}{\Alph{section}}
+\input{resCommands}
+\renewcommand\refname{List of Publications}
+%%%%%%%%%%%%%%%%%%%%
+%\setlength{\textheight}{9.5in} % increase text height to fit on 1-page 
+
+\begin{document} 
+\begin{center}
+	\Large{\bf List of Publications}
+\end{center}
+ \noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantom{
+\cite{satapathy2023disprotrack},
+\cite{nath2021containerized},
+\cite{chattopadhyay2020aloe},
+\cite{chattopadhyay2020amalgam},
+\cite{nath2019ptc},
+\cite{chattopadhyay2018improving},
+\cite{chattopadhyay2018aloe},
+\cite{pranav2017fast},
+\cite{chattopadhyay2017primary},
+\cite{chattopadhyay2017flipper},
+\cite{chakraborty2016alleviating},
+\cite{chakraborty2016es2},
+\cite{chattopadhayay2016leveraging},
+\cite{sett2016time},
+\cite{chakraborty2014defending},
+\cite{karmakar2014trigger},
+\cite{chakraborty2013surpassing}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \bibliographystyle{plainyr-rev}
+  %\bibliographystyle{../common/ieee/IEEEtran}
+  %\bibliographystyle{unsrt}
+  \bibliography{../common/20_bibilography/mypub}
+%\end{resume}
+
+\end{document}
