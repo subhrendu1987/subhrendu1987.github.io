@@ -1,11 +1,19 @@
 Sno.;Author;Title;Name of Journal/Conference;Publisher of Journal;Journal/conference;Volume Number;Issue Number;Year;Page numbers (from-to) or DOI number;Publication/Conference in the given format
+
+0.1;Neha Chowdhary, Utkalika Satapathy, Theophilus A. Benson, Subhrendu Chattopadhyay, Palani Kodeswaran, Sayandeep Sen, and Sandip Chakraborty; BeeGuard: Explainability-based Policy Enforcement of eBPF Codes for Cloud-native Environments;In: Seventeenth International Conference on COMmunication System & NETworks (COMSNET 2025);IEEE;Conference;Vol. 17;2025; (Accepted)
+
+0.2;Neha Chowdhary, Tanmoy Dutta, Subhrendu Chattopadhyay, Sandip Chakraborty; AutoPAC: Exploring LLMs for Automating Policy to Code Conversion in Business Organizations; In: Seventeenth International Conference on COMmunication System & NETworks (COMSNET 2025);IEEE;Conference;Vol. 17;2025; (Accepted)
+
+0.3;Arpit Tripathi, Abhishek Thakur, Abhinandan Sridhara Rao Prasad, Bheemarjuna Reddy Tamma, and Subhrendu Chattopadhyay; MADE: An MEC Supported Platform Independent and Version Agnostic Framework for Mobile Application Deployment; In: 16th IEEE International Conference on Advanced Networks and Telecommunications Systems (ANTS 2024); (Accepted),
+<-------------------------------------------------------->
+
 1.;Utkalika Satapathy, Rishabh Thakur, Subhrendu Chattopadhyay, and Sandip Chakraborty;DisProTrack: Distributed Provenance Tracking over Serverless Applications;In: Forty First IEEE International Conference on Computer Communications (INFOCOM);IEEE;Conference;Vol. 41;;2023;10.1109/INFOCOM53939.2023.10228884;
 <-------------------------------------------------------->
 2.;Shubha Brata Nath, Subhrendu Chattopadhyay, Raja Karmakar, Sourav Kanti Addya, Sandip Chakraborty and Soumya K Ghosh;Containerized Deployment of Micro-services in Fog Devices: A Reinforcement Learning-based Approach;Springer The Journal of Supercomputing;Springer;Journal;Vol. 78;5;2022;pp. 6817–6845. DOI: 10.1007/s11227-021-04135-2;Impact factor: 2.5
 <-------------------------------------------------------->
 3.;Subhrendu Chattopadhyay, Soumyajit Chatterjee, Sukumar Nandi, and Sandip Chakraborty;Aloe: Fault-Tolerant Network Management and Orchestration Framework for IoT Applications;In: IEEE Transactions on Network and Service Management;IEEE;Journal;Vol. 17;4;2020;pp. 2396-2409. DOI: 10.1109/TNSM.2020.3008426.; Impact factor: 4.7
 <-------------------------------------------------------->
-4.;Subhrendu Chattopadhyay, Sukumar Nandi, Sandip Chakraborty, and Abhinandan Prasad;Amalgam: Distributed Network Control With Scalable Service Chaining;In: Nineteenth IFIP Networking Conference (IFIP Networking);IFIP;Conference;Vol. 19;;2020;pp. 519-523.;
+4.;Subhrendu Chattopadhyay, Sukumar Nandi, Sandip Chakraborty, and Abhinandan Prasad;Amalgam: Distributed Network Control With Scalable Service Chaining;In: Nineteenth IFIP Networking Conference (IFIP Networking);IFIP;Conference;Vol. 19;;2020;pp. 519-523.;Electronic ISBN:978-3-903176-28-7
 5.;Subhrendu Chattopadhyay, Soumyajit Chatterjee, Sukumar Nandi, and Sandip Chakraborty;Aloe: An Elastic Auto-Scaled and Self-stabilized Orchestration Framework for IoT Applications;In: Thirty Eighth IEEE International Conference on Computer Communications (INFOCOM);IEEE;Conference;Vol. 38;;2019;DOI: 10.1109/INFOCOM.2019.8737656.;
 6.;Shubha Brata Nath, Subhrendu Chattopadhyay, Raja Karmakar, Sourav Kanti Addya, Sandip Chakraborty, and Soumya K. Ghosh;PTC: Pick-Test-Choose to Place Containerized Micro- Services in IoT;In: 2019 IEEE Global Communications Conference (GLOBECOM);IEEE;Conference;;;2019;pp. 1-6. DOI: 10.1109/GLOBECOM38437.2019.9013163.;
 7.;Subhrendu Chattopadhyay, Samar Shailendra, Sukumar Nandi, and Sandip Chakraborty;Improving MPTCP Performance by Enabling Sub-Flow Selection over a SDN Supported Network;In: Fourteenth International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob);IEEE;Coference;Vol. 14;;2018;DOI: 10.1109/WiMOB.2018.8589143.;
