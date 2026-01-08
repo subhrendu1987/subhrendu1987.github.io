@@ -6,6 +6,7 @@ file=CV.tex # Default build file
 #    # Not found
 #    source=$(file)
 #endif
+	
 source=$(basename $(file))
 CWD=$(PWD)
 AUX = $(wildcard *.aux)
@@ -58,10 +59,14 @@ bibtex:
 single:
 	source=$(basename $(file))
 	$(info [source,file] is [${source},${file}])
-	pdflatex -synctex=1 -interaction=nonstopmode $(source).tex || exit 0	# Faltu error in kile
-	make bibtex
+	pdflatex -synctex=1 -interaction=nonstopmode $(source) || exit 0
+	biber $(source)
+	pdflatex -synctex=1 -interaction=nonstopmode $(source) || exit 0
+	pdflatex -synctex=1 -interaction=nonstopmode $(source) || exit 0
+	#pdflatex -synctex=1 -interaction=nonstopmode $(source).tex || exit 0	# Faltu error in kile
+	#make bibtex
 	#makeindex $(source).nlo -s nomencl.ist -o $(source).nls
-	pdflatex -synctex=1 -interaction=nonstopmode $(source).tex || exit 0	# Faltu error in kile
+	#pdflatex -synctex=1 -interaction=nonstopmode $(source).tex || exit 0	# Faltu error in kile
 debug:
 	source=$(basename $(file))
 	$(info [source,file] is [${source},${file}])	

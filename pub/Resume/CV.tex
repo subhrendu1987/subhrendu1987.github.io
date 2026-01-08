@@ -7,6 +7,15 @@
 \geometry{a4paper,left=.8in,right=.8in,top=.8in,bottom=.8in}
 \usepackage{cite}
 \usepackage[utf8]{inputenc}
+
+\usepackage[
+  backend=biber,
+  doi=true,
+  url=false,
+  isbn=false
+]{biblatex}
+
+\addbibresource{../common/20_bibilography/mypub.bib}
 %%%%%%%%%%%%%%%%%%%%
 \renewcommand{\thesection}{\Alph{section}}
 \input{resCommands}
@@ -45,12 +54,10 @@
 
 My reserch interests are in computer systems (e.g. Computer Networks, Operating Systems, Distributed Systems). During my PhD my primary research focus was in Software Defined Networking (SDN), Network Function Virtualization (NFV), Fog Computing, Next Generation Networks, and Performance Modeling of Network and Communication Systems. My contributions were to enhance the scalability of SDN in large-scale IoT environments, where I successfully developed and implemented orchestration frameworks that automate deployment and provide robust fault and partition tolerance. I am passionate about creating self-managing, future-proof network architectures.
 
-At IDRBT, I was instrumental in the 5G Use-Case Lab for BFSI, contributing to the identification and development of critical India-specific 5G applications for the financial sector. I also played a key role in the establishment of the Network Innovation Lab (NIL), a dedicated facility for advancing network design, development, and management to foster evolutionary network architectures and test financial applications. 
+At IDRBT, I was instrumental in the 5G Use-Case Lab for BFSI, contributing to the identification and development of critical India-specific 5G applications for the financial sector. I also played a key role in the establishment of the Network Innovation Lab (NIL), a dedicated facility for advancing network design, development, and management to foster evolutionary network architectures and test financial applications. In both capacities, I engaged in in-depth research at the intersection of network, operating systems and distributed systems. 
 
-In my current assignment I have continued to am actively working on 
-In both capacities, I engaged in in-depth research at the intersection of network, operating systems and distributed systems.
+In my current assignment I am continuing to work on those fields by extending my works in the area of {\it Intent Based Networking (IBN)}. I am also collaborating with my peers to explore further the security concerns around IBN.  
 
-I like to diagnose system problems, simplifying them to their essence, and conceptualizing elegant solutions. This analytical approach clarifies issues and often reveals interdisciplinary connections, allowing me to leverage diverse insights for innovative problem-solving.
 \section{Academic Qualification} 
 	\begin{itemize}
 		\item{\bf PhD:} Doctor  of Philosophy in Computer Science and Engineering from Indian Institute of Technology, Guwahati (July,2014 - April,2021)
@@ -90,6 +97,8 @@ Subhrendu Chattopadhyay,{\em SDN for Large Scale IoT Networks}, PhD thesis, Supe
 	\end{enumerate}
 \section{Subjects Taught}	
 	\begin{enumerate}
+	 \item {\bf Continuous Development and DevOps (PG: Th+Lab)} in TIET
+	 \item {\bf Design and Analysis of Algorithm (UG: Th)} in TIET
 	 \item {\bf Objected Oriented Programming with C++ (UG: Th+Lab)} in TIET
 	 \item {\bf Microprocessor Based System Design (UG: Th+Lab)} in TIET
 	 \item {\bf Advanced Operating Systems (PG: Th+Lab)} in IDRBT, UoH Campus
@@ -125,11 +134,13 @@ Subhrendu Chattopadhyay,{\em SDN for Large Scale IoT Networks}, PhD thesis, Supe
 \section{Collaborations}
 I had the opportunity to collaborate with the following distinguished researchers.
   \begin{enumerate}
+	\item Prof. Somanath Tripathy, Professor, IIT Patna [On-going]
+  	\item Prof. Theophilus A. Benson, Professor, CMU
   	\item Dr. Sandip Chakraborty, Associate Professor, IIT Kharagpur [On-going]
 	\item Prof. Soumya K Ghosh, Professor, IIT Kharagpur
 	\item Prof. Sushanta Karmakar, Professor, IIT Guwahati
 	\item Dr. Samar Shailendra, Adjunct Faculty, IIIT Bangalore
-	\item Dr. Abhinandan S. Prasad, Assistant Professor, IIT Ropar [On-going]
+	\item Dr. Abhinandan S. Prasad, Assistant Professor, IIT Ropar
 	\item Dr. Niladri Sett, Assistant Professor, SRM University AP
 	\item Dr. Soumyajit Chatterjee, Research Scientist, Nokia Bell Labs Cambridge
 	\item Dr. Shubhabrata Nath, Assistant Professor, IIIT Guwahati
@@ -144,8 +155,8 @@ I had the opportunity to collaborate with the following distinguished researcher
   \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \phantom{
-\cite{mondal_granulotrack_underreview},
-\cite{satapathy_xplog_underreview},
+%\cite{mondal_granulotrack_underreview},
+\cite{satapathy_xplog_tsc},
 \cite{dutta2025autopac},
 \cite{chowdhary2025beeguard}
 \cite{tripathi2024made},
@@ -167,10 +178,6 @@ I had the opportunity to collaborate with the following distinguished researcher
 \cite{karmakar2014trigger},
 \cite{chakraborty2013surpassing}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-  \bibliographystyle{plainyr-rev}
-  %\bibliographystyle{../common/ieee/IEEEtran}
-  %\bibliographystyle{unsrt}
-  \bibliography{../common/20_bibilography/mypub}
-%\end{resume}
+%\printbibliography
 
 \end{document}
