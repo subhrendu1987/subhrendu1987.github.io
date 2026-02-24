@@ -56,6 +56,8 @@ chapter: # Not Working Yet
 	make file=$(fname) debug
 bibtex:
 	ls *.aux |xargs -n1 sh -c 'bibtex $$1' sh
+merge:
+	qpdf --empty --pages CV.pdf ListofPublication.pdf -- CV_full.pdf
 single:
 	source=$(basename $(file))
 	$(info [source,file] is [${source},${file}])
