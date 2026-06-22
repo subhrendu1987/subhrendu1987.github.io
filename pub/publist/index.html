@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAA</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles_note.css">
+</head>
+<!----------------------------------------------------------------------->
+<body>
+    <div class="loading-container"><div class="loading-message">  Please wait ...  </div><div class="loader"></div></div>
+    <!---------------------------------------------------------------------->
+    
+    <!----------------------------------------------------------------------
+    Open `webAppURL` from script_note.js in browser and copy the URL in the following `jsonURL`
+    DeploymentID = AKfycbysrT07PwASYMQodSYOXIOIFDZbBtZZU_5l_97Mw8Frdzs1RsryKeiGwFYb7LlZXSi7VA
+    --------------------------------------------------------------------->
+    <script>
+        const webAppURL = 'https://script.google.com/macros/s/AKfycbzUBQOrtNtmGy0WQnvYIVHrw5bvOGHk0f-rUJLcG9rO30jgqVZ7_4X_-p6ZyS-kl75z/exec';
+        const sheetURL = 'https://docs.google.com/spreadsheets/d/18nKTdl5obIpfgoLWjCqWVC76Y4JYBZK7xkaNRrZ0tKw/';
+        const jsonURL = webAppURL;
+        const COURSENAME="Design &amp Analysis of Algorithms (UCS415)"
+        const COURSESHORT="DAA"
+        document.title = COURSESHORT;
+        
+
+        // Function to extract the URL parameter by name
+        function getURLParameter(name) {
+            name = name.replace(/[[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+        var body = document.body;
+        //body.innerHTML = '<div class="loading-container"><div class="loading-message">  Please wait ...  </div><div class="loader"></div></div>';
+        // Get the value from the URL
+        var value = getURLParameter('url');
+        //alert("ShortURL="+(""+value).length);
+        if((""+value).length != 0){
+            // Fetch the JSON data
+            fetch(jsonURL)
+                .then(response => response.json())
+                .then(redirectMap => {
+                    if (redirectMap.hasOwnProperty(value)) {
+                        var URL = redirectMap[value].URL;
+                        // Redirect to the URL based on the value
+                        window.location.href = URL;
+                        //alert(value+" -> "+URL);
+                    } else {
+                        alert('No matching URL for the value: ' + value);
+                    }
+                })
+                .catch(error => {
+                    alert("Error:"+error.message);
+                });
+        }else{
+            document.title = COURSESHORT;
+            body.innerHTML += '<center><div class="container" id="notes-header"> <h1><center>'+COURSENAME+'</center></h1></div></center><div id="top-links">|<a href="https://subhrendu1987.github.io/" target="_blank">Instructor Profile</a>|<a href="https://suchat-subho.github.io/course/" target="_blank">All Courses</a>|<a href="https://suchat-subho.github.io/course/timetable/" target="_blank">Time Table</a>|</div><div class="container" id="notes-container"></div> <div class="sidebar"><ul id="sidenav"></ul></div>'
+        }        
+        //document.getElementById('loading-message').style.display = 'none';
+    </script>
+<!----------------------------------------------------------------------
+Update the following URL to point to the google sheet
+--------------------------------------------------------------------->
+<script src="script_note.js"></script>
+<center>
+    <div id="linkContainer"></div>
+<script type="text/javascript">
+if(webAppURL.length>0){const a=document.createElement('a');a.href=sheetURL;a.target="_blank";a.style.cssText="display:inline-block;margin-top:30px;font-size:16px;color:#007BFF;text-decoration:none";const i=document.createElement('img');i.src="../icon/sheet_icon.webp";i.alt="List";i.style.cssText="width:10px;height:10px";a.appendChild(i);document.getElementById('linkContainer').appendChild(a);}
+</script>
+<script type="text/javascript">
+if(webAppURL.length>0){const a=document.createElement('a');a.href=webAppURL;a.target="_blank";a.style.cssText="display:inline-block;margin-top:30px;font-size:16px;color:#007BFF;text-decoration:none";const i=document.createElement('img');i.src="../icon/json_icon.webp";i.alt="JSON";i.style.cssText="width:10px;height:10px";a.appendChild(i);document.getElementById('linkContainer').appendChild(a);}
+</script>
+
+</center>
+
+<!--center><a href="https://docs.google.com/spreadsheets/d/1bXcl9pq2Vb2phJhN99TxtkCmkIyJr0kUtT9yVu2WeEg/" target="_blank">Google Sheets</a></center-->
+</body>
+</html>

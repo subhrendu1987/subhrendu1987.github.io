@@ -1,0 +1,163 @@
+.loading-container {
+    text-align: center;
+    position: absolute;     /* as requested */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 2147483647;    /* always on top */
+}
+.loading-message {
+    font-size: 18px;
+    color: #333;
+}
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    margin: 15px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.container {
+    max-width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+    display: flex; /* Use flexbox */
+    flex-wrap: wrap; /* Wrap the items to next line if there's not enough space */
+    gap: 20px; /* Add space between the note divs */
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+}
+
+.note {
+    flex: 1 1 calc(33.333% - 20px); /* Adjusted flex basis */
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px; /* Adjust margin to handle gaps */
+    box-sizing: border-box; /* Ensure padding and border are included in width */
+    overflow: hidden; /* Prevent overflow from child elements */
+}
+
+.note p, .note h3 {
+    word-wrap: break-word; /* Break long words */
+}
+
+.note a {
+    word-break: break-all; /* Break long URLs */
+}
+
+
+.note h3 {
+    margin: 0 0 10px 0;
+}
+
+.note p {
+    margin: 5px 0;
+}
+
+.note em {
+    font-style: italic;
+    color: #207c9e;
+}
+
+.note a.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.green-box {
+  background-color: green;
+  color: white; /* Ensures text is readable on green background */
+  padding: 10px;
+  border-radius: 5px; /* Optional: rounds the corners */
+  margin: 10px 0; /* Optional: spacing around the box */
+  font-family: Arial, sans-serif; /* Optional: sets a clean font */
+}
+
+.note .short-url-icon {
+    /* Adjust font size, color, etc. as needed */
+}
+
+
+.sidebar {
+    display: none; 
+    visibility: hidden;
+    width: 20%; /* Set the width of the sidebar */
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sidebar ul li a:hover {
+    color: #007BFF;
+}
+
+#linkContainer {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Changed to column to place links at the very top */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#top-links {
+    background-color: #e6e6e6;
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+#top-links a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+#top-links a:hover {
+    text-decoration: underline;
+}
+
+#content-wrapper {
+    display: flex;
+    flex-grow: 1; /* Allows the content wrapper to take up remaining space */
+}
