@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
+
     const notesContainer = document.getElementById('notes-container');
     const sideNav = document.getElementById('sidenav');
 
@@ -10,41 +11,82 @@ document.addEventListener('DOMContentLoaded', function () {
             return response.json();
         })
         .then(data => {
-            URI = window.location.href;
 
-            for (const key in data) {
-                if (data.hasOwnProperty(key)) {
-                    const noteData = data[key];
-                    const note = document.createElement('div');
-                    note.className = 'note';
+            /*
+              Supports both:
+              1. JSON array:
+              [
+                {"ID":"1","Name":"Paper title", ...}
+              ]
 
-                    shortURI = URI + "?url=" + noteData.ShortURL;
+              2. JSON dictionary:
+              {
+                "1":{"ID":"1","Name":"Paper title", ...}
+              }
+            */
 
-                    let comment = !noteData.Comment || noteData.Comment.length === 0
-                        ? ""
-                        : `<div class="green-box"><p><strong>Note:</strong> ${noteData.Comment}</p></div>`;
+            let papers = Array.isArray(data) ? data : Object.values(data);
 
-                    note.innerHTML = `
-                        <h3>${noteData.Description}</h3>
-                        <p><strong>Actual URL:</strong> <em>${noteData.URL}</em></p>
-                        <p><strong>Short URL:</strong> <em>${shortURI}</em></p>
-                        <p><a href="${shortURI}" target="_blank" class="button">Go to Short URL</a></p>
-                        ${comment}
-                    `;
+            papers.forEach(paperData => {
 
-                    notesContainer.appendChild(note);
-                }
+                const note = document.createElement('div');
+                note.className = 'note';
+
+                note.innerHTML = `
+
+                    <h3>
+                        ${paperData.Name || "Untitled Paper"}
+                    </h3>
+
+                    <div class="details">
+                        ${paperData.Authors || ""}
+                    </div>
+
+                    <div class="abstract">
+                        <b>Abstract—</b>
+                        ${paperData.Abstract || ""}
+                    </div>
+
+                    <div class="link">
+                        <a href="${paperData.Link}" 
+                           target="_blank">
+                           View Paper
+                        </a>
+                    </div>
+
+                    <div class="info">
+                        ${paperData.Info || ""}
+                    </div>
+
+                `;
+
+                notesContainer.appendChild(note);
+
+            });
+
+
+            // Remove loading animation after rendering
+            const loader = document.querySelector('.loading-container');
+            if (loader) {
+                loader.remove();
             }
 
-            /* ✅ CRITICAL FIX: remove loader AFTER content is ready */
-            const loader = document.querySelector('.loading-container');
-            if (loader) loader.remove();
         })
         .catch(error => {
+
             console.log(error.message);
 
-            /* also remove loader on error */
             const loader = document.querySelector('.loading-container');
-            if (loader) loader.remove();
+            if (loader) {
+                loader.remove();
+            }
+
+            notesContainer.innerHTML =
+                `<div class="note">
+                    <h3>Error</h3>
+                    <p>${error.message}</p>
+                 </div>`;
+
         });
+
 });

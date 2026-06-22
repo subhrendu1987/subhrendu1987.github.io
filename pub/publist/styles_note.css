@@ -44,45 +44,65 @@
 }
 
 .note {
-    flex: 1 1 calc(33.333% - 20px); /* Adjusted flex basis */
-    background-color: white;
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 30px 45px;
+    background: white;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px; /* Adjust margin to handle gaps */
-    box-sizing: border-box; /* Ensure padding and border are included in width */
-    overflow: hidden; /* Prevent overflow from child elements */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-radius: 0;
+    font-family: "Times New Roman", Times, serif;
+    line-height: 1.5;
 }
-
-.note p, .note h3 {
-    word-wrap: break-word; /* Break long words */
-}
-
-.note a {
-    word-break: break-all; /* Break long URLs */
-}
-
 
 .note h3 {
-    margin: 0 0 10px 0;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.note p {
-    margin: 5px 0;
+.note .details {
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: #333;
 }
 
-.note em {
-    font-style: italic;
-    color: #207c9e;
+.note .abstract {
+    text-align: justify;
+    font-size: 15px;
 }
 
-.note a.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
+.note .abstract::first-letter {
+    font-weight: bold;
+}
+
+.note .link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.note .link a {
+    color: #0066cc;
     text-decoration: none;
-    border-radius: 5px;
+}
+
+.note .link a:hover {
+    text-decoration: underline;
+}
+
+.note .info {
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11px;
+    font-style: italic;
+    color: #555;
+    margin-top: 18px;
+    padding-top: 8px;
+    border-top: 0.5px solid #ccc;
+    line-height: 1.4;
 }
 
 .green-box {
@@ -94,9 +114,6 @@
   font-family: Arial, sans-serif; /* Optional: sets a clean font */
 }
 
-.note .short-url-icon {
-    /* Adjust font size, color, etc. as needed */
-}
 
 
 .sidebar {
