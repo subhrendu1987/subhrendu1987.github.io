@@ -154,6 +154,7 @@ body {
     flex-direction: column; /* Changed to column to place links at the very top */
     margin: 0;
     font-family: Arial, sans-serif;
+    color: black;
 }
 
 #top-links {
