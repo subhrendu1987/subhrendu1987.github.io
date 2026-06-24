@@ -149,6 +149,13 @@
   margin-top: 30px;
 }
 
+#notes-header{
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 body {
     display: flex;
     flex-direction: column; /* Changed to column to place links at the very top */
