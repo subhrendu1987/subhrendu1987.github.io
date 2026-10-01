@@ -1,0 +1,374 @@
+/*
+Theme Name: SAU 
+Theme URI: https://sau.int/
+Description: South Asian University (SAU)
+Version: 1.6.21
+Author: SAU ICT
+Author URI: https://sau.int
+Text Domain: sau
+*/
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+ /* @import url('https://fonts.cdnfonts.com/css/anek-devanagari');
+ body{font-family:'Anek Devanagari';font-style:normal;font-weight:400;font-stretch:100%;font-display:swap;}  */
+ 
+.goldbar{background-color: #082041 !important;}    
+.goldbar .gold {width: 100%;}
+.navbar>.container {
+    min-height: auto !important;
+}
+
+/* h1, h2, h3, h4, h5, h6 p{font-family: 'Barlow Semi Condensed', sans-serif !important; font-weight:normal !important} */
+
+.navbar {
+    background-color: #fff ;
+}
+.footer {
+    background-color: #082041;
+}
+
+.panel {
+    box-shadow: none !important;
+}
+.course, .course ol, .course ol li {
+    width: 100%;
+    float: left;
+    clear: both;
+    padding-bottom: 5px;
+    background: none;
+    list-style: none;
+}.course ol li.first span {
+    display: block;
+    margin: 0 4px 0 3px;
+    float: left;
+    background: none;
+    font-weight: bold;
+}
+.course ol li span {
+    display: block;
+    margin: 0 4px 0 3px;
+    float: left;
+    border: 1px solid #acacac;
+    background: #FFF;
+    padding: 0 10px;
+    width: 10%;
+    text-align: center;
+}
+
+/*******************/
+.pagination  { margin-top: -1px; }
+.page-numbers {
+    display: inline-block;
+    padding: 2px 10px;
+    border: 1px solid #eee;
+    line-height: 1;
+    text-decoration: none;
+    border-radius: 2px;
+    font-weight: 600;
+}
+.page-numbers.current,
+a.page-numbers:hover {
+    background: #f9f9f9;
+}
+
+
+
+ table {
+    margin-bottom: 20px;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ddd;
+}
+table>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #ddd;
+}
+table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+} 
+
+/*--media start--*/
+@media(max-width:786px){
+    #mega-menu-item-8118{display: none !important;}
+    #mega-menu-item-2366{display: none !important;}
+    .beta_site{display: none !important;}
+}
+
+.readmore{
+    color: #FFFFFF;
+    background-color: #0E4C92;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px 5px 5px 5px;
+    margin: 8px 0px 0px 0px;
+}
+
+.readmore:hover {
+    color: #FFFFFF;
+}
+.old{
+    padding: 0px 10px 0px 10px; 
+    line-height: 30px;
+    color: #fff !important;
+    background: rgb(153 145 145 / 60%);
+}
+.beta{
+    padding: 0px 10px 0px 10px; 
+    line-height: 30px;
+    color: #fff;
+    background:#ffcf4d;
+}
+
+
+/* search button */
+
+.single-search {
+    border-radius: 30px;
+    padding: 5px;
+    margin-bottom: auto;
+    height: 36px;
+    background-color: white;
+    margin-top: 5px !important;
+  }
+.search-area{
+    display: flex;
+    justify-content: center;
+}
+  .c-height {
+    height: 100%;
+  }
+
+/* input box*/
+
+  .custom-input{
+    border: 0;
+    outline: 0;
+    width: 0;
+    transition: width 0.4s linear;
+  }
+
+
+  input::placeholder {
+
+    color: #262626;
+
+    font-size: 19px;
+
+  }
+
+
+  /* active search bar */
+
+  .single-search:hover > .custom-input{
+    padding: 0 10px;
+    width: 100px;
+    caret-color:#262626;
+    border: 0px solid #7aa7c7;
+    transition: width 0.4s linear;
+    z-index: 99999999;
+  }
+
+
+  .single-search:hover > .icon-area{
+    background: white;
+    color: #262626;
+    display: none;
+  }
+
+/* search icon */
+
+  .icon-area {
+    height: 20px;
+    width: 30px;
+    float: right;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    display: flex;
+    text-decoration: none;
+    color: #262626;
+  }
+
+.fa-search{
+  font-size: 20px;
+}
+
+
+/* buttons */
+.button-8 {
+  background-color: #e1ecf4;
+  border-radius: 3px;
+  border: 1px solid #7aa7c7;
+  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-sizing: border-box;
+  color: #39739d;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.15385;
+  margin: 0;
+  outline: none;
+  padding: 8px .8em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.button-8:hover,
+.button-8:focus {
+  background-color: #b3d3ea;
+  color: #2c5777;
+}
+
+.button-8:focus {
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+}
+
+.button-8:active {
+  background-color: #a0c7e4;
+  box-shadow: none;
+  color: #2c5777;
+}
+
+
+/*--media start--*/
+@media(max-width:786px){
+  .search{display: none;}
+  #mega-menu-item-11239{display: none !important;}
+  #mega-menu-item-11240{display: none !important;}
+  .hide-mobile{display: none !important;}
+  .menuLeft1{width: 11%;}
+}
+
+#mega-menu-item-11239{
+  background-color: #a0c7e4 !important;
+}
+#mega-menu-item-11240{
+  background-color: #ffcf4d !important;
+}
+
+.fixed-top {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.dfa{
+  color: #034063;margin-right: 10px;margin-bottom: 3px;font-size: 24px;
+}
+.dcounter{color: #034063;font-size: 13px;margin-top: 8px;}
+.dheading{font-size: 9px;color:#555;}
+
+.wp-admin-bar-new-content{display:none !important; }
+
+.button_noti {
+  border: 1px solid #c00 !important;
+  background: #c00 !important;
+}
+.button_noti {
+  border: 1px solid #f6bb43;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: arial, helvetica, sans-serif;
+  padding: 25px 0;
+  text-decoration: none;
+  display: block;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #f6bb43;
+  text-align: center;
+  transition: 300ms ease-in-out;
+  margin-bottom: 7px;
+  float: left;
+  width: 100%;
+  line-height: 16px;
+}
+.blink {
+  text-decoration: blink;
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-direction: alternate;
+}
+.button_noti {
+  border: 1px solid #f6bb43;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  font-size: 13px;
+  font-family: arial, helvetica, sans-serif;
+  padding: 25px 0;
+  text-decoration: none;
+  display: block;
+  text-shadow: 1px 1px 0 rgba(0,0,0,0.3);
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #f6bb43;
+  text-align: center;
+  transition: 300ms ease-in-out;
+  margin-bottom: 7px;
+  float: left;
+  width: 100%;
+  line-height: 16px;
+}
+.button_noti {border: 1px solid #c00 !important;background: #c00 !important;}
+.carousel-inner a { color: #FFFFFF; }
+
+/* accordion */
+/* plus glyph for showing collapsible panels */
+.panel-heading .accordion-plus-toggle:before {
+    font-family: FontAwesome;  
+    content: "\f068"; 
+   float: right;
+   color: grey;
+}
+
+.panel-heading .accordion-plus-toggle.collapsed:before {
+   content: "\f067";
+   color: grey;
+}
+
+/* arrow glyph for showing collapsible panels */
+.panel-heading .accordion-arrow-toggle:before {
+   font-family: FontAwesome;
+   content: "\f078";
+   float: right;
+   color: silver;
+}
+
+.panel-heading .accordion-arrow-toggle.collapsed:before {
+   content: "\f054";
+   color: silver;
+}
+
+/* sets the link to the width of the entire panel title */
+.panel-title > a {
+   display: block;
+}

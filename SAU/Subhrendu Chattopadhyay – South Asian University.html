@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Academic profile of Dr. Subhrendu Chattopadhyay">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<title>Dr. Subhrendu Chattopadhyay | Academic Profile</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+:root {
+  --blue: #0e4c92;
+  --blue-dark: #073b73;
+  --blue-light: #eaf2fa;
+  --text: #333;
+  --muted: #666;
+  --line: #e2e7ed;
+  --bg: #f7f8fa;
+  --white: #fff;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+a { color: #2468a9; text-decoration: none; }
+a:hover { color: var(--blue-dark); text-decoration: underline; }
+
+.topbar {
+  height: 7px;
+  background: var(--blue);
+}
+.page {
+  max-width: 1240px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+.profile-box {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  background: var(--white);
+  box-shadow: 0 2px 14px rgba(0,0,0,.07);
+  border: 1px solid #e6e9ed;
+}
+.left-side {
+  padding: 32px 30px;
+  background: #fbfcfe;
+  border-right: 1px solid var(--line);
+}
+.profile-info {
+  text-align: center;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.profile-info img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 2px;
+  border: 1px solid #d7dde5;
+  padding: 4px;
+  background: white;
+}
+.profile-info h1 {
+  color: var(--blue);
+  font-size: 24px;
+  line-height: 1.25;
+  margin: 18px 0 5px;
+  font-weight: 700;
+}
+.profile-info .designation {
+  font-weight: 700;
+  font-size: 17px;
+  color: #333;
+}
+.profile-info .department {
+  color: var(--muted);
+  margin-top: 2px;
+}
+.info-row {
+  display: flex;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid #edf0f3;
+}
+.info-row i {
+  color: var(--blue);
+  width: 20px;
+  text-align: center;
+  padding-top: 4px;
+}
+.info-row .detail {
+  flex: 1;
+  font-size: 14px;
+}
+.side-title {
+  margin: 25px 0 12px;
+  color: var(--blue);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: .6px;
+  font-weight: 700;
+}
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.socials a {
+  width: 34px;
+  height: 34px;
+  border: 1px solid #d7dee7;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue);
+  border-radius: 3px;
+}
+.socials a:hover { background: var(--blue); color: #fff; text-decoration: none; }
+
+.right-side {
+  padding: 35px 44px 50px;
+  min-width: 0;
+}
+.section {
+  margin-bottom: 34px;
+  scroll-margin-top: 20px;
+}
+.section-title {
+  color: var(--blue);
+  font-size: 25px;
+  line-height: 1.25;
+  font-weight: 700;
+  margin: 0 0 18px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--blue-light);
+}
+.section-title::after {
+  content: "";
+  display: block;
+  width: 52px;
+  border-bottom: 3px solid var(--blue);
+  position: relative;
+  top: 11px;
+}
+.profile-text {
+  text-align: justify;
+  font-size: 16px;
+}
+.profile-text p { margin: 0 0 13px; }
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+.card {
+  border: 1px solid var(--line);
+  padding: 18px 20px;
+  background: #fff;
+}
+.card h3 {
+  margin: 0 0 10px;
+  color: var(--blue);
+  font-size: 18px;
+}
+ul.clean { margin: 0; padding-left: 20px; }
+ul.clean li { margin-bottom: 7px; }
+.timeline {
+  border-left: 2px solid #d8e4f0;
+  margin-left: 6px;
+  padding-left: 22px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 7px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.timeline-item .date {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 14px;
+}
+.timeline-item strong { display: block; font-size: 16px; }
+
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.interest {
+  background: var(--blue-light);
+  border: 1px solid #d5e4f3;
+  color: #214f7d;
+  padding: 5px 11px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+.publications-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+.filters {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.filter {
+  border: 1px solid #ccd6e1;
+  background: #fff;
+  color: #444;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-family: inherit;
+}
+.filter.active, .filter:hover {
+  background: var(--blue);
+  color: white;
+  border-color: var(--blue);
+}
+.publication {
+  position: relative;
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 18px 20px 17px;
+  margin-bottom: 12px;
+}
+.publication h3 {
+  margin: 0 0 7px;
+  color: #222;
+  font-size: 17px;
+  line-height: 1.4;
+}
+.publication p {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+.pub-type {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: var(--blue);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.doi-row {
+  margin-top: 8px;
+  font-size: 13px;
+}
+.doi { word-break: break-all; }
+.pub-actions { margin-top: 9px; display: flex; gap: 7px; flex-wrap: wrap; }
+.pub-link {
+  border: 1px solid #d2dce7;
+  padding: 3px 8px;
+  font-size: 12px;
+  background: #f9fbfd;
+}
+.pub-link:hover { background: var(--blue); color: white; text-decoration: none; }
+.badge {
+  display: inline-block;
+  background: var(--blue-light);
+  color: var(--blue);
+  padding: 3px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 9px 18px;
+}
+.link-grid a {
+  border-bottom: 1px dotted #b9c6d4;
+  padding-bottom: 5px;
+}
+.footer {
+  text-align: center;
+  color: #777;
+  font-size: 13px;
+  padding: 20px;
+}
+.backtop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--blue);
+  color: #fff;
+  border-radius: 3px;
+}
+.backtop:hover { color: #fff; text-decoration: none; background: var(--blue-dark); }
+
+@media (max-width: 900px) {
+  .profile-box { grid-template-columns: 1fr; }
+  .left-side { border-right: 0; border-bottom: 1px solid var(--line); }
+  .two-col { grid-template-columns: 1fr; }
+  .right-side { padding: 28px 25px 40px; }
+}
+@media (max-width: 600px) {
+  .page { margin: 10px auto; padding: 0 8px; }
+  .profile-box { box-shadow: none; }
+  .left-side { padding: 25px 20px; }
+  .right-side { padding: 25px 18px 35px; }
+  .link-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+<div class="topbar"></div>
+
+<div class="page">
+  <div class="profile-box">
+
+    <aside class="left-side">
+      <div class="profile-info">
+        <img src="Subhrendu Chattopadhyay – South Asian University_files/Subhrendu.jpg" alt="Dr. Subhrendu Chattopadhyay">
+        <h1>Subhrendu Chattopadhyay, Ph.D.</h1>
+        <div class="designation">Assistant Professor</div>
+        <div class="department">Computer Science &amp; Engineering</div>
+        <div class="department">Thapar Institute of Engineering and Technology, Patiala</div>
+      </div>
+
+      <div class="info-row">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <div class="detail"><strong>Ph.D.</strong><br>Computer Science &amp; Engineering<br>Indian Institute of Technology Guwahati</div>
+      </div>
+
+      <div class="info-row">
+        <i class="fa-solid fa-book-open"></i>
+        <div class="detail"><strong>Ph.D. Thesis</strong><br><em>SDN for Large Scale IoT Networks</em></div>
+      </div>
+
+      <div class="info-row">
+        <i class="fa-solid fa-flask"></i>
+        <div class="detail"><strong>Research</strong><br>Distributed Systems, Networking, Linux Systems &amp; eBPF</div>
+      </div>
+
+      <div class="side-title">Contact Details</div>
+
+      <div class="info-row">
+        <i class="fa-solid fa-envelope"></i>
+        <div class="detail">
+          <a href="mailto:subhrendu.chattopadhyay@thapar.edu">subhrendu.chattopadhyay@thapar.edu</a><br>
+          <a href="mailto:subhrendu.subho@gmail.com">subhrendu.subho@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <i class="fa-solid fa-location-dot"></i>
+        <div class="detail">Office No. 707, New Learning Block<br>TIET, Patiala, Punjab 147004</div>
+      </div>
+
+      <div class="side-title">Academic Profiles</div>
+      <div class="socials">
+        <a href="https://github.com/subhrendu1987" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://scholar.google.co.in/citations?user=B0fUBacAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+        <a href="https://dblp.uni-trier.de/pers/hd/c/Chattopadhyay:Subhrendu.html" target="_blank" title="DBLP"><i class="fa-solid fa-database"></i></a>
+        <a href="https://www.researchgate.net/profile/Subhrendu_Chattopadhay" target="_blank" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+        <a href="https://ieee-collabratec.ieee.org/app/p/subhrendu" target="_blank" title="IEEE"><i class="fa-solid fa-globe"></i></a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=56080934300" target="_blank" title="Scopus"><i class="fa-solid fa-chart-line"></i></a>
+        <a href="https://www.webofscience.com/wos/author/record/AAX-9227-2020" target="_blank" title="Web of Science"><i class="fa-solid fa-magnifying-glass"></i></a>
+      </div>
+    </aside>
+
+    <main class="right-side">
+
+      <section class="section" id="profile">
+        <h2 class="section-title">Profile</h2>
+        <div class="profile-text">
+          <p><strong>Dr. Subhrendu Chattopadhyay</strong> is an Assistant Professor in the Computer Science and Engineering domain at Thapar Institute of Engineering and Technology (TIET), Patiala. His academic and research background spans computer networks, software-defined networking, distributed systems and performance-oriented networked systems.</p>
+          <p>He completed his Ph.D. in Computer Science and Engineering at <strong>Indian Institute of Technology Guwahati (IITG)</strong>, with the thesis titled <em>“SDN for Large Scale IoT Networks”</em>, under the supervision of Prof. Sukumar Nandi and mentorship of Dr. Sandip Chakraborty. He received his M.Tech. in Computer Science and Engineering from IIT Guwahati in 2014.</p>
+          <p>Before joining TIET, he served as an Assistant Professor at the <strong>Institute for Development and Research in Banking Technology (IDRBT), Hyderabad</strong>, where he worked as a co-investigator of the <em>5G Use Cases Lab for Banking and Financial Services Industries (BFSi)</em> and coordinated the <em>Network Innovation Lab (NIL@IDRBT)</em>. He has also held an Assistant Professor position at SRM University, Andhra Pradesh, and worked as a temporary project staff member at IIT Kharagpur.</p>
+          <p>His current interests include debugging and observability frameworks for Linux kernels and distributed applications, eBPF-based systems monitoring, software-defined networking, distributed algorithms, serverless and edge systems, low-cost quantum key distribution experimentation, and wireless sensing.</p>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="date">2014 – 2021</div>
+            <strong>Ph.D., Computer Science and Engineering</strong>
+            Indian Institute of Technology Guwahati<br>
+            Thesis: <em>SDN for Large Scale IoT Networks</em>
+          </div>
+          <div class="timeline-item">
+            <div class="date">2012 – 2014</div>
+            <strong>M.Tech., Computer Science and Engineering</strong>
+            Indian Institute of Technology Guwahati &mdash; CGPA 8.81/10
+          </div>
+          <div class="timeline-item">
+            <div class="date">2006 – 2010</div>
+            <strong>B.Tech., Computer Science and Engineering</strong>
+            B.P. Poddar Institute of Management and Technology, West Bengal University of Technology &mdash; CGPA 8.04/10
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item"><div class="date">Jan 2025 – Present</div><strong>Assistant Professor, TIET, Patiala</strong>Computer Science and Engineering</div>
+          <div class="timeline-item"><div class="date">Apr 2022 – Dec 2024</div><strong>Assistant Professor, IDRBT, Hyderabad</strong>Research and teaching in networking, systems and banking technology</div>
+          <div class="timeline-item"><div class="date">Jun 2021 – Apr 2022</div><strong>Assistant Professor, SRM University, Andhra Pradesh</strong></div>
+          <div class="timeline-item"><div class="date">Sep 2020 – Mar 2021</div><strong>Temporary Project Staff, IIT Kharagpur</strong>Worked under the mentorship of Dr. Sandip Chakraborty</div>
+          <div class="timeline-item"><div class="date">Jul 2010 – Jul 2011</div><strong>Programmer Analyst Trainee, Cognizant Technology Solutions India</strong></div>
+        </div>
+      </section>
+
+      <section class="section" id="research">
+        <h2 class="section-title">Research Interests</h2>
+        <div class="interests">
+          <span class="interest">Software-Defined Networking</span>
+          <span class="interest">Distributed Systems</span>
+          <span class="interest">Serverless Computing</span>
+          <span class="interest">Distributed Algorithms</span>
+          <span class="interest">Performance Modelling</span>
+          <span class="interest">Network &amp; Communication Systems</span>
+          <span class="interest">Wireless Mesh Networks</span>
+          <span class="interest">Linux Kernel Debugging</span>
+          <span class="interest">eBPF &amp; Observability</span>
+          <span class="interest">QKD Communication</span>
+          <span class="interest">Wireless Sensing</span>
+        </div>
+      </section>
+
+      <section class="section" id="teaching">
+        <h2 class="section-title">Teaching</h2>
+        <div class="two-col">
+          <div class="card">
+            <h3>Current / Recent Teaching</h3>
+            <ul class="clean">
+              <li>Object Oriented Programming</li>
+              <li>Design and Analysis of Algorithms</li>
+              <li>Continuous Delivery and DevOps</li>
+              <li>Microprocessor Based System Design</li>
+              <li>Advanced Operating Systems</li>
+            </ul>
+            <p><a href="https://suchat-subho.github.io/course/" target="_blank">View course pages →</a></p>
+          </div>
+          <div class="card">
+            <h3>Teaching Assistance at IIT Guwahati</h3>
+            <ul class="clean">
+              <li>Operating Systems and Lab</li>
+              <li>Network Lab</li>
+              <li>Data Communication</li>
+              <li>Wireless Networks</li>
+              <li>Systems Lab</li>
+              <li>Programming Lab</li>
+              <li>Computing Lab</li>
+              <li>Discrete Mathematics</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="publications">
+        <h2 class="section-title">Selected Publications</h2>
+        <div class="publications-toolbar">
+          <div>Research publications and conference contributions</div>
+          <div class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="journal">Journals</button>
+            <button class="filter" data-filter="conference">Conferences</button>
+            <button class="filter" data-filter="poster">Posters</button>
+          </div>
+        </div>
+        
+      <article class="publication journal">
+        <div class="pub-type">Journal</div>
+        <h3>XPLOG: A Dynamic Observability Framework for Distributed Sandboxed Microservices</h3>
+        <p>Utkalika Satapathy ,Harsh Borse, Rajat Bachhawat, Neha Dalmia, Subhrendu Chattopadhyay , and Sandip Chakraborty IEEE Transactions on Services Computing, Volume 19, Issue 1, Pages 794-807 Feb,2026 Impact Factor: 5.8 https://doi.org/ 10.1109/TSC.2025.3612900</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/TSC.2025.3612900" target="_blank" rel="noopener">https://doi.org/10.1109/TSC.2025.3612900</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://www.computer.org/csdl/journal/sc/5555/01/11202650/2aMEBRM1Nf2" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://www.youtube.com/watch?v=eKvZP8qIEDo" target="_blank" rel="noopener">Video</a><a class="pub-link" href="https://github.com/usatpath01/XPLOG_Pluggable_Logging" target="_blank" rel="noopener">Code</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>BeeGuard: Explainability-based Policy Enforcement of eBPF Codes for Cloud-native Environments</h3>
+        <p>Neha Chowdhary , Utkalika Satapathy , Theophilus Benson , Subhrendu Chattopadhyay , Sayandeep Sen , Palani Kodeswaran , and Sandip Chakraborty 17th International Conference on COMmunication Systems NETworkS (COMSNETS), Bangalore, IN. 6th-10th January, 2025, https://doi.org/10.1109/COMSNETS63942.2025.10885589</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/COMSNETS63942.2025.10885589" target="_blank" rel="noopener">https://doi.org/10.1109/COMSNETS63942.2025.10885589</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://nehachowdhary.github.io/" target="_blank" rel="noopener">Code</a><a class="pub-link" href="https://ieeexplore.ieee.org/document/10885589" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://docs.google.com/presentation/d/1JNdivegr8hLKYrdphG7-5lQsOi3glrqXIVDNCvGy-P8/" target="_blank" rel="noopener">Slides</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>AutoPAC: Exploring LLMs for Automating Policy to Code Conversion in Business Organizations</h3>
+        <p>Tanmoy Dutta, Neha Chowdhary , Subhrendu Chattopadhyay , and Sandip Chakraborty 17th International Conference on COMmunication Systems NETworkS (COMSNETS), Bangalore, IN. 6th-10th January, 2025 https://doi.org/10.1109/COMSNETS63942.2025.10885751</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/COMSNETS63942.2025.10885751" target="_blank" rel="noopener">https://doi.org/10.1109/COMSNETS63942.2025.10885751</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://nehachowdhary.github.io/" target="_blank" rel="noopener">Code</a><a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/10885751" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://docs.google.com/presentation/d/1Qd4AtimLcqldIIHYcnhnGIeTpdcL7zr6H_xgc3F1OFE/" target="_blank" rel="noopener">Slides</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>MADE: An MEC Supported Platform Independent and Version Agnostic Framework for Mobile Application Deployment</h3>
+        <p>Arpit Tripathi, Abhishek Thakur , Abhinandan Sridhara Rao Prasad , Bheemarjuna Reddy Tamma , and Subhrendu Chattopadhyay 16th IEEE International Conference on Advanced Networks and Telecommunications Systems (ANTS), Guwahati, IN. 15th-18th December, 2024, https://doi.org/10.1109/ANTS63515.2024.10898186</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/ANTS63515.2024.10898186" target="_blank" rel="noopener">https://doi.org/10.1109/ANTS63515.2024.10898186</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/10898186" target="_blank" rel="noopener">Article</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>DisProTrack: Distributed Provenance Tracking over Serverless Applications</h3>
+        <p>Utkalika Satapathy , Rishabh Thakur, Subhrendu Chattopadhyay , and Sandip Chakraborty 41rst IEEE International Conference on Computer Communications (INFOCOM 2023), New York, USA. Ranked: A* 17th-20th May, 2023 https://doi.org/10.1109/INFOCOM53939.2023.10228884</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/INFOCOM53939.2023.10228884" target="_blank" rel="noopener">https://doi.org/10.1109/INFOCOM53939.2023.10228884</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/10228884" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://www.youtube.com/watch?v=0nJBD3hPIpA" target="_blank" rel="noopener">Video</a></div>
+      </article>
+    
+      <article class="publication journal">
+        <div class="pub-type">Journal</div>
+        <h3>Containerized Deployment of Micro-services in Fog Devices: A Reinforcement Learning-based Approach</h3>
+        <p>Shubha Brata Nath , Subhrendu Chattopadhyay , Raja Karmakar , Sourav Kanti Addya , Sandip Chakraborty and Soumya K Ghosh Springer The Journal of Supercomputing, Springer US, Volume 78, Issue 5, Pages 6817–6845 1rst April, 2022 Impact Factor: 3.5 https://doi.org/10.1007/s11227-021-04135-2</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1007/s11227-021-04135-2" target="_blank" rel="noopener">https://doi.org/10.1007/s11227-021-04135-2</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://shubhabratanath.github.io/" target="_blank" rel="noopener">Code</a><a class="pub-link" href="https://link.springer.com/article/10.1007/s11227-021-04135-2" target="_blank" rel="noopener">Article</a></div>
+      </article>
+    
+      <article class="publication journal">
+        <div class="pub-type">Journal</div>
+        <h3>Aloe: Fault-Tolerant Network Management and Orchestration Framework for IoT Applications</h3>
+        <p>Subhrendu Chattopadhyay , Soumyajit Chatterjee , Sukumar Nandi and Sandip Chakraborty IEEE Transactions on Network and Service Management, Volume 17, Issue 4, Pages 2396-2409 December, 2020 Impact Factor: 5.3 https://doi.org/10.1109/TNSM.2020.3008426</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/TNSM.2020.3008426" target="_blank" rel="noopener">https://doi.org/10.1109/TNSM.2020.3008426</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://stilllearningsoumya.github.io/" target="_blank" rel="noopener">Code</a><a class="pub-link" href="https://ieeexplore.ieee.org/document/9138447" target="_blank" rel="noopener">Article</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>Amalgam: Distributed Network Control With Scalable Service Chaining</h3>
+        <p>Subhrendu Chattopadhyay , Sukumar Nandi , Sandip Chakraborty and Abhinandan Sridhara Rao Prasad 19th IFIP Networking 2020 (NETWORKING 2020) Paris, France. Ranked: A 22th-25th June, 2020</p>
+        
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/9142727" target="_blank" rel="noopener">Article</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>PTC: Pick-Test-Choose to Place Containerized Micro-services in IoT</h3>
+        <p>Shubha Brata Nath , Subhrendu Chattopadhyay , Raja Karmakar, Sourav Kanti Addya , Sandip Chakraborty and Soumya K Ghosh IEEE Global Communications Conference (Globecom 2019) Waikoloa, HI, USA. Ranked: B 9th-13th December, 2019 https://doi.org/10.1109/GLOBECOM38437.2019.9013163</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/GLOBECOM38437.2019.9013163" target="_blank" rel="noopener">https://doi.org/10.1109/GLOBECOM38437.2019.9013163</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://shubhabratanath.github.io/" target="_blank" rel="noopener">Code</a><a class="pub-link" href="https://ieeexplore.ieee.org/document/9013163" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://subhrendu1987.github.io/slides/Globecom19.pptx" target="_blank" rel="noopener">Code</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>Aloe: An Elastic Auto-Scaled and Self-stabilized Orchestration Framework for IoT Applications</h3>
+        <p>Subhrendu Chattopadhyay , Soumyajit Chatterjee , Sukumar Nandi and Sandip Chakraborty 38th IEEE International Conference on Computer Communications (INFOCOM 2019) (Best paper in session) Paris, France Ranked: A* 29th April-2nd May, 2019 https://doi.org/10.1109/INFOCOM.2019.8737656</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/INFOCOM.2019.8737656" target="_blank" rel="noopener">https://doi.org/10.1109/INFOCOM.2019.8737656</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://stilllearningsoumya.github.io/" target="_blank" rel="noopener">Code</a><a class="pub-link" href="https://ieeexplore.ieee.org/document/8737656" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://subhrendu1987.github.io/slides/Aloe.pptx" target="_blank" rel="noopener">Code</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>Improving MPTCP Performance by Enabling Sub-Flow Selection over a SDN Supported Network</h3>
+        <p>Subhrendu Chattopadhyay , Samar Shailendra , Sukumar Nandi and Sandip Chakraborty 14th International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob 2018) Limassol, Cyprus. Ranked: B 15th-17th October, 2018 https://doi.org/10.1109/WiMOB.2018.8589143</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/WiMOB.2018.8589143" target="_blank" rel="noopener">https://doi.org/10.1109/WiMOB.2018.8589143</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/abstract/document/8589143" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://subhrendu1987.github.io/slides/WiMobPpt.pdf" target="_blank" rel="noopener">Code</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>Fast and Secure Handoffs for V2I communication in Smart City Wi-Fi Deployement</h3>
+        <p>Pranav Kumar Singh , Subhrendu Chattopadhyay , Pradeepkumar Gajendra Bhale and Sukumar Nandi 14th International Conference on Distributed Computing and Internet Technology (ICDCIT 2018) Bhubaneswar, India. Ranked: C 11th-13th January, 2018 https://doi.org/10.1007/978-3-319-72344-0_15</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1007/978-3-319-72344-0_15" target="_blank" rel="noopener">https://doi.org/10.1007/978-3-319-72344-0_15</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://link.springer.com/chapter/10.1007/978-3-319-72344-0_15" target="_blank" rel="noopener">Article</a></div>
+      </article>
+    
+      <article class="publication poster">
+        <div class="pub-type">Poster</div>
+        <h3>Poster: Primary Path Effect in Multi-Path TCP: How Serious Is It for Deployment Consideration?</h3>
+        <p>Subhrendu Chattopadhyay , Sukumar Nandi , Samar Shailendra , and Sandip Chakraborty 18th ACM International Symposium on Mobile Ad Hoc Networking and Computing (MobiHoc 2017) Chennai, India. Ranked: A 10th-14th July, 2017 https://doi.org/10.1145/3084041.3084076</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1145/3084041.3084076" target="_blank" rel="noopener">https://doi.org/10.1145/3084041.3084076</a></div>
+        <div class="pub-actions"><a class="pub-link" href="http://dl.acm.org/citation.cfm?id=3084076" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://subhrendu1987.github.io/slides/Mobihoc_2017_Poster.pdf" target="_blank" rel="noopener">Code</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>Flipper: Fault-Tolerant Distributed Network Management and Control</h3>
+        <p>Subhrendu Chattopadhyay , Niladri Sett , Sukumar Nandi , and Sandip Chakraborty 15th IFIP/IEEE International Symposium on Integrated Network Management (IM 2017) Lisbon, Portugal. Ranked: A 8th-12th May, 2017 https://doi.org/10.23919/INM.2017.7987307</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.23919/INM.2017.7987307" target="_blank" rel="noopener">https://doi.org/10.23919/INM.2017.7987307</a></div>
+        <div class="pub-actions"><a class="pub-link" href="http://ieeexplore.ieee.org/document/7987307/" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://subhrendu1987.github.io/slides/IM_2017_Flipper.pdf" target="_blank" rel="noopener">Code</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>A time agnostic method for predicting dull nodes and links in evolving networks for data cleaning.</h3>
+        <p>Niladri Sett , Subhrendu Chattopadhyay , Sanasam Ranbir Singh , and Sukumar Nandi 14th IEEE/WIC/ACM International Conference on Web Intelligence (WI 2016) Omaha, Nebraska, USA. Ranked: A2 Qualis 13th-16th October, 2016 https://doi.org/10.1109/WI.2016.0050</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/WI.2016.0050" target="_blank" rel="noopener">https://doi.org/10.1109/WI.2016.0050</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/7817067" target="_blank" rel="noopener">Article</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>Leveraging the Trade-off Between Spatial Reuse and Channel Contention in Wireless Mesh Networks</h3>
+        <p>Subhrendu Chattopadhyay , Sandip Chakraborty , Sukumar Nandi 8th International Conference on COMmunication System &amp; NETworks (COMSNET 2016) Bangalore, India. 5th-9th January, 2016 https://doi.org/10.1109/COMSNETS.2016.7439963</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/COMSNETS.2016.7439963" target="_blank" rel="noopener">https://doi.org/10.1109/COMSNETS.2016.7439963</a></div>
+        <div class="pub-actions"><a class="pub-link" href="http://ieeexplore.ieee.org/document/7439963/" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://subhrendu1987.github.io/slides/COMSNETS_2016_P1.pdf" target="_blank" rel="noopener">Code</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>ES2: Managing Link Level Parameters for Elevating Data Rate and Stability in High Throughput WLAN</h3>
+        <p>Sandip Chakraborty , Subhrendu Chattopadhyay 8th International Conference on COMmunication System &amp; NETworks (COMSNET 2016) (Best paper Award) Bangalore, India. 5th-9th January, 2016 https://doi.org/10.1109/COMSNETS.2016.7439977</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/COMSNETS.2016.7439977" target="_blank" rel="noopener">https://doi.org/10.1109/COMSNETS.2016.7439977</a></div>
+        <div class="pub-actions"><a class="pub-link" href="http://ieeexplore.ieee.org/document/7439977" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://subhrendu1987.github.io/slides/COMSNETS_2016_P2.pdf" target="_blank" rel="noopener">Code</a></div>
+      </article>
+    
+      <article class="publication journal">
+        <div class="pub-type">Journal</div>
+        <h3>Alleviating Hidden and Exposed Nodes in High-Throughput Wireless Mesh Networks</h3>
+        <p>Sandip Chakraborty , Sukumar Nandi , Subhrendu Chattopadhyay IEEE Transactions on Wireless Communication, Volume 15, Issue 2, Pages 928-937. 2nd February, 2016. Impact Factor: 6.779 https://doi.org/10.1109/TWC.2015.2480398</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/TWC.2015.2480398" target="_blank" rel="noopener">https://doi.org/10.1109/TWC.2015.2480398</a></div>
+        <div class="pub-actions"><a class="pub-link" href="http://ieeexplore.ieee.org/document/7273973/" target="_blank" rel="noopener">Article</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>A Trigger Counting Mechanism for Ring Topology.</h3>
+        <p>Sushanta Karmakar , Subhrendu Chattopadhyay 37th Australasian Computer Science Conference (ACSC 2014) Auckland, New Zealand. Ranked: B 20th-23rd January, 2014</p>
+        
+        <div class="pub-actions"><a class="pub-link" href="https://dl.acm.org/citation.cfm?id=2667483" target="_blank" rel="noopener">Article</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>Defending Concealedness in IEEE 802.11n.</h3>
+        <p>Sandip Chakraborty , Subhrendu Chattopadhyay , Suchetana Chakraborty , Sukumar Nandi 6th International Conference on COMmunication System &amp; NETworks (COMSNET 2014) Bangalore, India. 7th-10th January, 2014. https://doi.org/10.1109/COMSNETS.2014.6734873</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/COMSNETS.2014.6734873" target="_blank" rel="noopener">https://doi.org/10.1109/COMSNETS.2014.6734873</a></div>
+        <div class="pub-actions"><a class="pub-link" href="https://ieeexplore.ieee.org/document/6734873" target="_blank" rel="noopener">Article</a><a class="pub-link" href="https://subhrendu1987.github.io/slides/COMSNETS_2014_P1.pdf" target="_blank" rel="noopener">Code</a></div>
+      </article>
+    
+      <article class="publication conference">
+        <div class="pub-type">Conference</div>
+        <h3>Surpassing Flow Fairness in a Mesh Network: How to Ensure Equity among End Users?</h3>
+        <p>Sandip Chakraborty , Sukumar Nandi , Subhrendu Chattopadhyay 7th IEEE International Conference on Advanced Networks and Telecommunication Systems (ANTS 2013) (Best paper Award) Chennai, India. Ranked: B4 Qualis 15th-18th December, 2013 https://doi.org/10.1109/ANTS.2013.6802836</p>
+        <div class="doi-row"><a class="doi" href="https://doi.org/10.1109/ANTS.2013.6802836" target="_blank" rel="noopener">https://doi.org/10.1109/ANTS.2013.6802836</a></div>
+        
+      </article>
+    
+      </section>
+
+      <section class="section" id="awards">
+        <h2 class="section-title">Awards &amp; Honours</h2>
+        <ul class="clean">
+          <li>Recipient of TCS Research Scholar Fellowship Program (Cycle 10), TCS Research and Innovations.</li>
+          <li>Best Paper Award, IEEE ANTS 2013.</li>
+          <li>Best Paper Award, IEEE COMSNETS 2016.</li>
+          <li>Best Presentation in a Session Award, IEEE INFOCOM 2019.</li>
+          <li>Travel Grant, Microsoft Research and Development, 2019.</li>
+          <li>Travel Grant, IEEE COMSNETS and LRN Foundations, 2019.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="service">
+        <h2 class="section-title">Professional Service</h2>
+        <ul class="clean">
+          <li>Reviewer for IEEE ANTS, IEEE ICC, IEEE NCC, IEEE ISED, IEEE COMSNETS, Springer Journal of Network and Systems Management and Elsevier Ad Hoc Networks.</li>
+          <li>Member of Technical Program Committees including IEEE COMSNETS, CSI, NCC and ICDCN.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="collaborations">
+        <h2 class="section-title">Research Collaborations</h2>
+        <div class="link-grid">
+          <a href="https://www.iitg.ac.in/sukumar/" target="_blank">Prof. Sukumar Nandi — IIT Guwahati</a>
+          <a href="http://cse.iitkgp.ac.in/~sandipc/" target="_blank">Dr. Sandip Chakraborty — IIT Kharagpur</a>
+          <a href="https://www.iitkgp.ac.in/department/CS/faculty/cs-skg" target="_blank">Prof. Soumya K. Ghosh — IIT Kharagpur</a>
+          <a href="https://www.iitg.ac.in/" target="_blank">Prof. Sushanta Karmakar — IIT Guwahati</a>
+          <a href="https://www.srmist.edu.in/" target="_blank">Dr. Niladri Sett — SRM</a>
+          <a href="https://research.ibm.com/" target="_blank">IBM Research collaborators</a>
+          <a href="https://www.andrew.cmu.edu/user/theophib/" target="_blank">Prof. Theophilus A. Benson — CMU</a>
+          <a href="https://www.iitrpr.ac.in/" target="_blank">Dr. Abhinandan S. Prasad — IIT Ropar</a>
+        </div>
+      </section>
+
+      <section class="section" id="resources">
+        <h2 class="section-title">Academic Resources</h2>
+        <div class="link-grid">
+          <a href="https://subhrendu1987.github.io/pub/Resume/CV.pdf" target="_blank">Curriculum Vitae</a>
+          <a href="https://subhrendu1987.github.io/pub/Resume/CV_full.pdf" target="_blank">Full CV</a>
+          <a href="https://subhrendu1987.github.io/pub/publist/" target="_blank">Paper Abstracts</a>
+          <a href="https://subhrendu1987.github.io/pub/common/20_bibilography/mypub.bib" target="_blank">BibTeX</a>
+          <a href="https://subhrendu1987.github.io/course/" target="_blank">Courses</a>
+          <a href="https://github.com/subhrendu1987" target="_blank">GitHub Repositories</a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="footer">
+    Dr. Subhrendu Chattopadhyay · Academic Profile
+  </div>
+</div>
+
+<a class="backtop" href="#profile" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+
+<script>
+document.querySelectorAll(".filter").forEach(function(button) {
+  button.addEventListener("click", function() {
+    document.querySelectorAll(".filter").forEach(function(b) { b.classList.remove("active"); });
+    this.classList.add("active");
+    const filter = this.dataset.filter;
+    document.querySelectorAll(".publication").forEach(function(pub) {
+      pub.style.display = (filter === "all" || pub.classList.contains(filter)) ? "" : "none";
+    });
+  });
+});
+</script>
+</body>
+</html>
